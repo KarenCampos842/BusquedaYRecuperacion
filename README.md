@@ -1,4 +1,4 @@
-# 🏛️ Proyecto de Arquitectura de Software
+# 🏛️ Búsqueda y recuperación de información en la web
 
 Este repositorio corresponde a la materia **Búsqueda y recuperación de información en la web**, impartida por el profesor **Víctor Hugo Menéndez Domínguez** en la Universidad Autónoma de Yucatán.  
 El objetivo de este proyecto es centralizar y organizar el código, documentación y entregables del curso.
