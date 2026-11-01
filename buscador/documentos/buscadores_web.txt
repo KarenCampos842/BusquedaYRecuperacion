@@ -1,0 +1,3 @@
+Recuperar información en la Web implica retos particulares. La escala es enorme y crece sin parar, las páginas cambian o desaparecen constantemente y el contenido llega en múltiples formatos e idiomas.
+
+La información está distribuida en millones de servidores, hay mucho contenido repetido o de baja calidad y la confiabilidad de las fuentes varía. A esto se suma la ambigüedad del lenguaje: una misma palabra puede tener significados distintos según el contexto de la búsqueda.

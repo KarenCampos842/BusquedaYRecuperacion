@@ -1,0 +1,3 @@
+La recuperación de datos trabaja con datos estructurados guardados en tablas, registros y valores. Las consultas se escriben en un lenguaje formal y preciso como SQL, y el resultado es determinista: la misma consulta devuelve siempre el mismo resultado.
+
+Una base de datos relacional garantiza coincidencia exacta con las condiciones establecidas. Por eso no estima relevancia ni ordena los resultados según su utilidad para el usuario.

@@ -1,0 +1,3 @@
+La recuperación de información estudia cómo representar, organizar, buscar y recuperar información relevante de grandes colecciones de documentos, principalmente no estructurados. Dada una necesidad de información planteada por el usuario, el sistema debe identificar cuáles documentos son relevantes para esa necesidad.
+
+Un buen sistema busca un equilibrio: recuperar tantos documentos relevantes como sea posible y tan pocos documentos no relevantes como sea posible. Encontrar información no significa encontrar la información correcta, porque la relevancia depende del contexto y de lo que el usuario necesita.

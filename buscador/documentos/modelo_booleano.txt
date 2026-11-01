@@ -1,0 +1,3 @@
+El modelo booleano es un modelo de coincidencia exacta basado en la teoría de conjuntos y la lógica proposicional. Las consultas se construyen con términos unidos por los operadores AND, OR y NOT.
+
+Cada término está presente o ausente en un documento, por lo que no existen grados de pertinencia. Los documentos se recuperan sin ningún orden particular. Es sencillo y preciso, útil en búsquedas exactas como leyes o patentes, pero no distingue entre documentos que contienen muchos términos de la consulta y los que contienen pocos.

@@ -1,0 +1,3 @@
+Java es un lenguaje de programación orientado a objetos. Los programas se compilan a bytecode que se ejecuta en la máquina virtual de Java, lo que permite escribir el código una vez y ejecutarlo en distintos sistemas operativos.
+
+Se utiliza para aplicaciones empresariales, servicios web y aplicaciones móviles. Su biblioteca estándar incluye colecciones, manejo de archivos, redes y concurrencia.
