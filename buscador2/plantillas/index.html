@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indexador</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap">
+
+  <link rel="stylesheet" href="/estaticos/css/estilos.css">
+</head>
+<body class="pagina-inicio">
+
+  <header class="encabezado">
+    <a href="/" class="logo">Indexador<span class="logo-punto">.</span></a>
+    <a href="#subir" class="btn-subir" title="Subir archivos .txt" aria-label="Subir archivos .txt">
+      <i class="bi bi-upload"></i>
+    </a>
+  </header>
+
+  <main class="centro">
+    $mensaje
+    <h1 class="saludo">¿Qué quieres encontrar?</h1>
+    <p class="subtitulo">Busca dentro de los archivos de texto que has subido.</p>
+
+    <form action="/buscar" method="get" class="buscador" role="search">
+      <i class="bi bi-search buscador-icono"></i>
+      <input type="search" name="q" id="q" class="buscador-input" placeholder="Buscar en los documentos" aria-label="Buscar en los documentos" required>
+      <button type="submit" class="buscador-btn" aria-label="Buscar"><i class="bi bi-arrow-right"></i></button>
+    </form>
+
+    <p class="estado-indice">
+      <i class="bi bi-database"></i>
+      $total_documentos documentos · $total_terminos términos indizados
+    </p>
+  </main>
+
+  <div id="subir" class="modal-subir" role="dialog" aria-labelledby="titulo-subir" aria-modal="true">
+    <a href="#" class="modal-fondo" aria-label="Cerrar"></a>
+    <div class="modal-caja">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="titulo-subir" class="h5 mb-0 fw-bold">Subir archivos</h2>
+        <a href="#" class="modal-cerrar" aria-label="Cerrar"><i class="bi bi-x-lg"></i></a>
+      </div>
+
+      <form action="/subir" method="post" enctype="multipart/form-data">
+        <label for="archivos" class="zona-carga">
+          <i class="bi bi-file-earmark-arrow-up"></i>
+          <span class="zona-titulo">Elige tus archivos de texto</span>
+          <span class="zona-texto">Puedes seleccionar varios a la vez · solo .txt</span>
+        </label>
+        <input class="form-control mt-3" type="file" id="archivos" name="archivos[]" accept=".txt,text/plain" multiple required>
+        <p class="small text-secondary mt-2 mb-3">Al subirlos se guardan en el servidor y se actualiza el índice invertido.</p>
+        <div class="d-flex gap-2 justify-content-end">
+          <a href="#" class="btn btn-light">Cancelar</a>
+          <button type="submit" class="btn btn-indexador"><i class="bi bi-upload me-1"></i>Subir e indizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

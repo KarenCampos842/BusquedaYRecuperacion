@@ -1,0 +1,27 @@
+sequenceDiagram
+    actor U as Usuario
+    participant N as Navegador
+    participant CS as controladores
+    participant LM as lector_multipart
+    participant II as indexador_incremental
+    participant AL as almacen_archivos
+    participant PP as texto
+    participant R as repositorios
+    participant DB as MySQL
+
+    U->>N: Clic en la flecha y elige .txt
+    N->>CS: POST /subir (multipart/form-data)
+    CS->>LM: leer_archivos(encabezados, cuerpo)
+    LM-->>CS: [(nombre, bytes), ...]
+    loop por cada archivo .txt válido
+        CS->>II: indexar_archivo(nombre, bytes)
+        II->>AL: guardar(nombre_seguro, bytes)
+        II->>PP: obtener_frecuencias(texto, stopwords)
+        PP-->>II: {termino: tf}
+        II->>R: transacción (ver 7.2)
+        R->>DB: INSERT / UPDATE / DELETE
+        DB-->>R: OK
+        II-->>CS: nuevo o reemplazo
+    end
+    CS-->>N: 303 See Other → /?subidos=2&reemplazados=1
+    N->>U: Inicio con mensaje de éxito

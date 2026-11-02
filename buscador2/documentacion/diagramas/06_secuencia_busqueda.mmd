@@ -1,0 +1,28 @@
+sequenceDiagram
+    actor U as Usuario
+    participant N as Navegador
+    participant CB as controladores
+    participant MB as motor_busqueda
+    participant PP as texto
+    participant R as repositorios
+    participant RK as ranking
+    participant VR as vistas
+
+    U->>N: Escribe "gato come" y Enter
+    N->>CB: GET /buscar?q=gato+come
+    CB->>MB: buscar("gato come")
+    MB->>PP: obtener_frecuencias(consulta)
+    PP-->>MB: {gato:1, come:1}
+    MB->>R: documentos.contar() → N
+    MB->>R: diccionario.obtener_df(términos)
+    MB->>R: posting.obtener_por_terminos(términos)
+    Note over MB: candidatos = documentos con al menos un término
+    MB->>R: posting.obtener_pesos_de_documentos(candidatos)
+    MB->>RK: idf y peso de cada término
+    MB->>RK: coseno(vector_consulta, vector_documento)
+    MB->>RK: ordenar(resultados)
+    RK-->>MB: lista ordenada
+    MB-->>CB: [Resultado, ...]
+    CB->>VR: construir_resultados(consulta, resultados)
+    VR-->>CB: HTML
+    CB-->>N: 200 text/html

@@ -1,0 +1,17 @@
+flowchart TD
+    A([Archivo recibido]) --> B{"¿Termina en .txt<br/>y no está vacío el nombre?"}
+    B -- No --> X([Se rechaza y se cuenta como error])
+    B -- Sí --> C["nombre_seguro y guardar en almacen/"]
+    C --> D["decodificar bytes<br/>utf-8-sig, si falla cp1252"]
+    D --> E["obtener_frecuencias y extraer fragmentos"]
+    E --> F[[Abrir transacción]]
+    F --> G{"¿Ya existe un documento<br/>con ese nombre?"}
+    G -- Sí --> H["quitar_documento(id)<br/>restar contadores · borrar posting · borrar términos en 0"]
+    H --> I["actualizar_fecha(id) y conservar el id"]
+    G -- No --> J["documentos.insertar(nombre) → id nuevo"]
+    I --> K["diccionario.sumar_terminos<br/>INSERT ... ON DUPLICATE KEY UPDATE"]
+    J --> K
+    K --> L["posting.insertar_varios<br/>termino, id, tf, nombre, fragmento"]
+    L --> M[[Commit]]
+    M --> N([Listo · solo se procesó este archivo])
+    F -. error .-> R[[Rollback y propagar el error]]

@@ -1,0 +1,31 @@
+flowchart TB
+    subgraph Navegador
+        UI["index.html · resultados.html<br/>Bootstrap + estilos.css"]
+    end
+    subgraph Web["web/"]
+        SRV["servidor.py<br/>manejador + enrutador"] --> CTL["controladores.py<br/>inicio · busqueda · subida<br/>descarga · estaticos"]
+        CTL --> LM["lector_multipart.py"]
+        CTL --> VIS["vistas.py<br/>renderizador + HTML"]
+    end
+    subgraph Dominio
+        IDX["indexacion/<br/>indexador_incremental<br/>almacen_archivos"]
+        BUS["busqueda/<br/>motor_busqueda<br/>ranking"]
+        TXT["texto.py<br/>normalizar · tokenizar · filtrar<br/>obtener_frecuencias · extraer_fragmento"]
+    end
+    subgraph Datos["base_datos/"]
+        REPO["repositorios/<br/>documentos · diccionario · posting"]
+        CON["conexion.py"]
+    end
+    DB[("MySQL")]
+    FS[("almacen/<br/>archivos .txt")]
+
+    UI -- HTTP --> SRV
+    CTL --> IDX
+    CTL --> BUS
+    CTL --> REPO
+    IDX --> TXT
+    BUS --> TXT
+    IDX --> REPO
+    BUS --> REPO
+    REPO --> CON --> DB
+    IDX --> FS

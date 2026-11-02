@@ -1,0 +1,6 @@
+flowchart LR
+    A["Texto original<br/>El Gato come pescado."] --> B["normalizador<br/>el gato come pescado."]
+    B --> C["tokenizador<br/>el · gato · come · pescado"]
+    C --> D["filtro_stopwords<br/>gato · come · pescado"]
+    D --> E["contador_terminos<br/>gato:1 come:1 pescado:1"]
+    B -. "mismo largo que el original" .-> F["extractor_fragmento<br/>50 caracteres del original"]
