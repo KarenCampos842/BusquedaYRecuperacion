@@ -1,3 +1,0 @@
-En el modelo de espacio vectorial, tanto los documentos como la consulta se representan como vectores de términos. El vocabulario define las dimensiones del espacio y cada componente guarda el peso de un término.
-
-La similitud entre la consulta y cada documento se calcula con medidas como el producto interno, la distancia euclidiana o la similitud coseno. Los documentos se ordenan de mayor a menor similitud. La ponderación TF-IDF asigna más peso a los términos frecuentes en un documento pero raros en la colección, lo que mejora el ranking de los resultados.

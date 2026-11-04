@@ -1,3 +1,0 @@
-Un índice invertido permite localizar rápidamente los documentos candidatos sin revisar toda la colección. Se compone de un diccionario con el vocabulario y de listas de postings asociadas a cada término.
-
-Cada posting guarda el identificador del documento, la frecuencia del término y, opcionalmente, las posiciones de cada aparición, lo que permite resolver frases exactas y búsquedas por proximidad. Indizar exige un esfuerzo previo, pero evita recorrer todos los documentos en cada consulta y reduce la latencia.

@@ -8,20 +8,31 @@ def insertar_varios(
     nombre_archivo: str,
     frecuencias: dict[str, int],
     fragmentos: dict[str, str],
+    ids_token: dict[str, int],
 ) -> None:
     """Inserta los renglones de posting de un documento."""
     if not frecuencias:
         return
     filas = [
-        (termino, id_documento, frecuencia, nombre_archivo, fragmentos[termino])
+        (termino, ids_token[termino], id_documento, frecuencia, nombre_archivo, fragmentos[termino])
         for termino, frecuencia in frecuencias.items()
     ]
     with conexion.cursor() as cursor:
         cursor.executemany(
-            "INSERT INTO posting (termino, id_documento, frecuencia, nombre_archivo, fragmento) "
-            "VALUES (%s, %s, %s, %s, %s)",
+            "INSERT INTO posting (termino, id_token, id_documento, frecuencia, nombre_archivo, fragmento) "
+            "VALUES (%s, %s, %s, %s, %s, %s)",
             filas,
         )
+
+
+def obtener_ids_por_documento(conexion: Connection, id_documento: int) -> dict[str, int]:
+    """Devuelve el id_posting de cada término de un documento."""
+    with conexion.cursor() as cursor:
+        cursor.execute(
+            "SELECT termino, id_posting FROM posting WHERE id_documento = %s",
+            (id_documento,),
+        )
+        return {termino: id_posting for termino, id_posting in cursor.fetchall()}
 
 
 def obtener_por_terminos(conexion: Connection, terminos: list[str]) -> list[tuple[str, int, int, str, str]]:
@@ -66,6 +77,6 @@ def obtener_pesos_de_documentos(
 
 
 def eliminar_por_documento(conexion: Connection, id_documento: int) -> None:
-    """Borra los renglones de posting de un documento."""
+    """Borra los renglones de posting de un documento (y sus posiciones, en cascada)."""
     with conexion.cursor() as cursor:
         cursor.execute("DELETE FROM posting WHERE id_documento = %s", (id_documento,))

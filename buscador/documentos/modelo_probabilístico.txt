@@ -1,3 +1,0 @@
-El modelo probabilístico estima la probabilidad de que un documento sea relevante para una consulta. Los documentos se ordenan de mayor a menor probabilidad estimada.
-
-Utiliza evidencia observable, como la presencia o la frecuencia de los términos, y la actualiza con la regla de Bayes. Un término frecuente en documentos relevantes aporta evidencia a favor de la relevancia. Las probabilidades se estiman a partir de juicios de relevancia previos o de la retroalimentación del usuario.

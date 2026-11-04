@@ -1,13 +1,40 @@
       <li class="resultado">
-        <div class="resultado-cuerpo">
-          <a href="$url_descarga" download class="resultado-titulo">
-            <i class="bi bi-file-earmark-text"></i>$nombre_archivo
-          </a>
-          <p class="resultado-fragmento">$fragmento</p>
-          <a href="$url_descarga" download class="resultado-descarga"><i class="bi bi-download"></i> Descargar</a>
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="$url_descarga" download class="resultado-titulo">$titulo</a>
+            <p class="resultado-archivo">$nombre_archivo</p>
+            <p class="resultado-fragmento">$fragmento</p>
+            <p class="resultado-meta">
+              <span>$palabras</span>
+              <span>$tokens</span>
+              <span>$tamano</span>
+              <span>$fecha</span>
+            </p>
+            <a href="$url_descarga" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>$relevancia</dd></div>
+            <div><dt>Coseno</dt><dd>$coseno</dd></div>
+          </dl>
         </div>
-        <dl class="valores">
-          <div><dt>Relevancia tf-idf</dt><dd>$relevancia</dd></div>
-          <div><dt>Coseno</dt><dd>$coseno</dd></div>
-        </dl>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody>$filas_calculo</tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>$relevancia</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = $total_documentos documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
       </li>
+      

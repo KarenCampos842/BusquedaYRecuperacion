@@ -59,11 +59,11 @@ def atender_busqueda(manejador: BaseHTTPRequestHandler, url: SplitResult) -> Non
     if not consulta:
         respuestas.redirigir(manejador, "/")
         return
-    resultados = motor_busqueda.buscar(consulta)
-    respuestas.enviar_html(manejador, vistas.construir_resultados(consulta, resultados))
+    busqueda = motor_busqueda.buscar(consulta)
+    respuestas.enviar_html(manejador, vistas.construir_resultados(consulta, busqueda))
 
 
-def _indexar_todos(archivos: list[tuple[str, bytes]]) -> dict[str, int]:
+def _indexar_todos(manejador: BaseHTTPRequestHandler, archivos: list[tuple[str, bytes]]) -> dict[str, int]:
     """Indexa cada archivo válido y cuenta nuevos, reemplazados y rechazados."""
     conteo = {"subidos": 0, "reemplazados": 0, "rechazados": 0}
     for nombre, datos in archivos:
@@ -72,7 +72,8 @@ def _indexar_todos(archivos: list[tuple[str, bytes]]) -> dict[str, int]:
             continue
         try:
             reemplazo = indexador_incremental.indexar_archivo(nombre, datos)
-        except Exception:
+        except Exception as error:
+            manejador.log_error("No se pudo indexar %r: %r", nombre, error)
             conteo["rechazados"] += 1
             continue
         conteo["reemplazados" if reemplazo else "subidos"] += 1
@@ -89,7 +90,7 @@ def atender_subida(manejador: BaseHTTPRequestHandler, url: SplitResult) -> None:
         respuestas.enviar_error(manejador, 413, "La subida supera el tamaño máximo permitido.")
         return
     cuerpo = manejador.rfile.read(int(longitud))
-    conteo = _indexar_todos(leer_archivos(manejador.headers, cuerpo))
+    conteo = _indexar_todos(manejador, leer_archivos(manejador.headers, cuerpo))
     respuestas.redirigir(manejador, "/?" + urlencode(conteo))
 
 

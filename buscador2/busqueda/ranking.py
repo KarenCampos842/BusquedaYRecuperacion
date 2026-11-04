@@ -1,19 +1,45 @@
 """Pesos tf-idf, similitud coseno y orden de los resultados."""
 import math
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from functools import cmp_to_key
 
 TOLERANCIA = 1e-9
 
 
 @dataclass(frozen=True)
+class DetalleTermino:
+    """El cálculo tf-idf de un término de la consulta en un documento."""
+
+    termino: str
+    tf: int
+    df: int
+    idf: float
+    peso: float
+
+
+@dataclass(frozen=True)
 class Resultado:
-    """Un documento encontrado con su fragmento y sus puntajes."""
+    """Un documento encontrado con su fragmento, sus puntajes y sus datos."""
 
     nombre_archivo: str
     fragmento: str
     relevancia: float
     coseno: float
+    palabras: int = 0
+    tokens: int = 0
+    tamano: int = 0
+    fecha: str = ""
+    detalle: tuple[DetalleTermino, ...] = ()
+
+
+@dataclass(frozen=True)
+class Busqueda:
+    """La respuesta completa a una consulta."""
+
+    resultados: list[Resultado] = field(default_factory=list)
+    terminos: tuple[str, ...] = ()
+    ignorados: tuple[str, ...] = ()
+    total_documentos: int = 0
 
 
 def idf(total_documentos: int, df: int) -> float:

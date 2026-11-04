@@ -48,6 +48,23 @@ def obtener_df(conexion: Connection, terminos: list[str]) -> dict[str, int]:
         return {termino: df for termino, df in cursor.fetchall()}
 
 
+def obtener_ids(conexion: Connection, terminos: list[str]) -> dict[str, int]:
+    """Devuelve el id_token de cada término existente."""
+    if not terminos:
+        return {}
+    ids: dict[str, int] = {}
+    for inicio in range(0, len(terminos), 1000):
+        lote = terminos[inicio:inicio + 1000]
+        marcadores = ", ".join(["%s"] * len(lote))
+        with conexion.cursor() as cursor:
+            cursor.execute(
+                f"SELECT termino, id_token FROM diccionario WHERE termino IN ({marcadores})",
+                lote,
+            )
+            ids.update({termino: id_token for termino, id_token in cursor.fetchall()})
+    return ids
+
+
 def contar_terminos(conexion: Connection) -> int:
     """Cuenta los términos del diccionario."""
     with conexion.cursor() as cursor:
