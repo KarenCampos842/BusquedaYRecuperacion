@@ -1,0 +1,4 @@
+.venv-evaluacion/
+**/.venv/
+**/__pycache__/
+tmp/

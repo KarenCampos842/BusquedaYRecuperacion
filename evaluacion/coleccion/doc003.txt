@@ -1,0 +1,5 @@
+Agua caliente en casa
+
+El aprovechamiento de energía solar en viviendas incluye colectores térmicos para calentar agua. El circuito recibe radiación, transfiere calor y lo conserva en un depósito aislado. Una familia utiliza el agua en actividades domésticas durante distintos horarios. El documento explica la función del tanque, las tuberías y el equipo auxiliar cuando hay poca radiación. Se analiza el tamaño del sistema a partir de la demanda de agua caliente. La propuesta compara el servicio obtenido con el consumo previo del calentador y describe un registro de funcionamiento para revisar la instalación.
+
+En el proyecto doméstico se comparan alternativas según el consumo anual y las condiciones del edificio. La revisión considera orientación, sombras, mantenimiento y presupuesto disponible. El equipo presenta un esquema de componentes, una estimación de producción y una descripción de las tareas de seguimiento. Cada propuesta distingue los supuestos del cálculo y las mediciones que todavía deben obtenerse. El propósito del documento es explicar el funcionamiento de la solución en un caso didáctico.

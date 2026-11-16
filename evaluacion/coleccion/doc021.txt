@@ -1,0 +1,5 @@
+Agua para cultivos
+
+Para disminuir el consumo hídrico de los cultivos se colocan emisores junto a las raíces y se controla el tiempo de suministro. La humedad del terreno orienta la programación y ayuda a evitar aplicaciones excesivas. El documento explica cómo revisar pérdidas en las conducciones y cómo ajustar el volumen a las necesidades de las plantas. Un registro de caudal permite comparar jornadas y comprobar cambios en el manejo de la parcela. La propuesta describe pasos de instalación, seguimiento y mantenimiento de un sistema destinado a aprovechar mejor el agua durante la producción de alimentos.
+
+La propuesta se desarrolla en una parcela ficticia y compara alternativas de operación. El seguimiento registra condiciones del terreno, calendario de trabajo y recursos utilizados. El equipo anota los supuestos antes de interpretar las mediciones y conserva una bitácora de los cambios. Cada alternativa se revisa según las necesidades del cultivo y las características del lugar. El caso permite discutir decisiones de manejo, tareas de mantenimiento y datos necesarios para evaluar una temporada completa con criterios comparables.

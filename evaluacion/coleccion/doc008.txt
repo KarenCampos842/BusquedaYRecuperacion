@@ -1,0 +1,5 @@
+Paneles en azoteas
+
+La energía solar puede abastecer viviendas mediante paneles fotovoltaicos instalados en la azotea. Un inversor transforma la electricidad producida para alimentar los aparatos del hogar. El ejemplo analiza una casa con refrigerador, iluminación y equipos de trabajo. La producción durante las horas de luz se compara con la demanda de sus habitantes. Se explica cómo estimar la superficie necesaria y cómo registrar la generación mensual. La energía sobrante puede gestionarse según las condiciones de conexión disponibles. El texto describe las etapas de diseño, montaje y revisión de una instalación residencial.
+
+En el proyecto doméstico se comparan alternativas según el consumo anual y las condiciones del edificio. La revisión considera orientación, sombras, mantenimiento y presupuesto disponible. El equipo presenta un esquema de componentes, una estimación de producción y una descripción de las tareas de seguimiento. Cada propuesta distingue los supuestos del cálculo y las mediciones que todavía deben obtenerse. El propósito del documento es explicar el funcionamiento de la solución en un caso didáctico.

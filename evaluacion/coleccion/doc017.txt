@@ -1,0 +1,5 @@
+Goteo en parcelas
+
+El riego por goteo permite un uso eficiente del agua en agricultura al entregarla cerca de las raíces. El documento describe tuberías, emisores y controles para distribuir el caudal de una parcela. La programación considera el cultivo y la humedad del suelo. El ejemplo compara el volumen aplicado antes y después de ajustar el sistema. La revisión de fugas y obstrucciones ayuda a mantener una distribución uniforme. El texto explica cómo estas tareas pueden reducir pérdidas y cómo registrar el agua utilizada durante una temporada para evaluar el método de riego.
+
+La propuesta se desarrolla en una parcela ficticia y compara alternativas de operación. El seguimiento registra condiciones del terreno, calendario de trabajo y recursos utilizados. El equipo anota los supuestos antes de interpretar las mediciones y conserva una bitácora de los cambios. Cada alternativa se revisa según las necesidades del cultivo y las características del lugar. El caso permite discutir decisiones de manejo, tareas de mantenimiento y datos necesarios para evaluar una temporada completa con criterios comparables.

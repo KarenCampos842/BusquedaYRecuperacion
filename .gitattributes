@@ -1,0 +1,4 @@
+evaluacion/coleccion/*.txt -text
+evaluacion/protocolo.json -text
+*.pdf binary
+*.png binary

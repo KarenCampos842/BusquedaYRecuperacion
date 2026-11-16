@@ -1,0 +1,5 @@
+Acumulación doméstica
+
+Una instalación de energía solar para viviendas puede incorporar baterías para utilizar parte de la producción después del atardecer. Este caso describe el recorrido de la electricidad desde los módulos hasta el sistema de acumulación. La capacidad se elige a partir de los aparatos que se desea mantener activos. Se diferencian la energía generada durante el día y la potencia solicitada por los equipos. El ejemplo permite revisar pérdidas, autonomía y hábitos de consumo. También explica por qué resulta necesario registrar el estado de los componentes durante la operación doméstica.
+
+En el proyecto doméstico se comparan alternativas según el consumo anual y las condiciones del edificio. La revisión considera orientación, sombras, mantenimiento y presupuesto disponible. El equipo presenta un esquema de componentes, una estimación de producción y una descripción de las tareas de seguimiento. Cada propuesta distingue los supuestos del cálculo y las mediciones que todavía deben obtenerse. El propósito del documento es explicar el funcionamiento de la solución en un caso didáctico.

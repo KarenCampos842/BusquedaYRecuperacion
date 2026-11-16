@@ -1,0 +1,1276 @@
+{
+  "mysql": "8.0.44",
+  "base": "eval_buscador2_20261116_113239_660314",
+  "documentos": [
+    "doc001.txt",
+    "doc002.txt",
+    "doc003.txt",
+    "doc004.txt",
+    "doc005.txt",
+    "doc006.txt",
+    "doc007.txt",
+    "doc008.txt",
+    "doc009.txt",
+    "doc010.txt",
+    "doc011.txt",
+    "doc012.txt",
+    "doc013.txt",
+    "doc014.txt",
+    "doc015.txt",
+    "doc016.txt",
+    "doc017.txt",
+    "doc018.txt",
+    "doc019.txt",
+    "doc020.txt",
+    "doc021.txt",
+    "doc022.txt",
+    "doc023.txt",
+    "doc024.txt",
+    "doc025.txt",
+    "doc026.txt",
+    "doc027.txt",
+    "doc028.txt",
+    "doc029.txt",
+    "doc030.txt"
+  ],
+  "esquema_documentos": "CREATE TABLE `documentos` (\n  `id_documento` int NOT NULL AUTO_INCREMENT,\n  `nombre_archivo` varchar(255) COLLATE utf8mb4_bin NOT NULL,\n  `fecha_indexado` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `url` varchar(2048) COLLATE utf8mb4_bin NOT NULL,\n  `palabras` int NOT NULL,\n  `tokens` int NOT NULL,\n  `tamano` int NOT NULL,\n  PRIMARY KEY (`id_documento`),\n  UNIQUE KEY `nombre_archivo` (`nombre_archivo`)\n) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+  "variables_fulltext": {
+    "innodb_ft_aux_table": "",
+    "innodb_ft_cache_size": "8000000",
+    "innodb_ft_enable_diag_print": "OFF",
+    "innodb_ft_enable_stopword": "ON",
+    "innodb_ft_max_token_size": "84",
+    "innodb_ft_min_token_size": "3",
+    "innodb_ft_num_word_optimize": "2000",
+    "innodb_ft_result_cache_limit": "2000000000",
+    "innodb_ft_server_stopword_table": "",
+    "innodb_ft_sort_pll_degree": "2",
+    "innodb_ft_total_cache_size": "640000000",
+    "innodb_ft_user_stopword_table": ""
+  },
+  "stopwords_mysql": [],
+  "stopwords_sha256": "938b383fb4311624ee1dc7c1983a365cd9eda76617a20c3b75f13ef9d31bdbce",
+  "consultas": {
+    "Q1": {
+      "resultados": [
+        {
+          "nombre_archivo": "doc018.txt",
+          "fragmento": "Energía solar y viviendas del futuro. El documento",
+          "relevancia": 4.668907502301861,
+          "coseno": 0.26985293552717743,
+          "palabras": 170,
+          "tokens": 97,
+          "tamano": 1154,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "energia",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "solar",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "viviendas",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc027.txt",
+          "fragmento": "solar. El informe utiliza la palabra solar para id",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.2413929740075365,
+          "palabras": 172,
+          "tokens": 97,
+          "tamano": 1198,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "solar",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "viviendas",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "energia",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc014.txt",
+          "fragmento": "energía solar para viviendas puede incorporar bate",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.2033373723375462,
+          "palabras": 165,
+          "tokens": 91,
+          "tamano": 1145,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "energia",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "solar",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "viviendas",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc008.txt",
+          "fragmento": "energía solar puede abastecer viviendas mediante p",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.19417938220726152,
+          "palabras": 166,
+          "tokens": 96,
+          "tamano": 1163,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "energia",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "solar",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "viviendas",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc003.txt",
+          "fragmento": "energía solar en viviendas incluye colectores térm",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.14292396295210022,
+          "palabras": 167,
+          "tokens": 96,
+          "tamano": 1141,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "energia",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "solar",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "viviendas",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        }
+      ],
+      "terminos": [
+        "energia",
+        "solar",
+        "viviendas"
+      ],
+      "ignorados": [],
+      "total_documentos": 30
+    },
+    "Q2": {
+      "resultados": [
+        {
+          "nombre_archivo": "doc005.txt",
+          "fragmento": "diabetes incorpora ejercicio mediante caminatas or",
+          "relevancia": 4.668907502301861,
+          "coseno": 0.2886399725954975,
+          "palabras": 168,
+          "tokens": 101,
+          "tamano": 1175,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "diabetes",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "ejercicio",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "prevencion",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc022.txt",
+          "fragmento": "Ejercicio de contabilidad hospitalaria  El curso d",
+          "relevancia": 4.668907502301861,
+          "coseno": 0.24614176164356766,
+          "palabras": 173,
+          "tokens": 107,
+          "tamano": 1233,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "ejercicio",
+              "tf": 3,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 2.3344537511509307
+            },
+            {
+              "termino": "diabetes",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "prevencion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc006.txt",
+          "fragmento": "diabetes tipo dos. Subir escaleras y realizar desp",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.15261449996919166,
+          "palabras": 170,
+          "tokens": 101,
+          "tamano": 1186,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "diabetes",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "ejercicio",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "prevencion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc023.txt",
+          "fragmento": "diabetes tipo dos se relaciona con hábitos de movi",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.13444131748058027,
+          "palabras": 169,
+          "tokens": 102,
+          "tamano": 1214,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "diabetes",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "ejercicio",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "prevencion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc015.txt",
+          "fragmento": "Diabetes figura como título de una novela sobre un",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.11872451736114294,
+          "palabras": 171,
+          "tokens": 105,
+          "tamano": 1212,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "diabetes",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "ejercicio",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "prevencion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        }
+      ],
+      "terminos": [
+        "prevencion",
+        "diabetes",
+        "ejercicio"
+      ],
+      "ignorados": [],
+      "total_documentos": 30
+    },
+    "Q3": {
+      "resultados": [
+        {
+          "nombre_archivo": "doc020.txt",
+          "fragmento": "Contraseñas. El expediente de seguridad describe s",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.21948347250803435,
+          "palabras": 176,
+          "tokens": 102,
+          "tamano": 1222,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "contraseñas",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "seguridad",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "autenticacion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc010.txt",
+          "fragmento": "contraseñas diferentes para cada servicio. Si una",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.20579816369200143,
+          "palabras": 170,
+          "tokens": 99,
+          "tamano": 1177,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "contraseñas",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "autenticacion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "seguridad",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc024.txt",
+          "fragmento": "contraseñas escritas en papel. La autenticación de",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.17997220327010557,
+          "palabras": 174,
+          "tokens": 103,
+          "tamano": 1248,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "contraseñas",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "autenticacion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "seguridad",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc009.txt",
+          "fragmento": "autenticación durante la recuperación de cuentas.",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.1535546793416588,
+          "palabras": 171,
+          "tokens": 100,
+          "tamano": 1226,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "autenticacion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "contraseñas",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "seguridad",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc004.txt",
+          "fragmento": "autenticación con un segundo factor se incorpora a",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.14902431779290815,
+          "palabras": 170,
+          "tokens": 95,
+          "tamano": 1199,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "autenticacion",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "contraseñas",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "seguridad",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        }
+      ],
+      "terminos": [
+        "seguridad",
+        "contraseñas",
+        "autenticacion"
+      ],
+      "ignorados": [],
+      "total_documentos": 30
+    },
+    "Q4": {
+      "resultados": [
+        {
+          "nombre_archivo": "doc025.txt",
+          "fragmento": "electrónicos procedentes de oficinas. El personal",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.2349971329124208,
+          "palabras": 175,
+          "tokens": 104,
+          "tamano": 1246,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "electronicos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "residuos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "reciclaje",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc026.txt",
+          "fragmento": "electrónicos para registrar asistentes. Los residu",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.21730494061170677,
+          "palabras": 179,
+          "tokens": 106,
+          "tamano": 1262,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "electronicos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "reciclaje",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "residuos",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc028.txt",
+          "fragmento": "electrónicos y una pieza titulada Residuos. El rec",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.2026973857004809,
+          "palabras": 178,
+          "tokens": 105,
+          "tamano": 1247,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "electronicos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "residuos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "reciclaje",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc029.txt",
+          "fragmento": "residuos electrónicos comienza con la separación d",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.20069888802078403,
+          "palabras": 174,
+          "tokens": 101,
+          "tamano": 1218,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "residuos",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "electronicos",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "reciclaje",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc001.txt",
+          "fragmento": "electrónicos que requieren una ruta de gestión. El",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.14125459678267857,
+          "palabras": 178,
+          "tokens": 104,
+          "tamano": 1277,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "electronicos",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "reciclaje",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "residuos",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        }
+      ],
+      "terminos": [
+        "reciclaje",
+        "residuos",
+        "electronicos"
+      ],
+      "ignorados": [],
+      "total_documentos": 30
+    },
+    "Q5": {
+      "resultados": [
+        {
+          "nombre_archivo": "doc030.txt",
+          "fragmento": "agricultura conserva un expediente firmado por la",
+          "relevancia": 3.8907562519182184,
+          "coseno": 0.22712853697549654,
+          "palabras": 172,
+          "tokens": 101,
+          "tamano": 1193,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "agricultura",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "riego",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "eficiente",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc017.txt",
+          "fragmento": "riego por goteo permite un uso eficiente del agua",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.20569217977314522,
+          "palabras": 171,
+          "tokens": 97,
+          "tamano": 1136,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "riego",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "agricultura",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "eficiente",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc011.txt",
+          "fragmento": "riego eficiente en agricultura utiliza sensores pa",
+          "relevancia": 3.1126050015345745,
+          "coseno": 0.1937603111349108,
+          "palabras": 172,
+          "tokens": 99,
+          "tamano": 1174,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "riego",
+              "tf": 2,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 1.5563025007672873
+            },
+            {
+              "termino": "agricultura",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "eficiente",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc013.txt",
+          "fragmento": "agricultura considera el momento del día y las nec",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.16575464470301177,
+          "palabras": 170,
+          "tokens": 98,
+          "tamano": 1184,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "agricultura",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "eficiente",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "riego",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        },
+        {
+          "nombre_archivo": "doc007.txt",
+          "fragmento": "agricultura prestó vehículos para transportar herr",
+          "relevancia": 2.3344537511509307,
+          "coseno": 0.12546938494571805,
+          "palabras": 174,
+          "tokens": 102,
+          "tamano": 1216,
+          "fecha": "2026-11-16 11:32",
+          "detalle": [
+            {
+              "termino": "agricultura",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "eficiente",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            },
+            {
+              "termino": "riego",
+              "tf": 1,
+              "df": 5,
+              "idf": 0.7781512503836436,
+              "peso": 0.7781512503836436
+            }
+          ]
+        }
+      ],
+      "terminos": [
+        "riego",
+        "eficiente",
+        "agricultura"
+      ],
+      "ignorados": [],
+      "total_documentos": 30
+    }
+  },
+  "metricas": {
+    "Q1": {
+      "TP": 3,
+      "FP": 2,
+      "FN": 1,
+      "TN": 24,
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": 0.9,
+      "AP": 0.3583333333333333,
+      "puntos": [
+        {
+          "posicion": 1,
+          "nombre": "doc018.txt",
+          "relevante": false,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "posicion": 2,
+          "nombre": "doc027.txt",
+          "relevante": false,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "posicion": 3,
+          "nombre": "doc014.txt",
+          "relevante": true,
+          "precision": 0.3333333333333333,
+          "recall": 0.25
+        },
+        {
+          "posicion": 4,
+          "nombre": "doc008.txt",
+          "relevante": true,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "posicion": 5,
+          "nombre": "doc003.txt",
+          "relevante": true,
+          "precision": 0.6,
+          "recall": 0.75
+        }
+      ],
+      "interpolada": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relevantes_ausentes": [
+        "doc002.txt"
+      ]
+    },
+    "Q2": {
+      "TP": 3,
+      "FP": 2,
+      "FN": 1,
+      "TN": 24,
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": 0.9,
+      "AP": 0.6041666666666666,
+      "puntos": [
+        {
+          "posicion": 1,
+          "nombre": "doc005.txt",
+          "relevante": true,
+          "precision": 1.0,
+          "recall": 0.25
+        },
+        {
+          "posicion": 2,
+          "nombre": "doc022.txt",
+          "relevante": false,
+          "precision": 0.5,
+          "recall": 0.25
+        },
+        {
+          "posicion": 3,
+          "nombre": "doc006.txt",
+          "relevante": true,
+          "precision": 0.6666666666666666,
+          "recall": 0.5
+        },
+        {
+          "posicion": 4,
+          "nombre": "doc023.txt",
+          "relevante": true,
+          "precision": 0.75,
+          "recall": 0.75
+        },
+        {
+          "posicion": 5,
+          "nombre": "doc015.txt",
+          "relevante": false,
+          "precision": 0.6,
+          "recall": 0.75
+        }
+      ],
+      "interpolada": [
+        1.0,
+        1.0,
+        1.0,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relevantes_ausentes": [
+        "doc016.txt"
+      ]
+    },
+    "Q3": {
+      "TP": 3,
+      "FP": 2,
+      "FN": 1,
+      "TN": 24,
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": 0.9,
+      "AP": 0.4,
+      "puntos": [
+        {
+          "posicion": 1,
+          "nombre": "doc020.txt",
+          "relevante": false,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "posicion": 2,
+          "nombre": "doc010.txt",
+          "relevante": true,
+          "precision": 0.5,
+          "recall": 0.25
+        },
+        {
+          "posicion": 3,
+          "nombre": "doc024.txt",
+          "relevante": false,
+          "precision": 0.3333333333333333,
+          "recall": 0.25
+        },
+        {
+          "posicion": 4,
+          "nombre": "doc009.txt",
+          "relevante": true,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "posicion": 5,
+          "nombre": "doc004.txt",
+          "relevante": true,
+          "precision": 0.6,
+          "recall": 0.75
+        }
+      ],
+      "interpolada": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relevantes_ausentes": [
+        "doc012.txt"
+      ]
+    },
+    "Q4": {
+      "TP": 3,
+      "FP": 2,
+      "FN": 1,
+      "TN": 24,
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": 0.9,
+      "AP": 0.525,
+      "puntos": [
+        {
+          "posicion": 1,
+          "nombre": "doc025.txt",
+          "relevante": true,
+          "precision": 1.0,
+          "recall": 0.25
+        },
+        {
+          "posicion": 2,
+          "nombre": "doc026.txt",
+          "relevante": false,
+          "precision": 0.5,
+          "recall": 0.25
+        },
+        {
+          "posicion": 3,
+          "nombre": "doc028.txt",
+          "relevante": false,
+          "precision": 0.3333333333333333,
+          "recall": 0.25
+        },
+        {
+          "posicion": 4,
+          "nombre": "doc029.txt",
+          "relevante": true,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "posicion": 5,
+          "nombre": "doc001.txt",
+          "relevante": true,
+          "precision": 0.6,
+          "recall": 0.75
+        }
+      ],
+      "interpolada": [
+        1.0,
+        1.0,
+        1.0,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relevantes_ausentes": [
+        "doc019.txt"
+      ]
+    },
+    "Q5": {
+      "TP": 3,
+      "FP": 2,
+      "FN": 1,
+      "TN": 24,
+      "precision": 0.6,
+      "recall": 0.75,
+      "accuracy": 0.9,
+      "AP": 0.47916666666666663,
+      "puntos": [
+        {
+          "posicion": 1,
+          "nombre": "doc030.txt",
+          "relevante": false,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "posicion": 2,
+          "nombre": "doc017.txt",
+          "relevante": true,
+          "precision": 0.5,
+          "recall": 0.25
+        },
+        {
+          "posicion": 3,
+          "nombre": "doc011.txt",
+          "relevante": true,
+          "precision": 0.6666666666666666,
+          "recall": 0.5
+        },
+        {
+          "posicion": 4,
+          "nombre": "doc013.txt",
+          "relevante": true,
+          "precision": 0.75,
+          "recall": 0.75
+        },
+        {
+          "posicion": 5,
+          "nombre": "doc007.txt",
+          "relevante": false,
+          "precision": 0.6,
+          "recall": 0.75
+        }
+      ],
+      "interpolada": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relevantes_ausentes": [
+        "doc021.txt"
+      ]
+    }
+  },
+  "MAP": 0.47333333333333333,
+  "curva_media": [
+    0.79,
+    0.79,
+    0.79,
+    0.6599999999999999,
+    0.6599999999999999,
+    0.6599999999999999,
+    0.6599999999999999,
+    0.6599999999999999,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "comprobaciones": {
+    "subida_formulario": 30,
+    "descargas_identicas": 30,
+    "documentos_en_base": 30,
+    "orden_http_igual_motor": true,
+    "consulta_sin_coincidencias": true,
+    "recarga_sin_duplicados": true,
+    "ranking_y_puntajes_estables_tras_recarga": true,
+    "metricas_validadas_con_fracciones": true
+  }
+}

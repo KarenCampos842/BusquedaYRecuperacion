@@ -1,0 +1,5 @@
+Superficies de una urbanización
+
+La oficina municipal registra las viviendas de una urbanización y la superficie de cada solar. El informe utiliza la palabra solar para identificar un terreno destinado a construcción. Las viviendas se agrupan según calle y número de lote. Una sección administrativa informa sobre el contrato de energía de las oficinas y el horario de atención al público. El expediente contiene medidas, folios y responsables de la revisión. La comparación entre lotes permite corregir diferencias del padrón y preparar certificados para los propietarios. El objetivo es actualizar registros catastrales y organizar la documentación de cada inmueble.
+
+En el proyecto doméstico se comparan alternativas según el consumo anual y las condiciones del edificio. La revisión considera orientación, sombras, mantenimiento y presupuesto disponible. El equipo presenta un esquema de componentes, una estimación de producción y una descripción de las tareas de seguimiento. Cada propuesta distingue los supuestos del cálculo y las mediciones que todavía deben obtenerse. El propósito del documento es explicar el funcionamiento de la solución en un caso didáctico.

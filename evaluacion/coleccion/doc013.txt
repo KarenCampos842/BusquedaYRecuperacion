@@ -1,0 +1,5 @@
+Programación del suministro
+
+El manejo eficiente del riego en agricultura considera el momento del día y las necesidades del cultivo. El documento explica cómo ajustar duración y frecuencia para reducir pérdidas de agua. Una bitácora registra caudal, superficie atendida y observaciones del terreno. El caso describe la revisión de tuberías y la detección de fugas antes de comparar temporadas. La propuesta utiliza las mediciones para corregir aplicaciones excesivas. El objetivo es relacionar decisiones de operación con el consumo total y establecer un procedimiento que permita revisar el aprovechamiento del agua en una parcela.
+
+La propuesta se desarrolla en una parcela ficticia y compara alternativas de operación. El seguimiento registra condiciones del terreno, calendario de trabajo y recursos utilizados. El equipo anota los supuestos antes de interpretar las mediciones y conserva una bitácora de los cambios. Cada alternativa se revisa según las necesidades del cultivo y las características del lugar. El caso permite discutir decisiones de manejo, tareas de mantenimiento y datos necesarios para evaluar una temporada completa con criterios comparables.

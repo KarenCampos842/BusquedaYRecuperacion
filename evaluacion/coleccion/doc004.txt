@@ -1,0 +1,5 @@
+Segundo factor
+
+La autenticación con un segundo factor se incorpora a una política de seguridad de cuentas. Las contraseñas proporcionan una primera comprobación y un código o dispositivo aporta otra. El caso describe el registro del factor adicional y el proceso para utilizarlo al entrar al sistema. El documento explica cómo esa combinación reduce la dependencia de una sola credencial. También presenta un procedimiento de recuperación cuando el usuario pierde el dispositivo. La propuesta incluye capacitación, revisión de accesos y documentación de incidentes para valorar el funcionamiento del mecanismo en la organización.
+
+El caso utiliza cuentas ficticias de una organización educativa. El equipo responsable documenta los procedimientos y revisa que los participantes comprendan cada paso. La propuesta distingue el acceso cotidiano de las tareas de recuperación y administración. Las decisiones se registran junto con su propósito y con los recursos que requieren. La evaluación incluye observación del uso, revisión de incidentes simulados y actualización del material de capacitación. Los ejemplos permiten discutir el alcance de cada medida dentro del proyecto.

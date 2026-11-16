@@ -1,0 +1,5 @@
+Sensores de humedad
+
+Una estrategia de riego eficiente en agricultura utiliza sensores para observar la humedad del terreno. El equipo registra mediciones y programa aplicaciones cuando el cultivo requiere agua. La explicación relaciona la información del suelo con la duración de cada evento de riego. El caso compara un calendario fijo con decisiones basadas en registros de la parcela. También describe cómo revisar sensores y anotar cambios de clima. El propósito es comprender cómo evitar aplicaciones innecesarias y cómo medir el consumo para valorar una estrategia de manejo del agua durante el desarrollo del cultivo.
+
+La propuesta se desarrolla en una parcela ficticia y compara alternativas de operación. El seguimiento registra condiciones del terreno, calendario de trabajo y recursos utilizados. El equipo anota los supuestos antes de interpretar las mediciones y conserva una bitácora de los cambios. Cada alternativa se revisa según las necesidades del cultivo y las características del lugar. El caso permite discutir decisiones de manejo, tareas de mantenimiento y datos necesarios para evaluar una temporada completa con criterios comparables.

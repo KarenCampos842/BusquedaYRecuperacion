@@ -1,0 +1,5 @@
+Electricidad fotovoltaica residencial
+
+La captación fotovoltaica permite suministrar electricidad a casas mediante módulos colocados sobre el techo. Los equipos convierten la radiación del sol en corriente que luego adapta un inversor. Este documento explica cómo alimentar electrodomésticos en una residencia y cómo distribuir el consumo durante las horas de producción. Un acumulador permite reservar parte de la generación para la noche. El diseño parte de las facturas del hogar y de la superficie disponible. La explicación presenta los componentes principales y describe cómo observar el desempeño del conjunto a lo largo del año.
+
+En el proyecto doméstico se comparan alternativas según el consumo anual y las condiciones del edificio. La revisión considera orientación, sombras, mantenimiento y presupuesto disponible. El equipo presenta un esquema de componentes, una estimación de producción y una descripción de las tareas de seguimiento. Cada propuesta distingue los supuestos del cálculo y las mediciones que todavía deben obtenerse. El propósito del documento es explicar el funcionamiento de la solución en un caso didáctico.

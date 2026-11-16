@@ -1,0 +1,344 @@
+{
+  "origen": "Colección sintética redactada para esta actividad con asistencia de IA.",
+  "nombres": "Identificadores neutrales doc001 a doc030 asignados con random.Random(20261116).shuffle, antes de la ejecución definitiva.",
+  "diseno": "Cinco temas, tres relevantes con vocabulario directo, un relevante con paráfrasis y dos distractores por tema. Los seis textos de cada tema comparten un párrafo de contexto. Etiquetas binarias fijadas antes de buscar; sin ajuste posterior a los resultados.",
+  "consultas": [
+    {
+      "id": "Q1",
+      "consulta": "energía solar viviendas",
+      "criterio": "Explica el uso de energía solar para abastecer viviendas.",
+      "relevantes": [
+        "doc008.txt",
+        "doc014.txt",
+        "doc003.txt",
+        "doc002.txt"
+      ]
+    },
+    {
+      "id": "Q2",
+      "consulta": "prevención diabetes ejercicio",
+      "criterio": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2.",
+      "relevantes": [
+        "doc023.txt",
+        "doc005.txt",
+        "doc006.txt",
+        "doc016.txt"
+      ]
+    },
+    {
+      "id": "Q3",
+      "consulta": "seguridad contraseñas autenticación",
+      "criterio": "Explica protección de cuentas mediante contraseñas y autenticación.",
+      "relevantes": [
+        "doc010.txt",
+        "doc004.txt",
+        "doc009.txt",
+        "doc012.txt"
+      ]
+    },
+    {
+      "id": "Q4",
+      "consulta": "reciclaje residuos electrónicos",
+      "criterio": "Explica gestión y reciclaje de aparatos electrónicos desechados.",
+      "relevantes": [
+        "doc029.txt",
+        "doc025.txt",
+        "doc001.txt",
+        "doc019.txt"
+      ]
+    },
+    {
+      "id": "Q5",
+      "consulta": "riego eficiente agricultura",
+      "criterio": "Explica métodos para reducir el consumo de agua de riego agrícola.",
+      "relevantes": [
+        "doc017.txt",
+        "doc011.txt",
+        "doc013.txt",
+        "doc021.txt"
+      ]
+    }
+  ],
+  "documentos": [
+    {
+      "nombre": "doc008.txt",
+      "titulo": "Paneles en azoteas",
+      "palabras": 166,
+      "sha256": "d57fd14904a680fcaa6ef2c6e9173ae702fb047e9df530363f95516865318116",
+      "relevante_para": [
+        "Q1"
+      ],
+      "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+    },
+    {
+      "nombre": "doc014.txt",
+      "titulo": "Acumulación doméstica",
+      "palabras": 165,
+      "sha256": "58ea041fa737de9797922c49796a4fb296d788bab1fb8cbd6a3124e9ec55230d",
+      "relevante_para": [
+        "Q1"
+      ],
+      "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+    },
+    {
+      "nombre": "doc003.txt",
+      "titulo": "Agua caliente en casa",
+      "palabras": 167,
+      "sha256": "aacc5bc6f3e0bda56a1bc2c672e87e9038f37541e3c4c5ee92a3c3d9fca85a39",
+      "relevante_para": [
+        "Q1"
+      ],
+      "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+    },
+    {
+      "nombre": "doc002.txt",
+      "titulo": "Electricidad fotovoltaica residencial",
+      "palabras": 166,
+      "sha256": "0a580cbeeb3c1ab5ab89b808f14699853e85654bee0642ef1cefae1d27964b9e",
+      "relevante_para": [
+        "Q1"
+      ],
+      "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+    },
+    {
+      "nombre": "doc018.txt",
+      "titulo": "Catálogo de una exposición",
+      "palabras": 170,
+      "sha256": "f2560b891073ffe68cf982beaae01b9f60fd5b464bd825533bc61afc31ccb366",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc027.txt",
+      "titulo": "Superficies de una urbanización",
+      "palabras": 172,
+      "sha256": "f31508ebfd2fd91af28e028acada3f52636839f10a5febd1efb6b17d70f47d20",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc023.txt",
+      "titulo": "Movimiento y metabolismo",
+      "palabras": 169,
+      "sha256": "759fdb10a47166e9c2518923dd84281ac857ab35e584c900084a9323f38a0028",
+      "relevante_para": [
+        "Q2"
+      ],
+      "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+    },
+    {
+      "nombre": "doc005.txt",
+      "titulo": "Programa de caminatas",
+      "palabras": 168,
+      "sha256": "4f8a2c0a5516d62f794349c2f3cab684633893879ffa37bcce4b439c6746163c",
+      "relevante_para": [
+        "Q2"
+      ],
+      "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+    },
+    {
+      "nombre": "doc006.txt",
+      "titulo": "Rutinas activas cotidianas",
+      "palabras": 170,
+      "sha256": "92dcb13272d1702d5f48e29cd7e8725ebc768cd5be172978f2f9b1db1b57e833",
+      "relevante_para": [
+        "Q2"
+      ],
+      "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+    },
+    {
+      "nombre": "doc016.txt",
+      "titulo": "Actividad física y riesgo metabólico",
+      "palabras": 170,
+      "sha256": "83db0a6b2492f10c9f7f24b182598cc6a567eada6472365ef97a13b4625ef17f",
+      "relevante_para": [
+        "Q2"
+      ],
+      "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+    },
+    {
+      "nombre": "doc022.txt",
+      "titulo": "Ejercicio de contabilidad hospitalaria",
+      "palabras": 173,
+      "sha256": "bab961a749f86fa841b772f484d6733ecc364f63c61902ec55ae1d8add7375bb",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc015.txt",
+      "titulo": "Boletín editorial de salud",
+      "palabras": 171,
+      "sha256": "22d164bad068047e5f1df1dbcc2c7686c0e66fbcf7ad513f738fae1236232293",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc010.txt",
+      "titulo": "Claves únicas por cuenta",
+      "palabras": 170,
+      "sha256": "61504a21d13d79c6abd0feb8f416f6d18e28f8c2be868870b8989848fffbc950",
+      "relevante_para": [
+        "Q3"
+      ],
+      "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+    },
+    {
+      "nombre": "doc004.txt",
+      "titulo": "Segundo factor",
+      "palabras": 170,
+      "sha256": "40288571458544d817a8b99089112aedf205343471cfd985556c6327c54c35f7",
+      "relevante_para": [
+        "Q3"
+      ],
+      "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+    },
+    {
+      "nombre": "doc009.txt",
+      "titulo": "Recuperación de credenciales",
+      "palabras": 171,
+      "sha256": "ed4b17bd53909d46692bce5a1357b32f46224581255be778a4ebbeb81e8ac6d9",
+      "relevante_para": [
+        "Q3"
+      ],
+      "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+    },
+    {
+      "nombre": "doc012.txt",
+      "titulo": "Protección del acceso digital",
+      "palabras": 172,
+      "sha256": "af9d470696ee52cf6d9553809a47bd582e6f357f83cf9e692321974bfb04a687",
+      "relevante_para": [
+        "Q3"
+      ],
+      "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+    },
+    {
+      "nombre": "doc020.txt",
+      "titulo": "Utilería para una obra",
+      "palabras": 176,
+      "sha256": "e0a64de9e6afbccc6840b95ecca1ea5c4530753b6714c16965bc17ad158008cd",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc024.txt",
+      "titulo": "Colección de documentos históricos",
+      "palabras": 174,
+      "sha256": "3e085e6c19b344fa59e3a106eab4b95fafcd2247f71737efa7890d2dcd41dd37",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc029.txt",
+      "titulo": "Ruta de aparatos desechados",
+      "palabras": 174,
+      "sha256": "b1587ad04bde05b8991d0015391043fec8b35a9fbb68e4e5d1c182d9b9d4fb00",
+      "relevante_para": [
+        "Q4"
+      ],
+      "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+    },
+    {
+      "nombre": "doc025.txt",
+      "titulo": "Acopio de computadoras",
+      "palabras": 175,
+      "sha256": "e3c4951dc87b74c6ea0dc7d191e0f53be46679eebacf06d52fabb29a2b0d2dff",
+      "relevante_para": [
+        "Q4"
+      ],
+      "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+    },
+    {
+      "nombre": "doc001.txt",
+      "titulo": "Materiales de teléfonos",
+      "palabras": 178,
+      "sha256": "fd2a30ee966b5bd5ccb317e859d6ce3ca0ba88f3ea09fd78d5281d4483170290",
+      "relevante_para": [
+        "Q4"
+      ],
+      "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+    },
+    {
+      "nombre": "doc019.txt",
+      "titulo": "Recuperación de equipos informáticos",
+      "palabras": 176,
+      "sha256": "9340a13f0253a2abdb13e561bedfa288726f95e78411d589893d593a52ec731d",
+      "relevante_para": [
+        "Q4"
+      ],
+      "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+    },
+    {
+      "nombre": "doc026.txt",
+      "titulo": "Inscripción digital a un taller",
+      "palabras": 179,
+      "sha256": "9b0f0a12b5bafb225037baae1990674d803472684164b759722d0c5291fa8bb6",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc028.txt",
+      "titulo": "Ejercicios de una clase de sonido",
+      "palabras": 178,
+      "sha256": "8b9da880117db2460c671d2b028627611aa08b54edc1f2f4a4ecfbb7629284cd",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc017.txt",
+      "titulo": "Goteo en parcelas",
+      "palabras": 171,
+      "sha256": "2843224e13f097ce4a3e9fe6ae4a5bc825bba779a610e5e891decbae8b1979ac",
+      "relevante_para": [
+        "Q5"
+      ],
+      "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+    },
+    {
+      "nombre": "doc011.txt",
+      "titulo": "Sensores de humedad",
+      "palabras": 172,
+      "sha256": "b529fab57ff548b08e4e6dbd9a4c1c9bff90c31632e177dfe6ec28a867d55894",
+      "relevante_para": [
+        "Q5"
+      ],
+      "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+    },
+    {
+      "nombre": "doc013.txt",
+      "titulo": "Programación del suministro",
+      "palabras": 170,
+      "sha256": "989acbdb1f7e9b7883f264d768e7426830c590c69c986f15a770969ce6247280",
+      "relevante_para": [
+        "Q5"
+      ],
+      "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+    },
+    {
+      "nombre": "doc021.txt",
+      "titulo": "Agua para cultivos",
+      "palabras": 174,
+      "sha256": "5331da20104f856d373367054cae98988f3867b2f4ed120befa773fb3fd13148",
+      "relevante_para": [
+        "Q5"
+      ],
+      "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+    },
+    {
+      "nombre": "doc030.txt",
+      "titulo": "Archivo de un congreso",
+      "palabras": 172,
+      "sha256": "a73f48ee7cb130537684a2ae6ba6cfa8f3a14c45b5e3aefe3d8ece410d00ea27",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    },
+    {
+      "nombre": "doc007.txt",
+      "titulo": "Jardines ornamentales urbanos",
+      "palabras": 174,
+      "sha256": "eed70b341f39736a19df09f5659a22ad92573ae735a7d4e9f31914adf906e57d",
+      "relevante_para": [],
+      "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+    }
+  ]
+}

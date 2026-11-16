@@ -1,0 +1,5 @@
+Claves únicas por cuenta
+
+La seguridad de las cuentas mejora al utilizar contraseñas diferentes para cada servicio. Si una clave se divulga, reutilizarla puede facilitar accesos a otros sistemas. El documento explica cómo un gestor ayuda a organizar contraseñas y cómo se integra con un proceso de autenticación. Un segundo factor añade una comprobación al inicio de sesión. El caso describe el alta de usuarios, la verificación del acceso y la recuperación de credenciales. También revisa por qué el personal debe reconocer solicitudes engañosas que intentan obtener claves mediante formularios o mensajes.
+
+El caso utiliza cuentas ficticias de una organización educativa. El equipo responsable documenta los procedimientos y revisa que los participantes comprendan cada paso. La propuesta distingue el acceso cotidiano de las tareas de recuperación y administración. Las decisiones se registran junto con su propósito y con los recursos que requieren. La evaluación incluye observación del uso, revisión de incidentes simulados y actualización del material de capacitación. Los ejemplos permiten discutir el alcance de cada medida dentro del proyecto.
