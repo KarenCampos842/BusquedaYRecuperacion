@@ -13,7 +13,7 @@ El objetivo de este proyecto es centralizar y organizar el código, documentaci�
 - **Joseph Antonio García Avilés**
   <br><img src="Img/imagen_Joseph.jpg" alt="Foto de Joseph" width="200"/>
 - **Carlos Emmanuel Romero Poot**
-  <br><img src="Img/ImagenCharly.jpg" alt="Foto de Chaly" width="200"/>
+  <br><img src="Img/CarlosRomeroImg.jpeg" alt="Foto de Chaly" width="200"/>
   
 
 
