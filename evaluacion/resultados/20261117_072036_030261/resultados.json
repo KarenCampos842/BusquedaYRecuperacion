@@ -1,0 +1,2511 @@
+{
+  "fecha": "2026-11-17T07:20:36.030261-06:00",
+  "ejecucion": "20261117_072036_030261",
+  "protocolo_sha256": "2d9c899e0f1a1bf02478f07731284123b316faa6d8f3f37b7b042676e68748dc",
+  "protocolo": {
+    "origen": "Colección sintética redactada para esta actividad con asistencia de IA.",
+    "nombres": "Identificadores neutrales doc001 a doc030 asignados con random.Random(20261116).shuffle, antes de la ejecución definitiva.",
+    "diseno": "Cinco temas, tres relevantes con vocabulario directo, un relevante con paráfrasis y dos distractores por tema. Los seis textos de cada tema comparten un párrafo de contexto. Etiquetas binarias fijadas antes de buscar; sin ajuste posterior a los resultados.",
+    "consultas": [
+      {
+        "id": "Q1",
+        "consulta": "energía solar viviendas",
+        "criterio": "Explica el uso de energía solar para abastecer viviendas.",
+        "relevantes": [
+          "doc008.txt",
+          "doc014.txt",
+          "doc003.txt",
+          "doc002.txt"
+        ]
+      },
+      {
+        "id": "Q2",
+        "consulta": "prevención diabetes ejercicio",
+        "criterio": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2.",
+        "relevantes": [
+          "doc023.txt",
+          "doc005.txt",
+          "doc006.txt",
+          "doc016.txt"
+        ]
+      },
+      {
+        "id": "Q3",
+        "consulta": "seguridad contraseñas autenticación",
+        "criterio": "Explica protección de cuentas mediante contraseñas y autenticación.",
+        "relevantes": [
+          "doc010.txt",
+          "doc004.txt",
+          "doc009.txt",
+          "doc012.txt"
+        ]
+      },
+      {
+        "id": "Q4",
+        "consulta": "reciclaje residuos electrónicos",
+        "criterio": "Explica gestión y reciclaje de aparatos electrónicos desechados.",
+        "relevantes": [
+          "doc029.txt",
+          "doc025.txt",
+          "doc001.txt",
+          "doc019.txt"
+        ]
+      },
+      {
+        "id": "Q5",
+        "consulta": "riego eficiente agricultura",
+        "criterio": "Explica métodos para reducir el consumo de agua de riego agrícola.",
+        "relevantes": [
+          "doc017.txt",
+          "doc011.txt",
+          "doc013.txt",
+          "doc021.txt"
+        ]
+      }
+    ],
+    "documentos": [
+      {
+        "nombre": "doc008.txt",
+        "titulo": "Paneles en azoteas",
+        "palabras": 166,
+        "sha256": "d57fd14904a680fcaa6ef2c6e9173ae702fb047e9df530363f95516865318116",
+        "relevante_para": [
+          "Q1"
+        ],
+        "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+      },
+      {
+        "nombre": "doc014.txt",
+        "titulo": "Acumulación doméstica",
+        "palabras": 165,
+        "sha256": "58ea041fa737de9797922c49796a4fb296d788bab1fb8cbd6a3124e9ec55230d",
+        "relevante_para": [
+          "Q1"
+        ],
+        "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+      },
+      {
+        "nombre": "doc003.txt",
+        "titulo": "Agua caliente en casa",
+        "palabras": 167,
+        "sha256": "aacc5bc6f3e0bda56a1bc2c672e87e9038f37541e3c4c5ee92a3c3d9fca85a39",
+        "relevante_para": [
+          "Q1"
+        ],
+        "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+      },
+      {
+        "nombre": "doc002.txt",
+        "titulo": "Electricidad fotovoltaica residencial",
+        "palabras": 166,
+        "sha256": "0a580cbeeb3c1ab5ab89b808f14699853e85654bee0642ef1cefae1d27964b9e",
+        "relevante_para": [
+          "Q1"
+        ],
+        "justificacion": "Explica el uso de energía solar para abastecer viviendas."
+      },
+      {
+        "nombre": "doc018.txt",
+        "titulo": "Catálogo de una exposición",
+        "palabras": 170,
+        "sha256": "f2560b891073ffe68cf982beaae01b9f60fd5b464bd825533bc61afc31ccb366",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc027.txt",
+        "titulo": "Superficies de una urbanización",
+        "palabras": 172,
+        "sha256": "f31508ebfd2fd91af28e028acada3f52636839f10a5febd1efb6b17d70f47d20",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc023.txt",
+        "titulo": "Movimiento y metabolismo",
+        "palabras": 169,
+        "sha256": "759fdb10a47166e9c2518923dd84281ac857ab35e584c900084a9323f38a0028",
+        "relevante_para": [
+          "Q2"
+        ],
+        "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+      },
+      {
+        "nombre": "doc005.txt",
+        "titulo": "Programa de caminatas",
+        "palabras": 168,
+        "sha256": "4f8a2c0a5516d62f794349c2f3cab684633893879ffa37bcce4b439c6746163c",
+        "relevante_para": [
+          "Q2"
+        ],
+        "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+      },
+      {
+        "nombre": "doc006.txt",
+        "titulo": "Rutinas activas cotidianas",
+        "palabras": 170,
+        "sha256": "92dcb13272d1702d5f48e29cd7e8725ebc768cd5be172978f2f9b1db1b57e833",
+        "relevante_para": [
+          "Q2"
+        ],
+        "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+      },
+      {
+        "nombre": "doc016.txt",
+        "titulo": "Actividad física y riesgo metabólico",
+        "palabras": 170,
+        "sha256": "83db0a6b2492f10c9f7f24b182598cc6a567eada6472365ef97a13b4625ef17f",
+        "relevante_para": [
+          "Q2"
+        ],
+        "justificacion": "Explica cómo la actividad física contribuye a prevenir diabetes tipo 2."
+      },
+      {
+        "nombre": "doc022.txt",
+        "titulo": "Ejercicio de contabilidad hospitalaria",
+        "palabras": 173,
+        "sha256": "bab961a749f86fa841b772f484d6733ecc364f63c61902ec55ae1d8add7375bb",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc015.txt",
+        "titulo": "Boletín editorial de salud",
+        "palabras": 171,
+        "sha256": "22d164bad068047e5f1df1dbcc2c7686c0e66fbcf7ad513f738fae1236232293",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc010.txt",
+        "titulo": "Claves únicas por cuenta",
+        "palabras": 170,
+        "sha256": "61504a21d13d79c6abd0feb8f416f6d18e28f8c2be868870b8989848fffbc950",
+        "relevante_para": [
+          "Q3"
+        ],
+        "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+      },
+      {
+        "nombre": "doc004.txt",
+        "titulo": "Segundo factor",
+        "palabras": 170,
+        "sha256": "40288571458544d817a8b99089112aedf205343471cfd985556c6327c54c35f7",
+        "relevante_para": [
+          "Q3"
+        ],
+        "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+      },
+      {
+        "nombre": "doc009.txt",
+        "titulo": "Recuperación de credenciales",
+        "palabras": 171,
+        "sha256": "ed4b17bd53909d46692bce5a1357b32f46224581255be778a4ebbeb81e8ac6d9",
+        "relevante_para": [
+          "Q3"
+        ],
+        "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+      },
+      {
+        "nombre": "doc012.txt",
+        "titulo": "Protección del acceso digital",
+        "palabras": 172,
+        "sha256": "af9d470696ee52cf6d9553809a47bd582e6f357f83cf9e692321974bfb04a687",
+        "relevante_para": [
+          "Q3"
+        ],
+        "justificacion": "Explica protección de cuentas mediante contraseñas y autenticación."
+      },
+      {
+        "nombre": "doc020.txt",
+        "titulo": "Utilería para una obra",
+        "palabras": 176,
+        "sha256": "e0a64de9e6afbccc6840b95ecca1ea5c4530753b6714c16965bc17ad158008cd",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc024.txt",
+        "titulo": "Colección de documentos históricos",
+        "palabras": 174,
+        "sha256": "3e085e6c19b344fa59e3a106eab4b95fafcd2247f71737efa7890d2dcd41dd37",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc029.txt",
+        "titulo": "Ruta de aparatos desechados",
+        "palabras": 174,
+        "sha256": "b1587ad04bde05b8991d0015391043fec8b35a9fbb68e4e5d1c182d9b9d4fb00",
+        "relevante_para": [
+          "Q4"
+        ],
+        "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+      },
+      {
+        "nombre": "doc025.txt",
+        "titulo": "Acopio de computadoras",
+        "palabras": 175,
+        "sha256": "e3c4951dc87b74c6ea0dc7d191e0f53be46679eebacf06d52fabb29a2b0d2dff",
+        "relevante_para": [
+          "Q4"
+        ],
+        "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+      },
+      {
+        "nombre": "doc001.txt",
+        "titulo": "Materiales de teléfonos",
+        "palabras": 178,
+        "sha256": "fd2a30ee966b5bd5ccb317e859d6ce3ca0ba88f3ea09fd78d5281d4483170290",
+        "relevante_para": [
+          "Q4"
+        ],
+        "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+      },
+      {
+        "nombre": "doc019.txt",
+        "titulo": "Recuperación de equipos informáticos",
+        "palabras": 176,
+        "sha256": "9340a13f0253a2abdb13e561bedfa288726f95e78411d589893d593a52ec731d",
+        "relevante_para": [
+          "Q4"
+        ],
+        "justificacion": "Explica gestión y reciclaje de aparatos electrónicos desechados."
+      },
+      {
+        "nombre": "doc026.txt",
+        "titulo": "Inscripción digital a un taller",
+        "palabras": 179,
+        "sha256": "9b0f0a12b5bafb225037baae1990674d803472684164b759722d0c5291fa8bb6",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc028.txt",
+        "titulo": "Ejercicios de una clase de sonido",
+        "palabras": 178,
+        "sha256": "8b9da880117db2460c671d2b028627611aa08b54edc1f2f4a4ecfbb7629284cd",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc017.txt",
+        "titulo": "Goteo en parcelas",
+        "palabras": 171,
+        "sha256": "2843224e13f097ce4a3e9fe6ae4a5bc825bba779a610e5e891decbae8b1979ac",
+        "relevante_para": [
+          "Q5"
+        ],
+        "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+      },
+      {
+        "nombre": "doc011.txt",
+        "titulo": "Sensores de humedad",
+        "palabras": 172,
+        "sha256": "b529fab57ff548b08e4e6dbd9a4c1c9bff90c31632e177dfe6ec28a867d55894",
+        "relevante_para": [
+          "Q5"
+        ],
+        "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+      },
+      {
+        "nombre": "doc013.txt",
+        "titulo": "Programación del suministro",
+        "palabras": 170,
+        "sha256": "989acbdb1f7e9b7883f264d768e7426830c590c69c986f15a770969ce6247280",
+        "relevante_para": [
+          "Q5"
+        ],
+        "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+      },
+      {
+        "nombre": "doc021.txt",
+        "titulo": "Agua para cultivos",
+        "palabras": 174,
+        "sha256": "5331da20104f856d373367054cae98988f3867b2f4ed120befa773fb3fd13148",
+        "relevante_para": [
+          "Q5"
+        ],
+        "justificacion": "Explica métodos para reducir el consumo de agua de riego agrícola."
+      },
+      {
+        "nombre": "doc030.txt",
+        "titulo": "Archivo de un congreso",
+        "palabras": 172,
+        "sha256": "a73f48ee7cb130537684a2ae6ba6cfa8f3a14c45b5e3aefe3d8ece410d00ea27",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      },
+      {
+        "nombre": "doc007.txt",
+        "titulo": "Jardines ornamentales urbanos",
+        "palabras": 174,
+        "sha256": "eed70b341f39736a19df09f5659a22ad92573ae735a7d4e9f31914adf906e57d",
+        "relevante_para": [],
+        "justificacion": "Comparte vocabulario, pero su propósito no satisface la necesidad definida."
+      }
+    ]
+  },
+  "python": "3.14.8 (main, Oct 13 2026, 10:33:10) [GCC 16.2.1 20260810]",
+  "sistemas": {
+    "buscador2": {
+      "mysql": "8.0.46",
+      "base": "eval_buscador2_20261117_072036_030261",
+      "documentos": [
+        "doc001.txt",
+        "doc002.txt",
+        "doc003.txt",
+        "doc004.txt",
+        "doc005.txt",
+        "doc006.txt",
+        "doc007.txt",
+        "doc008.txt",
+        "doc009.txt",
+        "doc010.txt",
+        "doc011.txt",
+        "doc012.txt",
+        "doc013.txt",
+        "doc014.txt",
+        "doc015.txt",
+        "doc016.txt",
+        "doc017.txt",
+        "doc018.txt",
+        "doc019.txt",
+        "doc020.txt",
+        "doc021.txt",
+        "doc022.txt",
+        "doc023.txt",
+        "doc024.txt",
+        "doc025.txt",
+        "doc026.txt",
+        "doc027.txt",
+        "doc028.txt",
+        "doc029.txt",
+        "doc030.txt"
+      ],
+      "esquema_documentos": "CREATE TABLE `documentos` (\n  `id_documento` int NOT NULL AUTO_INCREMENT,\n  `nombre_archivo` varchar(255) COLLATE utf8mb4_bin NOT NULL,\n  `fecha_indexado` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `url` varchar(2048) COLLATE utf8mb4_bin NOT NULL,\n  `palabras` int NOT NULL,\n  `tokens` int NOT NULL,\n  `tamano` int NOT NULL,\n  PRIMARY KEY (`id_documento`),\n  UNIQUE KEY `nombre_archivo` (`nombre_archivo`)\n) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+      "variables_fulltext": {
+        "innodb_ft_aux_table": "",
+        "innodb_ft_cache_size": "8000000",
+        "innodb_ft_enable_diag_print": "OFF",
+        "innodb_ft_enable_stopword": "ON",
+        "innodb_ft_max_token_size": "84",
+        "innodb_ft_min_token_size": "3",
+        "innodb_ft_num_word_optimize": "2000",
+        "innodb_ft_result_cache_limit": "2000000000",
+        "innodb_ft_server_stopword_table": "",
+        "innodb_ft_sort_pll_degree": "2",
+        "innodb_ft_total_cache_size": "640000000",
+        "innodb_ft_user_stopword_table": ""
+      },
+      "stopwords_mysql": [],
+      "stopwords_sha256": "cdc36c899d9144db3cd28a4fe62c2fbf1185b70bc607e73ddc4ee4ee25d2dd08",
+      "consultas": {
+        "Q1": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc018.txt",
+              "fragmento": "Energía solar y viviendas del futuro. El documento",
+              "relevancia": 4.668907502301861,
+              "coseno": 0.26985293552717743,
+              "palabras": 170,
+              "tokens": 97,
+              "tamano": 1154,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "energia",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "solar",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "viviendas",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc027.txt",
+              "fragmento": "solar. El informe utiliza la palabra solar para id",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.2413929740075365,
+              "palabras": 172,
+              "tokens": 97,
+              "tamano": 1198,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "solar",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "viviendas",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "energia",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc014.txt",
+              "fragmento": "energía solar para viviendas puede incorporar bate",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.2033373723375462,
+              "palabras": 165,
+              "tokens": 91,
+              "tamano": 1145,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "energia",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "solar",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "viviendas",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc008.txt",
+              "fragmento": "energía solar puede abastecer viviendas mediante p",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.19417938220726152,
+              "palabras": 166,
+              "tokens": 96,
+              "tamano": 1163,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "energia",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "solar",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "viviendas",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc003.txt",
+              "fragmento": "energía solar en viviendas incluye colectores térm",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.14292396295210022,
+              "palabras": 167,
+              "tokens": 96,
+              "tamano": 1141,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "energia",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "solar",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "viviendas",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            }
+          ],
+          "terminos": [
+            "energia",
+            "solar",
+            "viviendas"
+          ],
+          "ignorados": [],
+          "total_documentos": 30
+        },
+        "Q2": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc005.txt",
+              "fragmento": "diabetes incorpora ejercicio mediante caminatas or",
+              "relevancia": 4.668907502301861,
+              "coseno": 0.2886399725954975,
+              "palabras": 168,
+              "tokens": 101,
+              "tamano": 1175,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "diabetes",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "ejercicio",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "prevencion",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc022.txt",
+              "fragmento": "Ejercicio de contabilidad hospitalaria  El curso d",
+              "relevancia": 4.668907502301861,
+              "coseno": 0.24614176164356766,
+              "palabras": 173,
+              "tokens": 107,
+              "tamano": 1233,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "ejercicio",
+                  "tf": 3,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 2.3344537511509307
+                },
+                {
+                  "termino": "diabetes",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "prevencion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc006.txt",
+              "fragmento": "diabetes tipo dos. Subir escaleras y realizar desp",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.15261449996919166,
+              "palabras": 170,
+              "tokens": 101,
+              "tamano": 1186,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "diabetes",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "ejercicio",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "prevencion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc023.txt",
+              "fragmento": "diabetes tipo dos se relaciona con hábitos de movi",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.13444131748058027,
+              "palabras": 169,
+              "tokens": 102,
+              "tamano": 1214,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "diabetes",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "ejercicio",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "prevencion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc015.txt",
+              "fragmento": "Diabetes figura como título de una novela sobre un",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.11872451736114294,
+              "palabras": 171,
+              "tokens": 105,
+              "tamano": 1212,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "diabetes",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "ejercicio",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "prevencion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            }
+          ],
+          "terminos": [
+            "prevencion",
+            "diabetes",
+            "ejercicio"
+          ],
+          "ignorados": [],
+          "total_documentos": 30
+        },
+        "Q3": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc020.txt",
+              "fragmento": "Contraseñas. El expediente de seguridad describe s",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.21948347250803435,
+              "palabras": 176,
+              "tokens": 102,
+              "tamano": 1222,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "contraseñas",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "seguridad",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "autenticacion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc010.txt",
+              "fragmento": "contraseñas diferentes para cada servicio. Si una",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.20579816369200143,
+              "palabras": 170,
+              "tokens": 99,
+              "tamano": 1177,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "contraseñas",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "autenticacion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "seguridad",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc024.txt",
+              "fragmento": "contraseñas escritas en papel. La autenticación de",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.17997220327010557,
+              "palabras": 174,
+              "tokens": 103,
+              "tamano": 1248,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "contraseñas",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "autenticacion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "seguridad",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc009.txt",
+              "fragmento": "autenticación durante la recuperación de cuentas.",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.1535546793416588,
+              "palabras": 171,
+              "tokens": 100,
+              "tamano": 1226,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "autenticacion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "contraseñas",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "seguridad",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc004.txt",
+              "fragmento": "autenticación con un segundo factor se incorpora a",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.14902431779290815,
+              "palabras": 170,
+              "tokens": 95,
+              "tamano": 1199,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "autenticacion",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "contraseñas",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "seguridad",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            }
+          ],
+          "terminos": [
+            "seguridad",
+            "contraseñas",
+            "autenticacion"
+          ],
+          "ignorados": [],
+          "total_documentos": 30
+        },
+        "Q4": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc025.txt",
+              "fragmento": "electrónicos procedentes de oficinas. El personal",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.2349971329124208,
+              "palabras": 175,
+              "tokens": 104,
+              "tamano": 1246,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "electronicos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "residuos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "reciclaje",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc026.txt",
+              "fragmento": "electrónicos para registrar asistentes. Los residu",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.21730494061170677,
+              "palabras": 179,
+              "tokens": 106,
+              "tamano": 1262,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "electronicos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "reciclaje",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "residuos",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc028.txt",
+              "fragmento": "electrónicos y una pieza titulada Residuos. El rec",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.2026973857004809,
+              "palabras": 178,
+              "tokens": 105,
+              "tamano": 1247,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "electronicos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "residuos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "reciclaje",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc029.txt",
+              "fragmento": "residuos electrónicos comienza con la separación d",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.20069888802078403,
+              "palabras": 174,
+              "tokens": 101,
+              "tamano": 1218,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "residuos",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "electronicos",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "reciclaje",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc001.txt",
+              "fragmento": "electrónicos que requieren una ruta de gestión. El",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.14125459678267857,
+              "palabras": 178,
+              "tokens": 104,
+              "tamano": 1277,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "electronicos",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "reciclaje",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "residuos",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            }
+          ],
+          "terminos": [
+            "reciclaje",
+            "residuos",
+            "electronicos"
+          ],
+          "ignorados": [],
+          "total_documentos": 30
+        },
+        "Q5": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc030.txt",
+              "fragmento": "agricultura conserva un expediente firmado por la",
+              "relevancia": 3.8907562519182184,
+              "coseno": 0.22712853697549654,
+              "palabras": 172,
+              "tokens": 101,
+              "tamano": 1193,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "agricultura",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "riego",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "eficiente",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc017.txt",
+              "fragmento": "riego por goteo permite un uso eficiente del agua",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.20569217977314522,
+              "palabras": 171,
+              "tokens": 97,
+              "tamano": 1136,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "riego",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "agricultura",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "eficiente",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc011.txt",
+              "fragmento": "riego eficiente en agricultura utiliza sensores pa",
+              "relevancia": 3.1126050015345745,
+              "coseno": 0.1937603111349108,
+              "palabras": 172,
+              "tokens": 99,
+              "tamano": 1174,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "riego",
+                  "tf": 2,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 1.5563025007672873
+                },
+                {
+                  "termino": "agricultura",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "eficiente",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc013.txt",
+              "fragmento": "agricultura considera el momento del día y las nec",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.16575464470301177,
+              "palabras": 170,
+              "tokens": 98,
+              "tamano": 1184,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "agricultura",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "eficiente",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "riego",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            },
+            {
+              "nombre_archivo": "doc007.txt",
+              "fragmento": "agricultura prestó vehículos para transportar herr",
+              "relevancia": 2.3344537511509307,
+              "coseno": 0.12546938494571805,
+              "palabras": 174,
+              "tokens": 102,
+              "tamano": 1216,
+              "fecha": "2026-11-17 13:20",
+              "detalle": [
+                {
+                  "termino": "agricultura",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "eficiente",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                },
+                {
+                  "termino": "riego",
+                  "tf": 1,
+                  "df": 5,
+                  "idf": 0.7781512503836436,
+                  "peso": 0.7781512503836436
+                }
+              ]
+            }
+          ],
+          "terminos": [
+            "riego",
+            "eficiente",
+            "agricultura"
+          ],
+          "ignorados": [],
+          "total_documentos": 30
+        }
+      },
+      "metricas": {
+        "Q1": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.3583333333333333,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc018.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc027.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc014.txt",
+              "relevante": true,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc008.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc003.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc002.txt"
+          ]
+        },
+        "Q2": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.6041666666666666,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc005.txt",
+              "relevante": true,
+              "precision": 1.0,
+              "recall": 0.25
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc022.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc006.txt",
+              "relevante": true,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc023.txt",
+              "relevante": true,
+              "precision": 0.75,
+              "recall": 0.75
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc015.txt",
+              "relevante": false,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            1.0,
+            1.0,
+            1.0,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc016.txt"
+          ]
+        },
+        "Q3": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.4,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc020.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc010.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc024.txt",
+              "relevante": false,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc009.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc004.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc012.txt"
+          ]
+        },
+        "Q4": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.525,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc025.txt",
+              "relevante": true,
+              "precision": 1.0,
+              "recall": 0.25
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc026.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc028.txt",
+              "relevante": false,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc029.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc001.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            1.0,
+            1.0,
+            1.0,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc019.txt"
+          ]
+        },
+        "Q5": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.47916666666666663,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc030.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc017.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc011.txt",
+              "relevante": true,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc013.txt",
+              "relevante": true,
+              "precision": 0.75,
+              "recall": 0.75
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc007.txt",
+              "relevante": false,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc021.txt"
+          ]
+        }
+      },
+      "MAP": 0.47333333333333333,
+      "curva_media": [
+        0.79,
+        0.79,
+        0.79,
+        0.6599999999999999,
+        0.6599999999999999,
+        0.6599999999999999,
+        0.6599999999999999,
+        0.6599999999999999,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "comprobaciones": {
+        "subida_formulario": 30,
+        "descargas_identicas": 30,
+        "documentos_en_base": 30,
+        "orden_http_igual_motor": true,
+        "consulta_sin_coincidencias": true,
+        "recarga_sin_duplicados": true,
+        "ranking_y_puntajes_estables_tras_recarga": true,
+        "metricas_validadas_con_fracciones": true
+      }
+    },
+    "empresarial": {
+      "mysql": "8.0.46",
+      "base": "eval_empresarial_20261117_072036_030261",
+      "documentos": [
+        "doc001.txt",
+        "doc002.txt",
+        "doc003.txt",
+        "doc004.txt",
+        "doc005.txt",
+        "doc006.txt",
+        "doc007.txt",
+        "doc008.txt",
+        "doc009.txt",
+        "doc010.txt",
+        "doc011.txt",
+        "doc012.txt",
+        "doc013.txt",
+        "doc014.txt",
+        "doc015.txt",
+        "doc016.txt",
+        "doc017.txt",
+        "doc018.txt",
+        "doc019.txt",
+        "doc020.txt",
+        "doc021.txt",
+        "doc022.txt",
+        "doc023.txt",
+        "doc024.txt",
+        "doc025.txt",
+        "doc026.txt",
+        "doc027.txt",
+        "doc028.txt",
+        "doc029.txt",
+        "doc030.txt"
+      ],
+      "esquema_documentos": "CREATE TABLE `documentos` (\n  `id_documento` int NOT NULL AUTO_INCREMENT,\n  `nombre_archivo` varchar(255) COLLATE utf8mb4_bin NOT NULL,\n  `fecha_indexado` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `url` varchar(2048) COLLATE utf8mb4_bin NOT NULL,\n  `palabras` int NOT NULL,\n  `tokens` int NOT NULL,\n  `tamano` int NOT NULL,\n  `contenido` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id_documento`),\n  UNIQUE KEY `nombre_archivo` (`nombre_archivo`),\n  FULLTEXT KEY `ft_contenido` (`contenido`)\n) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+      "variables_fulltext": {
+        "innodb_ft_aux_table": "",
+        "innodb_ft_cache_size": "8000000",
+        "innodb_ft_enable_diag_print": "OFF",
+        "innodb_ft_enable_stopword": "ON",
+        "innodb_ft_max_token_size": "84",
+        "innodb_ft_min_token_size": "3",
+        "innodb_ft_num_word_optimize": "2000",
+        "innodb_ft_result_cache_limit": "2000000000",
+        "innodb_ft_server_stopword_table": "",
+        "innodb_ft_sort_pll_degree": "2",
+        "innodb_ft_total_cache_size": "640000000",
+        "innodb_ft_user_stopword_table": ""
+      },
+      "stopwords_mysql": [
+        "a",
+        "al",
+        "algo",
+        "algunas",
+        "algunos",
+        "ante",
+        "antes",
+        "como",
+        "con",
+        "contra",
+        "cual",
+        "cuando",
+        "de",
+        "del",
+        "desde",
+        "donde",
+        "durante",
+        "e",
+        "el",
+        "ella",
+        "ellas",
+        "ellos",
+        "en",
+        "entre",
+        "era",
+        "eran",
+        "es",
+        "esa",
+        "esas",
+        "ese",
+        "eso",
+        "esos",
+        "esta",
+        "estaba",
+        "estan",
+        "estas",
+        "este",
+        "esto",
+        "estos",
+        "fue",
+        "fueron",
+        "ha",
+        "han",
+        "hasta",
+        "hay",
+        "la",
+        "las",
+        "le",
+        "les",
+        "lo",
+        "los",
+        "mas",
+        "me",
+        "mi",
+        "mis",
+        "mucho",
+        "muy",
+        "nada",
+        "ni",
+        "no",
+        "nos",
+        "o",
+        "otra",
+        "otras",
+        "otro",
+        "otros",
+        "para",
+        "pero",
+        "poco",
+        "por",
+        "porque",
+        "que",
+        "quien",
+        "se",
+        "sea",
+        "ser",
+        "si",
+        "sin",
+        "sobre",
+        "son",
+        "su",
+        "sus",
+        "tambien",
+        "te",
+        "tiene",
+        "tienen",
+        "todo",
+        "todos",
+        "tu",
+        "tus",
+        "un",
+        "una",
+        "unas",
+        "uno",
+        "unos",
+        "y",
+        "ya",
+        "yo"
+      ],
+      "stopwords_sha256": "cdc36c899d9144db3cd28a4fe62c2fbf1185b70bc607e73ddc4ee4ee25d2dd08",
+      "consultas": {
+        "Q1": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc018.txt",
+              "fragmento": "… museo prepara una exposición titulada Energía solar y viviendas del futuro. El documento organiza boletos, horarios y recorridos para grupos escolares. La sala principal contiene …",
+              "relevancia": 3.6331162452697754,
+              "palabras": 170,
+              "tokens": 97,
+              "tamano": 1154,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc027.txt",
+              "fragmento": "… oficina municipal registra las viviendas de una urbanización y la superficie de cada solar. El informe utiliza la palabra solar para identificar un terreno destinado a …",
+              "relevancia": 3.027596950531006,
+              "palabras": 172,
+              "tokens": 97,
+              "tamano": 1198,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc008.txt",
+              "fragmento": "Paneles en azoteas La energía solar puede abastecer viviendas mediante paneles fotovoltaicos instalados en la azotea. Un inversor transforma la electricidad producida para …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 166,
+              "tokens": 96,
+              "tamano": 1163,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc014.txt",
+              "fragmento": "… doméstica Una instalación de energía solar para viviendas puede incorporar baterías para utilizar parte de la producción después del atardecer. Este caso describe el recorrido de …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 165,
+              "tokens": 91,
+              "tamano": 1145,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc003.txt",
+              "fragmento": "… en casa El aprovechamiento de energía solar en viviendas incluye colectores térmicos para calentar agua. El circuito recibe radiación, transfiere calor y lo conserva en un …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 167,
+              "tokens": 96,
+              "tamano": 1141,
+              "fecha": "2026-11-17 13:20"
+            }
+          ],
+          "modo": {
+            "clave": "natural",
+            "nombre": "Lenguaje natural",
+            "modificador": "IN NATURAL LANGUAGE MODE",
+            "descripcion": "Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."
+          },
+          "palabras": [
+            "energia",
+            "solar",
+            "viviendas"
+          ],
+          "prefijos": [],
+          "ignorados": [],
+          "total_documentos": 30,
+          "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('energía solar viviendas' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('energía solar viviendas' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
+          "segundos": 0.0013692420034203678,
+          "error": ""
+        },
+        "Q2": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc005.txt",
+              "fragmento": "… caminatas Un programa comunitario de prevención de diabetes incorpora ejercicio mediante caminatas organizadas. Las sesiones buscan reducir el tiempo sedentario y crear una …",
+              "relevancia": 3.6331162452697754,
+              "palabras": 168,
+              "tokens": 101,
+              "tamano": 1175,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc022.txt",
+              "fragmento": "Ejercicio de contabilidad hospitalaria El curso de contabilidad plantea un ejercicio con facturas de una clínica llamada Diabetes. El ejercicio consiste en ordenar ingresos, …",
+              "relevancia": 3.6331162452697754,
+              "palabras": 173,
+              "tokens": 107,
+              "tamano": 1233,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc006.txt",
+              "fragmento": "Rutinas activas cotidianas El ejercicio cotidiano aparece en una estrategia educativa de prevención de diabetes tipo dos. Subir escaleras y realizar desplazamientos activos son …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 170,
+              "tokens": 101,
+              "tamano": 1186,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc015.txt",
+              "fragmento": "… un boletín con novedades editoriales. Diabetes figura como título de una novela sobre una familia, mientras Prevención es el nombre de una revista de arquitectura. El ejercicio de …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 171,
+              "tokens": 105,
+              "tamano": 1212,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc023.txt",
+              "fragmento": "Movimiento y metabolismo La prevención de diabetes tipo dos se relaciona con hábitos de movimiento sostenidos. El ejercicio favorece el uso de glucosa por los músculos y permite …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 169,
+              "tokens": 102,
+              "tamano": 1214,
+              "fecha": "2026-11-17 13:20"
+            }
+          ],
+          "modo": {
+            "clave": "natural",
+            "nombre": "Lenguaje natural",
+            "modificador": "IN NATURAL LANGUAGE MODE",
+            "descripcion": "Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."
+          },
+          "palabras": [
+            "prevencion",
+            "diabetes",
+            "ejercicio"
+          ],
+          "prefijos": [],
+          "ignorados": [],
+          "total_documentos": 30,
+          "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('prevención diabetes ejercicio' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('prevención diabetes ejercicio' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
+          "segundos": 0.001260420001926832,
+          "error": ""
+        },
+        "Q3": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc020.txt",
+              "fragmento": "… teatral prepara una obra llamada Contraseñas. El expediente de seguridad describe salidas de emergencia, extintores y capacidad de la sala. La autenticación de las firmas del …",
+              "relevancia": 3.0275967121124268,
+              "palabras": 176,
+              "tokens": 102,
+              "tamano": 1222,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc010.txt",
+              "fragmento": "Claves únicas por cuenta La seguridad de las cuentas mejora al utilizar contraseñas diferentes para cada servicio. Si una clave se divulga, reutilizarla puede facilitar accesos a …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 170,
+              "tokens": 99,
+              "tamano": 1177,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc024.txt",
+              "fragmento": "… conserva cartas militares con antiguas contraseñas escritas en papel. La autenticación de las piezas corresponde a especialistas que revisan tinta, sellos y procedencia. El plan …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 174,
+              "tokens": 103,
+              "tamano": 1248,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc004.txt",
+              "fragmento": "Segundo factor La autenticación con un segundo factor se incorpora a una política de seguridad de cuentas. Las contraseñas proporcionan una primera comprobación y un código o …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 170,
+              "tokens": 95,
+              "tamano": 1199,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc009.txt",
+              "fragmento": "… de credenciales Una política de seguridad debe considerar tanto las contraseñas como la autenticación durante la recuperación de cuentas. El texto describe la verificación de …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 171,
+              "tokens": 100,
+              "tamano": 1226,
+              "fecha": "2026-11-17 13:20"
+            }
+          ],
+          "modo": {
+            "clave": "natural",
+            "nombre": "Lenguaje natural",
+            "modificador": "IN NATURAL LANGUAGE MODE",
+            "descripcion": "Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."
+          },
+          "palabras": [
+            "seguridad",
+            "contraseñas",
+            "autenticacion"
+          ],
+          "prefijos": [],
+          "ignorados": [],
+          "total_documentos": 30,
+          "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('seguridad contraseñas autenticación' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('seguridad contraseñas autenticación' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
+          "segundos": 0.0012023830058751628,
+          "error": ""
+        },
+        "Q4": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc025.txt",
+              "fragmento": "Acopio de computadoras Una campaña de reciclaje recibe residuos electrónicos procedentes de oficinas. El personal reúne computadoras y periféricos, revisa su estado y separa los …",
+              "relevancia": 3.027596950531006,
+              "palabras": 175,
+              "tokens": 104,
+              "tamano": 1246,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc026.txt",
+              "fragmento": "… digital a un taller El taller de reciclaje de papel utiliza formularios electrónicos para registrar asistentes. Los residuos que se emplean en la actividad son hojas usadas y …",
+              "relevancia": 3.027596950531006,
+              "palabras": 179,
+              "tokens": 106,
+              "tamano": 1262,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc028.txt",
+              "fragmento": "… clase de música utiliza sonidos electrónicos y una pieza titulada Residuos. El reciclaje de motivos musicales consiste en repetir y transformar secuencias de notas. El documento …",
+              "relevancia": 3.027596950531006,
+              "palabras": 178,
+              "tokens": 105,
+              "tamano": 1247,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc029.txt",
+              "fragmento": "Ruta de aparatos desechados El reciclaje de residuos electrónicos comienza con la separación de aparatos que han dejado de utilizarse. Computadoras, teléfonos y cables se reciben …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 174,
+              "tokens": 101,
+              "tamano": 1218,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc001.txt",
+              "fragmento": "… desechados forman parte de los residuos electrónicos que requieren una ruta de gestión. El reciclaje permite separar materiales de carcasas y componentes internos mediante …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 178,
+              "tokens": 104,
+              "tamano": 1277,
+              "fecha": "2026-11-17 13:20"
+            }
+          ],
+          "modo": {
+            "clave": "natural",
+            "nombre": "Lenguaje natural",
+            "modificador": "IN NATURAL LANGUAGE MODE",
+            "descripcion": "Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."
+          },
+          "palabras": [
+            "reciclaje",
+            "residuos",
+            "electronicos"
+          ],
+          "prefijos": [],
+          "ignorados": [],
+          "total_documentos": 30,
+          "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('reciclaje residuos electrónicos' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('reciclaje residuos electrónicos' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
+          "segundos": 0.0010966359986923635,
+          "error": ""
+        },
+        "Q5": {
+          "resultados": [
+            {
+              "nombre_archivo": "doc030.txt",
+              "fragmento": "Archivo de un congreso El congreso de agricultura conserva un expediente firmado por la investigadora Ana Riego. El documento describe un sistema eficiente para registrar …",
+              "relevancia": 3.027596950531006,
+              "palabras": 172,
+              "tokens": 101,
+              "tamano": 1193,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc011.txt",
+              "fragmento": "Sensores de humedad Una estrategia de riego eficiente en agricultura utiliza sensores para observar la humedad del terreno. El equipo registra mediciones y programa aplicaciones …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 172,
+              "tokens": 99,
+              "tamano": 1174,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc017.txt",
+              "fragmento": "Goteo en parcelas El riego por goteo permite un uso eficiente del agua en agricultura al entregarla cerca de las raíces. El documento describe tuberías, emisores y controles para …",
+              "relevancia": 2.4220774173736572,
+              "palabras": 171,
+              "tokens": 97,
+              "tamano": 1136,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc007.txt",
+              "fragmento": "… ayuntamiento presenta un programa de riego eficiente para jardines ornamentales de avenidas. El texto describe horarios de mantenimiento de césped y macetas en espacios públicos. …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 174,
+              "tokens": 102,
+              "tamano": 1216,
+              "fecha": "2026-11-17 13:20"
+            },
+            {
+              "nombre_archivo": "doc013.txt",
+              "fragmento": "Programación del suministro El manejo eficiente del riego en agricultura considera el momento del día y las necesidades del cultivo. El documento explica cómo ajustar duración y …",
+              "relevancia": 1.8165581226348877,
+              "palabras": 170,
+              "tokens": 98,
+              "tamano": 1184,
+              "fecha": "2026-11-17 13:20"
+            }
+          ],
+          "modo": {
+            "clave": "natural",
+            "nombre": "Lenguaje natural",
+            "modificador": "IN NATURAL LANGUAGE MODE",
+            "descripcion": "Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."
+          },
+          "palabras": [
+            "riego",
+            "eficiente",
+            "agricultura"
+          ],
+          "prefijos": [],
+          "ignorados": [],
+          "total_documentos": 30,
+          "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('riego eficiente agricultura' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('riego eficiente agricultura' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
+          "segundos": 0.0010365990019636229,
+          "error": ""
+        }
+      },
+      "metricas": {
+        "Q1": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.3583333333333333,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc018.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc027.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc008.txt",
+              "relevante": true,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc014.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc003.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc002.txt"
+          ]
+        },
+        "Q2": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.5666666666666667,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc005.txt",
+              "relevante": true,
+              "precision": 1.0,
+              "recall": 0.25
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc022.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc006.txt",
+              "relevante": true,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc015.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc023.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            1.0,
+            1.0,
+            1.0,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc016.txt"
+          ]
+        },
+        "Q3": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.4,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc020.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc010.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc024.txt",
+              "relevante": false,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc004.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc009.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc012.txt"
+          ]
+        },
+        "Q4": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.525,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc025.txt",
+              "relevante": true,
+              "precision": 1.0,
+              "recall": 0.25
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc026.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc028.txt",
+              "relevante": false,
+              "precision": 0.3333333333333333,
+              "recall": 0.25
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc029.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc001.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            1.0,
+            1.0,
+            1.0,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc019.txt"
+          ]
+        },
+        "Q5": {
+          "TP": 3,
+          "FP": 2,
+          "FN": 1,
+          "TN": 24,
+          "precision": 0.6,
+          "recall": 0.75,
+          "accuracy": 0.9,
+          "AP": 0.44166666666666665,
+          "puntos": [
+            {
+              "posicion": 1,
+              "nombre": "doc030.txt",
+              "relevante": false,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            {
+              "posicion": 2,
+              "nombre": "doc011.txt",
+              "relevante": true,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            {
+              "posicion": 3,
+              "nombre": "doc017.txt",
+              "relevante": true,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            {
+              "posicion": 4,
+              "nombre": "doc007.txt",
+              "relevante": false,
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "posicion": 5,
+              "nombre": "doc013.txt",
+              "relevante": true,
+              "precision": 0.6,
+              "recall": 0.75
+            }
+          ],
+          "interpolada": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "relevantes_ausentes": [
+            "doc021.txt"
+          ]
+        }
+      },
+      "MAP": 0.4583333333333333,
+      "curva_media": [
+        0.7733333333333333,
+        0.7733333333333333,
+        0.7733333333333333,
+        0.6266666666666667,
+        0.6266666666666667,
+        0.6266666666666667,
+        0.6,
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "comprobaciones": {
+        "subida_formulario": 30,
+        "descargas_identicas": 30,
+        "documentos_en_base": 30,
+        "orden_http_igual_motor": true,
+        "consulta_sin_coincidencias": true,
+        "recarga_sin_duplicados": true,
+        "ranking_y_puntajes_estables_tras_recarga": true,
+        "metricas_validadas_con_fracciones": true
+      }
+    }
+  },
+  "dependencias": {
+    "PyMySQL": "1.2.4",
+    "reportlab": "5.1.0",
+    "matplotlib": "3.11.2",
+    "pypdf": "7.1.0",
+    "PyMuPDF": "2.1"
+  },
+  "fuentes_sha256": {
+    "buscador2/main.py": "d1e7ffbc9b7dce3bc7fd5ad596b36de39e9aa99e455a10cdee12c5d892134382",
+    "buscador2/texto.py": "a3ce3513e3ef8e3349924c755ce1dc7066bc3bdd3c8571deef8ab3bcc676d252",
+    "buscador2/base_datos/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/base_datos/conexion.py": "74cd1212c75315946000bcb9019785c456f30200efa6c84477059bb5a3a3cdae",
+    "buscador2/base_datos/inicializador.py": "eb549a3f0f30ea22aaf89fe287edc78dba2ed12a31e92030b67525a70c145398",
+    "buscador2/busqueda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/busqueda/motor_busqueda.py": "154b0a4368c5691c411104cec5ac8094366e6576e73a3281993b32d4c7cd0ad5",
+    "buscador2/busqueda/ranking.py": "a6bbeb91cf2a95eb3b6528a73e260a933a2d0edc1698266459eb0256d08dee2f",
+    "buscador2/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/config/ajustes.py": "d9f2557155fae4556a7160aa62c3e250bf67633360c3698617bd014586a0cc82",
+    "buscador2/indexacion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/indexacion/almacen_archivos.py": "7e1071fc54092e3362c08015bcf4de7f5bb88389077a496ee81686028724f733",
+    "buscador2/indexacion/indexador_incremental.py": "3a74a293b9ff4661131a31d08725de3159ca350b69dc0eddbdcd33e1a1c8c970",
+    "buscador2/web/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/web/lector_multipart.py": "f23f0a87d556827c43241f8a759ef1eee6fbefccc1e5430954c04b46d5d78139",
+    "buscador2/web/respuestas.py": "11de79c18e9b857e8e36038bbcb8425e8a10a9eee6354533f1e5736d7db5b0a6",
+    "buscador2/web/servidor.py": "2f83b4530b98f278225c520c2e78d2734fa2194731c0cf704e2517080a7f7f7b",
+    "buscador2/web/controladores.py": "e2ae868bd505b3444d415329d5108156ac7adb13a2f2c455504fa40abef6a92b",
+    "buscador2/web/vistas.py": "5579e2045efc38fc734c2754dcca507bde4f4d6be5801dc0d2f3ec2312fa42b2",
+    "buscador2/base_datos/repositorios/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/base_datos/repositorios/repositorio_diccionario.py": "e31a3c55d527db6c98e654f34b314b4d01fa0ad76973a226a4d949e8c1910f7a",
+    "buscador2/base_datos/repositorios/repositorio_documentos.py": "2e8ed0e058cc24ff62e943e22736f24771d10acf1da69947d17eb80c9470d724",
+    "buscador2/base_datos/repositorios/repositorio_posicion.py": "b9ce130e5a001ab84c0becfe485668a9cd8ff1bce13393faa748237ba7d8e00e",
+    "buscador2/base_datos/repositorios/repositorio_posting.py": "5ce376230490bb310900755ffde4d7ced59e38022f6ca14456c7163842b04f8a",
+    "Busqueda empresarial/main.py": "2d7719fd3146c18e37f5f11ac84a7dd7406c5205e91b31109bf9762bb9fabc25",
+    "Busqueda empresarial/reconstruir_indice.py": "bbd8599c7eef837d734fe32c4f9637002e2678ae8040b088923639823537062a",
+    "Busqueda empresarial/texto.py": "6832f98d706588c5be4388e5629ea8e7ac18f0b50d79844b234ef4b1becbae2e",
+    "Busqueda empresarial/base_datos/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/base_datos/conexion.py": "74cd1212c75315946000bcb9019785c456f30200efa6c84477059bb5a3a3cdae",
+    "Busqueda empresarial/base_datos/inicializador.py": "b39024f952c14193d4df0b965888224e84aca18a12c6f9057ef194895ec9a97c",
+    "Busqueda empresarial/busqueda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/busqueda/motor_busqueda.py": "8c0c2434f054336a06369ffee5f827dc48d2f48b33f058b76c3cc2df4c13758f",
+    "Busqueda empresarial/busqueda/ranking.py": "d70d57862b6d298080e881687f7060afd8614a0fa0fbc0749c6a7380e8f5affc",
+    "Busqueda empresarial/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/config/ajustes.py": "cb13bdb18a2f1968699b4a7b67077f00785ae635253eb6e2c918f651b68d4be1",
+    "Busqueda empresarial/indexacion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/indexacion/almacen_archivos.py": "1344218390818a182fb26286e9b0fb066d8e41760cc683d0f5dc96e80482de53",
+    "Busqueda empresarial/indexacion/indexador_incremental.py": "dbec6fa9b10af496baf1c47abc935b42f9d5b845234fc74c5908354d9d4f31a5",
+    "Busqueda empresarial/web/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/web/controladores.py": "a2ca48ee58bf1fa899493fc091584e869378793b2fe42f2d6bca400e85adb76d",
+    "Busqueda empresarial/web/lector_multipart.py": "f23f0a87d556827c43241f8a759ef1eee6fbefccc1e5430954c04b46d5d78139",
+    "Busqueda empresarial/web/respuestas.py": "11de79c18e9b857e8e36038bbcb8425e8a10a9eee6354533f1e5736d7db5b0a6",
+    "Busqueda empresarial/web/servidor.py": "2f83b4530b98f278225c520c2e78d2734fa2194731c0cf704e2517080a7f7f7b",
+    "Busqueda empresarial/web/vistas.py": "e5603a802f4c19c68eeb79346e47d9655cd025a985446bcda32e0b39e0de010c",
+    "Busqueda empresarial/base_datos/repositorios/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_documentos.py": "ca213fc3994e0bd3d8151748cf811d99e63e96dfa21c13d53505dc0857fbdd87",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_fulltext.py": "656429b2798687d537297d51fcdf0097e3aeb83e4a5b2fadff247d9566a6cbd4",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_stopwords.py": "fec56c75062595bf08687530356a31cff78f6f8121d3d727f24fd1c449f56f61"
+  },
+  "git_commit": "8f0cf333ce51d787fded0b0fc4d90685c655684d"
+}

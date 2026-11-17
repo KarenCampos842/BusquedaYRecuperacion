@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultados · Indexador</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="/estaticos/css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado encabezado-resultados">
+    <a href="/" class="logo">Indexador<span class="logo-punto">.</span></a>
+
+    <form action="/buscar" method="get" class="buscador buscador-chico" role="search">
+      <svg class="icono buscador-icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input type="search" name="q" id="q" class="buscador-input" value="seguridad contraseñas autenticación" aria-label="Buscar en los documentos" required>
+      <button type="submit" class="buscador-btn" aria-label="Buscar">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+
+    <a href="#subir" class="btn-subir" title="Subir archivos .txt" aria-label="Subir archivos .txt">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+    </a>
+  </header>
+
+  <main class="resultados">
+    
+    <p class="resumen">
+      5 documentos encontrados para <strong>“seguridad contraseñas autenticación”</strong> · ordenados por relevancia tf-idf
+    </p>
+
+    <ol class="lista-resultados">
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc020.txt" download class="resultado-titulo">Doc020</a>
+            <p class="resultado-archivo">doc020.txt</p>
+            <p class="resultado-fragmento"><mark>Contraseñas</mark>. El expediente de <mark>seguridad</mark> describe s</p>
+            <p class="resultado-meta">
+              <span>176 palabras</span>
+              <span>102 tokens indexados</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc020.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>3.8908</dd></div>
+            <div><dt>Coseno</dt><dd>0.2195</dd></div>
+          </dl>
+        </div>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody><tr><td>contraseñas</td><td>2</td><td>5</td><td>0.7782</td><td>1.5563</td></tr><tr><td>seguridad</td><td>2</td><td>5</td><td>0.7782</td><td>1.5563</td></tr><tr><td>autenticacion</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>3.8908</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = 30 documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
+      </li>
+            <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc010.txt" download class="resultado-titulo">Doc010</a>
+            <p class="resultado-archivo">doc010.txt</p>
+            <p class="resultado-fragmento"><mark>contraseñas</mark> diferentes para cada servicio. Si una</p>
+            <p class="resultado-meta">
+              <span>170 palabras</span>
+              <span>99 tokens indexados</span>
+              <span>1.1 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc010.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>3.1126</dd></div>
+            <div><dt>Coseno</dt><dd>0.2058</dd></div>
+          </dl>
+        </div>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody><tr><td>contraseñas</td><td>2</td><td>5</td><td>0.7782</td><td>1.5563</td></tr><tr><td>autenticacion</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>seguridad</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>3.1126</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = 30 documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
+      </li>
+            <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc024.txt" download class="resultado-titulo">Doc024</a>
+            <p class="resultado-archivo">doc024.txt</p>
+            <p class="resultado-fragmento"><mark>contraseñas</mark> escritas en papel. La <mark>autenticación</mark> de</p>
+            <p class="resultado-meta">
+              <span>174 palabras</span>
+              <span>103 tokens indexados</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc024.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>3.1126</dd></div>
+            <div><dt>Coseno</dt><dd>0.1800</dd></div>
+          </dl>
+        </div>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody><tr><td>contraseñas</td><td>2</td><td>5</td><td>0.7782</td><td>1.5563</td></tr><tr><td>autenticacion</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>seguridad</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>3.1126</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = 30 documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
+      </li>
+            <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc009.txt" download class="resultado-titulo">Doc009</a>
+            <p class="resultado-archivo">doc009.txt</p>
+            <p class="resultado-fragmento"><mark>autenticación</mark> durante la recuperación de cuentas.</p>
+            <p class="resultado-meta">
+              <span>171 palabras</span>
+              <span>100 tokens indexados</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc009.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>2.3345</dd></div>
+            <div><dt>Coseno</dt><dd>0.1536</dd></div>
+          </dl>
+        </div>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody><tr><td>autenticacion</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>contraseñas</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>seguridad</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>2.3345</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = 30 documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
+      </li>
+            <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc004.txt" download class="resultado-titulo">Doc004</a>
+            <p class="resultado-archivo">doc004.txt</p>
+            <p class="resultado-fragmento"><mark>autenticación</mark> con un segundo factor se incorpora a</p>
+            <p class="resultado-meta">
+              <span>170 palabras</span>
+              <span>95 tokens indexados</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc004.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia tf-idf</dt><dd>2.3345</dd></div>
+            <div><dt>Coseno</dt><dd>0.1490</dd></div>
+          </dl>
+        </div>
+
+        <details class="calculo">
+          <summary>Ver cálculo tf-idf</summary>
+          <div class="calculo-caja">
+            <table class="calculo-tabla">
+              <thead>
+                <tr><th>Término</th><th>tf</th><th>df</th><th>idf</th><th>Peso</th></tr>
+              </thead>
+              <tbody><tr><td>autenticacion</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>contraseñas</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr><tr><td>seguridad</td><td>1</td><td>5</td><td>0.7782</td><td>0.7782</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="4">Relevancia (suma de pesos)</td><td>2.3345</td></tr>
+              </tfoot>
+            </table>
+            <p class="calculo-nota">
+              idf = log10(N / df) con N = 30 documentos. Peso = tf × idf.
+              Un término que aparece en todos los documentos tiene idf = 0 y no aporta.
+            </p>
+          </div>
+        </details>
+      </li>
+      
+    </ol>
+
+    <p class="nota-orden">
+      Cuando dos documentos empatan en relevancia tf-idf, se ordenan por el valor del coseno.
+    </p>
+  </main>
+
+  <div id="subir" class="modal-subir" role="dialog" aria-labelledby="titulo-subir" aria-modal="true">
+    <a href="#" class="modal-fondo" aria-label="Cerrar"></a>
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2 id="titulo-subir" class="modal-titulo">Subir archivos</h2>
+        <a href="#" class="modal-cerrar" aria-label="Cerrar">&times;</a>
+      </div>
+      <form action="/subir" method="post" enctype="multipart/form-data">
+        <label for="archivos" class="zona-carga">
+          <svg class="icono zona-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-6M9.5 13.5L12 11l2.5 2.5"/></svg>
+          <span class="zona-titulo">Elige tus archivos de texto</span>
+          <span class="zona-texto">Puedes seleccionar varios a la vez · solo .txt</span>
+        </label>
+        <input class="campo-archivo" type="file" id="archivos" name="archivos[]" accept=".txt,text/plain" multiple required>
+        <p class="modal-nota">Al subirlos se guardan en el servidor y se actualiza el índice invertido.</p>
+        <div class="modal-acciones">
+          <a href="#" class="btn btn-claro">Cancelar</a>
+          <button type="submit" class="btn btn-indexador">Subir e indizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

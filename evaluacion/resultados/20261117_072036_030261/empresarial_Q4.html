@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultados · Búsqueda empresarial</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="/estaticos/css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado encabezado-resultados">
+    <a href="/" class="logo">Empresarial<span class="logo-punto">.</span></a>
+
+    <form action="/buscar" method="get" class="buscador buscador-chico" role="search" id="form-busqueda">
+      <svg class="icono buscador-icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input type="search" name="q" id="q" class="buscador-input" value="reciclaje residuos electrónicos" aria-label="Buscar en los documentos" required>
+      <button type="submit" class="buscador-btn" aria-label="Buscar">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+
+    <a href="#subir" class="btn-subir" title="Subir archivos .txt" aria-label="Subir archivos .txt">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+    </a>
+  </header>
+
+  <main class="resultados">
+    <fieldset class="modos modos-resultados">
+      <legend class="modos-titulo">Modo de búsqueda</legend>
+      <label class="modo" title="Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."><input type="radio" name="modo" value="natural" form="form-busqueda" checked><span>Lenguaje natural</span></label><label class="modo" title="Operadores: +obligatoria  -excluida  palabra*  &quot;frase exacta&quot;  &gt;más peso  &lt;menos peso  ~resta  ( )."><input type="radio" name="modo" value="booleano" form="form-busqueda"><span>Booleano</span></label><label class="modo" title="Busca dos veces: la segunda agrega palabras de los mejores resultados de la primera."><input type="radio" name="modo" value="expansion" form="form-busqueda"><span>Expansión de consulta</span></label>
+    </fieldset>
+
+    
+    <p class="resumen">
+      5 documentos encontrados para <strong>“reciclaje residuos electrónicos”</strong> · modo <strong>Lenguaje natural</strong> ·
+      ordenados por relevancia de MySQL · 0.0013 s
+    </p>
+
+    <ol class="lista-resultados">
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc025.txt" download class="resultado-titulo">Doc025</a>
+            <p class="resultado-archivo">doc025.txt</p>
+            <p class="resultado-fragmento">Acopio de computadoras Una campaña de <mark>reciclaje</mark> recibe <mark>residuos</mark> <mark>electrónicos</mark> procedentes de oficinas. El personal reúne computadoras y periféricos, revisa su estado y separa los …</p>
+            <p class="resultado-meta">
+              <span>175 palabras</span>
+              <span>104 tokens indexables</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc025.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia MySQL</dt><dd>3.027597</dd></div>
+            <div><dt>Posición</dt><dd>#1</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc026.txt" download class="resultado-titulo">Doc026</a>
+            <p class="resultado-archivo">doc026.txt</p>
+            <p class="resultado-fragmento">… digital a un taller El taller de <mark>reciclaje</mark> de papel utiliza formularios <mark>electrónicos</mark> para registrar asistentes. Los <mark>residuos</mark> que se emplean en la actividad son hojas usadas y …</p>
+            <p class="resultado-meta">
+              <span>179 palabras</span>
+              <span>106 tokens indexables</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc026.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia MySQL</dt><dd>3.027597</dd></div>
+            <div><dt>Posición</dt><dd>#2</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc028.txt" download class="resultado-titulo">Doc028</a>
+            <p class="resultado-archivo">doc028.txt</p>
+            <p class="resultado-fragmento">… clase de música utiliza sonidos <mark>electrónicos</mark> y una pieza titulada <mark>Residuos</mark>. El <mark>reciclaje</mark> de motivos musicales consiste en repetir y transformar secuencias de notas. El documento …</p>
+            <p class="resultado-meta">
+              <span>178 palabras</span>
+              <span>105 tokens indexables</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc028.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia MySQL</dt><dd>3.027597</dd></div>
+            <div><dt>Posición</dt><dd>#3</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc029.txt" download class="resultado-titulo">Doc029</a>
+            <p class="resultado-archivo">doc029.txt</p>
+            <p class="resultado-fragmento">Ruta de aparatos desechados El <mark>reciclaje</mark> de <mark>residuos</mark> <mark>electrónicos</mark> comienza con la separación de aparatos que han dejado de utilizarse. Computadoras, teléfonos y cables se reciben …</p>
+            <p class="resultado-meta">
+              <span>174 palabras</span>
+              <span>101 tokens indexables</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc029.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia MySQL</dt><dd>2.422077</dd></div>
+            <div><dt>Posición</dt><dd>#4</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="resultado">
+        <div class="resultado-fila">
+          <div class="resultado-cuerpo">
+            <a href="/archivos/doc001.txt" download class="resultado-titulo">Doc001</a>
+            <p class="resultado-archivo">doc001.txt</p>
+            <p class="resultado-fragmento">… desechados forman parte de los <mark>residuos</mark> <mark>electrónicos</mark> que requieren una ruta de gestión. El <mark>reciclaje</mark> permite separar materiales de carcasas y componentes internos mediante …</p>
+            <p class="resultado-meta">
+              <span>178 palabras</span>
+              <span>104 tokens indexables</span>
+              <span>1.2 KB</span>
+              <span>2026-11-17 13:20</span>
+            </p>
+            <a href="/archivos/doc001.txt" download class="resultado-descarga">Descargar</a>
+          </div>
+          <dl class="valores">
+            <div><dt>Relevancia MySQL</dt><dd>1.816558</dd></div>
+            <div><dt>Posición</dt><dd>#5</dd></div>
+          </dl>
+        </div>
+      </li>
+
+    </ol>
+
+    <details class="calculo consulta-sql">
+      <summary>Ver la consulta SQL enviada a MySQL</summary>
+      <div class="calculo-caja">
+        <pre class="sql">SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST (&#x27;reciclaje residuos electrónicos&#x27; IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST (&#x27;reciclaje residuos electrónicos&#x27; IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo</pre>
+        <p class="calculo-nota">
+          Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan.
+          En InnoDB, la relevancia de cada palabra es tf × idf × idf, con idf = log10(N / df)
+          y N = 30 documentos; la relevancia del documento es la suma.
+          MySQL no calcula el coseno ni da el detalle por palabra.
+        </p>
+      </div>
+    </details>
+  </main>
+
+  <div id="subir" class="modal-subir" role="dialog" aria-labelledby="titulo-subir" aria-modal="true">
+    <a href="#" class="modal-fondo" aria-label="Cerrar"></a>
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2 id="titulo-subir" class="modal-titulo">Subir archivos</h2>
+        <a href="#" class="modal-cerrar" aria-label="Cerrar">&times;</a>
+      </div>
+      <form action="/subir" method="post" enctype="multipart/form-data">
+        <label for="archivos" class="zona-carga">
+          <svg class="icono zona-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-6M9.5 13.5L12 11l2.5 2.5"/></svg>
+          <span class="zona-titulo">Elige tus archivos de texto</span>
+          <span class="zona-texto">Puedes seleccionar varios a la vez · solo .txt</span>
+        </label>
+        <input class="campo-archivo" type="file" id="archivos" name="archivos[]" accept=".txt,text/plain" multiple required>
+        <p class="modal-nota">El texto completo de cada archivo se guarda en MySQL y se agrega al índice FULLTEXT.</p>
+        <div class="modal-acciones">
+          <a href="#" class="btn btn-claro">Cancelar</a>
+          <button type="submit" class="btn btn-indexador">Subir e indizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-11-16T11:32:39.660314-06:00",
-  "ejecucion": "20261116_113239_660314",
+  "fecha": "2026-11-17T07:20:36.030261-06:00",
+  "ejecucion": "20261117_072036_030261",
   "protocolo_sha256": "2d9c899e0f1a1bf02478f07731284123b316faa6d8f3f37b7b042676e68748dc",
   "protocolo": {
     "origen": "Colección sintética redactada para esta actividad con asistencia de IA.",
@@ -346,11 +346,11 @@
       }
     ]
   },
-  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "python": "3.14.8 (main, Oct 13 2026, 10:33:10) [GCC 16.2.1 20260810]",
   "sistemas": {
     "buscador2": {
-      "mysql": "8.0.44",
-      "base": "eval_buscador2_20261116_113239_660314",
+      "mysql": "8.0.46",
+      "base": "eval_buscador2_20261117_072036_030261",
       "documentos": [
         "doc001.txt",
         "doc002.txt",
@@ -399,7 +399,7 @@
         "innodb_ft_user_stopword_table": ""
       },
       "stopwords_mysql": [],
-      "stopwords_sha256": "938b383fb4311624ee1dc7c1983a365cd9eda76617a20c3b75f13ef9d31bdbce",
+      "stopwords_sha256": "cdc36c899d9144db3cd28a4fe62c2fbf1185b70bc607e73ddc4ee4ee25d2dd08",
       "consultas": {
         "Q1": {
           "resultados": [
@@ -411,7 +411,7 @@
               "palabras": 170,
               "tokens": 97,
               "tamano": 1154,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "energia",
@@ -444,7 +444,7 @@
               "palabras": 172,
               "tokens": 97,
               "tamano": 1198,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "solar",
@@ -477,7 +477,7 @@
               "palabras": 165,
               "tokens": 91,
               "tamano": 1145,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "energia",
@@ -510,7 +510,7 @@
               "palabras": 166,
               "tokens": 96,
               "tamano": 1163,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "energia",
@@ -543,7 +543,7 @@
               "palabras": 167,
               "tokens": 96,
               "tamano": 1141,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "energia",
@@ -587,7 +587,7 @@
               "palabras": 168,
               "tokens": 101,
               "tamano": 1175,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "diabetes",
@@ -620,7 +620,7 @@
               "palabras": 173,
               "tokens": 107,
               "tamano": 1233,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "ejercicio",
@@ -653,7 +653,7 @@
               "palabras": 170,
               "tokens": 101,
               "tamano": 1186,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "diabetes",
@@ -686,7 +686,7 @@
               "palabras": 169,
               "tokens": 102,
               "tamano": 1214,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "diabetes",
@@ -719,7 +719,7 @@
               "palabras": 171,
               "tokens": 105,
               "tamano": 1212,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "diabetes",
@@ -763,7 +763,7 @@
               "palabras": 176,
               "tokens": 102,
               "tamano": 1222,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "contraseñas",
@@ -796,7 +796,7 @@
               "palabras": 170,
               "tokens": 99,
               "tamano": 1177,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "contraseñas",
@@ -829,7 +829,7 @@
               "palabras": 174,
               "tokens": 103,
               "tamano": 1248,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "contraseñas",
@@ -862,7 +862,7 @@
               "palabras": 171,
               "tokens": 100,
               "tamano": 1226,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "autenticacion",
@@ -895,7 +895,7 @@
               "palabras": 170,
               "tokens": 95,
               "tamano": 1199,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "autenticacion",
@@ -939,7 +939,7 @@
               "palabras": 175,
               "tokens": 104,
               "tamano": 1246,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "electronicos",
@@ -972,7 +972,7 @@
               "palabras": 179,
               "tokens": 106,
               "tamano": 1262,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "electronicos",
@@ -1005,7 +1005,7 @@
               "palabras": 178,
               "tokens": 105,
               "tamano": 1247,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "electronicos",
@@ -1038,7 +1038,7 @@
               "palabras": 174,
               "tokens": 101,
               "tamano": 1218,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "residuos",
@@ -1071,7 +1071,7 @@
               "palabras": 178,
               "tokens": 104,
               "tamano": 1277,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "electronicos",
@@ -1115,7 +1115,7 @@
               "palabras": 172,
               "tokens": 101,
               "tamano": 1193,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "agricultura",
@@ -1148,7 +1148,7 @@
               "palabras": 171,
               "tokens": 97,
               "tamano": 1136,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "riego",
@@ -1181,7 +1181,7 @@
               "palabras": 172,
               "tokens": 99,
               "tamano": 1174,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "riego",
@@ -1214,7 +1214,7 @@
               "palabras": 170,
               "tokens": 98,
               "tamano": 1184,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "agricultura",
@@ -1247,7 +1247,7 @@
               "palabras": 174,
               "tokens": 102,
               "tamano": 1216,
-              "fecha": "2026-11-16 11:32",
+              "fecha": "2026-11-17 13:20",
               "detalle": [
                 {
                   "termino": "agricultura",
@@ -1625,8 +1625,8 @@
       }
     },
     "empresarial": {
-      "mysql": "8.0.44",
-      "base": "eval_empresarial_20261116_113239_660314",
+      "mysql": "8.0.46",
+      "base": "eval_empresarial_20261117_072036_030261",
       "documentos": [
         "doc001.txt",
         "doc002.txt",
@@ -1774,7 +1774,7 @@
         "ya",
         "yo"
       ],
-      "stopwords_sha256": "938b383fb4311624ee1dc7c1983a365cd9eda76617a20c3b75f13ef9d31bdbce",
+      "stopwords_sha256": "cdc36c899d9144db3cd28a4fe62c2fbf1185b70bc607e73ddc4ee4ee25d2dd08",
       "consultas": {
         "Q1": {
           "resultados": [
@@ -1785,7 +1785,7 @@
               "palabras": 170,
               "tokens": 97,
               "tamano": 1154,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc027.txt",
@@ -1794,7 +1794,7 @@
               "palabras": 172,
               "tokens": 97,
               "tamano": 1198,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc008.txt",
@@ -1803,7 +1803,7 @@
               "palabras": 166,
               "tokens": 96,
               "tamano": 1163,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc014.txt",
@@ -1812,7 +1812,7 @@
               "palabras": 165,
               "tokens": 91,
               "tamano": 1145,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc003.txt",
@@ -1821,7 +1821,7 @@
               "palabras": 167,
               "tokens": 96,
               "tamano": 1141,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             }
           ],
           "modo": {
@@ -1839,7 +1839,7 @@
           "ignorados": [],
           "total_documentos": 30,
           "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('energía solar viviendas' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('energía solar viviendas' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
-          "segundos": 0.0007327000057557598,
+          "segundos": 0.0013692420034203678,
           "error": ""
         },
         "Q2": {
@@ -1851,7 +1851,7 @@
               "palabras": 168,
               "tokens": 101,
               "tamano": 1175,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc022.txt",
@@ -1860,7 +1860,7 @@
               "palabras": 173,
               "tokens": 107,
               "tamano": 1233,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc006.txt",
@@ -1869,7 +1869,7 @@
               "palabras": 170,
               "tokens": 101,
               "tamano": 1186,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc015.txt",
@@ -1878,7 +1878,7 @@
               "palabras": 171,
               "tokens": 105,
               "tamano": 1212,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc023.txt",
@@ -1887,7 +1887,7 @@
               "palabras": 169,
               "tokens": 102,
               "tamano": 1214,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             }
           ],
           "modo": {
@@ -1905,7 +1905,7 @@
           "ignorados": [],
           "total_documentos": 30,
           "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('prevención diabetes ejercicio' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('prevención diabetes ejercicio' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
-          "segundos": 0.0009692000021459535,
+          "segundos": 0.001260420001926832,
           "error": ""
         },
         "Q3": {
@@ -1917,7 +1917,7 @@
               "palabras": 176,
               "tokens": 102,
               "tamano": 1222,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc010.txt",
@@ -1926,7 +1926,7 @@
               "palabras": 170,
               "tokens": 99,
               "tamano": 1177,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc024.txt",
@@ -1935,7 +1935,7 @@
               "palabras": 174,
               "tokens": 103,
               "tamano": 1248,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc004.txt",
@@ -1944,7 +1944,7 @@
               "palabras": 170,
               "tokens": 95,
               "tamano": 1199,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc009.txt",
@@ -1953,7 +1953,7 @@
               "palabras": 171,
               "tokens": 100,
               "tamano": 1226,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             }
           ],
           "modo": {
@@ -1971,7 +1971,7 @@
           "ignorados": [],
           "total_documentos": 30,
           "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('seguridad contraseñas autenticación' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('seguridad contraseñas autenticación' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
-          "segundos": 0.0006737000003340654,
+          "segundos": 0.0012023830058751628,
           "error": ""
         },
         "Q4": {
@@ -1983,7 +1983,7 @@
               "palabras": 175,
               "tokens": 104,
               "tamano": 1246,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc026.txt",
@@ -1992,7 +1992,7 @@
               "palabras": 179,
               "tokens": 106,
               "tamano": 1262,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc028.txt",
@@ -2001,7 +2001,7 @@
               "palabras": 178,
               "tokens": 105,
               "tamano": 1247,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc029.txt",
@@ -2010,7 +2010,7 @@
               "palabras": 174,
               "tokens": 101,
               "tamano": 1218,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc001.txt",
@@ -2019,7 +2019,7 @@
               "palabras": 178,
               "tokens": 104,
               "tamano": 1277,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             }
           ],
           "modo": {
@@ -2037,7 +2037,7 @@
           "ignorados": [],
           "total_documentos": 30,
           "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('reciclaje residuos electrónicos' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('reciclaje residuos electrónicos' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
-          "segundos": 0.0007204000066849403,
+          "segundos": 0.0010966359986923635,
           "error": ""
         },
         "Q5": {
@@ -2049,7 +2049,7 @@
               "palabras": 172,
               "tokens": 101,
               "tamano": 1193,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc011.txt",
@@ -2058,7 +2058,7 @@
               "palabras": 172,
               "tokens": 99,
               "tamano": 1174,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc017.txt",
@@ -2067,7 +2067,7 @@
               "palabras": 171,
               "tokens": 97,
               "tamano": 1136,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc007.txt",
@@ -2076,7 +2076,7 @@
               "palabras": 174,
               "tokens": 102,
               "tamano": 1216,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             },
             {
               "nombre_archivo": "doc013.txt",
@@ -2085,7 +2085,7 @@
               "palabras": 170,
               "tokens": 98,
               "tamano": 1184,
-              "fecha": "2026-11-16 11:32"
+              "fecha": "2026-11-17 13:20"
             }
           ],
           "modo": {
@@ -2103,7 +2103,7 @@
           "ignorados": [],
           "total_documentos": 30,
           "sql": "SELECT nombre_archivo, contenido, palabras, tokens, tamano, fecha_indexado, MATCH(contenido) AGAINST ('riego eficiente agricultura' IN NATURAL LANGUAGE MODE) AS relevancia FROM documentos WHERE MATCH(contenido) AGAINST ('riego eficiente agricultura' IN NATURAL LANGUAGE MODE) ORDER BY relevancia DESC, nombre_archivo",
-          "segundos": 0.0006614000012632459,
+          "segundos": 0.0010365990019636229,
           "error": ""
         }
       },
@@ -2458,54 +2458,54 @@
     "PyMuPDF": "2.1"
   },
   "fuentes_sha256": {
-    "buscador2\\main.py": "98d8e9ff425a118a72f268fd7742909237e92343f2a864e0b85283bf738e633c",
-    "buscador2\\texto.py": "c53fa4334e89f24d086dadce8525141833c5e567bcb99cd0c25f9542e027d2bb",
-    "buscador2\\base_datos\\conexion.py": "5dfd1ea3bc201e25945f69d0e91d7196fd15dba514bc84f9d5ed685832334a26",
-    "buscador2\\base_datos\\inicializador.py": "83429a92b5f4596818e1d248969ddb5d77508dbd7b60e0cd2f9315915f56a156",
-    "buscador2\\base_datos\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "buscador2\\busqueda\\motor_busqueda.py": "137cf7f2d5ea1c4618c0b53c1485fb2435fc055e93777691ea0ab8af29efff3f",
-    "buscador2\\busqueda\\ranking.py": "8aed6a9235e45f7da6a62a6b7a7a755f29ee372041f3c4734074643c72a945c8",
-    "buscador2\\busqueda\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "buscador2\\config\\ajustes.py": "ace0382880fde0a9dde322bb09ec992de4bca86976520fd392ac77dda236f1ce",
-    "buscador2\\config\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "buscador2\\indexacion\\almacen_archivos.py": "8e533ec31862e79dc7775ce55231bfe2704fbf2b9485ed2921cb4581a78bdfd9",
-    "buscador2\\indexacion\\indexador_incremental.py": "9f71b19b4457001a83abe016303745163a0aeda04471455a52ef406e4ed6dabe",
-    "buscador2\\indexacion\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "buscador2\\web\\controladores.py": "0256671da374f9e35be493a1cc59c10a6c50754efcd1e555741dfe76f74f42d5",
-    "buscador2\\web\\lector_multipart.py": "87126b89304c61344d6cc6049c5f0ec78c62ae4a4cc47f2c553df1b002098ae1",
-    "buscador2\\web\\respuestas.py": "470cd7eff06c234953b77d12d2f1dd18af5fa08b12d8e88c4398beecf779c1b3",
-    "buscador2\\web\\servidor.py": "dc2ca423d1f2ef386c22bff3c1fc3939e7b352c06db64b7d0c50d0d1f1b878f5",
-    "buscador2\\web\\vistas.py": "3b32b23ad69d945135fb101820688e7d41f1419d8fa74edfc33de39d87229d3f",
-    "buscador2\\web\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "buscador2\\base_datos\\repositorios\\repositorio_diccionario.py": "4d943fa7621e632b6b098c0364d1a2e4a5423c84e9b2e2438ae3813ae48c984b",
-    "buscador2\\base_datos\\repositorios\\repositorio_documentos.py": "6603f3e80574d1b84f089b7734af0142ce710102da1b244b9b42d78e024af784",
-    "buscador2\\base_datos\\repositorios\\repositorio_posicion.py": "fc58c3ce65ac286a0604171fad77089f4c8847247123cf6b83a294aec7533697",
-    "buscador2\\base_datos\\repositorios\\repositorio_posting.py": "5029792ce118d6240a93c9fa4f3edff2254c736dfbfe27b963d61f8fe5afd88c",
-    "buscador2\\base_datos\\repositorios\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\main.py": "bfa286eec118aa643e2c55f18f6ad0b43140d03a80dceb7501ca561ba61feeea",
-    "Busqueda empresarial\\reconstruir_indice.py": "8fa307a4ee5d8b4c1dfb4d7a06136331412bad8407dbf8831c86389ebc047ed7",
-    "Busqueda empresarial\\texto.py": "85347bd0641bd12c0f7449a0af2623d13813dd7c3741ad14a668c8a0a0b94bf2",
-    "Busqueda empresarial\\base_datos\\conexion.py": "5dfd1ea3bc201e25945f69d0e91d7196fd15dba514bc84f9d5ed685832334a26",
-    "Busqueda empresarial\\base_datos\\inicializador.py": "28b24efc519740a04f13db45e8e442f16a9c6e2c52a0f501b89d8bc969c775eb",
-    "Busqueda empresarial\\base_datos\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\busqueda\\motor_busqueda.py": "a2b7d49cf47fa3787e89d4c2828217ea9b37f482fc9db4abf7f0c8d0959f5c09",
-    "Busqueda empresarial\\busqueda\\ranking.py": "f6853323c45b6dca1a4fc8d92d3ff7ceb424894eb055e1f06038e72f0b2cf1e8",
-    "Busqueda empresarial\\busqueda\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\config\\ajustes.py": "fcd76fcfe8290a25d845e0408a8a03b14ab4e2168c14e48fabaf5c2ac25fda62",
-    "Busqueda empresarial\\config\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\indexacion\\almacen_archivos.py": "b93e7d3f19f39a7713c63b0a46e2d2f197f7caba56c858fb7e292441f231494f",
-    "Busqueda empresarial\\indexacion\\indexador_incremental.py": "4b4b5539bfdd9fc0c066c3f30d37b3a719dcca5faae5f219adad3d2cc75ba12a",
-    "Busqueda empresarial\\indexacion\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\web\\controladores.py": "c25d67dae98c157b3f3f06be6f29c558ae9c4d01a776f1e32f1c2fafbaff4b11",
-    "Busqueda empresarial\\web\\lector_multipart.py": "87126b89304c61344d6cc6049c5f0ec78c62ae4a4cc47f2c553df1b002098ae1",
-    "Busqueda empresarial\\web\\respuestas.py": "470cd7eff06c234953b77d12d2f1dd18af5fa08b12d8e88c4398beecf779c1b3",
-    "Busqueda empresarial\\web\\servidor.py": "dc2ca423d1f2ef386c22bff3c1fc3939e7b352c06db64b7d0c50d0d1f1b878f5",
-    "Busqueda empresarial\\web\\vistas.py": "969787052ceaaf4a961d9548ab601e1cdf06725ba690e49891abcabac4d8b183",
-    "Busqueda empresarial\\web\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Busqueda empresarial\\base_datos\\repositorios\\repositorio_documentos.py": "54f708afefe6dbe73cdacd32c5570333a8c98c149333599506a842d7e185da3f",
-    "Busqueda empresarial\\base_datos\\repositorios\\repositorio_fulltext.py": "957fe8415bab10ba1b3d01245a731636b5d66ce82789ca5292e421b7030c19d3",
-    "Busqueda empresarial\\base_datos\\repositorios\\repositorio_stopwords.py": "5fd0e4ba257cd3aa7878af0ebe04ed2b123f47277cc1adbf1ce79b0107f41f28",
-    "Busqueda empresarial\\base_datos\\repositorios\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "buscador2/main.py": "d1e7ffbc9b7dce3bc7fd5ad596b36de39e9aa99e455a10cdee12c5d892134382",
+    "buscador2/texto.py": "a3ce3513e3ef8e3349924c755ce1dc7066bc3bdd3c8571deef8ab3bcc676d252",
+    "buscador2/base_datos/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/base_datos/conexion.py": "74cd1212c75315946000bcb9019785c456f30200efa6c84477059bb5a3a3cdae",
+    "buscador2/base_datos/inicializador.py": "eb549a3f0f30ea22aaf89fe287edc78dba2ed12a31e92030b67525a70c145398",
+    "buscador2/busqueda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/busqueda/motor_busqueda.py": "154b0a4368c5691c411104cec5ac8094366e6576e73a3281993b32d4c7cd0ad5",
+    "buscador2/busqueda/ranking.py": "a6bbeb91cf2a95eb3b6528a73e260a933a2d0edc1698266459eb0256d08dee2f",
+    "buscador2/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/config/ajustes.py": "d9f2557155fae4556a7160aa62c3e250bf67633360c3698617bd014586a0cc82",
+    "buscador2/indexacion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/indexacion/almacen_archivos.py": "7e1071fc54092e3362c08015bcf4de7f5bb88389077a496ee81686028724f733",
+    "buscador2/indexacion/indexador_incremental.py": "3a74a293b9ff4661131a31d08725de3159ca350b69dc0eddbdcd33e1a1c8c970",
+    "buscador2/web/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/web/lector_multipart.py": "f23f0a87d556827c43241f8a759ef1eee6fbefccc1e5430954c04b46d5d78139",
+    "buscador2/web/respuestas.py": "11de79c18e9b857e8e36038bbcb8425e8a10a9eee6354533f1e5736d7db5b0a6",
+    "buscador2/web/servidor.py": "2f83b4530b98f278225c520c2e78d2734fa2194731c0cf704e2517080a7f7f7b",
+    "buscador2/web/controladores.py": "e2ae868bd505b3444d415329d5108156ac7adb13a2f2c455504fa40abef6a92b",
+    "buscador2/web/vistas.py": "5579e2045efc38fc734c2754dcca507bde4f4d6be5801dc0d2f3ec2312fa42b2",
+    "buscador2/base_datos/repositorios/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "buscador2/base_datos/repositorios/repositorio_diccionario.py": "e31a3c55d527db6c98e654f34b314b4d01fa0ad76973a226a4d949e8c1910f7a",
+    "buscador2/base_datos/repositorios/repositorio_documentos.py": "2e8ed0e058cc24ff62e943e22736f24771d10acf1da69947d17eb80c9470d724",
+    "buscador2/base_datos/repositorios/repositorio_posicion.py": "b9ce130e5a001ab84c0becfe485668a9cd8ff1bce13393faa748237ba7d8e00e",
+    "buscador2/base_datos/repositorios/repositorio_posting.py": "5ce376230490bb310900755ffde4d7ced59e38022f6ca14456c7163842b04f8a",
+    "Busqueda empresarial/main.py": "2d7719fd3146c18e37f5f11ac84a7dd7406c5205e91b31109bf9762bb9fabc25",
+    "Busqueda empresarial/reconstruir_indice.py": "bbd8599c7eef837d734fe32c4f9637002e2678ae8040b088923639823537062a",
+    "Busqueda empresarial/texto.py": "6832f98d706588c5be4388e5629ea8e7ac18f0b50d79844b234ef4b1becbae2e",
+    "Busqueda empresarial/base_datos/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/base_datos/conexion.py": "74cd1212c75315946000bcb9019785c456f30200efa6c84477059bb5a3a3cdae",
+    "Busqueda empresarial/base_datos/inicializador.py": "b39024f952c14193d4df0b965888224e84aca18a12c6f9057ef194895ec9a97c",
+    "Busqueda empresarial/busqueda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/busqueda/motor_busqueda.py": "8c0c2434f054336a06369ffee5f827dc48d2f48b33f058b76c3cc2df4c13758f",
+    "Busqueda empresarial/busqueda/ranking.py": "d70d57862b6d298080e881687f7060afd8614a0fa0fbc0749c6a7380e8f5affc",
+    "Busqueda empresarial/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/config/ajustes.py": "cb13bdb18a2f1968699b4a7b67077f00785ae635253eb6e2c918f651b68d4be1",
+    "Busqueda empresarial/indexacion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/indexacion/almacen_archivos.py": "1344218390818a182fb26286e9b0fb066d8e41760cc683d0f5dc96e80482de53",
+    "Busqueda empresarial/indexacion/indexador_incremental.py": "dbec6fa9b10af496baf1c47abc935b42f9d5b845234fc74c5908354d9d4f31a5",
+    "Busqueda empresarial/web/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/web/controladores.py": "a2ca48ee58bf1fa899493fc091584e869378793b2fe42f2d6bca400e85adb76d",
+    "Busqueda empresarial/web/lector_multipart.py": "f23f0a87d556827c43241f8a759ef1eee6fbefccc1e5430954c04b46d5d78139",
+    "Busqueda empresarial/web/respuestas.py": "11de79c18e9b857e8e36038bbcb8425e8a10a9eee6354533f1e5736d7db5b0a6",
+    "Busqueda empresarial/web/servidor.py": "2f83b4530b98f278225c520c2e78d2734fa2194731c0cf704e2517080a7f7f7b",
+    "Busqueda empresarial/web/vistas.py": "e5603a802f4c19c68eeb79346e47d9655cd025a985446bcda32e0b39e0de010c",
+    "Busqueda empresarial/base_datos/repositorios/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_documentos.py": "ca213fc3994e0bd3d8151748cf811d99e63e96dfa21c13d53505dc0857fbdd87",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_fulltext.py": "656429b2798687d537297d51fcdf0097e3aeb83e4a5b2fadff247d9566a6cbd4",
+    "Busqueda empresarial/base_datos/repositorios/repositorio_stopwords.py": "fec56c75062595bf08687530356a31cff78f6f8121d3d727f24fd1c449f56f61"
   },
-  "git_commit": "858db935791d6a78cfdcc81bbe0d29e2a12494c0"
+  "git_commit": "8f0cf333ce51d787fded0b0fc4d90685c655684d"
 }

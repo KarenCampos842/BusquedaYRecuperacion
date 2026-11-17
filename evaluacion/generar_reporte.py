@@ -24,8 +24,8 @@ RAIZ = Path(__file__).resolve().parent
 REPO = RAIZ.parent
 SALIDA = REPO / "output" / "pdf"
 NOMBRES = {"buscador2": "buscador2", "empresarial": "Búsqueda empresarial"}
-PALETA = {"buscador2": "#17607D", "empresarial": "#B75A24"}
-AZUL = colors.HexColor("#193C50")
+PALETA = {"buscador2": "#000000", "empresarial": "#555555"}
+NEGRO = colors.black
 
 
 def curvas(datos):
@@ -64,7 +64,6 @@ def configurar_ejes(ax):
     ax.set(xlim=(-0.035, 1.035), ylim=(-0.035, 1.065),
            xlabel="Exhaustividad (recall)", ylabel="Precisión",
            xticks=[i / 10 for i in range(11)], yticks=[i / 5 for i in range(6)])
-    ax.grid(alpha=0.2)
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.24), ncol=2,
               fontsize=9, frameon=False)
 
@@ -88,11 +87,11 @@ def generar(archivo):
     pdfmetrics.registerFontFamily("Texto", normal="Texto", bold="TextoBold", italic="Texto", boldItalic="TextoBold")
     estilos = getSampleStyleSheet()
     estilos.add(ParagraphStyle("TituloReporte", fontName="TextoBold", fontSize=25,
-                              leading=30, textColor=AZUL, spaceAfter=15))
+                              leading=30, textColor=NEGRO, spaceAfter=15))
     estilos.add(ParagraphStyle("Seccion", fontName="TextoBold", fontSize=16,
-                              leading=20, textColor=AZUL, spaceAfter=12))
+                              leading=20, textColor=NEGRO, spaceAfter=12))
     estilos.add(ParagraphStyle("Apartado", fontName="TextoBold", fontSize=11,
-                              leading=15, textColor=AZUL, spaceBefore=9, spaceAfter=6))
+                              leading=15, textColor=NEGRO, spaceBefore=9, spaceAfter=6))
     estilos.add(ParagraphStyle("TextoReporte", fontName="Texto", fontSize=9.6,
                               leading=14, spaceAfter=9))
     estilos.add(ParagraphStyle("Pequeno", fontName="Texto", fontSize=8,
@@ -100,7 +99,7 @@ def generar(archivo):
     estilos.add(ParagraphStyle("Celda", fontName="Texto", fontSize=8,
                               leading=10))
     estilos.add(ParagraphStyle("CabeceraTabla", fontName="TextoBold", fontSize=8,
-                              leading=10, textColor=colors.white))
+                              leading=10, textColor=NEGRO))
     historia = []
     ancho = A4[0] - 96
 
@@ -123,13 +122,10 @@ def generar(archivo):
         ]
         t = Table(contenido, colWidths=anchos, repeatRows=1, hAlign="LEFT")
         t.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), AZUL),
-            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#F0F4F6")]),
             ("VALIGN", (0, 0), (-1, -1), "TOP"),
-            ("LEFTPADDING", (0, 0), (-1, -1), 7), ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-            ("TOPPADDING", (0, 0), (-1, -1), 3 if compacto else 5),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 3 if compacto else 5),
-            ("LINEBELOW", (0, -1), (-1, -1), 0.5, colors.HexColor("#CBD5DA")),
+            ("LEFTPADDING", (0, 0), (-1, -1), 5), ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+            ("TOPPADDING", (0, 0), (-1, -1), 3 if compacto else 4),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 3 if compacto else 4),
         ]))
         historia.extend([t, Spacer(1, 10)])
 
@@ -259,16 +255,14 @@ def generar(archivo):
     escribir("Desde la raíz del repositorio, instalar evaluacion/requirements.txt en un entorno virtual. Con MySQL disponible, configurar EVAL_DB_HOST, EVAL_DB_PUERTO, EVAL_DB_USUARIO y EVAL_DB_CONTRASENA. Ejecutar evaluacion/evaluar.py y después evaluacion/generar_reporte.py. El evaluador crea bases nuevas en cada ejecución. Las instrucciones completas y la configuración de la instancia aislada están en evaluacion/README.md.")
     escribir("La ejecución inicial utilizó identificadores que expresaban la etiqueta y reveló un sesgo en el desempate por nombre. La ejecución definitiva usa nombres neutrales asignados con semilla 20261116. Los textos y los juicios se conservaron. Ambos registros permanecen como evidencia y este PDF utiliza únicamente la ejecución definitiva.", "Pequeno")
     apartado("Fuentes")
-    escribir('[1] Manning, Raghavan y Schütze. Introduction to Information Retrieval, sección 8.4. <link href="https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html" color="#17607D">Evaluation of ranked retrieval results</link>. AP, MAP y precisión interpolada.', "Pequeno")
-    escribir('[2] Oracle. MySQL 8.0 Reference Manual. <link href="https://dev.mysql.com/doc/refman/8.0/en/fulltext-natural-language.html" color="#17607D">Natural Language Full-Text Searches</link>. Relevancia, límites de términos y stopwords.', "Pequeno")
+    escribir('[1] Manning, Raghavan y Schütze. Introduction to Information Retrieval, sección 8.4. <link href="https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html" color="#000000">Evaluation of ranked retrieval results</link>. AP, MAP y precisión interpolada.', "Pequeno")
+    escribir('[2] Oracle. MySQL 8.0 Reference Manual. <link href="https://dev.mysql.com/doc/refman/8.0/en/fulltext-natural-language.html" color="#000000">Natural Language Full-Text Searches</link>. Relevancia, límites de términos y stopwords.', "Pequeno")
     escribir("[3] Código local de ambos buscadores y evidencia de la ejecución. Los archivos resultados.json contienen el commit de origen y los hashes del código. El enunciado utilizado fue el proporcionado por el usuario; los enlaces del curso no fueron accesibles.", "Pequeno")
 
     def pie(canvas, documento):
         canvas.saveState()
-        canvas.setStrokeColor(colors.HexColor("#CBD5DA"))
-        canvas.line(48, 39, A4[0] - 48, 39)
         canvas.setFont("Texto", 8)
-        canvas.setFillColor(colors.HexColor("#4E6370"))
+        canvas.setFillColor(NEGRO)
         canvas.drawString(48, 26, "Comparación de buscadores | Colección sintética | " + fecha)
         canvas.drawRightString(A4[0] - 48, 26, str(documento.page))
         canvas.restoreState()

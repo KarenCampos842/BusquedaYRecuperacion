@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Búsqueda empresarial</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="/estaticos/css/estilos.css">
+</head>
+<body class="pagina-inicio">
+
+  <header class="encabezado">
+    <a href="/" class="logo">Empresarial<span class="logo-punto">.</span></a>
+    <a href="#subir" class="btn-subir" title="Subir archivos .txt" aria-label="Subir archivos .txt">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+    </a>
+  </header>
+
+  <main class="centro">
+    <div class="alerta alerta-success" role="alert">30 archivo(s) nuevo(s) guardado(s) en MySQL.</div>
+    <h1 class="saludo">¿Qué quieres encontrar?</h1>
+    <p class="subtitulo">Búsqueda por relevancia con el índice FULLTEXT de MySQL.</p>
+
+    <form action="/buscar" method="get" class="buscador" role="search" id="form-busqueda">
+      <svg class="icono buscador-icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input type="search" name="q" id="q" class="buscador-input" placeholder="Buscar en los documentos" aria-label="Buscar en los documentos" required>
+      <button type="submit" class="buscador-btn" aria-label="Buscar">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+
+    <fieldset class="modos">
+      <legend class="modos-titulo">Modo de búsqueda</legend>
+      <label class="modo" title="Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan."><input type="radio" name="modo" value="natural" form="form-busqueda" checked><span>Lenguaje natural</span></label><label class="modo" title="Operadores: +obligatoria  -excluida  palabra*  &quot;frase exacta&quot;  &gt;más peso  &lt;menos peso  ~resta  ( )."><input type="radio" name="modo" value="booleano" form="form-busqueda"><span>Booleano</span></label><label class="modo" title="Busca dos veces: la segunda agrega palabras de los mejores resultados de la primera."><input type="radio" name="modo" value="expansion" form="form-busqueda"><span>Expansión de consulta</span></label>
+    </fieldset>
+
+    <details class="ayuda-modos">
+      <summary>¿Qué hace cada modo?</summary>
+      <ul><li><strong>Lenguaje natural</strong>: Cada palabra suma relevancia. Las palabras que están en todos los documentos no aportan.</li><li><strong>Booleano</strong>: Operadores: +obligatoria  -excluida  palabra*  &quot;frase exacta&quot;  &gt;más peso  &lt;menos peso  ~resta  ( ).</li><li><strong>Expansión de consulta</strong>: Busca dos veces: la segunda agrega palabras de los mejores resultados de la primera.</li></ul>
+    </details>
+
+    <p class="estado-indice">30 documentos · 5153 palabras guardadas en MySQL</p>
+    <p class="estado-indice estado-config">
+      8.0.46 · se indexan palabras de 3 a 84 caracteres · 98 palabras vacías en español
+    </p>
+  </main>
+
+  <div id="subir" class="modal-subir" role="dialog" aria-labelledby="titulo-subir" aria-modal="true">
+    <a href="#" class="modal-fondo" aria-label="Cerrar"></a>
+    <div class="modal-caja">
+      <div class="modal-cabecera">
+        <h2 id="titulo-subir" class="modal-titulo">Subir archivos</h2>
+        <a href="#" class="modal-cerrar" aria-label="Cerrar">&times;</a>
+      </div>
+
+      <form action="/subir" method="post" enctype="multipart/form-data">
+        <label for="archivos" class="zona-carga">
+          <svg class="icono zona-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-6M9.5 13.5L12 11l2.5 2.5"/></svg>
+          <span class="zona-titulo">Elige tus archivos de texto</span>
+          <span class="zona-texto">Puedes seleccionar varios a la vez · solo .txt</span>
+        </label>
+        <input class="campo-archivo" type="file" id="archivos" name="archivos[]" accept=".txt,text/plain" multiple required>
+        <p class="modal-nota">El texto completo de cada archivo se guarda en MySQL y se agrega al índice FULLTEXT.</p>
+        <div class="modal-acciones">
+          <a href="#" class="btn btn-claro">Cancelar</a>
+          <button type="submit" class="btn btn-indexador">Subir e indizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
