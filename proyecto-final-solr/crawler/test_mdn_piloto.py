@@ -63,7 +63,7 @@ class PilotoTests(unittest.TestCase):
     def test_extrae_articulo_sin_navegacion(self):
         html = ('<html lang="es"><nav>MENU EXTERIOR</nav><main><h1>Introducción</h1>'
                 '<article class="main-page-content"><nav>MENU INTERIOR</nav>'
-                '<script>NO INCLUIR</script><p>' + 'Texto del artículo. ' * 15
+                '<script>NO INCLUIR</script><p>' + 'El texto del artículo es para la comunidad. ' * 15
                 + '</p><pre>const ejemplo = 1;</pre></article></main></html>')
         doc = extraer(URL, html.encode("utf-8"))
         self.assertEqual(doc["titulo"], "Introducción")
@@ -72,13 +72,13 @@ class PilotoTests(unittest.TestCase):
         self.assertIn("const ejemplo = 1;", doc["contenido"])
         for cuerpo in ('<html lang="en"><article></article></html>', '<html lang="es"></html>'):
             with self.assertRaises(PilotoError):
-                extraer(URL, cuerpo.encode())
+                extraer(URL, cuerpo.encode('utf-8'))
 
     def test_diseno_actual_excluye_aviso_y_tabla_lateral(self):
         html = ('<html lang="es"><main id="content">'
                 '<div class="reference-layout__header">AVISO<h1>Introducción</h1></div>'
                 '<aside>TABLA LATERAL</aside><div class="reference-layout__body">'
-                '<a>Anterior</a><p>' + 'Contenido principal. ' * 15
+                '<a>Anterior</a><p>' + 'El contenido principal es para la comunidad. ' * 15
                 + '</p><a>Siguiente</a></div></main></html>')
         doc = extraer(URL, html.encode("utf-8"))
         self.assertEqual(doc["titulo"], "Introducción")
