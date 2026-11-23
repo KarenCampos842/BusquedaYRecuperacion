@@ -1,0 +1,3478 @@
+{
+  "fecha_inicio": "2026-11-23T22:15:23.360230+00:00",
+  "user_agent": "MDNPilotoAcademico/2.0 (proyecto universitario; piloto limitado)",
+  "semillas": [
+    "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    "https://developer.mozilla.org/es/docs/Web/HTML",
+    "https://developer.mozilla.org/es/docs/Web/CSS"
+  ],
+  "solicitudes": [
+    {
+      "url": "https://developer.mozilla.org/robots.txt",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "codigo_http": 200
+    }
+  ],
+  "visitadas": [
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 0,
+      "descubierta_desde": null
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 0,
+      "descubierta_desde": null
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 0,
+      "descubierta_desde": null
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "profundidad": 1,
+      "descubierta_desde": "https://developer.mozilla.org/es/docs/Web/CSS"
+    }
+  ],
+  "descubiertas": [
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Closures",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Memory_management",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Map",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/instanceof",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/new",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/this",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/do...while",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...in",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...of",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/try...catch",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/var",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/const",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microformats",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Responsive_images",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/video",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/How_to/Use_data_attributes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/How_to/CORS_enabled_image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/img",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Attributes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Attributes/rel",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Display/Block_formatting_context",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Flexible_box_layout",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Grid_layout",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Media_queries",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/How_to/Layout_cookbook",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "profundidad": 1
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Introduction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Numbers_and_strings",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_expressions",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Indexed_collections",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Keyed_collections",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_objects",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Using_promises",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Iterators_and_generators",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Meta_programming",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Modules",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/length",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Lexical_grammar",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/substr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/concat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/get",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/set",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Typed_arrays",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/b",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/bdi",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/bdo",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/blockquote",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/br",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/button",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/canvas",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/cite",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/code",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/data",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/datalist",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/del",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/details",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/dfn",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/dialog",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/div",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/dl",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/em",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/embed",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/fieldset",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/figure",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/footer",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/form",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/Heading_Elements",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/header",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/hgroup",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/hr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/i",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/iframe",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/ins",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/kbd",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/label",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/main",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/map",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/mark",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/menu",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/nav",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/object",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/ol",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/p",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/picture",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/pre",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/progress",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/q",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/s",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/samp",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/section",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/select",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/slot",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/small",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/span",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/strong",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/sub",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/sup",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/table",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/textarea",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/time",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/u",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/ul",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/var",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/wbr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/area",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/itemprop",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/li",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/caption",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/col",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/colgroup",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/dd",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/dt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/figcaption",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/html",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/legend",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/option",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/param",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/source",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/th",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/tr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/track",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/autocapitalize",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/input/datetime-local",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/schema.org",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/itemid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/itemref",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Global_attributes/itemscope",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-broken",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-color-swatch",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-drag-over",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-first-node",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-handler-blocked",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-handler-crashed",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-handler-disabled",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-last-node",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-list-bullet",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-list-number",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-loading",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_ltr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-only-whitespace",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-progress-bar",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-range-progress",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-range-thumb",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-moz-range-track",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-suppressed",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-user-disabled",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:-moz-window-inactive",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-inner-spin-button",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-meter-bar",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-meter-inner-element",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-meter-suboptimum-value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-progress-bar",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-progress-inner-element",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-progress-value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-slider-runnable-track",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::-webkit-slider-thumb",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:active",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@counter-style/additive-symbols",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::after",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/align-content",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/align-items",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/align-self",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/all",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/angle",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-delay",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-direction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-duration",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-fill-mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-iteration-count",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-name",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-play-state",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation-timing-function",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:any-link",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/appearance",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/attr",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:autofill",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::backdrop",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/backdrop-filter",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/backface-visibility",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-attachment",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-blend-mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-clip",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-origin",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-position",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-repeat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/basic-shape",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::before",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:blank",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/blend-mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/block-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/filter-function/blur",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-border-before",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-end-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-end-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-end-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-start-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-start-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-start-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-block-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom-left-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom-right-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-bottom-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-collapse",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-end-end-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-end-start-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-image-outset",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-image-repeat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-image-slice",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-end-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-end-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-end-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-start-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-start-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-start-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-inline-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-left",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-left-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-right",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-spacing",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-start-end-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-start-start-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-top",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-top-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-top-left-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-top-right-radius",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/bottom",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-flex",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-ordinal-group",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-pack",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-box-reflect",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-shadow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-sizing",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/filter-function/brightness",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/--*",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/calc",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/caret-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:checked",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/clear",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/clip",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/color_value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/column-count",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/column-gap",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/column-span",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/content",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@counter-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::cue",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/cursor",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:default",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:defined",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:dir",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/direction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:disabled",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/display",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:empty",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:enabled",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/env",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::file-selector-button",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/filter",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/filter-function",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:first",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:first-child",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::first-letter",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::first-line",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:first-of-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/fit-content",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-basis",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-direction",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-flow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-grow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-shrink",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/flex-wrap",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/float",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-moz-float-edge",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:focus",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:focus-visible",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:focus-within",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/font-display",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/font-family",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-family",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-feature-values",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-language-override",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-size-adjust",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/font-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-variant",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-variant-alternates",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/font-weight",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-moz-force-broken-image-icon",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/frequency",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:fullscreen",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/gap",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/gradient",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid-auto-columns",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid-auto-rows",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid-template-areas",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid-template-columns",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/grid-template-rows",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:has",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/height",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:host",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:hover",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/hyphens",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/-moz-image-rect",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/image-rendering",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:in-range",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:indeterminate",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/inherit",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/initial",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inline-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-block",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-block-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-block-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-inline",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-inline-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/inset-inline-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/integer",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:invalid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:is",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/isolation",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/justify-content",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@keyframes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:lang",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:last-child",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:last-of-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/left",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:left",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/length",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/line-height",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/gradient/linear-gradient",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:link",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/list-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/list-style-image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/list-style-position",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/list-style-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-block",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-block-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-bottom",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-inline",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-inline-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-inline-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/margin-right",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::marker",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-box-image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask-clip",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-composite",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask-image",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask-origin",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask-position",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-position-x",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-position-y",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mask-repeat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-repeat-x",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-mask-repeat-y",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/max-block-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/max-height",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/max-inline-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/min",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/min-block-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/min-height",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/min-inline-size",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/min-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/minmax",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/mix-blend-mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@namespace",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:not",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:nth-child",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:nth-last-child",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:nth-last-of-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:nth-of-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/number",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/object-fit",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/object-position",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:only-child",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:only-of-type",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/opacity",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:optional",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/order",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-moz-orient",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:out-of-range",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/outline",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/outline-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/outline-offset",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/outline-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/outline-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/overflow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/overflow-y",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-block",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-block-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-block-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-bottom",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-inline",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-inline-end",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-inline-start",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/padding-top",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@page",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::part",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/percentage",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/perspective",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::placeholder",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:placeholder-shown",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/position",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/print-color-adjust",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/quotes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:read-only",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:read-write",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/repeat",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:required",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/resize",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/resolution",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/right",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:right",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:root",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/rotate",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/rotate3d",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/scale",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/scroll-behavior",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::selection",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::spelling-error",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/src",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@supports",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@counter-style/symbols",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-tap-highlight-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:target",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-align",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-decoration",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-decoration-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-decoration-line",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-decoration-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-emphasis",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-emphasis-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-text-fill-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-orientation",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-overflow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-shadow",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-text-stroke",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-color",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-transform",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/text-wrap",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/time",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/top",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-webkit-touch-callout",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform-origin",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform-style",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-delay",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-duration",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-property",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/translate",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/translateY",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/transform-function/translateZ",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/url_value",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-moz-user-focus",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/-moz-user-input",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:user-invalid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/user-modify",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/user-select",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:valid",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Values/var",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/vertical-align",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/visibility",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:visited",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/white-space",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/widows",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/width",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/writing-mode",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/z-index",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/zoom",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Selectors",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Child_combinator",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Descendant_combinator",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Images/Replaced_element_properties",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Media_queries/Using",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Images/Using_gradients",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Transforms/Using",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Animations/Using",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Transitions/Using",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Multicol_layout/Using",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Mozilla_extensions",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Conditional_rules",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "profundidad": 2
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity/contributors.txt",
+      "desde": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "profundidad": 2
+    }
+  ],
+  "aceptadas": [
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "categoria": "JavaScript",
+      "titulo": "JavaScript",
+      "caracteres": 3874
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "categoria": "HTML",
+      "titulo": "HTML: Lenguaje de Marcado de Hipertexto",
+      "caracteres": 6023
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "categoria": "CSS",
+      "titulo": "CSS",
+      "caracteres": 4531
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "categoria": "JavaScript",
+      "titulo": "Guía de JavaScript",
+      "caracteres": 1720
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "categoria": "JavaScript",
+      "titulo": "Una reintroducción a JavaScript (Tutorial de JS)",
+      "caracteres": 38015
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "categoria": "JavaScript",
+      "titulo": "Tipos de datos y estructuras en JavaScript",
+      "caracteres": 15629
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "categoria": "HTML",
+      "titulo": "Categorías de contenido",
+      "caracteres": 11467
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "categoria": "HTML",
+      "titulo": "Usar formatos de fecha y hora en HTML",
+      "caracteres": 16078
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "categoria": "HTML",
+      "titulo": "Microdatos",
+      "caracteres": 5737
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "categoria": "CSS",
+      "titulo": "Referencia CSS",
+      "caracteres": 33805
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "categoria": "CSS",
+      "titulo": "Sintaxis",
+      "caracteres": 5944
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "categoria": "CSS",
+      "titulo": "Especificidad",
+      "caracteres": 7812
+    }
+  ],
+  "rechazadas": [
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides",
+      "motivo": "Artículo vacío o insuficiente"
+    }
+  ],
+  "errores": [],
+  "limites": {
+    "por_categoria": 4,
+    "max_solicitudes": 45,
+    "max_profundidad": 3
+  },
+  "robots_verificado": true,
+  "intervalo_segundos": 3.0,
+  "resultado": "completo",
+  "motivo_fin": "cuotas cubiertas",
+  "conteo_por_categoria": {
+    "JavaScript": 4,
+    "HTML": 4,
+    "CSS": 4
+  },
+  "total_documentos": 12,
+  "fecha_fin": "2026-11-23T22:16:06.612996+00:00"
+}
