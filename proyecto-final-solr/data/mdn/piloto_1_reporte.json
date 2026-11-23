@@ -1,0 +1,23 @@
+{
+  "url_solicitada": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Introduction",
+  "user_agent": "MDNPilotoAcademico/1.0 (proyecto universitario; una pagina)",
+  "fecha": "2026-11-23T22:02:18.590973+00:00",
+  "solicitudes": [
+    {
+      "url": "https://developer.mozilla.org/robots.txt",
+      "codigo_http": 200
+    },
+    {
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Introduction",
+      "codigo_http": 200
+    }
+  ],
+  "aceptadas": [
+    "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Introduction"
+  ],
+  "rechazadas": [],
+  "robots_permite_url": true,
+  "intervalo_segundos": 3.0,
+  "resultado": "correcto",
+  "caracteres_contenido": 11479
+}

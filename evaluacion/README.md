@@ -1,5 +1,7 @@
 # Comparación de buscadores
 
+La [guía para un compañero con XAMPP](GUIA_COMPANERO_XAMPP.md) explica la carga manual, los juicios de relevancia, el cálculo de métricas y la repetición automatizada.
+
 El reporte final está en [`output/pdf/comparacion_buscadores.pdf`](../output/pdf/comparacion_buscadores.pdf).
 
 La evaluación definitiva usa 30 documentos sintéticos, cinco consultas y etiquetas binarias fijadas previamente. Se ejecutaron los buscadores originales mediante sus controladores HTTP, con bases nuevas y el modo natural de FULLTEXT.

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "D01",
+    "titulo": "Automóviles eléctricos y movilidad",
+    "contenido": "Los automóviles eléctricos utilizan baterías y motores eléctricos. Pueden reducir emisiones locales y cambiar la movilidad urbana.",
+    "categoria": "tecnologia",
+    "tema": "movilidad"
+  },
+  {
+    "id": "D02",
+    "titulo": "Coches eléctricos y baterías",
+    "contenido": "Los coches eléctricos almacenan energía en baterías recargables. La autonomía depende de la capacidad y el consumo.",
+    "categoria": "tecnologia",
+    "tema": "movilidad"
+  },
+  {
+    "id": "D03",
+    "titulo": "Vehículos eléctricos en las ciudades",
+    "contenido": "Los vehículos eléctricos pueden disminuir ruido y emisiones contaminantes en zonas urbanas.",
+    "categoria": "medio_ambiente",
+    "tema": "movilidad"
+  },
+  {
+    "id": "D04",
+    "titulo": "Contaminación atmosférica y salud",
+    "contenido": "La contaminación del aire afecta la salud respiratoria. Las partículas y otros contaminantes pueden aumentar el riesgo de enfermedades.",
+    "categoria": "salud",
+    "tema": "contaminacion"
+  },
+  {
+    "id": "D05",
+    "titulo": "Calidad del aire urbano",
+    "contenido": "La mala calidad del aire se relaciona con tráfico, industria y otras fuentes de emisiones.",
+    "categoria": "medio_ambiente",
+    "tema": "contaminacion"
+  },
+  {
+    "id": "D06",
+    "titulo": "Transporte público sostenible",
+    "contenido": "Autobuses eléctricos, trenes y movilidad activa pueden reducir el uso del automóvil privado y las emisiones.",
+    "categoria": "medio_ambiente",
+    "tema": "movilidad"
+  },
+  {
+    "id": "D07",
+    "titulo": "Motores de combustión",
+    "contenido": "Los motores de gasolina y diésel transforman energía química en movimiento y producen gases de escape.",
+    "categoria": "tecnologia",
+    "tema": "movilidad"
+  },
+  {
+    "id": "D08",
+    "titulo": "Energía solar fotovoltaica",
+    "contenido": "Los paneles solares convierten la radiación solar en electricidad.",
+    "categoria": "energia",
+    "tema": "renovables"
+  },
+  {
+    "id": "D09",
+    "titulo": "Energía eólica",
+    "contenido": "Los aerogeneradores transforman la energía del viento en electricidad.",
+    "categoria": "energia",
+    "tema": "renovables"
+  },
+  {
+    "id": "D10",
+    "titulo": "Fuentes renovables de energía",
+    "contenido": "La energía solar, eólica e hidráulica son fuentes renovables que pueden disminuir la dependencia de combustibles fósiles.",
+    "categoria": "energia",
+    "tema": "renovables"
+  },
+  {
+    "id": "D11",
+    "titulo": "Inteligencia artificial",
+    "contenido": "La inteligencia artificial estudia sistemas capaces de realizar tareas de percepción, razonamiento, aprendizaje y decisión.",
+    "categoria": "computacion",
+    "tema": "ia"
+  },
+  {
+    "id": "D12",
+    "titulo": "Aprendizaje automático",
+    "contenido": "El aprendizaje automático construye modelos a partir de datos para realizar predicciones o clasificaciones.",
+    "categoria": "computacion",
+    "tema": "ia"
+  },
+  {
+    "id": "D13",
+    "titulo": "Redes neuronales profundas",
+    "contenido": "Las redes neuronales profundas utilizan múltiples capas para aprender representaciones complejas.",
+    "categoria": "computacion",
+    "tema": "ia"
+  },
+  {
+    "id": "D14",
+    "titulo": "Procesamiento del lenguaje natural",
+    "contenido": "El procesamiento del lenguaje natural estudia métodos computacionales para analizar y generar lenguaje humano.",
+    "categoria": "computacion",
+    "tema": "lenguaje"
+  },
+  {
+    "id": "D15",
+    "titulo": "Motores de búsqueda",
+    "contenido": "Un motor de búsqueda recopila, indexa y recupera documentos relevantes para necesidades de información expresadas mediante consultas.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D16",
+    "titulo": "Índices invertidos",
+    "contenido": "Un índice invertido asocia términos con los documentos en los que aparecen.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D17",
+    "titulo": "Ranking BM25",
+    "contenido": "BM25 es una función de ranking. Considera frecuencia de términos, frecuencia documental y longitud de los documentos.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D18",
+    "titulo": "Búsqueda semántica",
+    "contenido": "La búsqueda semántica intenta recuperar información relacionada con el significado aunque no exista coincidencia exacta de palabras.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D19",
+    "titulo": "Embeddings de texto",
+    "contenido": "Los embeddings representan palabras, oraciones o documentos mediante vectores densos.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D20",
+    "titulo": "Búsqueda vectorial",
+    "contenido": "La búsqueda vectorial recupera elementos próximos a un vector de consulta mediante similitud o distancia.",
+    "categoria": "computacion",
+    "tema": "busqueda"
+  },
+  {
+    "id": "D21",
+    "titulo": "Universidades y educación superior",
+    "contenido": "Las universidades desarrollan docencia, investigación y vinculación.",
+    "categoria": "educacion",
+    "tema": "universidad"
+  },
+  {
+    "id": "D22",
+    "titulo": "Bibliotecas digitales",
+    "contenido": "Las bibliotecas digitales organizan documentos electrónicos y proporcionan herramientas para localización y acceso.",
+    "categoria": "educacion",
+    "tema": "bibliotecas"
+  },
+  {
+    "id": "D23",
+    "titulo": "Artículos científicos",
+    "contenido": "Los artículos científicos comunican resultados de investigación e incluyen título, resumen, metodología y referencias.",
+    "categoria": "educacion",
+    "tema": "investigacion"
+  },
+  {
+    "id": "D24",
+    "titulo": "Evaluación de sistemas de búsqueda",
+    "contenido": "La precisión y la exhaustividad permiten evaluar la calidad de los resultados recuperados.",
+    "categoria": "computacion",
+    "tema": "evaluacion"
+  },
+  {
+    "id": "D25",
+    "titulo": "Precisión en recuperación",
+    "contenido": "La precisión expresa la proporción de documentos recuperados que son relevantes.",
+    "categoria": "computacion",
+    "tema": "evaluacion"
+  },
+  {
+    "id": "D26",
+    "titulo": "Exhaustividad en recuperación",
+    "contenido": "La exhaustividad o recall expresa la proporción de documentos relevantes que fueron recuperados.",
+    "categoria": "computacion",
+    "tema": "evaluacion"
+  },
+  {
+    "id": "D27",
+    "titulo": "Sinónimos y consultas",
+    "contenido": "La expansión con sinónimos puede recuperar vocabulario diferente. Automóvil, coche y vehículo pueden expresar conceptos relacionados.",
+    "categoria": "computacion",
+    "tema": "consultas"
+  },
+  {
+    "id": "D28",
+    "titulo": "Palabras vacías",
+    "contenido": "Las palabras vacías son términos muy frecuentes que pueden eliminarse durante el análisis.",
+    "categoria": "computacion",
+    "tema": "procesamiento"
+  },
+  {
+    "id": "D29",
+    "titulo": "Stemming en español",
+    "contenido": "El stemming reduce variantes morfológicas a formas comunes aproximadas.",
+    "categoria": "computacion",
+    "tema": "procesamiento"
+  },
+  {
+    "id": "D30",
+    "titulo": "Tokenización de documentos",
+    "contenido": "La tokenización divide el texto en unidades que pueden normalizarse, filtrarse e incorporarse al índice.",
+    "categoria": "computacion",
+    "tema": "procesamiento"
+  }
+]

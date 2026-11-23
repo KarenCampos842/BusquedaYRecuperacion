@@ -1,0 +1,12 @@
+# Consultas didácticas
+- Término: `q=contenido:automóvil`
+- OR: `q=contenido:(automóvil OR coche OR vehículo)`
+- AND: `q=contenido:(búsqueda AND semántica)`
+- NOT: `q=contenido:(energía NOT solar)`
+- Frase: `q=contenido:"índice invertido"`
+- Campo: `q=titulo:búsqueda`
+- Filtro: `q=contenido:energía&fq=categoria:energia`
+- eDisMax/boost: `defType=edismax&q=búsqueda información&qf=titulo^4 contenido`
+- Faceta: `q=*:*&facet=true&facet.field=categoria`
+- Highlighting: `q=contenido:búsqueda&hl=true&hl.fl=contenido`
+- MoreLikeThis: `q=id:D18&mlt=true&mlt.fl=contenido&mlt.count=5`
