@@ -164,3 +164,100 @@ Este comando conserva textos, fechas, URLs y categorías del original y genera
 `corpus_piloto_v2.json` y `corpus_piloto_v2_ajustes.json`. El reporte de ajustes
 identifica la operación local y el SHA-256 del archivo de origen; no representa
 una ejecución nueva de crawling. Se niega a sobrescribir una versión v2 existente.
+
+## P02-07: limpieza local del corpus de sesenta documentos
+
+Desde `proyecto-final-solr/`, en PowerShell, sin acceso a Internet:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 crawler\limpiar_corpus_mdn.py `
+  --entrada data\mdn\ejecuciones\corpus_20261123T224903260669Z_b2f55364aeef4f189bdaf1e69021058e\corpus.json
+```
+
+La entrada predeterminada es ese mismo corpus; `--entrada` permite seleccionar
+otro archivo local. Por defecto se exigen 60 documentos; `--esperados` permite
+indicar explícitamente otra cantidad. El programa valida esquema, IDs y URLs
+únicos, categorías y ambos hashes antes de producir archivos. Si encuentra una
+inconsistencia o dejaría un documento vacío, se detiene sin descartar documentos
+ni escribir un corpus incompleto.
+
+Cada ejecución crea una carpeta única en:
+
+```text
+data/mdn/limpieza/limpieza_<fecha-UTC>_<UUID>/
+  corpus_limpio.json
+  reporte_limpieza.json
+```
+
+Opcionalmente `--salida data\mdn\limpieza\revision_manual_01` permite elegir una
+carpeta NUEVA dentro del proyecto. Si ya existe, la operación falla; los archivos
+se crean con modo exclusivo. No se sobrescriben corpus originales, V2 ni reportes
+de rastreo. No se accede a MDN, no se llama al crawler y no se configura ni indexa
+Solr. El módulo de limpieza solo utiliza la biblioteca estándar de Python.
+
+### Regla de eliminación P02-07-v1
+
+La inspección local encontró 34 apariciones del mismo CSS minificado de interfaz
+(276 caracteres), distribuidas entre JavaScript (14), HTML (13) y CSS (7). No se
+elimina CSS por selectores, por llaves ni por pertenecer a una categoría.
+Se exige la secuencia completa, en párrafos separados:
+
+1. Cabecera exacta `Compatibilidad con navegadores` o `Compatibilidad con los navegadores`.
+2. Firma CSS completa `CSS_INTERFAZ`, definida en `limpiar_corpus_mdn.py`, que empieza
+   por `*,:after,:before{box-sizing:border-box}` y termina en
+   `#content{scroll-margin-block-start:var(--sticky-header-height)}`.
+3. Aviso exacto `Activa JavaScript para ver esta tabla de compatibilidad con navegadores.`
+
+Se retira esa sección sin datos de compatibilidad, incluido el título que quedaría
+vacío y un separador vecino. No se vuelve a interpretar `contenido` como HTML.
+No se normalizan globalmente espacios, saltos, indentación, idiomas o etiquetas:
+se conservan ejemplos `<style>`, selectores, código JS y enlaces editoriales.
+Los textos conservados quedan idénticos; limpiar de nuevo no introduce cambios.
+
+### Esquema y trazabilidad
+
+El corpus limpio mantiene los 60 documentos en su orden original y con las mismas
+19 claves. Solo pueden cambiar `contenido`, `sha256_contenido` y
+`sha256_contenido_normalizado`; ambos hashes se recalculan con las definiciones
+documentadas arriba. Títulos, URLs, atribución, categoría, idioma, procedencia,
+profundidad y `fecha_rastreo` se preservan. La fecha de limpieza va exclusivamente
+en el reporte, no sustituye la fecha de descarga.
+
+El reporte incluye ruta y SHA-256 del archivo original, versión de reglas,
+conteos por categoría, hashes antes/después, caracteres y texto exacto eliminado
+con offsets en el contenido ORIGINAL (índices de caracteres Unicode). Las
+advertencias indican contexto y posición en el texto LIMPIO. Si dos documentos
+quedaran duplicados tras limpiar, se señalan en el resumen; no se borran para
+mantener la evidencia y la cantidad de documentos.
+
+### Casos conservados para revisión manual
+
+Las firmas incompletas o sin contexto no se eliminan. Se reportan avisos de
+compatibilidad aislados, variantes con `--sticky-header-height`, resúmenes
+`CSS Key Concepts:`, avisos `¡Estamos en obras!` y taxonomías históricas como
+`interwiki links` e `Interwiki Languages`. No se puede inferir con certeza si
+son navegación, explicación o contenido editorial a partir del texto plano.
+La lista de detectores no es exhaustiva: otras variantes de interfaz se conservan.
+Si un artículo citase literalmente la secuencia completa de la regla, requeriría
+revisión; no disponemos del DOM original para distinguir esa cita del componente.
+
+### Pruebas y resultado local
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 -m unittest discover -s crawler -v
+```
+
+La batería completa incluye filtros, robots, persistencia, ampliación y limpieza.
+Las regresiones de limpieza comprueban límites de bloques, variantes ambiguas,
+preservación de ejemplos reales CSS/HTML/JS, idempotencia, hashes, esquema, orden,
+persistencia exclusiva y validación de los 60 documentos de entrada.
+
+Resultado de P02-07: 55 pruebas correctas, ejecutadas con conexiones bloqueadas
+y cero intentos de conexión. La copia generada modificó 34 documentos y dejó 26
+sin cambios, eliminó 34 bloques (13 060 caracteres), conservó las cuotas 20/20/20
+y no produjo duplicados normalizados. Hay 12 advertencias en 10 documentos:
+7 resúmenes en inglés, 2 avisos antiguos y 3 marcas de taxonomía.
+
+Salida generada en esta revisión:
+`data/mdn/limpieza/limpieza_20261125T041126771671Z_baee495b391749e5b8d409724c26be31/`.
+Es una copia derivada para revisión; no se declara aprobada ni se ha indexado.
