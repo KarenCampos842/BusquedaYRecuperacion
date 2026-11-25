@@ -1,0 +1,16 @@
+{
+  "operacion": "actualizacion_local_sin_red",
+  "archivo_origen": "corpus_piloto.json",
+  "sha256_archivo_origen": "aea6ba2f057c03a2595911e39a9ef4f1be11bf525525dd1eb94a6fff1cf95627",
+  "archivo_resultado": "corpus_piloto_v2.json",
+  "total_documentos": 12,
+  "tipo_documento": {
+    "indice": 5,
+    "articulo_explicativo": 7
+  },
+  "enlaces_excluidos": 24,
+  "contenido_y_fechas_rastreo": "conservados del corpus original; sin nuevas descargas",
+  "sha256_contenido": "SHA-256 de contenido.encode('utf-8'), sin normalización",
+  "sha256_contenido_normalizado": "SHA-256 UTF-8 tras compactar espacios, strip y casefold",
+  "clasificacion": "heurística de ruta; raíces y Guide/Guides/Reference/Tutorials son índices"
+}

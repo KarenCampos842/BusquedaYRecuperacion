@@ -1,0 +1,1275 @@
+{
+  "resumen": {
+    "total_documentos": 60,
+    "modificados": 34,
+    "sin_cambios": 26,
+    "rechazados": 0,
+    "categorias": {
+      "JavaScript": 20,
+      "HTML": 20,
+      "CSS": 20
+    },
+    "modificados_por_categoria": {
+      "JavaScript": 14,
+      "HTML": 13,
+      "CSS": 7
+    },
+    "caracteres_eliminados": 13060,
+    "bloques_eliminados": 34,
+    "documentos_con_advertencias": 10,
+    "advertencias_por_patron": {
+      "resumen_ingles_repetido": 7,
+      "aviso_documento_antiguo": 2,
+      "taxonomia_antigua": 2,
+      "taxonomia_idiomas": 1
+    },
+    "duplicados_normalizados_despues": []
+  },
+  "documentos": [
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 38015,
+      "caracteres_despues": 38015,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "189213b3f10017e64a635b4ff7ae586c4adc5e1e6139d6e010a50258c6080c77",
+      "sha256_despues": "189213b3f10017e64a635b4ff7ae586c4adc5e1e6139d6e010a50258c6080c77",
+      "sha256_normalizado_antes": "91b131003113c3c35abec77a4f00414bf3cad7eee162f4134a67e6e26e66e6e0",
+      "sha256_normalizado_despues": "91b131003113c3c35abec77a4f00414bf3cad7eee162f4134a67e6e26e66e6e0",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 15629,
+      "caracteres_despues": 15629,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "b27b1fd56d50152a5838405f025dad334ad11b04dc1b1915efedd997ffed738f",
+      "sha256_despues": "b27b1fd56d50152a5838405f025dad334ad11b04dc1b1915efedd997ffed738f",
+      "sha256_normalizado_antes": "669d9782bf303b5a55b9d882843f3defaf330e2adbca6eeab0bc9efbf4e47db9",
+      "sha256_normalizado_despues": "669d9782bf303b5a55b9d882843f3defaf330e2adbca6eeab0bc9efbf4e47db9",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 11467,
+      "caracteres_despues": 11467,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "ee6a7d41bb8ccb84814e912c1962afe3df08799292e9355d2ee4772a3f17f770",
+      "sha256_despues": "ee6a7d41bb8ccb84814e912c1962afe3df08799292e9355d2ee4772a3f17f770",
+      "sha256_normalizado_antes": "e94599d2261f692ea70ce26d2c903b0afffb985ce589e0233ba3b5dda719553a",
+      "sha256_normalizado_despues": "e94599d2261f692ea70ce26d2c903b0afffb985ce589e0233ba3b5dda719553a",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 16078,
+      "caracteres_despues": 16078,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "8715a43bfa3ba30b72a6ed27eeef34c8e3aca407a9539c67e303193da67ebf1a",
+      "sha256_despues": "8715a43bfa3ba30b72a6ed27eeef34c8e3aca407a9539c67e303193da67ebf1a",
+      "sha256_normalizado_antes": "342e8a015086149fcf2256c5a497f4884f729f763b48e1b367038ce95d99fa1c",
+      "sha256_normalizado_despues": "342e8a015086149fcf2256c5a497f4884f729f763b48e1b367038ce95d99fa1c",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 5737,
+      "caracteres_despues": 5737,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "62fe493ca9c1b9a50ad3a1144d43bb6f46e1b536ad3291b87e71809696d8674d",
+      "sha256_despues": "62fe493ca9c1b9a50ad3a1144d43bb6f46e1b536ad3291b87e71809696d8674d",
+      "sha256_normalizado_antes": "88634ff35a7fde9d5f53444ae225590b61e36e3ca3b9a1056530c0db72949757",
+      "sha256_normalizado_despues": "88634ff35a7fde9d5f53444ae225590b61e36e3ca3b9a1056530c0db72949757",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 5944,
+      "caracteres_despues": 5944,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "a9bbc63354e646ee1163e44f04c70b956eb79dcdfdf5193629f5b2d07e0564ec",
+      "sha256_despues": "a9bbc63354e646ee1163e44f04c70b956eb79dcdfdf5193629f5b2d07e0564ec",
+      "sha256_normalizado_antes": "e5271435d72a38a71578b6a936ffe819347376722f0042d100d1ecf03a6f4e06",
+      "sha256_normalizado_despues": "e5271435d72a38a71578b6a936ffe819347376722f0042d100d1ecf03a6f4e06",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 5647,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "ner varios sets de reglas, e incluso, aunque no todas, reglas at.\n\nVer también\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 7812,
+      "caracteres_despues": 7812,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "07f5803b3eba1498c0eeba998b86069d3291c3c5a66e84807bb49ca9bc989014",
+      "sha256_despues": "07f5803b3eba1498c0eeba998b86069d3291c3c5a66e84807bb49ca9bc989014",
+      "sha256_normalizado_antes": "da1efca3578db48746f650527e981828d98121ed120ce3cdb0f1327f9272ab0f",
+      "sha256_normalizado_despues": "da1efca3578db48746f650527e981828d98121ed120ce3cdb0f1327f9272ab0f",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 7515,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": ".st/\n\nCSS3 Selectors Specificity - http://www.w3.org/TR/selectors/#specificity\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 3874,
+      "caracteres_despues": 3874,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "3c989a669d477da316afc8dc3b9be0ae1dded0162f2f8c804847bbadb9d5a1e8",
+      "sha256_despues": "3c989a669d477da316afc8dc3b9be0ae1dded0162f2f8c804847bbadb9d5a1e8",
+      "sha256_normalizado_antes": "e38080326aa239d0647057a5b9d0bd76ef36f3b933f790adbc419819d4a92c44",
+      "sha256_normalizado_despues": "e38080326aa239d0647057a5b9d0bd76ef36f3b933f790adbc419819d4a92c44",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 6023,
+      "caracteres_despues": 6023,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "d564c3d1c78d99c24c9ac3e27a55c5af723dfa34231d2ced284789d944916469",
+      "sha256_despues": "d564c3d1c78d99c24c9ac3e27a55c5af723dfa34231d2ced284789d944916469",
+      "sha256_normalizado_antes": "d55760321f1026f4623c0d2a33ad4d4cd2770facfdce19406c7dffb92dad461b",
+      "sha256_normalizado_despues": "d55760321f1026f4623c0d2a33ad4d4cd2770facfdce19406c7dffb92dad461b",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 4531,
+      "caracteres_despues": 4531,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "985c88b6d317ff8ac547a7e7772b4a051cf41990e4b2b917fc4faa97a3a66704",
+      "sha256_despues": "985c88b6d317ff8ac547a7e7772b4a051cf41990e4b2b917fc4faa97a3a66704",
+      "sha256_normalizado_antes": "c7f060e92bba52e5a821a513a5f37de1d9dd88a1b086d9ff07765d963c6a6bd1",
+      "sha256_normalizado_despues": "c7f060e92bba52e5a821a513a5f37de1d9dd88a1b086d9ff07765d963c6a6bd1",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 1720,
+      "caracteres_despues": 1720,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "9c5508b0c9cb57e00e2f6a48bfcf59d868d12f541e681098bd2b19cc2db099a9",
+      "sha256_despues": "9c5508b0c9cb57e00e2f6a48bfcf59d868d12f541e681098bd2b19cc2db099a9",
+      "sha256_normalizado_antes": "5b46856a65195a6ce49c260ec87581a7e6e938059985a4a4ed8d5fa03fbb2364",
+      "sha256_normalizado_despues": "5b46856a65195a6ce49c260ec87581a7e6e938059985a4a4ed8d5fa03fbb2364",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 33805,
+      "caracteres_despues": 33805,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "21d15ca14fcdeff3e846f5737588494421c4e6dcd85e23a586d10036e2f4696d",
+      "sha256_despues": "21d15ca14fcdeff3e846f5737588494421c4e6dcd85e23a586d10036e2f4696d",
+      "sha256_normalizado_antes": "a3ef8b7f5c19e64fd77970bb50de9270ece6b607c6304318a0d9aa9a5d7d03f2",
+      "sha256_normalizado_despues": "a3ef8b7f5c19e64fd77970bb50de9270ece6b607c6304318a0d9aa9a5d7d03f2",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 34791,
+      "caracteres_despues": 34791,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "f1f389ba77b5f5b7b705fcdd165c2cc13a6726f35a4ec53f7bec44e8c1c23c97",
+      "sha256_despues": "f1f389ba77b5f5b7b705fcdd165c2cc13a6726f35a4ec53f7bec44e8c1c23c97",
+      "sha256_normalizado_antes": "6c37883c37ab25118f168f15c01906490dcbc945b29d696f3628ce12ee2fa0cd",
+      "sha256_normalizado_despues": "6c37883c37ab25118f168f15c01906490dcbc945b29d696f3628ce12ee2fa0cd",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 8307,
+      "caracteres_despues": 7923,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "48383e68e28fac7cfa36d0035c10a3c34f59dff87270a5254b03b0710cbd0e2f",
+      "sha256_despues": "8895bcd666cb9b26adee25e9da5522696e7efb3b0664aeb35d885544692efff9",
+      "sha256_normalizado_antes": "31038d49dda3f90010c16f1bc4798267a77ba5fd1e742b98047dcd9c64081b70",
+      "sha256_normalizado_despues": "2416a9605543dbefbb2de6e95b27ee020e43b3130de8c9154998fdcc0bf67933",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 7857,
+          "fin": 8241,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "categoria": "JavaScript",
+      "modificado": false,
+      "caracteres_antes": 4762,
+      "caracteres_despues": 4762,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "decc2832f35565550659daa6c2454969e0fac975acb85a09527586372dc30e5b",
+      "sha256_despues": "decc2832f35565550659daa6c2454969e0fac975acb85a09527586372dc30e5b",
+      "sha256_normalizado_antes": "6dcf4dccee5c139dfac4dabe64d085acb6f7a9e23f7f64611cf7a692ff14794f",
+      "sha256_normalizado_despues": "6dcf4dccee5c139dfac4dabe64d085acb6f7a9e23f7f64611cf7a692ff14794f",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 13689,
+      "caracteres_despues": 13305,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "c2d95ace541a9ba7a6a4dfd46d155aef677c660b8aa726855c6223de4eafd2b3",
+      "sha256_despues": "da14273efc06530e51b711d3971ed24df625114d73bc6f36739fb72ff697986e",
+      "sha256_normalizado_antes": "a3b23d4ca20f113b9ec3dfac8ad8d82603b502c4e6e3b0b1d087d0ea41b962e0",
+      "sha256_normalizado_despues": "aa9b9aa8aea9d2492c8fdc75af104b757ade16cbfd0a2a7da9ea561b1a71a2a3",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 13135,
+          "fin": 13519,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 3405,
+      "caracteres_despues": 3021,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "2b4256c52aab997895f4e363cb5adf24edc0799ce9c477e40e3fffe696942326",
+      "sha256_despues": "b1c8f45383279b9627596ae39f13ca50a70ecd3f9a9b6815739e43523cd61ce5",
+      "sha256_normalizado_antes": "c7e2c4edc82dd12904d6ae60f60b80ac2142c5073c218d08da31bda0956eb07a",
+      "sha256_normalizado_despues": "7a6b46f15173433c028ecce98482c177d7f84222883e476b2ac5cecda235dc4d",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 2949,
+          "fin": 3333,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 3441,
+      "caracteres_despues": 3057,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "e7a30f570a84b31f4f01effe5247ed5ed677bd4b9a4ca6b5e0f2eaa825ad6525",
+      "sha256_despues": "3109560126f2d4e5987a58b5c7a5e66a4bd7005a7d6b57113668d0cb1aaaf1d5",
+      "sha256_normalizado_antes": "c5aa0b29a0ae8c35921caa4aa5b5c0432089a1d6a4618744102574e7e6fe58fe",
+      "sha256_normalizado_despues": "6225fa77b5d92cfbaafc8d95dbc4a66136ce79d3a421e17838b51ea028a1f556",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 2888,
+          "fin": 3272,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 10060,
+      "caracteres_despues": 9676,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "f78e5557a929531cb01531e2678874ad0c8fa783eb46c72db4d78bee04150a29",
+      "sha256_despues": "3223b6e851c93aae3b1aba1cba3db2a3edefa52baa8ee0ffc16cfee5cf3d78cd",
+      "sha256_normalizado_antes": "eafd3609f5a8f845a6bb8b9706ff1006c12deb22bd8f2a7f5e1365e4ce9dfd2d",
+      "sha256_normalizado_despues": "a87fcb85a509ee04e0b71912f1ada5f5d6fb871e02b5e459b443cd06b7de4b39",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 9637,
+          "fin": 10021,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 6919,
+      "caracteres_despues": 6535,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "6b09275b59e69c87940e1ec3e0e3ef93fb0a3dec8d6e9791d6fe4821efffcf6e",
+      "sha256_despues": "abe88f87658c8e60ddc54e2c5f2efa3100fc1a27a72522094edfb5cbeabccb46",
+      "sha256_normalizado_antes": "318283822189267a15e09285352c09fe6a7492faa93b501514b7178a2a6ce2bb",
+      "sha256_normalizado_despues": "f081adff8e6a100ae895d421579319c7b0127d3e9ca4f8af96fff110930e5ca8",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 6401,
+          "fin": 6785,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 3837,
+      "caracteres_despues": 3453,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "6423251100f4af10284112765aabe0a892c9caf2864cb615bbd66f2d420a45eb",
+      "sha256_despues": "da7233c0864a3d55b2d773d470959432dd4a449de5a6a94cfce71c4a0465004b",
+      "sha256_normalizado_antes": "0dd0e75ff538b05a01fd9743f177e0b9c58ce1b2e9ff73039f593041e95fba7e",
+      "sha256_normalizado_despues": "5ba0c16cfdcd0d4347b5e4ec1c65e503230e8a408cbf608a97b25044cdd0762a",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 3453,
+          "fin": 3837,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 1491,
+      "caracteres_despues": 1107,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "9f4d51169d071360fe1fc2288e573077c27e7810bc3b55015da79f16b8a21559",
+      "sha256_despues": "6ea2198ca2bba2c1294585d851ba04ea60a823e579c977556727e7044cf347c4",
+      "sha256_normalizado_antes": "3490c9a9626910ad75936f038cff857b7aa02f55f64f301da14211d9b669b9d8",
+      "sha256_normalizado_despues": "d63fe23dce9a6cace6fa833174297adc74462181f0f64f1957e56c51b21b0def",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 1078,
+          "fin": 1462,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 15174,
+      "caracteres_despues": 14790,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "7c9db6da0c231a29820d8f50c90406d29c1233816b9f9b9333144d2eafee8273",
+      "sha256_despues": "6a5d6a4a3aefa0b4ef9d59185e868e2c275af860a9a81463b2825ddee3b1ef52",
+      "sha256_normalizado_antes": "36fa6049572b9a46a38308fb7ea770c7640e6298837539711b5413f428f73a19",
+      "sha256_normalizado_despues": "8bd15d4871bd9845a7c509762bcb79518d2d7d90148920c547b643457236ed30",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 14658,
+          "fin": 15042,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 13234,
+      "caracteres_despues": 12850,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "e014ec4f4037fe262516b459681ce2957e29725e63437e1bf1e8bb8cddbc25a2",
+      "sha256_despues": "481aee67918e14c506bff34eb04c4e6c439117e6ee850076836df6d4555fbb64",
+      "sha256_normalizado_antes": "b6f67ff9b04f373705f6a050ceb3e41075d284ddb2220e1dc63dcfb6f52a8350",
+      "sha256_normalizado_despues": "e210474ee6fea8e73d0dbe19ccc6d1de9b015649d74e96290c7bcbc563cdaa67",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 12817,
+          "fin": 13201,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 9189,
+      "caracteres_despues": 8805,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "048bf4de702f8c84e1dc092ef24eab2ebfe382ec8b5ff77ef6448d4908815c85",
+      "sha256_despues": "f358746b935c09717aa7837d051102287f46ca15a89692b9cf8eae8a0b43f3ab",
+      "sha256_normalizado_antes": "1c19fb0e61c24e0f083018745c7f688777b4b8cddea0ec3014bb825b000170d8",
+      "sha256_normalizado_despues": "1885f4fc86b59419721d713a25a2e7e39e4d850bc01be74d31ea838ff57587d7",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 8000,
+          "fin": 8384,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 6276,
+      "caracteres_despues": 5892,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "3f18494c81d3d9b704f875b8dbdf9ae4b42cfef5203f396cc3bc98ec04fcfbf5",
+      "sha256_despues": "4314ba8a393e37942f9e0b590bd0388833747625853c6bf24b609344e24a8fa5",
+      "sha256_normalizado_antes": "56adca186da16c9782f52322ba9f7da77deda5b311b0d4a63d98295de2835af7",
+      "sha256_normalizado_despues": "9693bdcc6b921d9bd21953c2b9c62ed04ee74c7eb6344cdf9f05c411c048f30d",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 5862,
+          "fin": 6246,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 12254,
+      "caracteres_despues": 11870,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "61ae4154b3a84d29446b7f4ad74dc2a786a564a8dade22a5f82051acfca44018",
+      "sha256_despues": "117c7b74318eced7d857d19d87a3c22ba1c56484e676a9e777bb49a624ccc697",
+      "sha256_normalizado_antes": "b3c8f6b1f3df32dbd9af904ba7bb378f25e8d2f694bd7d8bf1dc67b054b0b147",
+      "sha256_normalizado_despues": "cd2ce8db15ef48dc5e297c280b7701addb291ab411d18bf914169b042ec4fe18",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 11824,
+          "fin": 12208,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+      "categoria": "JavaScript",
+      "modificado": true,
+      "caracteres_antes": 10007,
+      "caracteres_despues": 9623,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "c86c2a7e8dbb78981d6b9b292883379595bd17aa1daf6e018694668ea5fb11ad",
+      "sha256_despues": "d05ac549b42e0e3542c5e6c1ae77cbc67001eb2c83736b5fc3ad5c9929bc6718",
+      "sha256_normalizado_antes": "39e9de4054b9ad708578f3af3601b29006d98e14ead58fdc75114a3a1cbb0161",
+      "sha256_normalizado_despues": "36a58e902c95aa72657fb05f58feb8f53bf3e6251ac4acb7665fb06ec1559cfa",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 9588,
+          "fin": 9972,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 1043,
+      "caracteres_despues": 659,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "5ef6996c8aad8fcbc773cc44bfb1b7d25f5cd1a822bd82326232745a9de23dd7",
+      "sha256_despues": "42dee625e15f5b901bf9b4f36bbe8546aa2b68fe12e97c7467f3c45068a371d1",
+      "sha256_normalizado_antes": "012c2eeaba54f6f1b4e3e663c6aecc1f11690f9c27e155d1e2e03f819d9efcd2",
+      "sha256_normalizado_despues": "06007a6968ef0e49578fd614f8d76d00f66f58d13c6275b5c7b9481a32d77af3",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 520,
+          "fin": 904,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 2012,
+      "caracteres_despues": 1628,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "5f7ac533d708a81b58baeb0c0f9881c27c6fe3f18e71931e00d15f664d5acda2",
+      "sha256_despues": "1061596dd2b78f0a786897a6b8907debe9aa835f7c135001a0fe4ef115d29c25",
+      "sha256_normalizado_antes": "04345d7a5430932435a740bf6803286a4a807c8f18619a7999700568d574aec3",
+      "sha256_normalizado_despues": "5bc5829dae7777c9780bbed199970cc000f67119cb325fed402a59c722765c8e",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 1628,
+          "fin": 2012,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 20349,
+      "caracteres_despues": 19965,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "ced3c6f3cd11544df897600e580800d2e4869d2e81664bbdf18a7b7da9f088ab",
+      "sha256_despues": "c3998a8cdb0aaa942f798505dd27339deacbe534c37cc9989ca78ee0e740c902",
+      "sha256_normalizado_antes": "8d84d374eba63758c5862a3ef7fd3d722fc92f684143c5e671e887c5336ae76d",
+      "sha256_normalizado_despues": "bec7d6974d3420735160c1c068edd60c6e29d636902e5897f282848de0665d51",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 19901,
+          "fin": 20285,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 3621,
+      "caracteres_despues": 3237,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "23c398ef2c6a2dedfe7c9b8fb344cb22694dc3ca515266cae8e1bc79df47d8fc",
+      "sha256_despues": "f9c0b309e55ffd7d7fbf43f110e33e49321a00fccf5e40d7e363de69c4ed853c",
+      "sha256_normalizado_antes": "164c37524c0fab396aa679044a3204a76e9ac293b2281f2fb5ef713c4ba524bc",
+      "sha256_normalizado_despues": "c895173e771a6766e9bb697059907803900d13a25c39e76a86d01f9bf9dd4481",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 3176,
+          "fin": 3560,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 666,
+      "caracteres_despues": 666,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "3bdb70feb51480e58c9b24ee98f8d762dc989f627031dca3794b2063eeb39d32",
+      "sha256_despues": "3bdb70feb51480e58c9b24ee98f8d762dc989f627031dca3794b2063eeb39d32",
+      "sha256_normalizado_antes": "a2112bfbb78bc6fcd5b689e6f26ae05b8395db840677be2913986915fe44a979",
+      "sha256_normalizado_despues": "a2112bfbb78bc6fcd5b689e6f26ae05b8395db840677be2913986915fe44a979",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "aviso_documento_antiguo",
+          "inicio_en_texto_limpio": 488,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Posible aviso editorial antiguo; no eliminar automáticamente.",
+          "contexto": ": Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.\n\n¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.\n\nCategoría\n\ninterwiki links\n\nautomatismos"
+        },
+        {
+          "patron": "taxonomia_antigua",
+          "inicio_en_texto_limpio": 637,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Posible taxonomía o texto histórico; revisar manualmente.",
+          "contexto": "n su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.\n\nCategoría\n\ninterwiki links\n\nautomatismos"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 19799,
+      "caracteres_despues": 19411,
+      "caracteres_eliminados": 388,
+      "sha256_antes": "6e0cb01a79980951200e1efe25cfe5c2532686b1e93f18d674ef044e4c012e02",
+      "sha256_despues": "1539069483d8d27f90c99c12e71382493062ad2e9dfab7e8251ca9d64ff6b8f4",
+      "sha256_normalizado_antes": "1cdcb0c825dc3997b8509e7def1281bbd068d6b517b211f2c63ec64b68462e0d",
+      "sha256_normalizado_despues": "325d99f9934ba01f3454b9b8fd6f7b660c5bdf596b989809349a13a4e169e868",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 19228,
+          "fin": 19616,
+          "texto_eliminado": "Compatibilidad con los navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 564,
+      "caracteres_despues": 564,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "7a3f0a6f628039215b077fa517f16431b4426e98ce20fdb8a17acbc9fb3a554d",
+      "sha256_despues": "7a3f0a6f628039215b077fa517f16431b4426e98ce20fdb8a17acbc9fb3a554d",
+      "sha256_normalizado_antes": "342ab7541d19684e0d4b97d6c07a92c9d51e20b2b42652549c31a8eeb0389caf",
+      "sha256_normalizado_despues": "342ab7541d19684e0d4b97d6c07a92c9d51e20b2b42652549c31a8eeb0389caf",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "aviso_documento_antiguo",
+          "inicio_en_texto_limpio": 386,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Posible aviso editorial antiguo; no eliminar automáticamente.",
+          "contexto": ": Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.\n\n¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.\n\nCategoría\n\ninterwiki links\n\nautomatismos"
+        },
+        {
+          "patron": "taxonomia_antigua",
+          "inicio_en_texto_limpio": 535,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Posible taxonomía o texto histórico; revisar manualmente.",
+          "contexto": "n su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.\n\nCategoría\n\ninterwiki links\n\nautomatismos"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 2626,
+      "caracteres_despues": 2242,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "20da0c8f1068de3787901132b042c707f48e3502dc6fe97611942b69bd5701ee",
+      "sha256_despues": "9afdb9919a89fcae75ee7c564aadce89111221e31084e3b4b509639074caa3af",
+      "sha256_normalizado_antes": "477c9dc80d21e45b8e7dc61e25b8e0e029cb87bbf3d42074ba09617ddc90e756",
+      "sha256_normalizado_despues": "aad41f028fcf77ae4e47be11b39c7f28e98e054f21428a0b34bcfe0da2ed363a",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 2157,
+          "fin": 2541,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 4272,
+      "caracteres_despues": 3888,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "5537193674fc79da19753031e3b08df5336a61458820bdd004ac4c1f6134c749",
+      "sha256_despues": "7e934e2cd3a55c71de64ac33f9dcfbebc254493517d26bf8a40251280c32afe1",
+      "sha256_normalizado_antes": "eb5bd36c5ccbed5919b33ff580529c4a95cab060e65406394c50c70809c757b0",
+      "sha256_normalizado_despues": "9f86e448bd9eb3520104c6154d7fa38c5e5295fbe225f8f21fa5e06a4b079248",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 3888,
+          "fin": 4272,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 3686,
+      "caracteres_despues": 3302,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "33d4d90788f64abd71461d84e467c98f6a3e87b807e1316d4d3171887bfb3b4e",
+      "sha256_despues": "d33889855d0514b4c6338a80eb49072e4df08833ab63aec953b3f0f2b39b349b",
+      "sha256_normalizado_antes": "6b7576a5ab08ee62ead3c14e0ced0ee9906b8b28bd8159c1ddc6e2a111b347db",
+      "sha256_normalizado_despues": "4c8437d6594876fa61d2d6e5f587e2bc7e1a01f0675205bddde6ca56c6a95002",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 3276,
+          "fin": 3660,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 20724,
+      "caracteres_despues": 20340,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "3b6cdec5b99c25de6cfeed6dcf03d047865b844ba891f3992b6bad1caedd73c7",
+      "sha256_despues": "c26eda50d1a5f27e09b2837028468120ddf2ecae440dc6636f0875184f938735",
+      "sha256_normalizado_antes": "72035b116b2c4f8043f5c3275a9704cebf21841fd8535a2ff949d55ffad9b5d2",
+      "sha256_normalizado_despues": "59a7637c5991edf3ef8a87c552cc47376be8565d85be8947f70a01958759f7c2",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 19662,
+          "fin": 20046,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 2037,
+      "caracteres_despues": 1653,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "fb88e710fb2c84300e6847d20c6038ca83f2383b1138b5e8ad015feb39cce502",
+      "sha256_despues": "2128938781d715f3f2e2030709978f53d98d5eb6604204d5005edaaf1c72bd30",
+      "sha256_normalizado_antes": "c794017492f5df51a4b7a6484f967506e9896479576ca70b46eb3deadc13d7a4",
+      "sha256_normalizado_despues": "666581d3812eb89df8114e142f7f12219461004bcf371b18e61f6a817f06a86e",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 772,
+          "fin": 1156,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 1395,
+      "caracteres_despues": 1011,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "70833e6433c189172a6cff0a3a894d122dd24f958a2a7cc34ca74f890d594283",
+      "sha256_despues": "87703db9fba99d5cc500523f3a864d4f1ebd55d7cf712360146d11eaa983887d",
+      "sha256_normalizado_antes": "128e4a8e4f9f531d177bbaa95b863d75cc2b16097d159fddee5e622ca00b2264",
+      "sha256_normalizado_despues": "e6fbc813bb7852f928c73d684b169597fac70d4e3db98e0168be81c008ae9525",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 794,
+          "fin": 1178,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 3970,
+      "caracteres_despues": 3586,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "614f3495974949208b97c4009c59e1dc4676c3f77c473248c4f0ed0131259786",
+      "sha256_despues": "1b01a987cb824df121378aa1351fcdf564e3cf7ee1e2c754b802de9881110790",
+      "sha256_normalizado_antes": "8911630a6fded19626846da06b20cc5ec2dd57aa2f1e21d70ce5c1028505f0fe",
+      "sha256_normalizado_despues": "9b73e9cdc4c8058d6e838675e08e4025ac444ee654bf524cb5851e3e5cf7f8cb",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 3396,
+          "fin": 3780,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+      "categoria": "HTML",
+      "modificado": false,
+      "caracteres_antes": 798,
+      "caracteres_despues": 798,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "2f8ce2d6e70b16f5ab7119231d8ed32f55330d5b9b8be1068836f756348dbb0d",
+      "sha256_despues": "2f8ce2d6e70b16f5ab7119231d8ed32f55330d5b9b8be1068836f756348dbb0d",
+      "sha256_normalizado_antes": "aea6798f4410fdc7e4cf51ee5306c8751e84f3854f2b5b8835080ddfa2923f98",
+      "sha256_normalizado_despues": "aea6798f4410fdc7e4cf51ee5306c8751e84f3854f2b5b8835080ddfa2923f98",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+      "categoria": "HTML",
+      "modificado": true,
+      "caracteres_antes": 21796,
+      "caracteres_despues": 21412,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "d6f733fd4c8a7ff53a25bebe7d065cbb0fa03cff5def075ddbc9d1f3148b7613",
+      "sha256_despues": "057eb7a5defa1b794649a309d6e1fd2934c8eb3589e8f8f73c3b8a227c8eef24",
+      "sha256_normalizado_antes": "682e8dd47074bdd95f1626160ce3bae4f6fb5f785b5979d852ac0fd0ff48a92f",
+      "sha256_normalizado_despues": "442c476c32390de5d434929d2a2310dce130505f62a0f77ee11beaafece704a4",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 21129,
+          "fin": 21513,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 1302,
+      "caracteres_despues": 1302,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "899dc5cad794f1db2454277dace40fb0e0891239476434e531eafd89d83e25ac",
+      "sha256_despues": "899dc5cad794f1db2454277dace40fb0e0891239476434e531eafd89d83e25ac",
+      "sha256_normalizado_antes": "4f46f0e3652a4a94fdd1c8fb5c7685c421c5f944b6cb9fff56f5ac48e8599611",
+      "sha256_normalizado_despues": "4f46f0e3652a4a94fdd1c8fb5c7685c421c5f944b6cb9fff56f5ac48e8599611",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 1005,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "s\n\nEspecificación |\n\nCSS Syntax Module Level 3 |\n\nVéase también\n\nCSS Reference\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 1326,
+      "caracteres_despues": 942,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "501cf1b4039d4e3bd5453b167805d6f3f26b85fd5d34271a1233bcd157632cf3",
+      "sha256_despues": "9a5bacca98227c9fc006f64259d88060d58528be187073f408c205f9d416d6a2",
+      "sha256_normalizado_antes": "05fa1474003aa84f823cbacb9849b021847878b71aa3f8fde9ae94409df05316",
+      "sha256_normalizado_despues": "4fef7df6b9bae8d2fda9bc0074728d1de63cf38df3d20be0784e7df6d5553d63",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 942,
+          "fin": 1326,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 1194,
+      "caracteres_despues": 810,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "6cae8d12cf7f31b3fd93cd95a0106e4fdcc0427839264e3ed73f088d368ed983",
+      "sha256_despues": "7aa7b09e12bbda9d46261a80b1b64fc0b580adadf648f43e8ad7dae8bb396876",
+      "sha256_normalizado_antes": "2fba9c5b44064877557df23c33076ba350ed071a0ec195754fb91653e97b6fa6",
+      "sha256_normalizado_despues": "0aa624ba269fea4f5919ce174fce31f2da392faa55cedb1d8933b56051a5c1ee",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 810,
+          "fin": 1194,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 5136,
+      "caracteres_despues": 4752,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "a89c13ec60865cf98cea29d588b56b29364258733c35acce9f591e2e6e540de0",
+      "sha256_despues": "601b72172ccedcef208265202e1654ea2d69fae50add36b9d52710ffea038f31",
+      "sha256_normalizado_antes": "71d24b2b99b5dd4e025a1b5d1f4c77532254722ae101157ba27d8d460f8fc8df",
+      "sha256_normalizado_despues": "874cb71c3dbc45a68339d053bb1c2cfef4ccfe9b0b543b0fabaa6b4a6dfdf045",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 4668,
+          "fin": 5052,
+          "texto_eliminado": "Compatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores.\n\n"
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 3583,
+      "caracteres_despues": 3583,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "3ba8f549d60881c638b8316af07786396afafb0e4b344ba7eb15b9ef67aad3f9",
+      "sha256_despues": "3ba8f549d60881c638b8316af07786396afafb0e4b344ba7eb15b9ef67aad3f9",
+      "sha256_normalizado_antes": "5ecaa439d0affe12be9caeb09053f1ba497550d9a56b6cc54b7d73fa5481c531",
+      "sha256_normalizado_despues": "5ecaa439d0affe12be9caeb09053f1ba497550d9a56b6cc54b7d73fa5481c531",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 1061,
+      "caracteres_despues": 1061,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "a707418f6bafaf11a2bf54c81b13a2c2bfda87366efd3b78dea13e6d4fdd28da",
+      "sha256_despues": "a707418f6bafaf11a2bf54c81b13a2c2bfda87366efd3b78dea13e6d4fdd28da",
+      "sha256_normalizado_antes": "ecc6352d63f44bd3fc09c070a16ceeffcca5369902a476b084d7a76ff951634c",
+      "sha256_normalizado_despues": "ecc6352d63f44bd3fc09c070a16ceeffcca5369902a476b084d7a76ff951634c",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 764,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "\n\nCSS 2.1 Syntax and basic data types #comments\n\nVéase también\n\nReferencia CSS\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 1667,
+      "caracteres_despues": 1667,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "fe7d33f3d662bdfba8c2b1b0fde29a079df8147798d61ce7fe7353f719cc6ed0",
+      "sha256_despues": "fe7d33f3d662bdfba8c2b1b0fde29a079df8147798d61ce7fe7353f719cc6ed0",
+      "sha256_normalizado_antes": "99770575a6445fc2094bd986babd54f6b6efe34a26079db2904116f090c6cc96",
+      "sha256_normalizado_despues": "99770575a6445fc2094bd986babd54f6b6efe34a26079db2904116f090c6cc96",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "taxonomia_idiomas",
+          "inicio_en_texto_limpio": 1648,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Posible taxonomía o referencia editorial; revisar manualmente.",
+          "contexto": "heredadas y las no heredadas.\n\nVer también\n\ninherit, Valor inicial\n\nCategorías\n\nInterwiki Languages"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 3376,
+      "caracteres_despues": 3376,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "34679eac7a7b599e7481a2446d535a450dde513f1a33314ab4aab7f2e4f5c22d",
+      "sha256_despues": "34679eac7a7b599e7481a2446d535a450dde513f1a33314ab4aab7f2e4f5c22d",
+      "sha256_normalizado_antes": "98535fd7d32394bcf17da82e52f8ddd3ef8f25d0293d800931c77efea90c7571",
+      "sha256_normalizado_despues": "98535fd7d32394bcf17da82e52f8ddd3ef8f25d0293d800931c77efea90c7571",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 1012,
+      "caracteres_despues": 1012,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "b50938d416858d977f7a46ac620dafcd07469613e81484a8f2ff606c2adad99c",
+      "sha256_despues": "b50938d416858d977f7a46ac620dafcd07469613e81484a8f2ff606c2adad99c",
+      "sha256_normalizado_antes": "ab9f8aa1279e640ee469743ed0c471518107e3768872742a72ffa5a98554e0ba",
+      "sha256_normalizado_despues": "ab9f8aa1279e640ee469743ed0c471518107e3768872742a72ffa5a98554e0ba",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 715,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "0 1.2rem 0;\n  background: yellow;\n}\n\nResult\n\nTambién puedes ver\n\nCSS Reference\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 15958,
+      "caracteres_despues": 15958,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "f9cd574bee2c5943e17dfb87899c5cd55b94ce16d0373acb87df653f116aa793",
+      "sha256_despues": "f9cd574bee2c5943e17dfb87899c5cd55b94ce16d0373acb87df653f116aa793",
+      "sha256_normalizado_antes": "d527209955cffe794f6687528b8448418719dfdedaa7f50a865e67456e4d5f9c",
+      "sha256_normalizado_despues": "d527209955cffe794f6687528b8448418719dfdedaa7f50a865e67456e4d5f9c",
+      "eliminaciones": [],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 9754,
+      "caracteres_despues": 9754,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "95a68c68fbf1dee646e2f4caafe207ee5ccdda8507a5f441fd0ae5a74c0f5de7",
+      "sha256_despues": "95a68c68fbf1dee646e2f4caafe207ee5ccdda8507a5f441fd0ae5a74c0f5de7",
+      "sha256_normalizado_antes": "450b45b76076ab4ba6f443d882853b36103ee6ed0c95045d5734c62dd23b6ffe",
+      "sha256_normalizado_despues": "450b45b76076ab4ba6f443d882853b36103ee6ed0c95045d5734c62dd23b6ffe",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 9457,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "cificación |\n\nCSS Values and Units Module Level 4\n\n# value-defs |\n\nVea también\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+      "categoria": "CSS",
+      "modificado": false,
+      "caracteres_antes": 7650,
+      "caracteres_despues": 7650,
+      "caracteres_eliminados": 0,
+      "sha256_antes": "58061872160a7ef53043373c797fa81f3442502e56f1d1319b722fe64a3befc9",
+      "sha256_despues": "58061872160a7ef53043373c797fa81f3442502e56f1d1319b722fe64a3befc9",
+      "sha256_normalizado_antes": "a039a3689796f3b46f2dea0e51f1bc880c353f2086f888e0c0a4297fbbe9231e",
+      "sha256_normalizado_despues": "a039a3689796f3b46f2dea0e51f1bc880c353f2086f888e0c0a4297fbbe9231e",
+      "eliminaciones": [],
+      "advertencias": [
+        {
+          "patron": "resumen_ingles_repetido",
+          "inicio_en_texto_limpio": 6808,
+          "accion": "conservado_para_revision_manual",
+          "motivo": "Puede ser resumen editorial o navegación; revisar manualmente.",
+          "contexto": "obtener más información sobre cómo funciona la herencia en CSS.\n\nVéase también\n\nCSS Key Concepts: CSS syntax, at-rule, comments, specificity and inheritance, the box, layout modes and visual formatting models, and margin collapsing, or the initial, computed, resolved, specified, used, and actual values. Definitions of value syntax, sho"
+        }
+      ]
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 746,
+      "caracteres_despues": 362,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "744a82c38cb5b8012b0eb8b29932b426ba726b0c4b1c4ef3fbe910f39f3722bc",
+      "sha256_despues": "a8852f8947f8f31524d53208a609524e3e74b3f34d5b912d3621fb297da39f30",
+      "sha256_normalizado_antes": "59216a171802dd51daf3f80f2fb829424c044b8c04fdb57f2d5cae24d629132a",
+      "sha256_normalizado_despues": "226812829b1979e3867b00e40d2a56fe7b69b2f24683126745c0938b5c6c1853",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 362,
+          "fin": 746,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 777,
+      "caracteres_despues": 393,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "1aa349da6041e346ad57834efe7ca33486134e80f30ac776547d73ee5182d101",
+      "sha256_despues": "b872698d1cd2693a13664f87e43a927e527b0a4c57b2df8a5d12040fc7065726",
+      "sha256_normalizado_antes": "a8b2be121ecc88c915de4bab8d9f73d9463e651c985d563bfc95860cc7f04034",
+      "sha256_normalizado_despues": "69f2cc23d54b09389fc57f5f4312a6f3bb3913d2063c55b4d8bba9b7307d651b",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 393,
+          "fin": 777,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 786,
+      "caracteres_despues": 402,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "1c404187081a34c2944db0dfeaaeba48cec1170e685d1d67cd70d56be8887a69",
+      "sha256_despues": "50d652c8de808595aa367786c3028f8aaf9d1b9d3618ac416c6a88201a5005c1",
+      "sha256_normalizado_antes": "0899d73085235fae6b139af7d613a0e9ed1796e6866507adcc4e8b8c9fffe056",
+      "sha256_normalizado_despues": "40ec5f266d0e2e4caadc6457f52a6edff57b56370833252bde204d40044560bf",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 402,
+          "fin": 786,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+      "categoria": "CSS",
+      "modificado": true,
+      "caracteres_antes": 1108,
+      "caracteres_despues": 724,
+      "caracteres_eliminados": 384,
+      "sha256_antes": "1fff2a7beb610c8da52cd50f383ebc44b33782cea5a61aceb35bb8ee586a66d2",
+      "sha256_despues": "e995f43cc2a2a6b047c5b126cdbdc1fb39831d31c53aac5a362fedee4fd0c9ee",
+      "sha256_normalizado_antes": "238948e470b33217f703a14437b963f08f59a4cbe6612073a01394802d9edc84",
+      "sha256_normalizado_despues": "c0bcb74bfd7706d83307cf58b0cbc3f813913f915af8da89ab2379967a2216c0",
+      "eliminaciones": [
+        {
+          "regla": "compatibilidad_sin_datos_css_interfaz_exacto",
+          "inicio": 724,
+          "fin": 1108,
+          "texto_eliminado": "\n\nCompatibilidad con navegadores\n\n*,:after,:before{box-sizing:border-box}button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer}img{height:auto;max-width:100%}a{color:var(--color-link-normal)}[hidden]{display:none!important}#content{scroll-margin-block-start:var(--sticky-header-height)}\n\nActiva JavaScript para ver esta tabla de compatibilidad con navegadores."
+        }
+      ],
+      "advertencias": []
+    }
+  ],
+  "operacion": "limpieza_local_sin_red",
+  "version_reglas": "P02-07-v1",
+  "fecha_limpieza": "2026-11-25T04:36:42.045810+00:00",
+  "archivo_entrada": "data/mdn/ejecuciones/corpus_20261123T224903260669Z_b2f55364aeef4f189bdaf1e69021058e/corpus.json",
+  "sha256_archivo_entrada": "45f9e5e528667d378d395f480138e4f5b1a3284d664761e1f4e4b953c7e159e7",
+  "archivo_salida": "data/mdn/limpieza/limpieza_20261125T043642044138Z_c21372d7d7c14eaa9055b2593fd866be/corpus_limpio.json",
+  "campos_modificables": [
+    "contenido",
+    "sha256_contenido",
+    "sha256_contenido_normalizado"
+  ],
+  "preservacion": "Mismo orden, cantidad, IDs, esquema y metadatos; fecha_rastreo original intacta.",
+  "limite": "Solo firma CSS exacta con cabecera y aviso de compatibilidad; sin reconstrucción del DOM."
+}
