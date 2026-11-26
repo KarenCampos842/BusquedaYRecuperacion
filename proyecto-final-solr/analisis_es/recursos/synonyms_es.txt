@@ -39,8 +39,10 @@ expresiones regulares, regexps
 asíncrono, asíncrona, asincrónico, async
 
 # HTML
-enlace, vínculo, hipervínculo, ancla
-enlaces, vínculos, hipervínculos, anclas
+# Sin "enlace": en el corpus es genérico (aparece en Array, String o Herencia
+# como "enlace a otra página") y traía ruido a "hipervínculo" (P03-07, C14).
+hipervínculo, vínculo, ancla
+hipervínculos, vínculos, anclas
 
 # CSS
 relleno, padding
