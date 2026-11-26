@@ -1,25 +1,25 @@
-"""Lectura del corpus MDN limpio e indexación en el core de prueba (nunca en `ri`)."""
+"""Lectura del corpus oficial (corpus_solr.json, P02-09) e indexación en el core de prueba (nunca en `ri`)."""
 
 import json
 from pathlib import Path
 
-from configuracion import CORE_PRODUCCION, DIRECTORIO_PROYECTO, PATRON_CORPUS_LIMPIO
+from configuracion import CORE_PRODUCCION, DIRECTORIO_PROYECTO, PATRON_CORPUS_SOLR
 from solr_cliente import enviar
 
 TOTAL_DOCUMENTOS_ESPERADOS = 60
 CAMPOS_OBLIGATORIOS = ("id", "titulo", "contenido", "categoria")
 
 
-def ruta_corpus_limpio() -> Path:
-    candidatos = sorted(DIRECTORIO_PROYECTO.glob(PATRON_CORPUS_LIMPIO))
+def ruta_corpus_solr() -> Path:
+    candidatos = sorted(DIRECTORIO_PROYECTO.glob(PATRON_CORPUS_SOLR))
     if not candidatos:
-        raise FileNotFoundError(f"No hay corpus en {PATRON_CORPUS_LIMPIO}")
+        raise FileNotFoundError(f"No hay corpus en {PATRON_CORPUS_SOLR}")
     return candidatos[-1]  # el nombre lleva marca de tiempo: el último es el más reciente
 
 
 def cargar_corpus(ruta: Path | None = None) -> list[dict]:
     """Lee el JSON (solo lectura) y valida 60 documentos con IDs únicos."""
-    documentos = json.loads((ruta or ruta_corpus_limpio()).read_text(encoding="utf-8"))
+    documentos = json.loads((ruta or ruta_corpus_solr()).read_text(encoding="utf-8"))
     identificadores = {documento["id"] for documento in documentos}
     if len(documentos) != TOTAL_DOCUMENTOS_ESPERADOS or len(identificadores) != len(documentos):
         raise ValueError(f"Se esperaban {TOTAL_DOCUMENTOS_ESPERADOS} documentos con IDs únicos.")

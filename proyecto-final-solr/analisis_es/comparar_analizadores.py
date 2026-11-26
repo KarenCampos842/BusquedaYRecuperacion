@@ -6,7 +6,7 @@ Uso (desde proyecto-final-solr/, con Solr encendido):
 Pasos (todos en el core aislado ri_analisis_es; `ri` no se toca):
 1. Crea el core si falta y configura text_es_ri (copia del kit) y los tipos nuevos.
 2. Crea campos espejo titulo_<variante> y contenido_<variante> por cada tipo.
-3. Indexa los 60 documentos MDN limpios (el JSON solo se lee).
+3. Indexa los 60 documentos de corpus_solr.json (P02-09; el JSON solo se lee).
 4. Ejecuta las mismas consultas en cada variante y guarda totales, primeros
    resultados y documentos ganados/perdidos frente a text_es_ri.
 5. Guarda tokens de ejemplos para la evidencia (equivale a Solr Admin > Analysis).

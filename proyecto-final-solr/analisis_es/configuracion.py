@@ -30,4 +30,4 @@ RUTA_ESQUEMA_KIT = (
     DIRECTORIO_PROYECTO
     / "kit" / "02_recuperacion_informacion" / "configuracion" / "configurar_esquema.py"
 )
-PATRON_CORPUS_LIMPIO = "data/mdn/limpieza/limpieza_*/corpus_limpio.json"
+PATRON_CORPUS_SOLR = "data/mdn/transformacion/transformacion_*/corpus_solr.json"
