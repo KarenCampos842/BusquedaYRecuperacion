@@ -7,6 +7,7 @@ import unittest
 
 from configuracion import TIPO_CONTROL
 from configurar_analizadores import agregar_o_reemplazar
+from recursos_gestionados import mapa_equivalencias
 from definiciones_tipos import (
     DEFINIDORES_TIPOS,
     definir_text_es_proyecto,
@@ -55,6 +56,14 @@ class PruebasTiposAlternativos(unittest.TestCase):
     def test_protegidos_antes_del_stemming(self):
         consulta = clases(definir_text_es_proyecto()["queryAnalyzer"])
         self.assertLess(consulta.index("KeywordMarkerFilterFactory"), consulta.index("SpanishLightStemFilterFactory"))
+
+
+class PruebasRecursosGestionados(unittest.TestCase):
+    def test_mapa_equivalencias_incluye_el_original(self):
+        mapa = mapa_equivalencias([["promesa", "promise"], ["expresion regular", "regex"]])
+        self.assertEqual(mapa["promise"], ["promesa", "promise"])
+        self.assertEqual(mapa["expresion regular"], ["expresion regular", "regex"])
+        self.assertEqual(len(mapa), 4)
 
 
 if __name__ == "__main__":
