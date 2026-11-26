@@ -1,0 +1,31 @@
+# Términos técnicos protegidos del stemming (text_es_proyecto).
+# Una palabra por línea, UTF-8, en minúsculas. Las líneas con # son comentarios.
+# El script los convierte en el patrón de solr.KeywordMarkerFilterFactory,
+# que se aplica después de minúsculas y del plegado de acentos.
+#
+# Nota sobre SpanishLightStemFilter: no altera palabras de menos de 5 letras
+# y solo recorta vocales finales (a, e, o) y plurales (-s, -es). Por eso:
+#  - Los nombres de lenguajes se protegen por contrato, aunque hoy el stemmer
+#    ligero no los cambie: así un cambio futuro de stemmer no los deforma.
+#  - Los términos en inglés que terminan en vocal o en -s sí se deformarían
+#    o chocarían con palabras españolas (media -> "medi", igual que "medio").
+
+# Lenguajes y tecnologías (acordado en P00-03)
+javascript
+ecmascript
+html
+css
+json
+
+# Identificadores de la API que el stemmer recortaría
+array
+fetch
+promise
+canvas
+media
+style
+title
+template
+aside
+source
+value

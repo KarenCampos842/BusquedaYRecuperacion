@@ -1,0 +1,54 @@
+# Sinónimos del dominio MDN para text_es_proyecto (P03-07).
+# Se aplican SOLO al analizar la consulta (SynonymGraph en queryAnalyzer),
+# así que se pueden cambiar sin reindexar: basta volver a ejecutar
+# configurar_analizadores.py.
+#
+# Formato: un grupo de equivalentes por línea, separados por comas.
+# No se usa "=>" (reemplazo): todas las equivalencias son bidireccionales.
+# Se escriben con acentos; el script los sube en minúsculas y sin acentos.
+#
+# El filtro de sinónimos va ANTES del stemming, por eso cada grupo aparece
+# en singular y en plural. Las frases de varias palabras se permiten.
+#
+# Criterios (P03-07):
+#  - Solo pares término español <-> nombre técnico en inglés que MDN en
+#    español usa indistintamente, o variantes españolas del mismo concepto.
+#  - Se evita "cadena" sola: en el corpus también es "cadena de prototipos".
+#  - Se evita "fuente" sola: en el corpus también significa "código fuente".
+
+# JavaScript
+arreglo, array, matriz
+arreglos, arrays, matrices
+cadena de caracteres, cadena de texto, string
+cadenas de caracteres, cadenas de texto, strings
+función, function
+funciones, functions
+objeto, object
+objetos, objects
+clase, class
+clases, classes
+promesa, promise
+promesas, promises
+booleano, boolean
+número, number
+números, numbers
+fecha, date
+símbolo, symbol
+expresión regular, regexp, regex
+expresiones regulares, regexps
+asíncrono, asíncrona, asincrónico, async
+
+# HTML
+# Sin "enlace": en el corpus también significa otras cosas ("enlace a un
+# objeto prototipo", "ámbito de enlace with"); con él, "hipervínculo"
+# coincidía con 11 documentos y sin él con 4 (P03-07, C14).
+hipervínculo, vínculo, ancla
+hipervínculos, vínculos, anclas
+
+# CSS
+relleno, padding
+margen, margin
+márgenes, margins
+borde, border
+bordes, borders
+tipografía, font

@@ -1,0 +1,171 @@
+# Palabras vacías en español para text_es_proyecto (P03-02).
+# Una palabra por línea, UTF-8. Las líneas con # son comentarios.
+# Se escriben con acentos para que sean legibles; el script de configuración
+# sube cada palabra y su forma sin acentos, porque el analizador pliega acentos
+# antes del filtro de palabras vacías.
+#
+# Criterio: solo artículos, preposiciones, conjunciones, pronombres,
+# determinantes y formas auxiliares sin valor para distinguir documentos.
+# Excluidas a propósito (ver analisis_es/README.md):
+#   - "no" y "sin": cambian el sentido de una frase técnica.
+#   - "estado", "valor", "tipo", "nombre", "uno", "dos": son vocabulario del dominio.
+#   - Letras sueltas que también son elementos HTML (b, i, p, q, s, u).
+#   - "a" SÍ se incluye: es la preposición más frecuente del corpus. El elemento
+#     <a> se recupera por "ancla", "enlace" o "hipervínculo" (ver synonyms_es.txt).
+
+# Artículos
+el
+la
+los
+las
+lo
+un
+una
+unos
+unas
+
+# Preposiciones y contracciones
+a
+al
+ante
+bajo
+con
+contra
+de
+del
+desde
+durante
+en
+entre
+hacia
+hasta
+mediante
+para
+por
+según
+sobre
+tras
+
+# Conjunciones y nexos
+y
+e
+o
+ni
+que
+pero
+sino
+aunque
+porque
+pues
+si
+como
+cuando
+donde
+mientras
+
+# Pronombres personales y reflexivos
+yo
+tú
+él
+ella
+ello
+ellos
+ellas
+nosotros
+nosotras
+vosotros
+usted
+ustedes
+me
+te
+se
+le
+les
+nos
+os
+mí
+ti
+sí
+
+# Posesivos
+mi
+mis
+tu
+tus
+su
+sus
+nuestro
+nuestra
+nuestros
+nuestras
+
+# Demostrativos
+este
+esta
+estos
+estas
+ese
+esa
+esos
+esas
+aquel
+aquella
+aquellos
+aquellas
+esto
+eso
+aquello
+
+# Relativos e indefinidos poco informativos
+cual
+cuales
+quien
+quienes
+cuyo
+cuya
+algún
+alguna
+algunos
+algunas
+otro
+otra
+otros
+otras
+mismo
+misma
+mismos
+mismas
+cada
+todo
+toda
+todos
+todas
+muy
+más
+menos
+ya
+también
+tan
+tanto
+
+# Formas auxiliares de ser, estar y haber
+es
+son
+era
+eran
+fue
+fueron
+ser
+sea
+sean
+está
+están
+estar
+estaba
+ha
+han
+hay
+haber
+había
+he
+has

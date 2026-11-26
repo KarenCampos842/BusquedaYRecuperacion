@@ -1,0 +1,98 @@
+# Análisis del español para Solr (integrante B · Karen)
+
+Tipos de campo, recursos lingüísticos y pruebas del analizador `text_es_proyecto`,
+que el contrato P00-03 asigna a `titulo` y `contenido`. `text_es_ri` (kit) **no se
+modifica**: es el control experimental.
+
+## Tipos de campo
+
+| Tipo | Tarea | Índice | Consulta |
+|---|---|---|---|
+| `text_es_ri` (kit) | control | estándar → minúsculas → plegado (conserva original) | igual |
+| `text_es_stop` | P03-03 | `text_es_ri` + palabras vacías | igual |
+| `text_es_stem` | P03-05 | estándar → minúsculas → plegado → `SpanishLightStem` | igual |
+| `text_es_proyecto` | P00-03 | estándar → minúsculas → plegado → palabras vacías → términos protegidos → `SpanishLightStem` | igual + **sinónimos** tras el plegado |
+
+- Palabras vacías y sinónimos son **recursos gestionados** de Solr (`ManagedStopFilterFactory`,
+  `ManagedSynonymGraphFilterFactory`, nombre `es_proyecto`). Se cargan por HTTP desde
+  `recursos/`, así que no hace falta copiar archivos al contenedor.
+- Los términos protegidos se convierten en el atributo `pattern` de `KeywordMarkerFilterFactory`.
+- Los sinónimos solo actúan en la consulta: se cambian **sin reindexar**.
+
+## Recursos (`recursos/`)
+
+| Archivo | Contenido |
+|---|---|
+| `stopwords_es.txt` | artículos, preposiciones, conjunciones, pronombres y auxiliares. Excluye `no`, `sin` y vocabulario del dominio (`estado`, `valor`, `tipo`…) y letras que son elementos HTML (`b`, `i`, `p`, `q`, `s`, `u`). |
+| `protwords_es.txt` | lenguajes (JavaScript, HTML, CSS…) e identificadores que el stemmer recortaría o confundiría (`media` → `medi`, igual que «medio»). |
+| `synonyms_es.txt` | grupos español ↔ inglés técnico de MDN (`promesa, promise`; `relleno, padding`…), en singular y plural porque se aplican antes del stemming. |
+
+Se escriben con acentos; los scripts los suben en minúsculas y sin acentos.
+
+## Uso (desde `proyecto-final-solr/`)
+
+```bash
+# Pruebas sin Solr (un solo comando)
+py -m unittest discover -s analisis_es -v
+
+# Con Solr encendido (kit/01_instalacion: docker compose up -d)
+py analisis_es/verificar_linea_base.py      # P01-04 / P03-01
+py analisis_es/comparar_analizadores.py     # P03-04 / P03-06 / P03-08
+py analisis_es/configurar_analizadores.py   # solo los tipos, core de prueba
+```
+
+Plantillas del kit completadas (delegan en esta carpeta, no duplican lógica):
+`kit/02_recuperacion_informacion/experimentos/{stopwords,stemming,sinonimos}/configurar_*.py`.
+
+Todo se ejecuta por defecto en el core aislado **`ri_analisis_es`**, creado con
+`docker exec solr-ri solr create -c ri_analisis_es -d _default`. El core `ri` solo se
+**lee** (`verificar_linea_base.py`). Los scripts se pueden repetir: si un tipo o campo
+ya existe se reemplaza con la definición del repositorio; `text_es_ri` nunca se reemplaza.
+
+La comparación indexa `data/mdn/transformacion/transformacion_*/corpus_solr.json`
+(P02-09, solo lectura). Resultados: `resultados/` y `../docs/resultados_comparacion_analizadores.md`.
+
+## Integración en `ri`
+
+**Dónde se ejecuta:** en la máquina donde corre el Solr de destino, porque el script
+se conecta a `http://localhost:8983/solr` (`URL_SOLR` en `configuracion.py`). Para el
+`ri` de Joseph, **Joseph lo ejecuta en su equipo**, primero en modo de prueba (sin
+`--aplicar`), revisa la salida y solo después aplica. Si lo ejecuta otra persona en su
+propio equipo, cambia su Solr local, no el de Joseph.
+
+```bash
+py analisis_es/aplicar_en_ri.py            # modo de prueba: estado de ri y JSON que se enviaría
+py analisis_es/aplicar_en_ri.py --aplicar  # pide escribir "ri"; solo con aprobación de Karen
+```
+
+Al aplicar, en este orden:
+
+1. **`text_es_ri` (P01-04).** Si falta en `ri`, crea **solo el tipo** con la definición
+   leída del kit (`kit/.../configurar_esquema.py`, sin ejecutarlo y sin copiarla a mano).
+   No se ejecuta `configurar_esquema.py` porque además crearía `titulo` y `contenido` con
+   `text_es_ri`, contra el contrato P00-03 §5. Si ya existe, comprueba que sea idéntico al
+   kit y no lo toca. Si es distinto, se detiene sin enviar nada.
+2. **`text_es_proyecto`.** Lo agrega (o reemplaza), sincroniza los recursos `es_proyecto`
+   y recarga `ri`.
+3. Comprueba que `text_es_ri` quedó idéntico al kit.
+
+Solo envía tipos de campo y recursos. **No crea ni modifica campos** (`titulo`,
+`contenido`, `tema`, `vector`…) **ni documentos**. Asignar `"type": "text_es_proyecto"`
+a `titulo` y `contenido` e indexar le corresponde a Joseph en su script de esquema.
+
+## Notas de Solr 10
+
+- La REST API de sinónimos gestionados rechaza «lista de listas»; se envía un mapa
+  término → grupo completo (`recursos_gestionados.mapa_equivalencias`).
+- Desde Git Bash, `docker exec` necesita `MSYS_NO_PATHCONV=1`; en PowerShell no.
+
+## P03-09 · Cuándo reindexar
+
+| Cambio | ¿Reindexar `titulo`/`contenido`? | Qué hacer |
+|---|---|---|
+| `synonyms_es.txt` | **No** (solo consulta) | Repetir `configurar_analizadores.py --core ri --tipos text_es_proyecto` (sincroniza y recarga). |
+| `stopwords_es.txt` o `protwords_es.txt` | **Sí** (afectan el índice) | Repetir el script anterior y pedir a Joseph que vuelva a indexar los documentos. |
+| Filtros del `indexAnalyzer` de `text_es_proyecto` | **Sí** | Igual que el caso anterior. |
+| Solo el `queryAnalyzer` | No | Repetir el script. |
+
+No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11, P08-02).

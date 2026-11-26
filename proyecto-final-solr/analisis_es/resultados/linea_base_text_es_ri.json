@@ -1,0 +1,59 @@
+{
+  "estado_en_ri": "presente e idéntico al kit",
+  "analisis": {
+    "BÚSQUEDA de Información": [
+      {
+        "etapa": "StandardTokenizer",
+        "tokens": [
+          "BÚSQUEDA",
+          "de",
+          "Información"
+        ]
+      },
+      {
+        "etapa": "LowerCaseFilter",
+        "tokens": [
+          "búsqueda",
+          "de",
+          "información"
+        ]
+      },
+      {
+        "etapa": "ASCIIFoldingFilter",
+        "tokens": [
+          "busqueda",
+          "búsqueda",
+          "de",
+          "informacion",
+          "información"
+        ]
+      }
+    ],
+    "busqueda de informacion": [
+      {
+        "etapa": "StandardTokenizer",
+        "tokens": [
+          "busqueda",
+          "de",
+          "informacion"
+        ]
+      },
+      {
+        "etapa": "LowerCaseFilter",
+        "tokens": [
+          "busqueda",
+          "de",
+          "informacion"
+        ]
+      },
+      {
+        "etapa": "ASCIIFoldingFilter",
+        "tokens": [
+          "busqueda",
+          "de",
+          "informacion"
+        ]
+      }
+    ]
+  }
+}

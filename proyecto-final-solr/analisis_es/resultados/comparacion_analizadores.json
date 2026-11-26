@@ -1,0 +1,2616 @@
+{
+  "consultas": [
+    {
+      "id": "C01",
+      "consulta": "promesas",
+      "proposito": "morfologia",
+      "variantes": {
+        "ri": {
+          "total": 1,
+          "primeros": [
+            "Guía de JavaScript"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 1,
+          "primeros": [
+            "Guía de JavaScript"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 2,
+          "primeros": [
+            "Guía de JavaScript",
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [
+            "Expresiones y operadores"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 2,
+          "primeros": [
+            "Guía de JavaScript",
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [
+            "Expresiones y operadores"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "consulta": "promesa",
+      "proposito": "morfologia",
+      "variantes": {
+        "ri": {
+          "total": 1,
+          "primeros": [
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 1,
+          "primeros": [
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 2,
+          "primeros": [
+            "Guía de JavaScript",
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [
+            "Guía de JavaScript"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 2,
+          "primeros": [
+            "Guía de JavaScript",
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [
+            "Guía de JavaScript"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "consulta": "arreglos",
+      "proposito": "morfologia",
+      "variantes": {
+        "ri": {
+          "total": 5,
+          "primeros": [
+            "Guía de JavaScript",
+            "Tipos de datos y estructuras en JavaScript",
+            "Expresiones y operadores",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "String — Cadena de caracteres"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 5,
+          "primeros": [
+            "Guía de JavaScript",
+            "Tipos de datos y estructuras en JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Expresiones y operadores",
+            "String — Cadena de caracteres"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 9,
+          "primeros": [
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Tipos de datos y estructuras en JavaScript",
+            "Guía de JavaScript",
+            "Object",
+            "Expresiones y operadores",
+            "String — Cadena de caracteres",
+            "Booleano",
+            "Function",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [
+            "Booleano",
+            "Function",
+            "Object",
+            "RegExp"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 13,
+          "primeros": [
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Tipos de datos y estructuras en JavaScript",
+            "Array",
+            "Object",
+            "Guía de JavaScript",
+            "Expresiones y operadores",
+            "Symbol",
+            "String — Cadena de caracteres",
+            "Function",
+            "Booleano"
+          ],
+          "ganados_vs_ri": [
+            "Array",
+            "BigInt",
+            "Booleano",
+            "Function",
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "RegExp",
+            "Symbol"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C04",
+      "consulta": "funciones",
+      "proposito": "morfologia",
+      "variantes": {
+        "ri": {
+          "total": 13,
+          "primeros": [
+            "Guía de JavaScript",
+            "Clases",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Function",
+            "Herencia y la cadena de prototipos",
+            "JavaScript",
+            "Tipos de datos y estructuras en JavaScript",
+            "Expresiones y operadores",
+            "Object",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 13,
+          "primeros": [
+            "Guía de JavaScript",
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Clases",
+            "Herencia y la cadena de prototipos",
+            "JavaScript",
+            "Tipos de datos y estructuras en JavaScript",
+            "Expresiones y operadores",
+            "Object",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 32,
+          "primeros": [
+            "Function",
+            "<body>: El elemento body del documento",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Guía de JavaScript",
+            "Herencia y la cadena de prototipos",
+            "Clases",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "JavaScript"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<audio> : elemento HTML para incrustar audio",
+            "<body>: El elemento body del documento",
+            "<script>: The Script element",
+            "<title>: El elemento Título del documento",
+            "Array",
+            "BigInt",
+            "Booleano",
+            "Error",
+            "Especificidad",
+            "Herencia",
+            "Microdatos",
+            "Number",
+            "Propiedades abreviadas",
+            "Sintaxis",
+            "String — Cadena de caracteres",
+            "Symbol",
+            "Usar formatos de fecha y hora en HTML",
+            "undefined"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 32,
+          "primeros": [
+            "Function",
+            "<body>: El elemento body del documento",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos",
+            "Guía de JavaScript",
+            "Clases",
+            "Object",
+            "JavaScript",
+            "Expresiones y operadores",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<audio> : elemento HTML para incrustar audio",
+            "<body>: El elemento body del documento",
+            "<script>: The Script element",
+            "<title>: El elemento Título del documento",
+            "Array",
+            "BigInt",
+            "Booleano",
+            "Error",
+            "Especificidad",
+            "Herencia",
+            "Microdatos",
+            "Number",
+            "Propiedades abreviadas",
+            "Sintaxis",
+            "String — Cadena de caracteres",
+            "Symbol",
+            "Usar formatos de fecha y hora en HTML",
+            "undefined"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "consulta": "selectores",
+      "proposito": "morfologia",
+      "variantes": {
+        "ri": {
+          "total": 9,
+          "primeros": [
+            "Selectores universales",
+            "Selectores de tipo",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Especificidad",
+            "Referencia CSS",
+            "Sintaxis",
+            "CSS",
+            "Procesamiento del valor de las propiedades CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 9,
+          "primeros": [
+            "Selectores de tipo",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Selectores universales",
+            "Especificidad",
+            "Referencia CSS",
+            "Sintaxis",
+            "CSS",
+            "Procesamiento del valor de las propiedades CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 9,
+          "primeros": [
+            "Selectores universales",
+            "Selectores de tipo",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Especificidad",
+            "Sintaxis",
+            "Referencia CSS",
+            "Procesamiento del valor de las propiedades CSS",
+            "CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 9,
+          "primeros": [
+            "Selectores de tipo",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Selectores universales",
+            "Especificidad",
+            "Sintaxis",
+            "Referencia CSS",
+            "Procesamiento del valor de las propiedades CSS",
+            "CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "consulta": "función",
+      "proposito": "acentos",
+      "variantes": {
+        "ri": {
+          "total": 25,
+          "primeros": [
+            "<body>: El elemento body del documento",
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "String — Cadena de caracteres",
+            "BigInt",
+            "Symbol"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 25,
+          "primeros": [
+            "<body>: El elemento body del documento",
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "String — Cadena de caracteres",
+            "BigInt",
+            "Symbol"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 32,
+          "primeros": [
+            "Function",
+            "<body>: El elemento body del documento",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Guía de JavaScript",
+            "Herencia y la cadena de prototipos",
+            "Clases",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "JavaScript"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<link> elemento de enlace a recurso externo HTML",
+            "<title>: El elemento Título del documento",
+            "Herencia",
+            "Microdatos",
+            "Propiedades abreviadas",
+            "Sintaxis de definición de valor"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 35,
+          "primeros": [
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "<body>: El elemento body del documento",
+            "Referencia CSS",
+            "Herencia y la cadena de prototipos",
+            "Clases",
+            "Expresiones y operadores",
+            "Object",
+            "Guía de JavaScript",
+            "JavaScript"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<link> elemento de enlace a recurso externo HTML",
+            "<title>: El elemento Título del documento",
+            "Herencia",
+            "Microdatos",
+            "Procesamiento del valor de las propiedades CSS",
+            "Propiedades abreviadas",
+            "Referencia CSS",
+            "Sintaxis de definición de valor",
+            "null"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "consulta": "funcion",
+      "proposito": "acentos",
+      "variantes": {
+        "ri": {
+          "total": 25,
+          "primeros": [
+            "<body>: El elemento body del documento",
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "String — Cadena de caracteres",
+            "BigInt",
+            "Symbol"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 25,
+          "primeros": [
+            "<body>: El elemento body del documento",
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "String — Cadena de caracteres",
+            "BigInt",
+            "Symbol"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 32,
+          "primeros": [
+            "Function",
+            "<body>: El elemento body del documento",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Guía de JavaScript",
+            "Herencia y la cadena de prototipos",
+            "Clases",
+            "Object",
+            "Expresiones y operadores",
+            "RegExp",
+            "JavaScript"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<link> elemento de enlace a recurso externo HTML",
+            "<title>: El elemento Título del documento",
+            "Herencia",
+            "Microdatos",
+            "Propiedades abreviadas",
+            "Sintaxis de definición de valor"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 35,
+          "primeros": [
+            "Function",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "<body>: El elemento body del documento",
+            "Referencia CSS",
+            "Herencia y la cadena de prototipos",
+            "Clases",
+            "Expresiones y operadores",
+            "Object",
+            "Guía de JavaScript",
+            "JavaScript"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<link> elemento de enlace a recurso externo HTML",
+            "<title>: El elemento Título del documento",
+            "Herencia",
+            "Microdatos",
+            "Procesamiento del valor de las propiedades CSS",
+            "Propiedades abreviadas",
+            "Referencia CSS",
+            "Sintaxis de definición de valor",
+            "null"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C08",
+      "consulta": "MÉTODOS",
+      "proposito": "acentos",
+      "variantes": {
+        "ri": {
+          "total": 20,
+          "primeros": [
+            "Clases",
+            "Date",
+            "Object",
+            "String — Cadena de caracteres",
+            "Error",
+            "BigInt",
+            "Symbol",
+            "Herencia y la cadena de prototipos",
+            "Array",
+            "Number"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 20,
+          "primeros": [
+            "Clases",
+            "Date",
+            "Object",
+            "String — Cadena de caracteres",
+            "Error",
+            "BigInt",
+            "Symbol",
+            "Herencia y la cadena de prototipos",
+            "Array",
+            "Number"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 25,
+          "primeros": [
+            "Clases",
+            "Symbol",
+            "<body>: El elemento body del documento",
+            "String — Cadena de caracteres",
+            "Object",
+            "BigInt",
+            "Date",
+            "Array",
+            "Booleano",
+            "Error"
+          ],
+          "ganados_vs_ri": [
+            "<audio> : elemento HTML para incrustar audio",
+            "<body>: El elemento body del documento",
+            "Expresiones y operadores",
+            "Procesamiento del valor de las propiedades CSS",
+            "undefined"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 25,
+          "primeros": [
+            "Clases",
+            "Symbol",
+            "<body>: El elemento body del documento",
+            "String — Cadena de caracteres",
+            "Object",
+            "BigInt",
+            "Date",
+            "Array",
+            "Herencia y la cadena de prototipos",
+            "Booleano"
+          ],
+          "ganados_vs_ri": [
+            "<audio> : elemento HTML para incrustar audio",
+            "<body>: El elemento body del documento",
+            "Expresiones y operadores",
+            "Procesamiento del valor de las propiedades CSS",
+            "undefined"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C09",
+      "consulta": "la cadena de prototipos",
+      "proposito": "stopwords",
+      "variantes": {
+        "ri": {
+          "total": 60,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "String — Cadena de caracteres",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Guía de JavaScript",
+            "Object",
+            "Sintaxis de definición de valor",
+            "HTML: Lenguaje de Marcado de Hipertexto",
+            "Elemento de metadatos HTML <meta>",
+            "JavaScript",
+            "Usar formatos de fecha y hora en HTML"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 24,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "String — Cadena de caracteres",
+            "Object",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "JavaScript",
+            "Clases",
+            "Guía de JavaScript",
+            "Usar formatos de fecha y hora en HTML",
+            "RegExp",
+            "Symbol"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": [
+            "https://developer.mozilla.org/es/docs/Web/CSS",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+            "https://developer.mozilla.org/es/docs/Web/HTML",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
+          ]
+        },
+        "stem": {
+          "total": 60,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "String — Cadena de caracteres",
+            "Guía de JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "HTML: Lenguaje de Marcado de Hipertexto",
+            "Object",
+            "Sintaxis de definición de valor",
+            "Elemento de metadatos HTML <meta>",
+            "Tipos de datos y estructuras en JavaScript",
+            "Categorías de contenido"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 26,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "String — Cadena de caracteres",
+            "Object",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "JavaScript",
+            "Guía de JavaScript",
+            "Number",
+            "Clases",
+            "Error",
+            "Usar formatos de fecha y hora en HTML"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": [
+            "https://developer.mozilla.org/es/docs/Web/CSS",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
+          ]
+        }
+      }
+    },
+    {
+      "id": "C10",
+      "consulta": "el modelo de caja",
+      "proposito": "stopwords",
+      "variantes": {
+        "ri": {
+          "total": 60,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Entendiendo el colapso de margen",
+            "Categorías de contenido",
+            "Guía de JavaScript",
+            "<title>: El elemento Título del documento",
+            "<body>: El elemento body del documento",
+            "<article>: El elemento con contendio del artículo",
+            "Propiedades abreviadas",
+            "CSS",
+            "Sintaxis de definición de valor"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 10,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas",
+            "CSS",
+            "Categorías de contenido",
+            "Guía de JavaScript",
+            "@media",
+            "Array",
+            "Herencia y la cadena de prototipos",
+            "Referencia CSS",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": [
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+            "https://developer.mozilla.org/es/docs/Web/HTML",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
+          ]
+        },
+        "stem": {
+          "total": 60,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Entendiendo el colapso de margen",
+            "Categorías de contenido",
+            "Guía de JavaScript",
+            "<title>: El elemento Título del documento",
+            "<body>: El elemento body del documento",
+            "<article>: El elemento con contendio del artículo",
+            "Propiedades abreviadas",
+            "CSS",
+            "Sintaxis de definición de valor"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 10,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas",
+            "CSS",
+            "Categorías de contenido",
+            "Guía de JavaScript",
+            "@media",
+            "Array",
+            "Herencia y la cadena de prototipos",
+            "Referencia CSS",
+            "RegExp"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": [
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+            "https://developer.mozilla.org/es/docs/Web/HTML",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+            "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
+          ]
+        }
+      }
+    },
+    {
+      "id": "C11",
+      "consulta": "\"cadena de prototipos\"",
+      "proposito": "stopwords_frase",
+      "variantes": {
+        "ri": {
+          "total": 4,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 4,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 4,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 4,
+          "primeros": [
+            "Herencia y la cadena de prototipos",
+            "Object",
+            "JavaScript",
+            "Una reintroducción a JavaScript (Tutorial de JS)"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C12",
+      "consulta": "promise",
+      "proposito": "sinonimos",
+      "variantes": {
+        "ri": {
+          "total": 0,
+          "primeros": [],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 0,
+          "primeros": [],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 0,
+          "primeros": [],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 2,
+          "primeros": [
+            "Guía de JavaScript",
+            "Expresiones y operadores"
+          ],
+          "ganados_vs_ri": [
+            "Expresiones y operadores",
+            "Guía de JavaScript"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C13",
+      "consulta": "relleno",
+      "proposito": "sinonimos",
+      "variantes": {
+        "ri": {
+          "total": 2,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 2,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 3,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas",
+            "String — Cadena de caracteres"
+          ],
+          "ganados_vs_ri": [
+            "String — Cadena de caracteres"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 8,
+          "primeros": [
+            "Introducción al modelo de caja básico de CSS",
+            "Propiedades abreviadas",
+            "Referencia CSS",
+            "Procesamiento del valor de las propiedades CSS",
+            "<article>: El elemento con contendio del artículo",
+            "String — Cadena de caracteres",
+            "<a> : elemento de ancla HTML",
+            "<audio> : elemento HTML para incrustar audio"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<article>: El elemento con contendio del artículo",
+            "<audio> : elemento HTML para incrustar audio",
+            "Procesamiento del valor de las propiedades CSS",
+            "Referencia CSS",
+            "String — Cadena de caracteres"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C14",
+      "consulta": "hipervínculo",
+      "proposito": "sinonimos",
+      "variantes": {
+        "ri": {
+          "total": 1,
+          "primeros": [
+            "<a> : elemento de ancla HTML"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 1,
+          "primeros": [
+            "<a> : elemento de ancla HTML"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 4,
+          "primeros": [
+            "<base>",
+            "<body>: El elemento body del documento",
+            "<a> : elemento de ancla HTML",
+            "HTML: Lenguaje de Marcado de Hipertexto"
+          ],
+          "ganados_vs_ri": [
+            "<base>",
+            "<body>: El elemento body del documento",
+            "HTML: Lenguaje de Marcado de Hipertexto"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 4,
+          "primeros": [
+            "<a> : elemento de ancla HTML",
+            "<base>",
+            "<body>: El elemento body del documento",
+            "HTML: Lenguaje de Marcado de Hipertexto"
+          ],
+          "ganados_vs_ri": [
+            "<base>",
+            "<body>: El elemento body del documento",
+            "HTML: Lenguaje de Marcado de Hipertexto"
+          ],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C15",
+      "consulta": "expresión regular",
+      "proposito": "sinonimos",
+      "variantes": {
+        "ri": {
+          "total": 10,
+          "primeros": [
+            "RegExp",
+            "Symbol",
+            "String — Cadena de caracteres",
+            "Array",
+            "Expresiones y operadores",
+            "Clases",
+            "Function",
+            "Selectores de ID",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 10,
+          "primeros": [
+            "RegExp",
+            "Symbol",
+            "String — Cadena de caracteres",
+            "Array",
+            "Expresiones y operadores",
+            "Clases",
+            "Function",
+            "Selectores de ID",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "Herencia y la cadena de prototipos"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 13,
+          "primeros": [
+            "Expresiones y operadores",
+            "RegExp",
+            "Symbol",
+            "Clases",
+            "Guía de JavaScript",
+            "String — Cadena de caracteres",
+            "Array",
+            "Function",
+            "Selectores de ID",
+            "Una reintroducción a JavaScript (Tutorial de JS)"
+          ],
+          "ganados_vs_ri": [
+            "Guía de JavaScript",
+            "JavaScript",
+            "Tipos de datos y estructuras en JavaScript"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 10,
+          "primeros": [
+            "RegExp",
+            "String — Cadena de caracteres",
+            "Array",
+            "Symbol",
+            "Clases",
+            "Guía de JavaScript",
+            "Expresiones y operadores",
+            "Una reintroducción a JavaScript (Tutorial de JS)",
+            "JavaScript",
+            "Herencia y la cadena de prototipos"
+          ],
+          "ganados_vs_ri": [
+            "Guía de JavaScript",
+            "JavaScript"
+          ],
+          "perdidos_vs_ri": [
+            "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+            "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function"
+          ]
+        }
+      }
+    },
+    {
+      "id": "C16",
+      "consulta": "media",
+      "proposito": "protegidas",
+      "variantes": {
+        "ri": {
+          "total": 12,
+          "primeros": [
+            "@media",
+            "@import",
+            "<link> elemento de enlace a recurso externo HTML",
+            "Elemento de metadatos HTML <meta>",
+            "Regla-At",
+            "Sintaxis",
+            "@font-face",
+            "CSS",
+            "Date",
+            "Referencia CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 12,
+          "primeros": [
+            "@media",
+            "@import",
+            "<link> elemento de enlace a recurso externo HTML",
+            "Elemento de metadatos HTML <meta>",
+            "Regla-At",
+            "Sintaxis",
+            "@font-face",
+            "CSS",
+            "Date",
+            "Referencia CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 16,
+          "primeros": [
+            "@media",
+            "@import",
+            "<link> elemento de enlace a recurso externo HTML",
+            "Elemento de metadatos HTML <meta>",
+            "Regla-At",
+            "Sintaxis",
+            "@font-face",
+            "CSS",
+            "Date",
+            "HTML: Lenguaje de Marcado de Hipertexto"
+          ],
+          "ganados_vs_ri": [
+            "<a> : elemento de ancla HTML",
+            "<script>: The Script element",
+            "HTML: Lenguaje de Marcado de Hipertexto",
+            "Tipos de datos y estructuras en JavaScript"
+          ],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 12,
+          "primeros": [
+            "@media",
+            "@import",
+            "<link> elemento de enlace a recurso externo HTML",
+            "Elemento de metadatos HTML <meta>",
+            "Regla-At",
+            "Sintaxis",
+            "@font-face",
+            "CSS",
+            "Date",
+            "Referencia CSS"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        }
+      }
+    },
+    {
+      "id": "C17",
+      "consulta": "CSS selector",
+      "proposito": "control",
+      "variantes": {
+        "ri": {
+          "total": 26,
+          "primeros": [
+            "Referencia CSS",
+            "CSS",
+            "Procesamiento del valor de las propiedades CSS",
+            "Introducción al modelo de caja básico de CSS",
+            "Especificidad",
+            "Sintaxis",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Selectores universales",
+            "<body>: El elemento body del documento"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stop": {
+          "total": 26,
+          "primeros": [
+            "CSS",
+            "Referencia CSS",
+            "Procesamiento del valor de las propiedades CSS",
+            "Introducción al modelo de caja básico de CSS",
+            "Especificidad",
+            "Sintaxis",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Selectores universales",
+            "<body>: El elemento body del documento"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "stem": {
+          "total": 26,
+          "primeros": [
+            "CSS",
+            "Referencia CSS",
+            "Selectores universales",
+            "Selectores de clase",
+            "Selectores de tipo",
+            "Selectores de ID",
+            "Procesamiento del valor de las propiedades CSS",
+            "Introducción al modelo de caja básico de CSS",
+            "Especificidad",
+            "Sintaxis"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        },
+        "proyecto": {
+          "total": 26,
+          "primeros": [
+            "CSS",
+            "Referencia CSS",
+            "Selectores de tipo",
+            "Selectores de clase",
+            "Selectores de ID",
+            "Selectores universales",
+            "Procesamiento del valor de las propiedades CSS",
+            "Introducción al modelo de caja básico de CSS",
+            "Especificidad",
+            "Sintaxis"
+          ],
+          "ganados_vs_ri": [],
+          "perdidos_vs_ri": []
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "texto": "BÚSQUEDA de Información",
+      "fase": "index",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "BÚSQUEDA",
+            "de",
+            "Información"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "búsqueda",
+            "de",
+            "información"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "busqueda",
+            "búsqueda",
+            "de",
+            "informacion",
+            "información"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "BÚSQUEDA de Información",
+      "fase": "index",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "BÚSQUEDA",
+            "de",
+            "Información"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "búsqueda",
+            "de",
+            "información"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "busqueda",
+            "búsqueda",
+            "de",
+            "informacion",
+            "información"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "busqueda",
+            "búsqueda",
+            "informacion",
+            "información"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "BÚSQUEDA de Información",
+      "fase": "index",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "BÚSQUEDA",
+            "de",
+            "Información"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "búsqueda",
+            "de",
+            "información"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "busqueda",
+            "de",
+            "informacion"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "busqued",
+            "de",
+            "informacion"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "BÚSQUEDA de Información",
+      "fase": "index",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "BÚSQUEDA",
+            "de",
+            "Información"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "búsqueda",
+            "de",
+            "información"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "busqueda",
+            "de",
+            "informacion"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "busqueda",
+            "informacion"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "busqueda",
+            "informacion"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "busqued",
+            "informacion"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "la cadena de prototipos",
+      "fase": "index",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "la cadena de prototipos",
+      "fase": "index",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "cadena",
+            "prototipos"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "la cadena de prototipos",
+      "fase": "index",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "la",
+            "caden",
+            "de",
+            "prototip"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "la cadena de prototipos",
+      "fase": "index",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "cadena",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "cadena",
+            "prototipos"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "caden",
+            "prototip"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promesa promesas funciones función arreglos",
+      "fase": "index",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "función",
+            "arreglos"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promesa promesas funciones función arreglos",
+      "fase": "index",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "función",
+            "arreglos"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promesa promesas funciones función arreglos",
+      "fase": "index",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "promes",
+            "promes",
+            "funcion",
+            "funcion",
+            "arregl"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promesa promesas funciones función arreglos",
+      "fase": "index",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "función",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "promesa",
+            "promesas",
+            "funciones",
+            "funcion",
+            "arreglos"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "promes",
+            "promes",
+            "funcion",
+            "funcion",
+            "arregl"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "JavaScript CSS HTML fetch array media canvas",
+      "fase": "index",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "JavaScript",
+            "CSS",
+            "HTML",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "JavaScript CSS HTML fetch array media canvas",
+      "fase": "index",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "JavaScript",
+            "CSS",
+            "HTML",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "JavaScript CSS HTML fetch array media canvas",
+      "fase": "index",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "JavaScript",
+            "CSS",
+            "HTML",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "medi",
+            "canv"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "JavaScript CSS HTML fetch array media canvas",
+      "fase": "index",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "JavaScript",
+            "CSS",
+            "HTML",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "javascript",
+            "css",
+            "html",
+            "fetch",
+            "array",
+            "media",
+            "canvas"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promise",
+      "fase": "query",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promise"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promise",
+      "fase": "query",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "promise"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promise",
+      "fase": "query",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "promis"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "promise",
+      "fase": "query",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promise"
+          ]
+        },
+        {
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "promesa",
+            "promise"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "promesa",
+            "promise"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "promesa",
+            "promise"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "promes",
+            "promise"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "relleno",
+      "fase": "query",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "relleno"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "relleno",
+      "fase": "query",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "relleno"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "relleno",
+      "fase": "query",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "rellen"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "relleno",
+      "fase": "query",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "padding",
+            "rellen"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "expresión regular",
+      "fase": "query",
+      "tipo": "text_es_ri",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "expresion",
+            "expresión",
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "expresión regular",
+      "fase": "query",
+      "tipo": "text_es_stop",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "expresion",
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "expresion",
+            "expresión",
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "expresión regular",
+      "fase": "query",
+      "tipo": "text_es_stem",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "expresion",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "expresion",
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "texto": "expresión regular",
+      "fase": "query",
+      "tipo": "text_es_proyecto",
+      "etapas": [
+        {
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "expresión",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "expresion",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "expresion",
+            "regex",
+            "regexp",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "StopFilter",
+          "tokens": [
+            "expresion",
+            "regex",
+            "regexp",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "expresion",
+            "regex",
+            "regexp",
+            "regular"
+          ]
+        },
+        {
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "expresion",
+            "regex",
+            "regexp",
+            "regular"
+          ]
+        }
+      ]
+    }
+  ]
+}
