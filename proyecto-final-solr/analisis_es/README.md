@@ -59,13 +59,20 @@ py analisis_es/aplicar_en_ri.py            # modo de prueba: estado de ri y JSON
 py analisis_es/aplicar_en_ri.py --aplicar  # pide escribir "ri"; solo con aprobación de Karen
 ```
 
-Agrega solo el tipo `text_es_proyecto` y los recursos `es_proyecto`, recarga `ri` y
-comprueba que `text_es_ri` sigue idéntico al kit. No toca campos ni documentos: los
-campos `titulo` y `contenido` los cambia Joseph a `"type": "text_es_proyecto"` en su
-script de esquema (cambiar el tipo de un campo exige vaciar y reindexar).
+Al aplicar, en este orden:
 
-Estado de `ri` al 26-nov-2026: tiene el esquema del kit (`titulo`/`contenido` con
-`text_es_ri`, `tema`, `vector`) y **30 documentos didácticos** (D01…), no los de MDN.
+1. **`text_es_ri` (P01-04).** Si falta en `ri`, crea **solo el tipo** con la definición
+   leída del kit (`kit/.../configurar_esquema.py`, sin ejecutarlo y sin copiarla a mano).
+   No se ejecuta `configurar_esquema.py` porque además crearía `titulo` y `contenido` con
+   `text_es_ri`, contra el contrato P00-03 §5. Si ya existe, comprueba que sea idéntico al
+   kit y no lo toca. Si es distinto, se detiene sin enviar nada.
+2. **`text_es_proyecto`.** Lo agrega (o reemplaza), sincroniza los recursos `es_proyecto`
+   y recarga `ri`.
+3. Comprueba que `text_es_ri` quedó idéntico al kit.
+
+Solo envía tipos de campo y recursos. **No crea ni modifica campos** (`titulo`,
+`contenido`, `tema`, `vector`…) **ni documentos**. Asignar `"type": "text_es_proyecto"`
+a `titulo` y `contenido` e indexar le corresponde a Joseph en su script de esquema.
 
 ## Notas de Solr 10
 
