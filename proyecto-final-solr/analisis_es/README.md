@@ -54,6 +54,12 @@ La comparación indexa `data/mdn/transformacion/transformacion_*/corpus_solr.jso
 
 ## Integración en `ri`
 
+**Dónde se ejecuta:** en la máquina donde corre el Solr de destino, porque el script
+se conecta a `http://localhost:8983/solr` (`URL_SOLR` en `configuracion.py`). Para el
+`ri` de Joseph, **Joseph lo ejecuta en su equipo**, primero en modo de prueba (sin
+`--aplicar`), revisa la salida y solo después aplica. Si lo ejecuta otra persona en su
+propio equipo, cambia su Solr local, no el de Joseph.
+
 ```bash
 py analisis_es/aplicar_en_ri.py            # modo de prueba: estado de ri y JSON que se enviaría
 py analisis_es/aplicar_en_ri.py --aplicar  # pide escribir "ri"; solo con aprobación de Karen

@@ -44,22 +44,22 @@ Reproducir desde `proyecto-final-solr/`: `py analisis_es/comparar_analizadores.p
 
 - **Acentos y mayúsculas (P03-01).** `text_es_ri` ya trata igual «función», «funcion» y «MÉTODOS» (C06 = C07). Es la línea base: pliega los acentos y conserva también el original (`búsqueda` → `busqueda`, `búsqueda`), pero no quita palabras vacías ni reduce plurales.
 - **Stopwords (P03-04).**
-  - Con `q.op=OR`, «la» y «de» hacen que `ri` devuelva **los 60 documentos** en C09 y C10. Con stopwords quedan 24–26 y 10, todos con los términos informativos.
-  - Los «perdidos» de C09 y C10 son ruido que coincidía solo por «la», «el» o «de».
+  - Con `q.op=OR`, «la» y «de» hacen que `ri` devuelva **los 60 documentos** en C09 y C10. Con stopwords quedan 24–26 y 10: los documentos que contienen «cadena» o «prototipos» (C09), o «modelo» o «caja» (C10).
+  - Los «perdidos» de C09 (34) y C10 (50) son documentos que coincidían solo por «la», «el» o «de».
   - La búsqueda de frase (C11) no cambia: el filtro conserva las posiciones.
 - **Stemming (P03-06).**
   - Singular y plural se unifican: «promesa/promesas» pasan de 1 a 2 documentos y «funciones» de 13 a 32.
   - «selectores» (C05) no cambia porque las páginas que usan «selector» también usan «selectores».
 - **Términos protegidos.**
-  - Sin protección, el stemmer recorta `media` → `medi`, que coincide con «medio». C16 en `stem` sube de 12 a 16 y trae 4 páginas no pertinentes (`<a>`, `<script>`, HTML, Tipos de datos).
+  - Sin protección, el stemmer recorta `media` → `medi`, que coincide con «medio». C16 en `stem` pasa de 12 a 16: los 4 documentos adicionales (`<a>`, `<script>`, HTML, Tipos de datos) coinciden por la raíz `medi`.
   - Con `text_es_proyecto` vuelve a 12.
   - `canvas` → `canv` también queda protegido.
 - **Sinónimos solo en consulta (P03-08).**
-  - **C12 «promise»** no aparece literalmente en ningún documento: `ri` devuelve 0 y `proyecto` devuelve 2, que contienen «promesa(s)». Es la prueba del criterio: el usuario no escribe `OR`.
-  - **C13 «relleno»** pasa de 2 a 8 por `padding`. Las páginas añadidas tienen ejemplos de CSS con `padding`, pero su tema principal no es el relleno.
-  - **C15** pasa a buscar la frase «expresión regular» o `regex`/`regexp`. Pierde 2 documentos que solo tenían «expresión» o «regular» por separado (selectores de ID, `Function`): sube la precisión.
-  - **C14:** en todas estas cifras ya se quitó «enlace» del grupo (`fix:` `438c932`). Con él, «hipervínculo» recuperaba 11 documentos, varios ajenos (Array, String, Herencia). Sin él recupera 4, y esa mejora ya la da el stemming (`hipervínculos`).
-- **Control (C17).** «CSS selector» no cambia, como se esperaba.
+  - **C12 «promise»** no aparece literalmente en ningún documento: `ri` devuelve 0 y `proyecto` devuelve 2, que contienen «promesa(s)». La expansión ocurre sin que el usuario escriba `OR`.
+  - **C13 «relleno»** pasa de 2 a 8 por `padding`. Los 6 documentos añadidos contienen `padding`; sus títulos (`<a>`, `<article>`, `<audio>`…) no mencionan «relleno».
+  - **C15** pasa a buscar la frase «expresión regular» o `regex`/`regexp`. El total queda en 10: pierde 2 documentos que solo tenían «expresión» o «regular» por separado (selectores de ID, `Function`) y gana 2 (Guía de JavaScript, JavaScript).
+  - **C14:** en todas estas cifras ya se quitó «enlace» del grupo (`fix:` `438c932`). Con él, «hipervínculo» coincidía con 11 documentos, entre ellos Herencia («enlace a un objeto prototipo»), Array («ámbito de enlace `with`») y String («enlace a URL», en `String.prototype.link()`). Sin él coincide con 4, el mismo total que `stem` (por el plural `hipervínculos`).
+- **Control (C17).** «CSS selector» da 26 en las cuatro variantes.
 
 ## Limitaciones
 

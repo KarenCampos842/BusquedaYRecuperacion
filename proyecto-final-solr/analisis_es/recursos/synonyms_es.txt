@@ -39,8 +39,9 @@ expresiones regulares, regexps
 asíncrono, asíncrona, asincrónico, async
 
 # HTML
-# Sin "enlace": en el corpus es genérico (aparece en Array, String o Herencia
-# como "enlace a otra página") y traía ruido a "hipervínculo" (P03-07, C14).
+# Sin "enlace": en el corpus también significa otras cosas ("enlace a un
+# objeto prototipo", "ámbito de enlace with"); con él, "hipervínculo"
+# coincidía con 11 documentos y sin él con 4 (P03-07, C14).
 hipervínculo, vínculo, ancla
 hipervínculos, vínculos, anclas
 
