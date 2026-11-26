@@ -22,6 +22,11 @@ TEXTOS_P03_01 = ("BÚSQUEDA de Información", "busqueda de informacion")
 RUTA_RESULTADO = DIRECTORIO_RESULTADOS / "linea_base_text_es_ri.json"
 CLAVES_ANALIZADOR = ("indexAnalyzer", "queryAnalyzer")
 
+ESTADO_SIN_CORE = f"el core '{CORE_PRODUCCION}' no existe"
+ESTADO_AUSENTE = "ausente (se crea solo el tipo con aplicar_en_ri.py)"
+ESTADO_IDENTICO = "presente e idéntico al kit"
+ESTADO_DISTINTO = "presente pero DISTINTO al kit"
+
 
 def firma_analizador(analizador: dict) -> list:
     """Representación comparable: clase y atributos de tokenizador y filtros."""
@@ -31,16 +36,16 @@ def firma_analizador(analizador: dict) -> list:
 
 def estado_tipo_en_produccion() -> str:
     if not core_existe(CORE_PRODUCCION):
-        return f"el core '{CORE_PRODUCCION}' no existe"
+        return ESTADO_SIN_CORE
     try:
         actual = obtener(CORE_PRODUCCION, f"schema/fieldtypes/{TIPO_CONTROL}")["fieldType"]
     except ErrorSolr as error:
         if error.estado == 404:
-            return "ausente (lo crea Joseph al integrar el esquema)"
+            return ESTADO_AUSENTE
         raise
     kit = leer_text_es_ri_del_kit()
     iguales = all(firma_analizador(actual[c]) == firma_analizador(kit[c]) for c in CLAVES_ANALIZADOR)
-    return "presente e idéntico al kit" if iguales else "presente pero DISTINTO al kit"
+    return ESTADO_IDENTICO if iguales else ESTADO_DISTINTO
 
 
 def analizar_pares() -> dict:
