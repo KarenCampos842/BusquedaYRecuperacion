@@ -261,3 +261,130 @@ y no produjo duplicados normalizados. Hay 12 advertencias en 10 documentos:
 Salida generada en esta revisión:
 `data/mdn/limpieza/limpieza_20261125T041126771671Z_baee495b391749e5b8d409724c26be31/`.
 Es una copia derivada para revisión; no se declara aprobada ni se ha indexado.
+
+## P02-09: transformación local al contrato Solr
+
+Referencia disponible: [`P00-03_contrato_solr_v1.1.md`](../docs/P00-03_contrato_solr_v1.1.md),
+secciones 2, 3 y 6.1. No existe en esta copia el nombre sin versión
+`P00-03_contrato_solr.md`. Se aplican las reglas de campos de v1.1; el estado de
+ratificación formal indicado en ese documento no se modifica con esta tarea.
+
+Desde `proyecto-final-solr/`, en PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 crawler\transformar_corpus_mdn.py
+```
+
+La entrada predeterminada es exclusivamente la limpieza validada de P02-07:
+`data/mdn/limpieza/limpieza_20261125T043642044138Z_c21372d7d7c14eaa9055b2593fd866be/corpus_limpio.json`.
+`--entrada <archivo>` selecciona otra copia local, con las mismas exigencias.
+No hay opción para relajar las cuotas: se requieren exactamente 60 documentos,
+20 de JavaScript, 20 de HTML y 20 de CSS, con IDs únicos. No se descarga nada ni
+se configura o contacta Solr. Se reutilizan únicamente las funciones locales de
+URL del crawler y hashes de limpieza; se mantienen las dependencias existentes
+de `crawler/requirements.txt`.
+
+Cada ejecución crea una carpeta nueva con fecha UTC y UUID:
+
+```text
+data/mdn/transformacion/transformacion_<fecha-UTC>_<UUID>/
+  corpus_solr.json
+  metadatos_crawler.json
+  reporte_transformacion.json
+```
+
+También se puede elegir una carpeta NUEVA mediante
+`--salida data\mdn\transformacion\revision_01`. La carpeta debe estar dentro del
+proyecto, incluso al invocar la función Python. Nunca se reutiliza una carpeta
+existente ni se sobrescriben el corpus de entrada o reportes anteriores.
+
+### Campos mínimos y metadatos opcionales
+
+Por defecto, `corpus_solr.json` es un arreglo de objetos con exactamente los
+ocho campos web obligatorios de P00-03: `id`, `titulo`, `contenido`, `categoria`,
+`tipo_fuente`, `fuente`, `idioma` y `url`. Se preservan sus valores y el orden de
+los documentos sin recortar, limpiar ni volver a normalizar textos o IDs.
+Se exige `idioma="es"`, `tipo_fuente="web"`, `fuente="MDN Web Docs"`, URL MDN
+canónica dentro del alcance del crawler, `id=url` y categoría coherente con la
+ruta. Se rechazan cadenas obligatorias vacías, IDs repetidos y campos ajenos al
+contrato, incluidos `score`, `snippet`, `tema`, `titulo_web` y `contenido_web`.
+
+`metadatos_crawler.json` contiene un arreglo asociado por `id`, en el mismo orden,
+con los opcionales autorizados presentes y válidos. Esta separación permite
+preparar el JSON mínimo mientras se concretan los tipos opcionales del esquema.
+Este archivo auxiliar **no es otro lote para enviar a Solr**. No convierte
+`tipo_documento` ni otros metadatos en facetas; las facetas siguen siendo
+`categoria` y `tipo_fuente`.
+
+Para preparar un lote que incluya también los opcionales autorizados:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 crawler\transformar_corpus_mdn.py --incluir-metadatos
+```
+
+Esa opción requiere que posteriormente se definan los campos opcionales en el
+esquema antes de indexar. Siempre se genera también la copia auxiliar. Los
+opcionales ausentes o `null` se omiten, incluidas las tres semillas sin
+`descubierta_desde`; no se inventan valores. Si están presentes se validan:
+
+- `fecha_rastreo`: ISO 8601 con hora y zona explícita, convertida a UTC
+  `YYYY-MM-DDTHH:mm:ss.SSSZ`. Se truncan las fracciones inferiores al milisegundo
+  para la precisión de `pdate`; el reporte conserva la fecha original y la
+  transformada. No se sustituye por la fecha de ejecución.
+- `enlaces_salientes`: arreglo de URLs MDN normalizadas; se conservan valores y
+  orden, incluso el arreglo vacío. `descubierta_desde` también se valida como URL.
+- `profundidad`: entero no negativo en rango de `pint`, excluyendo booleanos.
+  `pagerank`: número finito no negativo, si existe; no se calcula.
+- Atribución, títulos editoriales y tipo de documento: cadenas; para el corpus
+  actual se admiten los tipos `indice` y `articulo_explicativo` del crawler.
+  Ambos SHA-256 deben corresponder al contenido limpio si están presentes.
+
+### Reporte, fallos y reproducibilidad
+
+El reporte registra estado, reglas, ruta y SHA-256 del contrato y de la entrada,
+cuotas, IDs únicos, campos permitidos, modo de metadatos y comprobaciones por
+documento. Registra la preservación exacta de ID/título/contenido, longitud y hash
+del contenido, fecha antes/después y cantidad de enlaces. Al finalizar vuelve a
+comprobar los bytes de entrada y calcula el SHA-256 del archivo de salida.
+
+Si hay un documento inválido se rechaza **todo el lote**, con código de salida 1:
+solo se escribe `reporte_transformacion.json` con `estado="rechazado"`, motivos e
+índices (desde cero). No se produce un corpus parcial de documentos válidos.
+Una entrada inexistente o una carpeta ya existente falla sin alterar archivos.
+Un fallo de escritura puede dejar archivos incompletos: únicamente una ejecución
+con reporte `estado="exitoso"` y hash de salida coincidente es válida.
+
+Los mismos bytes de entrada y opciones generan los mismos bytes de
+`corpus_solr.json` y `metadatos_crawler.json`. Las carpetas, fecha de ejecución y
+rutas/hash de evidencia del reporte identifican cada ejecución; no se espera que
+los reportes de ejecuciones distintas sean idénticos.
+
+Pruebas específicas y batería completa, respectivamente:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 -m unittest discover -s crawler -p test_transformacion_mdn.py -v
+.\.venv\Scripts\python.exe -X utf8 -m unittest discover -s crawler -v
+```
+
+Las pruebas usan el corpus limpio real y casos inválidos. Comprueban las cuotas,
+preservación exacta y ausencia de mutación, campos mínimos/opcionales, fechas con
+distintas zonas, enlaces multivaluados, rechazo integral, CLI, persistencia del
+reporte y reproducción byte a byte en dos ejecuciones. Las pruebas existentes
+del crawler usan clientes simulados; no requieren consultas a Internet.
+
+Resultado verificado de P02-09: **60 documentos, 60 IDs únicos, reparto 20/20/20**,
+66 pruebas aprobadas (55 existentes y 11 nuevas), con `socket.socket.connect`
+bloqueado y cero intentos de conexión. La ejecución conservada es:
+
+`data/mdn/transformacion/transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0/`.
+
+La comprobación independiente de esa ejecución se guardó en
+`verificacion_reproducibilidad.json`: compara los ocho campos obligatorios de
+los 60 documentos con la entrada, valida cuotas y hashes y verifica que una
+segunda ejecución temporal produzca corpus y metadatos idénticos byte a byte.
+La entrada mantiene SHA-256
+`c318361a13acdbbdc0886c91c1209d1123c1dd89147c63a19ef588806d196483`;
+el archivo `corpus_solr.json` generado tiene SHA-256
+`8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11`.
+Estos resultados acreditan la transformación de datos a P00-03; la definición
+del esquema real y su validación mediante indexación pertenecen a tareas posteriores.

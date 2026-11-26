@@ -1,0 +1,664 @@
+{
+  "estado": "exitoso",
+  "version_reglas": "P02-09-v1",
+  "contrato": "docs/P00-03_contrato_solr_v1.1.md",
+  "sha256_contrato": "c7b298d7e68a6b31d5cafd32f0805e22f40b96cb8ad967d139ab0300a778d2a9",
+  "modo_metadatos": "separados",
+  "campos_obligatorios": [
+    "id",
+    "titulo",
+    "contenido",
+    "categoria",
+    "tipo_fuente",
+    "fuente",
+    "idioma",
+    "url"
+  ],
+  "campos_opcionales_autorizados": [
+    "atribucion",
+    "profundidad",
+    "fecha_rastreo",
+    "enlaces_salientes",
+    "descubierta_desde",
+    "tipo_documento",
+    "titulo_original",
+    "titulo_descriptivo",
+    "titulo_documento",
+    "sha256_contenido",
+    "sha256_contenido_normalizado",
+    "pagerank"
+  ],
+  "facetas": [
+    "categoria",
+    "tipo_fuente"
+  ],
+  "politica_fecha": "UTC Z con milisegundos; se truncan microsegundos inferiores al milisegundo",
+  "resumen": {
+    "total_entrada": 60,
+    "documentos_validos": 60,
+    "documentos_transformados": 60,
+    "ids_unicos_validos": 60,
+    "categorias_validas": {
+      "JavaScript": 20,
+      "HTML": 20,
+      "CSS": 20
+    }
+  },
+  "comprobaciones": {
+    "cantidad_60": true,
+    "cuotas_20_20_20": true,
+    "todos_documentos_validos": true,
+    "preservacion_id_titulo_contenido": true
+  },
+  "errores": [],
+  "documentos": [
+    {
+      "indice": 0,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 38015,
+      "sha256_contenido": "189213b3f10017e64a635b4ff7ae586c4adc5e1e6139d6e010a50258c6080c77",
+      "fecha_original": "2026-11-23T22:15:40.286254+00:00",
+      "fecha_solr": "2026-11-23T22:15:40.286Z",
+      "total_enlaces": 39
+    },
+    {
+      "indice": 1,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 15629,
+      "sha256_contenido": "b27b1fd56d50152a5838405f025dad334ad11b04dc1b1915efedd997ffed738f",
+      "fecha_original": "2026-11-23T22:15:43.535407+00:00",
+      "fecha_solr": "2026-11-23T22:15:43.535Z",
+      "total_enlaces": 38
+    },
+    {
+      "indice": 2,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 11467,
+      "sha256_contenido": "ee6a7d41bb8ccb84814e912c1962afe3df08799292e9355d2ee4772a3f17f770",
+      "fecha_original": "2026-11-23T22:15:50.158469+00:00",
+      "fecha_solr": "2026-11-23T22:15:50.158Z",
+      "total_enlaces": 98
+    },
+    {
+      "indice": 3,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 16078,
+      "sha256_contenido": "8715a43bfa3ba30b72a6ed27eeef34c8e3aca407a9539c67e303193da67ebf1a",
+      "fecha_original": "2026-11-23T22:15:53.356296+00:00",
+      "fecha_solr": "2026-11-23T22:15:53.356Z",
+      "total_enlaces": 7
+    },
+    {
+      "indice": 4,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 5737,
+      "sha256_contenido": "62fe493ca9c1b9a50ad3a1144d43bb6f46e1b536ad3291b87e71809696d8674d",
+      "fecha_original": "2026-11-23T22:15:56.615051+00:00",
+      "fecha_solr": "2026-11-23T22:15:56.615Z",
+      "total_enlaces": 6
+    },
+    {
+      "indice": 5,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 5944,
+      "sha256_contenido": "a9bbc63354e646ee1163e44f04c70b956eb79dcdfdf5193629f5b2d07e0564ec",
+      "fecha_original": "2026-11-23T22:16:03.309765+00:00",
+      "fecha_solr": "2026-11-23T22:16:03.309Z",
+      "total_enlaces": 16
+    },
+    {
+      "indice": 6,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 7812,
+      "sha256_contenido": "07f5803b3eba1498c0eeba998b86069d3291c3c5a66e84807bb49ca9bc989014",
+      "fecha_original": "2026-11-23T22:16:06.612110+00:00",
+      "fecha_solr": "2026-11-23T22:16:06.612Z",
+      "total_enlaces": 19
+    },
+    {
+      "indice": 7,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3874,
+      "sha256_contenido": "3c989a669d477da316afc8dc3b9be0ae1dded0162f2f8c804847bbadb9d5a1e8",
+      "fecha_original": "2026-11-23T22:15:27.018045+00:00",
+      "fecha_solr": "2026-11-23T22:15:27.018Z",
+      "total_enlaces": 43
+    },
+    {
+      "indice": 8,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 6023,
+      "sha256_contenido": "d564c3d1c78d99c24c9ac3e27a55c5af723dfa34231d2ced284789d944916469",
+      "fecha_original": "2026-11-23T22:15:30.270533+00:00",
+      "fecha_solr": "2026-11-23T22:15:30.270Z",
+      "total_enlaces": 20
+    },
+    {
+      "indice": 9,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 4531,
+      "sha256_contenido": "985c88b6d317ff8ac547a7e7772b4a051cf41990e4b2b917fc4faa97a3a66704",
+      "fecha_original": "2026-11-23T22:15:33.648180+00:00",
+      "fecha_solr": "2026-11-23T22:15:33.648Z",
+      "total_enlaces": 17
+    },
+    {
+      "indice": 10,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1720,
+      "sha256_contenido": "9c5508b0c9cb57e00e2f6a48bfcf59d868d12f541e681098bd2b19cc2db099a9",
+      "fecha_original": "2026-11-23T22:15:36.947626+00:00",
+      "fecha_solr": "2026-11-23T22:15:36.947Z",
+      "total_enlaces": 14
+    },
+    {
+      "indice": 11,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 33805,
+      "sha256_contenido": "21d15ca14fcdeff3e846f5737588494421c4e6dcd85e23a586d10036e2f4696d",
+      "fecha_original": "2026-11-23T22:16:00.125527+00:00",
+      "fecha_solr": "2026-11-23T22:16:00.125Z",
+      "total_enlaces": 420
+    },
+    {
+      "indice": 12,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 34791,
+      "sha256_contenido": "f1f389ba77b5f5b7b705fcdd165c2cc13a6726f35a4ec53f7bec44e8c1c23c97",
+      "fecha_original": "2026-11-23T22:49:07.324361+00:00",
+      "fecha_solr": "2026-11-23T22:49:07.324Z",
+      "total_enlaces": 15
+    },
+    {
+      "indice": 13,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 7923,
+      "sha256_contenido": "8895bcd666cb9b26adee25e9da5522696e7efb3b0664aeb35d885544692efff9",
+      "fecha_original": "2026-11-23T22:49:10.580700+00:00",
+      "fecha_solr": "2026-11-23T22:49:10.580Z",
+      "total_enlaces": 17
+    },
+    {
+      "indice": 14,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 4762,
+      "sha256_contenido": "decc2832f35565550659daa6c2454969e0fac975acb85a09527586372dc30e5b",
+      "fecha_original": "2026-11-23T22:49:14.035243+00:00",
+      "fecha_solr": "2026-11-23T22:49:14.035Z",
+      "total_enlaces": 24
+    },
+    {
+      "indice": 15,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 13305,
+      "sha256_contenido": "da14273efc06530e51b711d3971ed24df625114d73bc6f36739fb72ff697986e",
+      "fecha_original": "2026-11-23T22:49:17.786716+00:00",
+      "fecha_solr": "2026-11-23T22:49:17.786Z",
+      "total_enlaces": 71
+    },
+    {
+      "indice": 16,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3021,
+      "sha256_contenido": "b1c8f45383279b9627596ae39f13ca50a70ecd3f9a9b6815739e43523cd61ce5",
+      "fecha_original": "2026-11-23T22:49:21.117461+00:00",
+      "fecha_solr": "2026-11-23T22:49:21.117Z",
+      "total_enlaces": 9
+    },
+    {
+      "indice": 17,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3057,
+      "sha256_contenido": "3109560126f2d4e5987a58b5c7a5e66a4bd7005a7d6b57113668d0cb1aaaf1d5",
+      "fecha_original": "2026-11-23T22:49:24.571780+00:00",
+      "fecha_solr": "2026-11-23T22:49:24.571Z",
+      "total_enlaces": 20
+    },
+    {
+      "indice": 18,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 9676,
+      "sha256_contenido": "3223b6e851c93aae3b1aba1cba3db2a3edefa52baa8ee0ffc16cfee5cf3d78cd",
+      "fecha_original": "2026-11-23T22:49:28.028286+00:00",
+      "fecha_solr": "2026-11-23T22:49:28.028Z",
+      "total_enlaces": 38
+    },
+    {
+      "indice": 19,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 6535,
+      "sha256_contenido": "abe88f87658c8e60ddc54e2c5f2efa3100fc1a27a72522094edfb5cbeabccb46",
+      "fecha_original": "2026-11-23T22:49:31.496466+00:00",
+      "fecha_solr": "2026-11-23T22:49:31.496Z",
+      "total_enlaces": 40
+    },
+    {
+      "indice": 20,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3453,
+      "sha256_contenido": "da7233c0864a3d55b2d773d470959432dd4a449de5a6a94cfce71c4a0465004b",
+      "fecha_original": "2026-11-23T22:49:35.044681+00:00",
+      "fecha_solr": "2026-11-23T22:49:35.044Z",
+      "total_enlaces": 6
+    },
+    {
+      "indice": 21,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1107,
+      "sha256_contenido": "6ea2198ca2bba2c1294585d851ba04ea60a823e579c977556727e7044cf347c4",
+      "fecha_original": "2026-11-23T22:49:38.547778+00:00",
+      "fecha_solr": "2026-11-23T22:49:38.547Z",
+      "total_enlaces": 2
+    },
+    {
+      "indice": 22,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 14790,
+      "sha256_contenido": "6a5d6a4a3aefa0b4ef9d59185e868e2c275af860a9a81463b2825ddee3b1ef52",
+      "fecha_original": "2026-11-23T22:49:42.010003+00:00",
+      "fecha_solr": "2026-11-23T22:49:42.010Z",
+      "total_enlaces": 41
+    },
+    {
+      "indice": 23,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 12850,
+      "sha256_contenido": "481aee67918e14c506bff34eb04c4e6c439117e6ee850076836df6d4555fbb64",
+      "fecha_original": "2026-11-23T22:49:45.480007+00:00",
+      "fecha_solr": "2026-11-23T22:49:45.480Z",
+      "total_enlaces": 29
+    },
+    {
+      "indice": 24,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 8805,
+      "sha256_contenido": "f358746b935c09717aa7837d051102287f46ca15a89692b9cf8eae8a0b43f3ab",
+      "fecha_original": "2026-11-23T22:49:49.002312+00:00",
+      "fecha_solr": "2026-11-23T22:49:49.002Z",
+      "total_enlaces": 16
+    },
+    {
+      "indice": 25,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 5892,
+      "sha256_contenido": "4314ba8a393e37942f9e0b590bd0388833747625853c6bf24b609344e24a8fa5",
+      "fecha_original": "2026-11-23T22:49:52.378076+00:00",
+      "fecha_solr": "2026-11-23T22:49:52.378Z",
+      "total_enlaces": 23
+    },
+    {
+      "indice": 26,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 11870,
+      "sha256_contenido": "117c7b74318eced7d857d19d87a3c22ba1c56484e676a9e777bb49a624ccc697",
+      "fecha_original": "2026-11-23T22:49:55.836269+00:00",
+      "fecha_solr": "2026-11-23T22:49:55.836Z",
+      "total_enlaces": 24
+    },
+    {
+      "indice": 27,
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 9623,
+      "sha256_contenido": "d05ac549b42e0e3542c5e6c1ae77cbc67001eb2c83736b5fc3ad5c9929bc6718",
+      "fecha_original": "2026-11-23T22:49:59.471912+00:00",
+      "fecha_solr": "2026-11-23T22:49:59.471Z",
+      "total_enlaces": 42
+    },
+    {
+      "indice": 28,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 659,
+      "sha256_contenido": "42dee625e15f5b901bf9b4f36bbe8546aa2b68fe12e97c7467f3c45068a371d1",
+      "fecha_original": "2026-11-23T22:50:02.859357+00:00",
+      "fecha_solr": "2026-11-23T22:50:02.859Z",
+      "total_enlaces": 8
+    },
+    {
+      "indice": 29,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1628,
+      "sha256_contenido": "1061596dd2b78f0a786897a6b8907debe9aa835f7c135001a0fe4ef115d29c25",
+      "fecha_original": "2026-11-23T22:50:06.269329+00:00",
+      "fecha_solr": "2026-11-23T22:50:06.269Z",
+      "total_enlaces": 1
+    },
+    {
+      "indice": 30,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 19965,
+      "sha256_contenido": "c3998a8cdb0aaa942f798505dd27339deacbe534c37cc9989ca78ee0e740c902",
+      "fecha_original": "2026-11-23T22:50:09.711153+00:00",
+      "fecha_solr": "2026-11-23T22:50:09.711Z",
+      "total_enlaces": 13
+    },
+    {
+      "indice": 31,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3237,
+      "sha256_contenido": "f9c0b309e55ffd7d7fbf43f110e33e49321a00fccf5e40d7e363de69c4ed853c",
+      "fecha_original": "2026-11-23T22:50:13.135858+00:00",
+      "fecha_solr": "2026-11-23T22:50:13.135Z",
+      "total_enlaces": 6
+    },
+    {
+      "indice": 32,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 666,
+      "sha256_contenido": "3bdb70feb51480e58c9b24ee98f8d762dc989f627031dca3794b2063eeb39d32",
+      "fecha_original": "2026-11-23T22:50:16.607174+00:00",
+      "fecha_solr": "2026-11-23T22:50:16.607Z",
+      "total_enlaces": 0
+    },
+    {
+      "indice": 33,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 19411,
+      "sha256_contenido": "1539069483d8d27f90c99c12e71382493062ad2e9dfab7e8251ca9d64ff6b8f4",
+      "fecha_original": "2026-11-23T22:50:20.063012+00:00",
+      "fecha_solr": "2026-11-23T22:50:20.063Z",
+      "total_enlaces": 4
+    },
+    {
+      "indice": 34,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 564,
+      "sha256_contenido": "7a3f0a6f628039215b077fa517f16431b4426e98ce20fdb8a17acbc9fb3a554d",
+      "fecha_original": "2026-11-23T22:50:23.444951+00:00",
+      "fecha_solr": "2026-11-23T22:50:23.444Z",
+      "total_enlaces": 0
+    },
+    {
+      "indice": 35,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 2242,
+      "sha256_contenido": "9afdb9919a89fcae75ee7c564aadce89111221e31084e3b4b509639074caa3af",
+      "fecha_original": "2026-11-23T22:50:26.929195+00:00",
+      "fecha_solr": "2026-11-23T22:50:26.929Z",
+      "total_enlaces": 2
+    },
+    {
+      "indice": 36,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3888,
+      "sha256_contenido": "7e934e2cd3a55c71de64ac33f9dcfbebc254493517d26bf8a40251280c32afe1",
+      "fecha_original": "2026-11-23T22:50:30.398264+00:00",
+      "fecha_solr": "2026-11-23T22:50:30.398Z",
+      "total_enlaces": 2
+    },
+    {
+      "indice": 37,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3302,
+      "sha256_contenido": "d33889855d0514b4c6338a80eb49072e4df08833ab63aec953b3f0f2b39b349b",
+      "fecha_original": "2026-11-23T22:50:33.928113+00:00",
+      "fecha_solr": "2026-11-23T22:50:33.928Z",
+      "total_enlaces": 11
+    },
+    {
+      "indice": 38,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 20340,
+      "sha256_contenido": "c26eda50d1a5f27e09b2837028468120ddf2ecae440dc6636f0875184f938735",
+      "fecha_original": "2026-11-23T22:50:37.348147+00:00",
+      "fecha_solr": "2026-11-23T22:50:37.348Z",
+      "total_enlaces": 17
+    },
+    {
+      "indice": 39,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1653,
+      "sha256_contenido": "2128938781d715f3f2e2030709978f53d98d5eb6604204d5005edaaf1c72bd30",
+      "fecha_original": "2026-11-23T22:50:40.789761+00:00",
+      "fecha_solr": "2026-11-23T22:50:40.789Z",
+      "total_enlaces": 24
+    },
+    {
+      "indice": 40,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1011,
+      "sha256_contenido": "87703db9fba99d5cc500523f3a864d4f1ebd55d7cf712360146d11eaa983887d",
+      "fecha_original": "2026-11-23T22:50:44.183167+00:00",
+      "fecha_solr": "2026-11-23T22:50:44.183Z",
+      "total_enlaces": 11
+    },
+    {
+      "indice": 41,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3586,
+      "sha256_contenido": "1b01a987cb824df121378aa1351fcdf564e3cf7ee1e2c754b802de9881110790",
+      "fecha_original": "2026-11-23T22:50:47.545426+00:00",
+      "fecha_solr": "2026-11-23T22:50:47.545Z",
+      "total_enlaces": 12
+    },
+    {
+      "indice": 42,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 798,
+      "sha256_contenido": "2f8ce2d6e70b16f5ab7119231d8ed32f55330d5b9b8be1068836f756348dbb0d",
+      "fecha_original": "2026-11-23T22:50:50.959065+00:00",
+      "fecha_solr": "2026-11-23T22:50:50.959Z",
+      "total_enlaces": 10
+    },
+    {
+      "indice": 43,
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 21412,
+      "sha256_contenido": "057eb7a5defa1b794649a309d6e1fd2934c8eb3589e8f8f73c3b8a227c8eef24",
+      "fecha_original": "2026-11-23T22:50:54.474387+00:00",
+      "fecha_solr": "2026-11-23T22:50:54.474Z",
+      "total_enlaces": 14
+    },
+    {
+      "indice": 44,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1302,
+      "sha256_contenido": "899dc5cad794f1db2454277dace40fb0e0891239476434e531eafd89d83e25ac",
+      "fecha_original": "2026-11-23T22:50:58.051225+00:00",
+      "fecha_solr": "2026-11-23T22:50:58.051Z",
+      "total_enlaces": 13
+    },
+    {
+      "indice": 45,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 942,
+      "sha256_contenido": "9a5bacca98227c9fc006f64259d88060d58528be187073f408c205f9d416d6a2",
+      "fecha_original": "2026-11-23T22:51:01.562363+00:00",
+      "fecha_solr": "2026-11-23T22:51:01.562Z",
+      "total_enlaces": 0
+    },
+    {
+      "indice": 46,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 810,
+      "sha256_contenido": "7aa7b09e12bbda9d46261a80b1b64fc0b580adadf648f43e8ad7dae8bb396876",
+      "fecha_original": "2026-11-23T22:51:05.035788+00:00",
+      "fecha_solr": "2026-11-23T22:51:05.035Z",
+      "total_enlaces": 2
+    },
+    {
+      "indice": 47,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 4752,
+      "sha256_contenido": "601b72172ccedcef208265202e1654ea2d69fae50add36b9d52710ffea038f31",
+      "fecha_original": "2026-11-23T22:51:08.501406+00:00",
+      "fecha_solr": "2026-11-23T22:51:08.501Z",
+      "total_enlaces": 13
+    },
+    {
+      "indice": 48,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3583,
+      "sha256_contenido": "3ba8f549d60881c638b8316af07786396afafb0e4b344ba7eb15b9ef67aad3f9",
+      "fecha_original": "2026-11-23T22:51:11.839961+00:00",
+      "fecha_solr": "2026-11-23T22:51:11.839Z",
+      "total_enlaces": 3
+    },
+    {
+      "indice": 49,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1061,
+      "sha256_contenido": "a707418f6bafaf11a2bf54c81b13a2c2bfda87366efd3b78dea13e6d4fdd28da",
+      "fecha_original": "2026-11-23T22:51:18.809045+00:00",
+      "fecha_solr": "2026-11-23T22:51:18.809Z",
+      "total_enlaces": 11
+    },
+    {
+      "indice": 50,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1667,
+      "sha256_contenido": "fe7d33f3d662bdfba8c2b1b0fde29a079df8147798d61ce7fe7353f719cc6ed0",
+      "fecha_original": "2026-11-23T22:51:22.331077+00:00",
+      "fecha_solr": "2026-11-23T22:51:22.331Z",
+      "total_enlaces": 5
+    },
+    {
+      "indice": 51,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 3376,
+      "sha256_contenido": "34679eac7a7b599e7481a2446d535a450dde513f1a33314ab4aab7f2e4f5c22d",
+      "fecha_original": "2026-11-23T22:51:25.825221+00:00",
+      "fecha_solr": "2026-11-23T22:51:25.825Z",
+      "total_enlaces": 28
+    },
+    {
+      "indice": 52,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 1012,
+      "sha256_contenido": "b50938d416858d977f7a46ac620dafcd07469613e81484a8f2ff606c2adad99c",
+      "fecha_original": "2026-11-23T22:51:29.356321+00:00",
+      "fecha_solr": "2026-11-23T22:51:29.356Z",
+      "total_enlaces": 11
+    },
+    {
+      "indice": 53,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 15958,
+      "sha256_contenido": "f9cd574bee2c5943e17dfb87899c5cd55b94ce16d0373acb87df653f116aa793",
+      "fecha_original": "2026-11-23T22:51:32.841235+00:00",
+      "fecha_solr": "2026-11-23T22:51:32.841Z",
+      "total_enlaces": 31
+    },
+    {
+      "indice": 54,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 9754,
+      "sha256_contenido": "95a68c68fbf1dee646e2f4caafe207ee5ccdda8507a5f441fd0ae5a74c0f5de7",
+      "fecha_original": "2026-11-23T22:51:36.332831+00:00",
+      "fecha_solr": "2026-11-23T22:51:36.332Z",
+      "total_enlaces": 12
+    },
+    {
+      "indice": 55,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 7650,
+      "sha256_contenido": "58061872160a7ef53043373c797fa81f3442502e56f1d1319b722fe64a3befc9",
+      "fecha_original": "2026-11-23T22:51:39.858657+00:00",
+      "fecha_solr": "2026-11-23T22:51:39.858Z",
+      "total_enlaces": 42
+    },
+    {
+      "indice": 56,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 362,
+      "sha256_contenido": "a8852f8947f8f31524d53208a609524e3e74b3f34d5b912d3621fb297da39f30",
+      "fecha_original": "2026-11-23T22:51:46.819348+00:00",
+      "fecha_solr": "2026-11-23T22:51:46.819Z",
+      "total_enlaces": 0
+    },
+    {
+      "indice": 57,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 393,
+      "sha256_contenido": "b872698d1cd2693a13664f87e43a927e527b0a4c57b2df8a5d12040fc7065726",
+      "fecha_original": "2026-11-23T22:51:50.348140+00:00",
+      "fecha_solr": "2026-11-23T22:51:50.348Z",
+      "total_enlaces": 1
+    },
+    {
+      "indice": 58,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 402,
+      "sha256_contenido": "50d652c8de808595aa367786c3028f8aaf9d1b9d3618ac416c6a88201a5005c1",
+      "fecha_original": "2026-11-23T22:51:53.784057+00:00",
+      "fecha_solr": "2026-11-23T22:51:53.784Z",
+      "total_enlaces": 1
+    },
+    {
+      "indice": 59,
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+      "id_titulo_contenido_preservados": true,
+      "caracteres_contenido": 724,
+      "sha256_contenido": "e995f43cc2a2a6b047c5b126cdbdc1fb39831d31c53aac5a362fedee4fd0c9ee",
+      "fecha_original": "2026-11-23T22:51:57.246620+00:00",
+      "fecha_solr": "2026-11-23T22:51:57.246Z",
+      "total_enlaces": 0
+    }
+  ],
+  "operacion": "transformacion_local_sin_red_sin_indexacion",
+  "fecha_transformacion": "2026-11-26T06:15:27.352931+00:00",
+  "archivo_entrada": "data/mdn/limpieza/limpieza_20261125T043642044138Z_c21372d7d7c14eaa9055b2593fd866be/corpus_limpio.json",
+  "sha256_archivo_entrada": "c318361a13acdbbdc0886c91c1209d1123c1dd89147c63a19ef588806d196483",
+  "archivo_salida": "data/mdn/transformacion/transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0/corpus_solr.json",
+  "sha256_archivo_salida": "8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11",
+  "entrada_intacta": true,
+  "archivo_metadatos": "data/mdn/transformacion/transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0/metadatos_crawler.json"
+}

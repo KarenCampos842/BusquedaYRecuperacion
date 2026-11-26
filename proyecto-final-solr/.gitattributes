@@ -1,0 +1,3 @@
+data/mdn/**/*.json text eol=lf
+docs/P00-03_contrato_solr_v1.1.md text eol=lf
+crawler/*.py text eol=lf
