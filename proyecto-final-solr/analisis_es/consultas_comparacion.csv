@@ -1,0 +1,18 @@
+id,consulta,proposito
+C01,promesas,morfologia
+C02,promesa,morfologia
+C03,arreglos,morfologia
+C04,funciones,morfologia
+C05,selectores,morfologia
+C06,función,acentos
+C07,funcion,acentos
+C08,MÉTODOS,acentos
+C09,la cadena de prototipos,stopwords
+C10,el modelo de caja,stopwords
+C11,"""cadena de prototipos""",stopwords_frase
+C12,promise,sinonimos
+C13,relleno,sinonimos
+C14,hipervínculo,sinonimos
+C15,expresión regular,sinonimos
+C16,media,protegidas
+C17,CSS selector,control
