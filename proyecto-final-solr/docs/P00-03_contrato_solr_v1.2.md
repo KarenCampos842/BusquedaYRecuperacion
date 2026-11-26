@@ -1,16 +1,16 @@
 # P00-03 · Contrato común de documentos Solr (web y PDF)
 
-**Versión:** 1.1 — consolidación Solr ↔ API; pendiente de ratificación por el equipo  
+**Versión:** 1.2 — aclaración del uso adaptable del kit docente; pendiente de ratificación por el equipo  
 **Fecha:** 26 de noviembre de 2026  
 **Proyecto:** Búsqueda y Recuperación de Información  
 **Motor:** Apache Solr 10 · **Core de trabajo:** `ri`  
 **Participantes:** Joseph (infraestructura, documentos, indexación y PDF), Karen (análisis de español), Carlos (consultas y FastAPI). Mauricio consume el contrato HTTP desde Angular.
 
-> **Estado del acuerdo.** Los campos comunes, el analizador y las facetas recogen las respuestas de Karen y Carlos. La interfaz HTTP toma como referencia **P00-04 · Contrato de API FastAPI–Angular v1.0**, recibido de Carlos. Este documento fija la correspondencia entre los datos y la API; **no constituye todavía la ratificación formal de P00-03 v1.1 ni de P00-04**. Algunos detalles de HTTP siguen abiertos en la sección 7.3. Tampoco acredita que el esquema esté aplicado o que haya documentos indexados.
+> **Estado del acuerdo.** Los campos comunes, el analizador y las facetas recogen las respuestas de Karen y Carlos. La interfaz HTTP toma como referencia **P00-04 · Contrato de API FastAPI–Angular v1.0**, recibido de Carlos. Este documento fija la correspondencia entre los datos y la API; **no constituye todavía la ratificación formal de P00-03 v1.2 ni de P00-04**. Algunos detalles de HTTP siguen abiertos en la sección 7.3. Tampoco acredita que el esquema esté aplicado o que haya documentos indexados.
 
 ## 1. Objetivo y límites
 
-Definir un único contrato para indexar y consultar páginas MDN en español y documentos PDF locales. Las consultas del backend usarán los mismos campos de título y cuerpo independientemente de la procedencia. No se alterará el corpus original ni se ejecutarán indiscriminadamente los scripts docentes que definan campos incompatibles.
+Definir un único contrato para indexar y consultar páginas MDN en español y documentos PDF locales. Las consultas del backend usarán los mismos campos de título y cuerpo independientemente de la procedencia. No se alterará el corpus original ni se ejecutarán indiscriminadamente scripts que definan campos incompatibles, sean del kit o del proyecto.
 
 **Datos disponibles:** 60 documentos MDN, 20 JavaScript, 20 HTML y 20 CSS; limpieza P02-07 concluida y registrada en el commit `7d0ddc8` (34 documentos modificados, 26 sin cambios, 13 060 caracteres eliminados, 55 pruebas exitosas). Estos son datos de la limpieza, no de una indexación en Solr.
 
@@ -60,13 +60,15 @@ Los tipos opcionales se concretarán en el script de esquema; la ausencia de un 
 
 **Condición para indexar:** el tipo `text_es_proyecto` debe existir y analizar correctamente ejemplos en español antes de crear/cargar el índice definitivo. Cualquier cambio posterior al *indexAnalyzer* puede exigir reconstrucción/reindexación.
 
-## 5. Compatibilidad con el kit docente
+## 5. Compatibilidad y adaptación del kit docente
 
-El kit incluye `text_es_ri` y scripts que crean `titulo` y `contenido` con ese tipo, además de `tema`, `vector` y campos web `titulo_web`, `contenido_web`, `url`, `profundidad`, `enlaces_salientes` y `pagerank`.
+El kit docente de Apache Solr constituye una **base de trabajo adaptable**, no un conjunto de archivos inmodificables. Se permite completar las plantillas de `estudiante/`, modificar y ampliar sus scripts, y reutilizar sus componentes para el buscador integrado. El kit v2 incluye ejercicios de stopwords, stemming y sinónimos expresamente preparados para ser implementados por el estudiante. Estas adaptaciones deben versionarse en Git, documentar sus efectos y someterse a las mismas pruebas de integración que el resto del proyecto.
 
-Para el **buscador integrado**, las consultas utilizan **`titulo` y `contenido`**, ambos con `text_es_proyecto`. No se duplicará por defecto cada texto en `titulo_web` y `contenido_web` ni se exigirá `tema` o `tipo_documento` como facetas. Se conservarán sin alterar los scripts originales del profesor; los campos heredados y `pagerank` podrán mantenerse para prácticas o experimentos independientes.
+**Línea base experimental:** se conservará la definición original de `text_es_ri` como control para comparar el comportamiento antes y después de aplicar filtros lingüísticos. Esto **no impide modificar** las plantillas `configurar_*.py` de los experimentos ni ampliar el kit; significa que los experimentos no deben redefinir silenciosamente `text_es_ri` cuando se necesite comparar resultados. Los recursos de referencia y las soluciones docentes, cuando estén presentes, se distinguirán de las implementaciones del equipo.
 
-**No ejecutar `kit/02_recuperacion_informacion/configuracion/configurar_esquema.py` sin revisar el destino:** en su forma original crea `titulo` y `contenido` con `text_es_ri`. El esquema del sistema integrado debe configurarse mediante un script propio y reproducible, comprobando antes el estado del core `ri`; no sobrescribir campos incompatibles ni borrar un índice sin respaldo.
+Para el **buscador integrado**, las consultas utilizan **`titulo` y `contenido`**, ambos con `text_es_proyecto`. No se duplicará por defecto cada texto en `titulo_web` y `contenido_web` ni se exigirá `tema` o `tipo_documento` como facetas. Los campos heredados y `pagerank` podrán mantenerse para prácticas o experimentos independientes.
+
+**Precaución al ejecutar scripts sobre el core `ri`:** revisar primero el esquema y el destino de `kit/02_recuperacion_informacion/configuracion/configurar_esquema.py` (o su versión adaptada), pues la versión inicial crea `titulo` y `contenido` con `text_es_ri`. El equipo puede adaptar ese mismo script o usar uno nuevo, siempre que el procedimiento sea reproducible, respete `text_es_proyecto` en los campos definitivos y no sobrescriba campos incompatibles ni borre un índice sin respaldo. Los cambios de analizadores de indexación o reglas `copyField` que afecten documentos ya cargados pueden requerir reindexación.
 
 ## 6. Identificación y transformación de documentos
 
@@ -218,7 +220,7 @@ Las rutas de sugerencias y corrección **no convierten** automáticamente los ca
 | **Carlos** | Consultas a Solr, facetas, ranking, snippets, serialización FastAPI y endpoint `POST /api/v1/documents/pdf` | Respuestas API conformes a P00-04 y llamada al módulo de Joseph. |
 | **Mauricio** | Interfaz Angular | Consumo seguro del contrato HTTP. |
 
-Cada implementación se desarrolla en una rama por funcionalidad, mediante Pull Request hacia `main`. En particular, **Karen no modifica el esquema final en paralelo con Joseph**: entrega sus recursos y Joseph los integra. La integración no debe reemplazar la configuración docente ni borrar datos del core.
+Cada implementación se desarrolla en una rama por funcionalidad, mediante Pull Request hacia `main`. En particular, **Karen no modifica el esquema final en paralelo con Joseph**: entrega sus recursos y Joseph los integra. La integración debe mantener disponible `text_es_ri` como línea base experimental y no borrar datos del core sin respaldo; se permite adaptar el código del kit.
 
 ## 9. Criterios de aceptación de P00-03 y siguientes fases
 
@@ -231,7 +233,7 @@ Cada implementación se desarrolla en una rama por funcionalidad, mediante Pull 
 - [x] Convenciones de ID, categoría y campos para PDF establecidas en este documento.
 - [x] Ejemplos de web y PDF incluidos.
 - [x] Alcance HTTP de subida PDF identificado en P00-04; reparto de responsabilidades documentado.
-- [ ] Karen y Carlos ratifican P00-03 v1.1 y se versiona el Markdown en el repositorio (verificar tras la Pull Request).
+- [ ] Karen y Carlos ratifican P00-03 v1.2; el Markdown se integra mediante Pull Request.
 - [ ] Carlos y Mauricio resuelven los puntos abiertos de P00-04 para el cierre formal de **esa** tarea; no bloquean el contrato de campos Solr.
 
 **Tareas posteriores, no incluidas en el cierre de P00-03:**
