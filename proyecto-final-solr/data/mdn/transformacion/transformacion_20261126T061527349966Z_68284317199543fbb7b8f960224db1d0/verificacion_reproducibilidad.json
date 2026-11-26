@@ -1,0 +1,17 @@
+{
+  "estado": "exitoso",
+  "documentos": 60,
+  "categorias": {
+    "JavaScript": 20,
+    "HTML": 20,
+    "CSS": 20
+  },
+  "preservacion_exacta_campos_obligatorios": true,
+  "entrada_intacta": true,
+  "segunda_ejecucion_bytes_identicos": {
+    "corpus_solr.json": true,
+    "metadatos_crawler.json": true
+  },
+  "sha256_archivo_entrada": "c318361a13acdbbdc0886c91c1209d1123c1dd89147c63a19ef588806d196483",
+  "sha256_archivo_salida": "8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11"
+}
