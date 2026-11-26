@@ -49,14 +49,29 @@ Todo se ejecuta por defecto en el core aislado **`ri_analisis_es`**, creado con
 **lee** (`verificar_linea_base.py`). Los scripts se pueden repetir: si un tipo o campo
 ya existe se reemplaza con la definición del repositorio; `text_es_ri` nunca se reemplaza.
 
-## Integración en `ri` (la hace Joseph)
+La comparación indexa `data/mdn/transformacion/transformacion_*/corpus_solr.json`
+(P02-09, solo lectura). Resultados: `resultados/` y `../docs/resultados_comparacion_analizadores.md`.
+
+## Integración en `ri`
 
 ```bash
-py analisis_es/configurar_analizadores.py --core ri --tipos text_es_proyecto
+py analisis_es/aplicar_en_ri.py            # modo de prueba: estado de ri y JSON que se enviaría
+py analisis_es/aplicar_en_ri.py --aplicar  # pide escribir "ri"; solo con aprobación de Karen
 ```
 
-Crea solo el tipo y sus recursos; los campos `titulo` y `contenido` los define Joseph
-en su script de esquema con `"type": "text_es_proyecto"`.
+Agrega solo el tipo `text_es_proyecto` y los recursos `es_proyecto`, recarga `ri` y
+comprueba que `text_es_ri` sigue idéntico al kit. No toca campos ni documentos: los
+campos `titulo` y `contenido` los cambia Joseph a `"type": "text_es_proyecto"` en su
+script de esquema (cambiar el tipo de un campo exige vaciar y reindexar).
+
+Estado de `ri` al 26-nov-2026: tiene el esquema del kit (`titulo`/`contenido` con
+`text_es_ri`, `tema`, `vector`) y **30 documentos didácticos** (D01…), no los de MDN.
+
+## Notas de Solr 10
+
+- La REST API de sinónimos gestionados rechaza «lista de listas»; se envía un mapa
+  término → grupo completo (`recursos_gestionados.mapa_equivalencias`).
+- Desde Git Bash, `docker exec` necesita `MSYS_NO_PATHCONV=1`; en PowerShell no.
 
 ## P03-09 · Cuándo reindexar
 
