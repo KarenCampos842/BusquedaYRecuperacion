@@ -2,7 +2,7 @@
 
 Uso (desde proyecto-final-solr/):
     py analisis_es/configurar_sugerencias_ortografia.py                       # core de prueba ri_sugerencias_es
-    py analisis_es/configurar_sugerencias_ortografia.py --reemplazar          # solo core de prueba
+    py analisis_es/configurar_sugerencias_ortografia.py --reemplazar          # solo ri_sugerencias_es
     py analisis_es/configurar_sugerencias_ortografia.py --core ri             # modo de prueba: solo muestra
     py analisis_es/configurar_sugerencias_ortografia.py --core ri --aplicar   # pide escribir "ri"
 
@@ -16,7 +16,8 @@ Funciona en dos fases:
    componentes sugerencias_es y ortografia_es y los handlers /sugerencias y
    /ortografia (Config API). No toca `spellcheck` ni `/spell` del configset.
 NO crea ni modifica titulo ni contenido: deben existir.
---reemplazar (solo core de prueba, nunca en `ri`) reemplaza lo incompatible.
+--reemplazar reemplaza lo incompatible y solo se acepta con ri_sugerencias_es;
+cualquier otro core (incluido `ri`) se rechaza sin leerlo ni modificarlo.
 En `ri` se ejecuta en la máquina del Solr de destino y solo con confirmación.
 """
 
@@ -42,6 +43,7 @@ CAMPOS_REQUERIDOS = (CAMPO_TITULO, CAMPO_CONTENIDO)
 PROPIEDADES_BOOLEANAS = {"stored", "indexed", "required", "multiValued", "docValues"}
 PROPIEDADES_COPIA = {"source", "dest", "maxChars"}
 DESTINOS_AUXILIARES = {copia["dest"] for copia in COPIAS}
+CORE_PERMITIDO_PARA_REEMPLAZAR = CORE_SUGERENCIAS  # nunca ri ni otro core
 
 FALTA = "falta"
 COMPATIBLE = "compatible"
@@ -220,9 +222,14 @@ def crear_faltantes(core: str, revision: RevisionEsquema) -> None:
         print(f"  copyField {copia['source']}->{copia['dest']}: creado")
 
 
+def exigir_core_reemplazable(core: str) -> None:
+    if core != CORE_PERMITIDO_PARA_REEMPLAZAR:
+        raise ValueError(f"--reemplazar solo se permite en '{CORE_PERMITIDO_PARA_REEMPLAZAR}', no en '{core}'.")
+
+
 def configurar(core: str, reemplazar: bool = False) -> None:
-    if reemplazar and core == CORE_PRODUCCION:
-        raise ValueError(f"--reemplazar no se permite en '{CORE_PRODUCCION}'.")
+    if reemplazar:
+        exigir_core_reemplazable(core)  # antes de cualquier lectura o escritura
     exigir_campos_origen(core)
     revision = revisar_esquema(core)
     bloqueantes = revision.irreparables if reemplazar else revision.incompatibles
@@ -261,10 +268,10 @@ def leer_argumentos(argumentos=None) -> argparse.Namespace:
     lector.add_argument("--core", default=CORE_SUGERENCIAS, help=f"core destino (por defecto {CORE_SUGERENCIAS})")
     lector.add_argument("--aplicar", action="store_true", help=f"obligatorio para aplicar en '{CORE_PRODUCCION}'")
     lector.add_argument("--reemplazar", action="store_true",
-                        help=f"reemplaza lo incompatible; solo core de prueba, nunca '{CORE_PRODUCCION}'")
+                        help=f"reemplaza lo incompatible; solo con --core {CORE_PERMITIDO_PARA_REEMPLAZAR}")
     opciones = lector.parse_args(argumentos)
-    if opciones.reemplazar and opciones.core == CORE_PRODUCCION:
-        lector.error(f"--reemplazar no se permite con --core {CORE_PRODUCCION}")
+    if opciones.reemplazar and opciones.core != CORE_PERMITIDO_PARA_REEMPLAZAR:
+        lector.error(f"--reemplazar solo se permite con --core {CORE_PERMITIDO_PARA_REEMPLAZAR}")
     return opciones
 
 
