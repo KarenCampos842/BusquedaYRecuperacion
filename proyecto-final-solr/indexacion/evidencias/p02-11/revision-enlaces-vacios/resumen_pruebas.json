@@ -1,0 +1,26 @@
+{
+  "p02-11": {
+    "total": 23,
+    "exitosas": 22,
+    "omitidas": 1,
+    "codigo_salida": 0
+  },
+  "p01-05": {
+    "total": 19,
+    "exitosas": 18,
+    "omitidas": 1,
+    "codigo_salida": 0
+  },
+  "transformacion": {
+    "total": 11,
+    "exitosas": 11,
+    "omitidas": 0,
+    "codigo_salida": 0
+  },
+  "analisis": {
+    "total": 39,
+    "exitosas": 39,
+    "omitidas": 0,
+    "codigo_salida": 0
+  }
+}

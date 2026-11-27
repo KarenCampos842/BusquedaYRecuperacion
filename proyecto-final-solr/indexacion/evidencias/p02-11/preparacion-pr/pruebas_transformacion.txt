@@ -1,0 +1,18 @@
+test_cli_exito_y_error (test_transformacion_mdn.TransformacionTests.test_cli_exito_y_error) ... ok
+test_corpus_real_cuotas_campos_preservacion_y_no_mutacion (test_transformacion_mdn.TransformacionTests.test_corpus_real_cuotas_campos_preservacion_y_no_mutacion) ... ok
+test_fechas_utc_offsets_y_precision (test_transformacion_mdn.TransformacionTests.test_fechas_utc_offsets_y_precision) ... ok
+test_generacion_reproducible_entrada_intacta_y_no_sobrescritura (test_transformacion_mdn.TransformacionTests.test_generacion_reproducible_entrada_intacta_y_no_sobrescritura) ... ok
+test_metadatos_incluidos_solo_autorizados (test_transformacion_mdn.TransformacionTests.test_metadatos_incluidos_solo_autorizados) ... ok
+test_opcionales_ausentes_null_y_listas_vacias (test_transformacion_mdn.TransformacionTests.test_opcionales_ausentes_null_y_listas_vacias) ... ok
+test_rechaza_campos_obligatorios_faltantes_y_vacios (test_transformacion_mdn.TransformacionTests.test_rechaza_campos_obligatorios_faltantes_y_vacios) ... ok
+test_rechaza_cantidad_cuotas_raiz_y_duplicados (test_transformacion_mdn.TransformacionTests.test_rechaza_cantidad_cuotas_raiz_y_duplicados) ... ok
+test_rechaza_valores_invalidos_y_campos_ajenos (test_transformacion_mdn.TransformacionTests.test_rechaza_valores_invalidos_y_campos_ajenos) ... ok
+test_rechazo_persistido_sin_corpus_parcial (test_transformacion_mdn.TransformacionTests.test_rechazo_persistido_sin_corpus_parcial) ... ok
+test_urls_invalidas_y_sin_normalizar_no_se_reparan (test_transformacion_mdn.TransformacionTests.test_urls_invalidas_y_sin_normalizar_no_se_reparan) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.032s
+
+OK
+
+Exit code: 0
