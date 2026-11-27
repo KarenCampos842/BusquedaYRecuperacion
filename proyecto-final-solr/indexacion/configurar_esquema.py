@@ -39,6 +39,53 @@ CAMPOS = [
     campo("sha256_contenido_normalizado"), campo("pagerank", "pdouble"),
 ]
 
+# Contrato de compatibilidad con P05, revisado en la rama de Karen (671ae7d).
+# No se agregan a CAMPOS: su creación y sus analizadores pertenecen a P05.
+CAMPOS_AUXILIARES_P05 = [
+    {**campo("titulo_sugerencia", "text_sugerencia_es"), "docValues": False},
+    {**campo("contenido_ortografia", "text_ortografia_es"), "stored": False, "docValues": False},
+    {**campo("contenido_vocabulario", "text_vocabulario_es"), "stored": False, "docValues": False},
+]
+COPIAS_P05 = {
+    ("titulo", "titulo_sugerencia"),
+    ("contenido", "contenido_ortografia"),
+    ("contenido", "contenido_vocabulario"),
+}
+
+
+def validar_p05(esquema, actuales, tipos):
+    """Valida lo que ya existe; no exige instalar P05 ni propone reparaciones."""
+    errores = []
+    for esperado in CAMPOS_AUXILIARES_P05:
+        actual = actuales.get(esperado["name"])
+        if actual is None:
+            continue
+        for propiedad, valor in esperado.items():
+            # Solr puede omitir propiedades booleanas cuyo valor efectivo es false.
+            defecto = False if propiedad in {"required", "multiValued", "docValues"} else None
+            if actual.get(propiedad, defecto) != valor:
+                errores.append(f"{esperado['name']}.{propiedad}: {actual.get(propiedad, defecto)!r} != {valor!r}")
+        if esperado["type"] not in tipos:
+            errores.append(f"Falta tipo P05 preexistente: {esperado['type']}")
+        if "default" in actual:
+            errores.append(f"Valor default inesperado: {esperado['name']}")
+    vistas = set()
+    for copia in esquema.get("copyFields", []):
+        par = (copia.get("source"), copia.get("dest"))
+        if par not in COPIAS_P05:
+            errores.append(f"Regla copyField no autorizada: {copia!r}")
+            continue
+        if par in vistas:
+            errores.append(f"Regla copyField duplicada: {par}")
+        vistas.add(par)
+        # Sin maxChars (o 0) se copia todo el texto; truncarlo cambia P05.
+        if set(copia) - {"source", "dest", "maxChars"} or (
+                "maxChars" in copia and (type(copia["maxChars"]) is not int or copia["maxChars"] != 0)):
+            errores.append(f"Propiedades copyField incompatibles: {copia!r}")
+        if par[1] not in actuales:
+            errores.append(f"Destino copyField P05 ausente: {par[1]}")
+    return errores
+
 
 def guardar_nuevo(ruta, datos):
     ruta = Path(ruta)
@@ -80,8 +127,7 @@ def planificar(estado):
             errores.append(f"Campo obligatorio ajeno al contrato: {actual['name']}")
         if actual["name"] in nombres and "default" in actual:
             errores.append(f"Valor default inesperado: {actual['name']}")
-    if esquema.get("copyFields"):
-        errores.append("Hay reglas copyField: revisar manualmente antes de continuar")
+    errores.extend(validar_p05(esquema, actuales, tipos))
     if errores:
         raise ValueError("Esquema incompatible; sin sobrescrituras: " + "; ".join(errores))
     return nuevos

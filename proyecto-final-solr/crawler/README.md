@@ -264,10 +264,9 @@ Es una copia derivada para revisión; no se declara aprobada ni se ha indexado.
 
 ## P02-09: transformación local al contrato Solr
 
-Referencia disponible: [`P00-03_contrato_solr_v1.1.md`](../docs/P00-03_contrato_solr_v1.1.md),
-secciones 2, 3 y 6.1. No existe en esta copia el nombre sin versión
-`P00-03_contrato_solr.md`. Se aplican las reglas de campos de v1.1; el estado de
-ratificación formal indicado en ese documento no se modifica con esta tarea.
+Referencia vigente: [P00-03 v1.2](../docs/P00-03_contrato_solr_v1.2.md),
+secciones 2, 3 y 6.1, ratificado por Karen y Carlos. El transformador valida
+contra v1.2; los reportes históricos conservan la versión utilizada al generarse.
 
 Desde `proyecto-final-solr/`, en PowerShell:
 
