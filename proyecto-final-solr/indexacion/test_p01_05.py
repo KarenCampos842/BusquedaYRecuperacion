@@ -1,6 +1,7 @@
 """Pruebas locales sin red; integración real optativa de solo lectura."""
 
 from copy import deepcopy
+from itertools import product
 import json
 import os
 from pathlib import Path
@@ -19,7 +20,119 @@ def estado_base(completo=False):
             "fields": deepcopy(esquema.CAMPOS if completo else esquema.CAMPOS[:1])}
 
 
+def estado_p05(completo=True):
+    estado = estado_base(completo)
+    for nombre, tipo, stored in (
+            ("titulo_sugerencia", "text_sugerencia_es", True),
+            ("contenido_ortografia", "text_ortografia_es", False),
+            ("contenido_vocabulario", "text_vocabulario_es", False)):
+        estado["fields"].append(dict(name=nombre, type=tipo, stored=stored, indexed=True,
+                                     required=False, multiValued=False, docValues=False))
+        estado["schema"]["fieldTypes"].append({"name": tipo})
+    estado["schema"]["copyFields"] = [
+        {"source": "titulo", "dest": "titulo_sugerencia"},
+        {"source": "contenido", "dest": "contenido_ortografia"},
+        {"source": "contenido", "dest": "contenido_vocabulario"},
+    ]
+    return estado
+
+
 class EsquemaTests(unittest.TestCase):
+    def test_p05_ausente_parcial_completo_sin_mutacion_ni_creacion(self):
+        # Cada auxiliar puede faltar, existir solo o existir con su copia: 27 estados.
+        for presencia in product(range(3), repeat=3):
+            for completo in (False, True):
+                with self.subTest(presencia=presencia, completo=completo):
+                    estado = estado_p05(completo)
+                    auxiliares = estado["fields"][-3:]
+                    copias = estado["schema"]["copyFields"]
+                    estado["fields"] = estado["fields"][:-3] + [
+                        c for c, p in zip(auxiliares, presencia) if p > 0]
+                    estado["schema"]["copyFields"] = [
+                        c for c, p in zip(copias, presencia) if p == 2]
+                    antes = deepcopy(estado)
+                    plan = esquema.planificar(estado)
+                    self.assertEqual(plan, [] if completo else esquema.CAMPOS[1:])
+                    self.assertEqual(esquema.planificar(estado), plan)
+                    self.assertEqual(estado, antes)
+
+    def test_p05_propiedades_false_omitidas_y_maxchars_cero(self):
+        estado = estado_p05()
+        for c in estado["fields"][-3:]:
+            for propiedad in ("required", "multiValued", "docValues"):
+                del c[propiedad]
+        for copia in estado["schema"]["copyFields"]:
+            copia["maxChars"] = 0
+        self.assertEqual(esquema.planificar(estado), [])
+
+    def comprobar_rechazo_p05(self, estado):
+        antes = deepcopy(estado)
+        with patch.object(esquema, "instantanea", return_value=estado), \
+                patch.object(esquema, "comprobar_analizador") as analizar, \
+                patch.object(esquema, "enviar") as enviar:
+            with self.assertRaisesRegex(ValueError, "incompatible"):
+                esquema.configurar(True)
+            enviar.assert_not_called()
+            analizar.assert_not_called()
+        self.assertEqual(estado, antes)
+
+    def test_p05_campos_incompatibles_aun_sin_copias(self):
+        for indice in range(3):
+            for propiedad, valor in (("name", "auxiliar_renombrado"), ("type", "text_es_proyecto"),
+                                      ("stored", indice != 0), ("indexed", False),
+                                      ("required", True), ("multiValued", True),
+                                      ("docValues", True), ("default", "texto inyectado")):
+                with self.subTest(indice=indice, propiedad=propiedad):
+                    estado = estado_p05()
+                    estado["fields"][-3 + indice][propiedad] = valor
+                    # El nombre cambiado se rechaza al quedar la copia sin destino.
+                    if propiedad != "name":
+                        estado["schema"]["copyFields"] = []
+                    self.comprobar_rechazo_p05(estado)
+
+    def test_p05_tipo_ausente_y_destino_ausente_o_dinamico(self):
+        for indice in range(3):
+            for quitar in ("campo", "tipo"):
+                with self.subTest(indice=indice, quitar=quitar):
+                    estado = estado_p05()
+                    if quitar == "campo":
+                        estado["fields"].pop(-3 + indice)
+                        estado["schema"]["dynamicFields"] = [{"name": "*", "type": "string"}]
+                    else:
+                        estado["schema"]["fieldTypes"].pop(-3 + indice)
+                    self.comprobar_rechazo_p05(estado)
+
+    def test_p05_copias_desconocidas_inversas_truncadas_y_duplicadas(self):
+        invalidas = [
+            {"source": "*", "dest": "titulo_sugerencia"},
+            {"source": "titulo", "dest": "contenido_ortografia"},
+            {"source": "titulo_sugerencia", "dest": "titulo"},
+            {"source": "contenido", "dest": "_text_"},
+            {"source": "contenido", "dest": "contenido_*"},
+            {"source": "titulo"},
+            *({"source": "titulo", "dest": "titulo_sugerencia", "maxChars": valor}
+              for valor in (100, -1, "0", False)),
+            {"source": "titulo", "dest": "titulo_sugerencia", "extra": True},
+            {"source": "titulo", "dest": "titulo_sugerencia"},  # Duplicada.
+        ]
+        for copia in invalidas:
+            with self.subTest(copia=copia):
+                estado = estado_p05()
+                estado["schema"]["copyFields"].append(copia)
+                self.comprobar_rechazo_p05(estado)
+
+    def test_aplicar_con_p05_solo_agrega_contrato_y_repetir_no_escribe(self):
+        for antes, despues, cantidad in ((estado_p05(False), estado_p05(), 19),
+                                         (estado_p05(), estado_p05(), 0)):
+            with patch.object(esquema, "instantanea", side_effect=[antes, despues]), \
+                    patch.object(esquema, "comprobar_analizador", return_value={}), \
+                    patch.object(esquema, "enviar") as enviar:
+                esquema.configurar(True)
+                if cantidad:
+                    enviar.assert_called_once_with(esquema.CORE, "schema", {"add-field": esquema.CAMPOS[1:]})
+                else:
+                    enviar.assert_not_called()
+
     def test_plan_idempotente_y_sin_mutacion(self):
         estado = estado_base()
         antes = deepcopy(estado)

@@ -54,13 +54,68 @@ además de introducir campos ajenos a este alcance.
 Comprueba todo antes de agregar campos; una discrepancia de tipo, cardinalidad,
 obligatoriedad, almacenamiento, indexación o `docValues` de las facetas detiene
 la operación. También rechaza campos obligatorios ajenos, valores predeterminados
-en campos del contrato y reglas `copyField` sin revisión. Nunca envía
+en campos del contrato y reglas `copyField` no autorizadas. Nunca envía
 `replace-field`, `delete-field` ni operaciones sobre tipos.
 
-La validación actual de `copyField` es estricta: rechaza cualquier regla existente.
-Cuando se integren Suggester/SpellCheck, deberá ajustarse para admitir las reglas
-autorizadas por el equipo y seguir rechazando las no autorizadas. Esa adaptación
-y las funcionalidades de esos componentes quedan fuera de P01-05.
+### Compatibilidad con P05 (PR #6)
+
+Se revisaron las definiciones de `origin/feat/autocompletado-ortografia`, commit
+`671ae7d`, sin fusionar sus archivos. Se admite cualquier subconjunto de estas
+reglas, incluida su ausencia total:
+
+| Origen | Destino | Tipo del destino | stored | indexed |
+|---|---|---|---|---|
+| `titulo` | `titulo_sugerencia` | `text_sugerencia_es` | true | true |
+| `contenido` | `contenido_ortografia` | `text_ortografia_es` | false | true |
+| `contenido` | `contenido_vocabulario` | `text_vocabulario_es` | false | true |
+
+Los auxiliares son opcionales, de un valor, sin `docValues` ni `default`. Si
+existen se validan aun sin reglas de copia y su tipo debe existir. Se usan las
+propiedades efectivas de `showDefaults=true`; `required`, `multiValued` y
+`docValues` omitidos se interpretan como false. Una regla necesita un destino
+explícito compatible; no basta un campo dinámico. Se rechazan reglas ajenas,
+comodines, copias inversas, duplicadas, propiedades adicionales y truncamientos
+(`maxChars` solo puede faltar o ser el entero 0, copia ilimitada).
+
+P01-05 **no crea ni modifica** auxiliares, reglas, tipos ni componentes P05.
+Solo agrega los campos faltantes del contrato principal. La repetición sobre un
+esquema completo compatible no envía escrituras. Esta validación no certifica
+los analizadores auxiliares ni el funcionamiento de Suggester/SpellCheck.
+
+Observaciones para revisar antes de integrar la PR #6:
+
+- Su configurador usa `agregar_o_reemplazar`: reemplaza tipos y campos auxiliares
+  existentes sin comparar compatibilidad ni guardar una instantánea previa.
+- Su detección de copias existentes compara solo origen/destino: una copia con
+  `maxChars` incompatible se conserva. P01-05 la detecta y detiene la operación.
+- Agregar `copyField` no rellena retroactivamente los auxiliares de los tres
+  documentos existentes. La validación funcional con esos documentos requiere
+  acordar después una actualización por ID y construcción de diccionarios.
+  No ejecutar cargas o reindexaciones durante esta preparación.
+- Las evidencias de Karen corresponden a `ri_sugerencias_es` con 60 documentos;
+  no demuestran integración funcional sobre el piloto de `ri`. El script
+  `probar_sugerencias_ortografia.py` carga esos 60 documentos en el core de prueba;
+  no forma parte de las verificaciones de esta adaptación.
+- La cabecera de su configurador enumera dos tipos y dos auxiliares aunque las
+  definiciones actuales incluyen también `text_vocabulario_es` y
+  `contenido_vocabulario`.
+
+Las pruebas locales cubren los 27 estados de ausencia/campo/campo con copia de
+los tres auxiliares, con contrato principal parcial y completo, idempotencia,
+ausencia de mutaciones y rechazo previo a toda escritura. La integración
+optativa del bloque anterior solo consulta esquema, análisis, documentos,
+búsquedas y facetas; no construye diccionarios ni modifica Solr.
+
+Verificación de esta adaptación (26-nov-2026), en
+`fix/compatibilidad-copyfield-p05`: **19 pruebas P01-05** con
+`P01_05_SOLR_INTEGRACION=1`, **66 del crawler** (incluidas las 11 de
+transformación) y **39 de análisis español**, todas correctas, sin omisiones.
+El configurador sin `--aplicar` informó cero campos pendientes y tipos
+protegidos intactos. La integración verificó los tres documentos, sus datos,
+búsquedas y facetas. `ri` no tiene todavía auxiliares ni copias P05; la
+compatibilidad parcial y completa de P05 se comprobó con estados simulados.
+`git diff --check` pasó. No se aplicó configuración, no se reindexaron documentos
+ni se cargaron los 60; tampoco se modificaron los analizadores.
 
 Define 20 campos contando `id`, ya existente; en esta ejecución agregó 19.
 `titulo` y `contenido` usan `text_es_proyecto`. Los siete campos comunes son
