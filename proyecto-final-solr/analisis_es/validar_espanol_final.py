@@ -19,19 +19,29 @@ Sobre el core indicado solo hace lecturas (GET). La única escritura es
 --preparar-core-de-prueba, que solo se acepta con ri_validacion_es.
 La salida se etiqueta "PRUEBA LOCAL" salvo con --evidencia-final, que solo vale
 sobre el índice definitivo (el `ri` de Joseph) y en el equipo donde corre ese Solr.
+
+Con --evidencia-final, además:
+- exige que estén los 60 documentos MDN aprobados (IDs de corpus_solr.json), con su
+  categoría, tipo_fuente=web y 20/20/20 por categoría; los documentos adicionales
+  (por ejemplo PDF) no provocan rechazo;
+- escribe cada ejecución en una carpeta nueva con fecha y hora UTC dentro de
+  resultados/evidencia_final/ (nunca sobrescribe) y añade una línea a INDICE.md.
+La prueba local (resultados/prueba_local/) se sobrescribe en cada ejecución.
 """
 
 import argparse
 import csv
 import hashlib
 import json
+from collections import Counter
 from datetime import datetime, timezone
+from pathlib import Path
 
 from analisis_tokens import FASE_CONSULTA, FASE_INDICE, analizar_campo_por_etapas, ultimos_tokens
 from comparar_analizadores import PESO_TITULO
 from configuracion import CORE_PRODUCCION, DIRECTORIO_ANALISIS, DIRECTORIO_RESULTADOS, RECURSO_GESTIONADO
 from configurar_analizadores import agregar_o_reemplazar, configurar_tipos
-from corpus_prueba import TOTAL_DOCUMENTOS_ESPERADOS, cargar_corpus, reindexar_core_de_prueba
+from corpus_prueba import cargar_corpus, reindexar_core_de_prueba
 from definiciones_tipos import TIPO_PROYECTO
 from solr_cliente import ErrorSolr, core_existe, exigir_solr, obtener
 
@@ -40,8 +50,11 @@ CAMPO_TITULO = "titulo"
 CAMPO_CONTENIDO = "contenido"
 CAMPOS_ANALIZADOS = (CAMPO_TITULO, CAMPO_CONTENIDO)
 CAMPO_CATEGORIA = "categoria"
+CAMPO_TIPO_FUENTE = "tipo_fuente"
+TIPO_FUENTE_WEB = "web"
+CONTEO_ESPERADO_POR_CATEGORIA = {"JavaScript": 20, "HTML": 20, "CSS": 20}
 CRITERIO_SINONIMOS = "sinonimos"
-MAXIMO_RESULTADOS = TOTAL_DOCUMENTOS_ESPERADOS
+MAXIMO_RESULTADOS = 1000  # el índice final tendrá más de 60 documentos (PDF)
 ORDEN_ESTABLE = "score desc,id asc"  # desempata por id para que dos ejecuciones coincidan
 
 ETIQUETA_PRUEBA_LOCAL = "PRUEBA LOCAL — no es evidencia final"
@@ -51,6 +64,11 @@ CONFIRMACION_EVIDENCIA_FINAL = "indice definitivo"
 RUTA_CASOS = DIRECTORIO_ANALISIS / "consultas_validacion_final.csv"
 DIRECTORIO_PRUEBA_LOCAL = DIRECTORIO_RESULTADOS / "prueba_local"
 DIRECTORIO_EVIDENCIA_FINAL = DIRECTORIO_RESULTADOS / "evidencia_final"
+NOMBRE_INDICE_EVIDENCIAS = "INDICE.md"
+FORMATO_CARPETA_EVIDENCIA = "%Y-%m-%dT%H%M%SZ"
+FORMATO_FECHA = "%Y-%m-%dT%H:%M:%SZ"
+ENCABEZADO_INDICE = ("# Ejecuciones de evidencia final (append-only: no editar líneas anteriores)\n\n"
+                     "| Fecha UTC | Core | Documentos | Carpeta |\n|---|---|---|---|\n")
 PREFIJO_URL_MDN = "https://developer.mozilla.org/es/docs/Web/"
 
 
@@ -88,10 +106,10 @@ def parametros_sin_expansion(tokens_indexados: list[str]) -> dict:
 
 def buscar(core: str, parametros: dict) -> list[dict]:
     documentos = obtener(core, "select", parametros)["response"]["docs"]
-    return [{"id": d["id"], "titulo": texto_titulo(d.get(CAMPO_TITULO))} for d in documentos]
+    return [{"id": d["id"], "titulo": primer_valor(d.get(CAMPO_TITULO))} for d in documentos]
 
 
-def texto_titulo(valor) -> str:
+def primer_valor(valor) -> str:
     return valor[0] if isinstance(valor, list) else (valor or "")
 
 
@@ -158,7 +176,48 @@ def huella_sinonimos(core: str) -> str:
     return hashlib.sha256(contenido).hexdigest()[:16]
 
 
-def exigir_core_listo(core: str) -> int:
+def leer_documentos_por_id(core: str, ids: list[str]) -> dict[str, dict]:
+    """Devuelve {id: {categoria, tipo_fuente}} de los IDs pedidos que están en el índice."""
+    if any("," in i for i in ids):
+        raise ValueError("Un ID contiene comas; no se puede usar el separador de {!terms}.")
+    documentos = obtener(core, "select", {
+        "q": "{!terms f=id}" + ",".join(ids),
+        "fl": f"id,{CAMPO_CATEGORIA},{CAMPO_TIPO_FUENTE}",
+        "rows": len(ids),
+    })["response"]["docs"]
+    return {d["id"]: {CAMPO_CATEGORIA: primer_valor(d.get(CAMPO_CATEGORIA)),
+                      CAMPO_TIPO_FUENTE: primer_valor(d.get(CAMPO_TIPO_FUENTE))} for d in documentos}
+
+
+def diferencias_corpus(aprobados: list[dict], encontrados: dict[str, dict]) -> list[str]:
+    """Compara los documentos aprobados con los del índice. Ignora documentos adicionales."""
+    diferencias = [f"falta en el índice: {d['id']}" for d in aprobados if d["id"] not in encontrados]
+    for documento in aprobados:
+        actual = encontrados.get(documento["id"])
+        if actual is None:
+            continue
+        if actual[CAMPO_CATEGORIA] != documento[CAMPO_CATEGORIA]:
+            diferencias.append(f"categoría incorrecta en {documento['id']}: se esperaba "
+                               f"{documento[CAMPO_CATEGORIA]!r} y tiene {actual[CAMPO_CATEGORIA]!r}")
+        if actual[CAMPO_TIPO_FUENTE] != TIPO_FUENTE_WEB:
+            diferencias.append(f"tipo_fuente incorrecto en {documento['id']}: se esperaba "
+                               f"{TIPO_FUENTE_WEB!r} y tiene {actual[CAMPO_TIPO_FUENTE]!r}")
+    conteo = Counter(a[CAMPO_CATEGORIA] for a in encontrados.values() if a[CAMPO_TIPO_FUENTE] == TIPO_FUENTE_WEB)
+    if dict(conteo) != CONTEO_ESPERADO_POR_CATEGORIA:
+        diferencias.append(f"conteo por categoría de los documentos aprobados: {dict(sorted(conteo.items()))}; "
+                           f"se esperaba {CONTEO_ESPERADO_POR_CATEGORIA}")
+    return diferencias
+
+
+def exigir_corpus_aprobado(core: str) -> None:
+    aprobados = cargar_corpus()  # 60 documentos con IDs únicos; el JSON solo se lee
+    diferencias = diferencias_corpus(aprobados, leer_documentos_por_id(core, [d["id"] for d in aprobados]))
+    if diferencias:
+        raise SystemExit(f"'{core}' no contiene los {len(aprobados)} documentos MDN aprobados; "
+                         "no se generó evidencia:\n  - " + "\n  - ".join(diferencias))
+
+
+def exigir_core_listo(core: str, exigir_corpus: bool = False) -> int:
     if not core_existe(core):
         raise SystemExit(f"El core '{core}' no existe.")
     distintos = {c: t for c in CAMPOS_ANALIZADOS if (t := tipo_de_campo(core, c)) != TIPO_PROYECTO}
@@ -167,6 +226,8 @@ def exigir_core_listo(core: str) -> int:
     total = contar_documentos(core)
     if total == 0:
         raise SystemExit(f"El core '{core}' no tiene documentos indexados.")
+    if exigir_corpus:
+        exigir_corpus_aprobado(core)
     return total
 
 
@@ -241,22 +302,53 @@ def tabla_markdown(encabezado: dict, resultados: list[dict]) -> str:
     return "\n".join(lineas) + "\n"
 
 
-def directorio_salida(evidencia_final: bool):
-    return DIRECTORIO_EVIDENCIA_FINAL if evidencia_final else DIRECTORIO_PRUEBA_LOCAL
+def carpeta_evidencia(core: str, instante: datetime) -> Path:
+    return DIRECTORIO_EVIDENCIA_FINAL / f"{instante.strftime(FORMATO_CARPETA_EVIDENCIA)}_{core}"
 
 
-def guardar(encabezado: dict, resultados: list[dict], evidencia_final: bool) -> tuple:
-    directorio = directorio_salida(evidencia_final)
-    directorio.mkdir(parents=True, exist_ok=True)
+def directorio_salida(evidencia_final: bool, core: str, instante: datetime) -> Path:
+    return carpeta_evidencia(core, instante) if evidencia_final else DIRECTORIO_PRUEBA_LOCAL
+
+
+def exigir_carpeta_nueva(carpeta: Path) -> None:
+    if carpeta.exists():
+        raise SystemExit(f"La carpeta de evidencia {carpeta} ya existe; no se sobrescribe.")
+
+
+def crear_directorio(directorio: Path, evidencia_final: bool) -> None:
+    """La prueba local se sobrescribe; la evidencia final siempre usa una carpeta nueva."""
+    try:
+        directorio.mkdir(parents=True, exist_ok=not evidencia_final)
+    except FileExistsError:
+        raise SystemExit(f"La carpeta de evidencia {directorio} ya existe; no se sobrescribe.") from None
+
+
+def registrar_en_indice(encabezado: dict, carpeta: Path) -> Path:
+    """Añade una línea al índice (solo se agrega al final; nunca se reescribe)."""
+    indice = DIRECTORIO_EVIDENCIA_FINAL / NOMBRE_INDICE_EVIDENCIAS
+    nuevo = not indice.exists()
+    with indice.open("a", encoding="utf-8", newline="\n") as archivo:
+        if nuevo:
+            archivo.write(ENCABEZADO_INDICE)
+        archivo.write(f"| {encabezado['fecha_utc']} | {encabezado['core']} | {encabezado['documentos']} | "
+                      f"[{carpeta.name}]({carpeta.name}/) |\n")
+    return indice
+
+
+def guardar(encabezado: dict, resultados: list[dict], evidencia_final: bool, instante: datetime) -> tuple:
+    directorio = directorio_salida(evidencia_final, encabezado["core"], instante)
+    crear_directorio(directorio, evidencia_final)
     ruta_json = directorio / f"validacion_final_{encabezado['core']}.json"
     ruta_tabla = directorio / f"validacion_final_{encabezado['core']}.md"
     ruta_json.write_text(json.dumps({"encabezado": encabezado, "casos": resultados},
                                     ensure_ascii=False, indent=2), encoding="utf-8")
     ruta_tabla.write_text(tabla_markdown(encabezado, resultados), encoding="utf-8")
+    if evidencia_final:
+        registrar_en_indice(encabezado, directorio)
     return ruta_json, ruta_tabla
 
 
-def construir_encabezado(core: str, documentos: int, evidencia_final: bool) -> dict:
+def construir_encabezado(core: str, documentos: int, evidencia_final: bool, instante: datetime) -> dict:
     consulta = parametros_consulta_real("<consulta>")
     return {
         "etiqueta": ETIQUETA_EVIDENCIA_FINAL if evidencia_final else ETIQUETA_PRUEBA_LOCAL,
@@ -264,7 +356,7 @@ def construir_encabezado(core: str, documentos: int, evidencia_final: bool) -> d
         "documentos": documentos,
         "huella_sinonimos": huella_sinonimos(core),
         "consulta": f"defType={consulta['defType']} q.op={consulta['q.op']} qf={consulta['qf']}",
-        "fecha_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "fecha_utc": instante.strftime(FORMATO_FECHA),
     }
 
 
@@ -288,7 +380,7 @@ def leer_argumentos(argumentos=None) -> argparse.Namespace:
 
 def confirmar_evidencia_final(leer_respuesta=input) -> bool:
     print(f"La evidencia final solo vale si este Solr es el de quien ejecuta el script y si "
-          f"'{CORE_PRODUCCION}' es el índice definitivo (P02-11 / P08-02) con los 60 documentos.")
+          f"'{CORE_PRODUCCION}' es el índice definitivo (P02-11 / P08-02) con los 60 documentos MDN aprobados.")
     respuesta = leer_respuesta(f"Escriba '{CONFIRMACION_EVIDENCIA_FINAL}' para confirmar: ")
     return respuesta.strip().lower() == CONFIRMACION_EVIDENCIA_FINAL
 
@@ -297,13 +389,16 @@ def main(argumentos=None, leer_respuesta=input) -> None:
     opciones = leer_argumentos(argumentos)
     if opciones.evidencia_final and not confirmar_evidencia_final(leer_respuesta):
         raise SystemExit("Sin confirmación: no se generó evidencia final.")
+    instante = datetime.now(timezone.utc)
+    if opciones.evidencia_final:
+        exigir_carpeta_nueva(carpeta_evidencia(opciones.core, instante))
     exigir_solr()
     if opciones.preparar_core_de_prueba:
         preparar_core_de_prueba(opciones.core)
-    documentos = exigir_core_listo(opciones.core)
-    encabezado = construir_encabezado(opciones.core, documentos, opciones.evidencia_final)
+    documentos = exigir_core_listo(opciones.core, exigir_corpus=opciones.evidencia_final)
+    encabezado = construir_encabezado(opciones.core, documentos, opciones.evidencia_final, instante)
     resultados = [ejecutar_caso(opciones.core, caso) for caso in leer_casos()]
-    ruta_json, ruta_tabla = guardar(encabezado, resultados, opciones.evidencia_final)
+    ruta_json, ruta_tabla = guardar(encabezado, resultados, opciones.evidencia_final, instante)
     print(tabla_markdown(encabezado, resultados))
     print(f"Detalle: {ruta_json}\nTabla: {ruta_tabla}")
 
