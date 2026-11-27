@@ -1,9 +1,15 @@
 """Definiciones para autocompletado (P05-01 a P05-03) y corrección ortográfica (P05-06).
 
 Estrategia (P05-01):
-- Autocompletado: SuggestComponent con AnalyzingInfixLookupFactory sobre
-  `titulo_sugerencia` (copia de `titulo`). Propone títulos completos que contienen
-  una palabra que empieza por el prefijo escrito, sin distinguir acentos ni mayúsculas.
+- Autocompletado: un SuggestComponent con DOS diccionarios, consultados juntos:
+  * `titulos_es` (AnalyzingInfixLookupFactory sobre `titulo_sugerencia`, copia de
+    `titulo`): títulos completos que contienen una palabra que empieza por el prefijo.
+  * `terminos_es` (AnalyzingLookupFactory + HighFrequencyDictionaryFactory sobre
+    `contenido_vocabulario`, copia de `contenido`): palabras del contenido de los
+    60 documentos que empiezan por el prefijo, ordenadas por número de documentos.
+    El campo no aplica stemming ni quita acentos y descarta palabras vacías, tokens
+    de menos de 3 letras y restos de código con números o símbolos («javascript:void»).
+  En ambos, el prefijo se compara sin distinguir acentos ni mayúsculas.
 - Corrección: SpellCheckComponent con DirectSolrSpellChecker sobre
   `contenido_ortografia` (copia de `contenido` SIN stemming ni plegado de acentos),
   para que las sugerencias sean palabras reales: «función», no la raíz ni la forma sin acento.
@@ -16,14 +22,18 @@ from definiciones_tipos import FILTRO_MINUSCULAS, FILTRO_PALABRAS_VACIAS, FILTRO
 
 TIPO_SUGERENCIA = "text_sugerencia_es"
 TIPO_ORTOGRAFIA = "text_ortografia_es"
+TIPO_VOCABULARIO = "text_vocabulario_es"
 
 CAMPO_TITULO = "titulo"
 CAMPO_CONTENIDO = "contenido"
 CAMPO_SUGERENCIA = "titulo_sugerencia"
 CAMPO_ORTOGRAFIA = "contenido_ortografia"
+CAMPO_VOCABULARIO = "contenido_vocabulario"
 
 COMPONENTE_SUGERENCIAS = "sugerencias_es"
 DICCIONARIO_SUGERENCIAS = "titulos_es"
+DICCIONARIO_TERMINOS = "terminos_es"
+DICCIONARIOS_AUTOCOMPLETADO = [DICCIONARIO_TERMINOS, DICCIONARIO_SUGERENCIAS]
 HANDLER_SUGERENCIAS = "/sugerencias"
 
 COMPONENTE_ORTOGRAFIA = "ortografia_es"
@@ -32,6 +42,9 @@ HANDLER_ORTOGRAFIA = "/ortografia"
 
 # Contrato P00-04: /suggest y /spellcheck exigen al menos 3 letras; /suggest devuelve 5 (máx. 8).
 LONGITUD_MINIMA_CONSULTA = 3
+LONGITUD_MAXIMA_TERMINO = 40
+# Token válido para el vocabulario: letras, con puntos solo entre letras («promise.all»).
+PATRON_TOKEN_VALIDO = r"\p{L}+(?:\.\p{L}+)*"
 SUGERENCIAS_POR_DEFECTO = 5
 ALTERNATIVAS_ORTOGRAFICAS = 5
 
@@ -46,26 +59,46 @@ def definir_text_ortografia_es() -> dict:
     return tipo_texto(TIPO_ORTOGRAFIA, [FILTRO_MINUSCULAS, FILTRO_PALABRAS_VACIAS])
 
 
+def definir_text_vocabulario_es() -> dict:
+    # Como text_ortografia_es, pero vacía los tokens con números o símbolos y
+    # LengthFilter descarta los vacíos y los de menos de 3 letras.
+    descartar_codigo = {
+        "class": "solr.PatternReplaceFilterFactory",
+        "pattern": f"^(?!{PATRON_TOKEN_VALIDO}$).*$",
+        "replacement": "",
+        "replace": "all",
+    }
+    longitud = {
+        "class": "solr.LengthFilterFactory",
+        "min": str(LONGITUD_MINIMA_CONSULTA),
+        "max": str(LONGITUD_MAXIMA_TERMINO),
+    }
+    return tipo_texto(TIPO_VOCABULARIO, [FILTRO_MINUSCULAS, FILTRO_PALABRAS_VACIAS, descartar_codigo, longitud])
+
+
 DEFINIDORES_TIPOS_SUGERENCIAS = {
     TIPO_SUGERENCIA: definir_text_sugerencia_es,
     TIPO_ORTOGRAFIA: definir_text_ortografia_es,
+    TIPO_VOCABULARIO: definir_text_vocabulario_es,
 }
 
 CAMPOS_AUXILIARES = [
     # stored=true: DocumentDictionaryFactory lee el valor almacenado para armar el diccionario.
     {"name": CAMPO_SUGERENCIA, "type": TIPO_SUGERENCIA, "stored": True, "indexed": True},
     {"name": CAMPO_ORTOGRAFIA, "type": TIPO_ORTOGRAFIA, "stored": False, "indexed": True},
+    {"name": CAMPO_VOCABULARIO, "type": TIPO_VOCABULARIO, "stored": False, "indexed": True},
 ]
 
 COPIAS = [
     {"source": CAMPO_TITULO, "dest": CAMPO_SUGERENCIA},
     {"source": CAMPO_CONTENIDO, "dest": CAMPO_ORTOGRAFIA},
+    {"source": CAMPO_CONTENIDO, "dest": CAMPO_VOCABULARIO},
 ]
 
 COMPONENTE_SUGGESTER = {
     "name": COMPONENTE_SUGERENCIAS,
     "class": "solr.SuggestComponent",
-    "suggester": {
+    "suggester": [{
         "name": DICCIONARIO_SUGERENCIAS,
         "lookupImpl": "AnalyzingInfixLookupFactory",
         "dictionaryImpl": "DocumentDictionaryFactory",
@@ -75,7 +108,18 @@ COMPONENTE_SUGGESTER = {
         "highlight": "false",
         "buildOnStartup": "false",
         "buildOnCommit": "true",
-    },
+    }, {
+        "name": DICCIONARIO_TERMINOS,
+        "lookupImpl": "AnalyzingLookupFactory",
+        "dictionaryImpl": "HighFrequencyDictionaryFactory",
+        "field": CAMPO_VOCABULARIO,
+        # Sin "threshold": la Config API lo guarda como texto y Solr 10 exige número
+        # (ClassCastException). El valor por defecto, 0, incluye todos los términos.
+        "suggestAnalyzerFieldType": TIPO_SUGERENCIA,
+        "exactMatchFirst": "true",
+        "buildOnStartup": "false",
+        "buildOnCommit": "true",
+    }],
 }
 
 HANDLER_SUGGESTER = {
@@ -84,7 +128,7 @@ HANDLER_SUGGESTER = {
     "startup": "lazy",
     "defaults": {
         "suggest": "true",
-        "suggest.dictionary": DICCIONARIO_SUGERENCIAS,
+        "suggest.dictionary": DICCIONARIOS_AUTOCOMPLETADO,
         "suggest.count": str(SUGERENCIAS_POR_DEFECTO),
     },
     "components": [COMPONENTE_SUGERENCIAS],
