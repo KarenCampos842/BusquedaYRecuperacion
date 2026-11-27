@@ -3,14 +3,20 @@
 Ejecutar desde proyecto-final-solr/:  py -m unittest discover -s analisis_es -v
 """
 
+import tempfile
 import unittest
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from unittest import mock
 
 import validar_espanol_final as validacion
 from configuracion import CORE_PRODUCCION, CORE_PRUEBA
+from corpus_prueba import cargar_corpus
+from definiciones_tipos import TIPO_PROYECTO
 
 CORES_NO_PREPARABLES = (CORE_PRODUCCION, CORE_PRUEBA, "core_inventado")
 CORES_SIN_EVIDENCIA_FINAL = (validacion.CORE_VALIDACION, CORE_PRUEBA, "core_inventado")
+INSTANTE = datetime(2026, 11, 27, 19, 30, 0, tzinfo=timezone.utc)
 
 
 def documentos(*ids):
@@ -48,33 +54,175 @@ class PruebasArgumentos(unittest.TestCase):
 class PruebasEvidenciaFinal(unittest.TestCase):
     def ejecutar_main(self, argumentos, respuesta):
         with mock.patch.object(validacion, "exigir_solr") as exigir_solr, \
-             mock.patch.object(validacion, "exigir_core_listo", return_value=60), \
+             mock.patch.object(validacion, "exigir_carpeta_nueva"), \
+             mock.patch.object(validacion, "exigir_core_listo", return_value=60) as core_listo, \
              mock.patch.object(validacion, "construir_encabezado", return_value={}) as encabezado, \
              mock.patch.object(validacion, "leer_casos", return_value=[]), \
              mock.patch.object(validacion, "guardar", return_value=("j", "t")), \
              mock.patch.object(validacion, "tabla_markdown", return_value=""), \
              mock.patch("builtins.print"):
             validacion.main(argumentos, leer_respuesta=lambda _: respuesta)
-        return exigir_solr, encabezado
+        return exigir_solr, encabezado, core_listo
 
     def test_sin_confirmacion_no_conecta_ni_genera(self):
-        with self.assertRaises(SystemExit):
-            self.ejecutar_main(["--core", "ri", "--evidencia-final"], respuesta="ri")
+        with mock.patch.object(validacion, "exigir_solr") as exigir_solr, \
+             mock.patch("builtins.print"), self.assertRaises(SystemExit):
+            validacion.main(["--core", "ri", "--evidencia-final"], leer_respuesta=lambda _: "ri")
+        exigir_solr.assert_not_called()
 
-    def test_con_confirmacion_marca_evidencia_final(self):
-        _, encabezado = self.ejecutar_main(["--core", "ri", "--evidencia-final"],
-                                           respuesta=validacion.CONFIRMACION_EVIDENCIA_FINAL)
-        encabezado.assert_called_once_with("ri", 60, True)
+    def test_con_confirmacion_marca_evidencia_final_y_exige_corpus(self):
+        _, encabezado, core_listo = self.ejecutar_main(["--core", "ri", "--evidencia-final"],
+                                                       respuesta=validacion.CONFIRMACION_EVIDENCIA_FINAL)
+        self.assertEqual(encabezado.call_args.args[:3], ("ri", 60, True))
+        core_listo.assert_called_once_with("ri", exigir_corpus=True)
 
-    def test_por_defecto_es_prueba_local(self):
-        _, encabezado = self.ejecutar_main(["--core", "ri"], respuesta="")
-        encabezado.assert_called_once_with("ri", 60, False)
+    def test_prueba_local_no_exige_corpus_y_es_la_etiqueta_por_defecto(self):
+        for argumentos in (["--core", "ri"], []):
+            with self.subTest(argumentos=argumentos):
+                _, encabezado, core_listo = self.ejecutar_main(argumentos, respuesta="")
+                self.assertFalse(encabezado.call_args.args[2])
+                self.assertFalse(core_listo.call_args.kwargs["exigir_corpus"])
         with mock.patch.object(validacion, "huella_sinonimos", return_value="x"):
-            self.assertEqual(validacion.construir_encabezado("ri", 60, False)["etiqueta"],
+            self.assertEqual(validacion.construir_encabezado("ri", 60, False, INSTANTE)["etiqueta"],
                              validacion.ETIQUETA_PRUEBA_LOCAL)
 
     def test_carpetas_separadas(self):
-        self.assertNotEqual(validacion.directorio_salida(False), validacion.directorio_salida(True))
+        self.assertEqual(validacion.directorio_salida(False, "ri", INSTANTE), validacion.DIRECTORIO_PRUEBA_LOCAL)
+        self.assertEqual(validacion.directorio_salida(True, "ri", INSTANTE).name, "2026-11-27T193000Z_ri")
+
+
+class IndiceSimulado:
+    """Solr en memoria para exigir_core_listo: campos, conteo y consulta {!terms f=id}."""
+
+    def __init__(self, documentos, tipo_campos=TIPO_PROYECTO):
+        self.documentos = {d["id"]: d for d in documentos}
+        self.tipo_campos = tipo_campos
+
+    def obtener(self, _core, ruta, parametros=None):
+        if ruta.startswith("schema/fields/"):
+            return {"field": {"type": self.tipo_campos}}
+        consulta = parametros["q"]
+        if consulta == "*:*":
+            return {"response": {"numFound": len(self.documentos), "docs": []}}
+        ids = consulta.removeprefix("{!terms f=id}").split(",")
+        return {"response": {"docs": [self.documentos[i] for i in ids if i in self.documentos]}}
+
+
+def indice_mdn(*, quitar=0, extras=(), cambiar=None):
+    """Índice con los 60 MDN aprobados; `cambiar` = {posición: {campo: valor}}."""
+    documentos = [{"id": d["id"], "categoria": d["categoria"], "tipo_fuente": d["tipo_fuente"]}
+                  for d in cargar_corpus()]
+    for posicion, valores in (cambiar or {}).items():
+        documentos[posicion] = {**documentos[posicion], **valores}
+    return documentos[quitar:] + list(extras)
+
+
+PDF_EXTRA = [{"id": f"pdf-{n}", "categoria": "General", "tipo_fuente": "pdf"} for n in (1, 2)]
+
+
+class PruebasCorpusAprobado(unittest.TestCase):
+    def core_listo(self, documentos, exigir_corpus=True, tipo_campos=TIPO_PROYECTO):
+        indice = IndiceSimulado(documentos, tipo_campos)
+        with mock.patch.object(validacion, "core_existe", return_value=True), \
+             mock.patch.object(validacion, "obtener", side_effect=indice.obtener):
+            return validacion.exigir_core_listo("ri", exigir_corpus=exigir_corpus)
+
+    def rechaza(self, documentos, *fragmentos, **opciones):
+        with self.assertRaises(SystemExit) as contexto:
+            self.core_listo(documentos, **opciones)
+        for fragmento in fragmentos:
+            self.assertIn(fragmento, str(contexto.exception))
+
+    def test_a_los_60_mdn_correctos_se_aceptan(self):
+        self.assertEqual(self.core_listo(indice_mdn()), 60)
+
+    def test_b_60_mdn_mas_dos_pdf_se_aceptan(self):
+        self.assertEqual(self.core_listo(indice_mdn(extras=PDF_EXTRA)), 62)
+
+    def test_c_falta_un_id_aprobado_aunque_haya_otros_documentos(self):
+        faltante = cargar_corpus()[0]["id"]
+        self.rechaza(indice_mdn(quitar=1, extras=PDF_EXTRA), f"falta en el índice: {faltante}",
+                     "conteo por categoría")
+
+    def test_c_59_mdn_se_rechaza(self):
+        self.rechaza(indice_mdn(quitar=1), "falta en el índice")
+
+    def test_d_categorias_que_no_coinciden_se_rechazan(self):
+        aprobados = cargar_corpus()
+        css = next(i for i, d in enumerate(aprobados) if d["categoria"] == "CSS")
+        self.rechaza(indice_mdn(cambiar={css: {"categoria": "JavaScript"}}),
+                     "categoría incorrecta", "'JavaScript': 21", "'CSS': 19")
+
+    def test_d_tipo_fuente_distinto_de_web_se_rechaza(self):
+        self.rechaza(indice_mdn(cambiar={0: {"tipo_fuente": "pdf"}}), "tipo_fuente incorrecto")
+
+    def test_e_indice_vacio_y_tipo_incorrecto_siguen_rechazandose(self):
+        for exigir_corpus in (True, False):
+            with self.subTest(exigir_corpus=exigir_corpus):
+                self.rechaza([], "no tiene documentos", exigir_corpus=exigir_corpus)
+                self.rechaza(indice_mdn(), "no usan", exigir_corpus=exigir_corpus, tipo_campos="text_es_ri")
+
+    def test_prueba_local_no_consulta_los_ids_aprobados(self):
+        self.assertEqual(self.core_listo(indice_mdn(quitar=10), exigir_corpus=False), 50)
+
+    def test_rechazo_en_main_no_escribe_nada(self):
+        with tempfile.TemporaryDirectory() as temporal:
+            indice = IndiceSimulado(indice_mdn(quitar=1))
+            with mock.patch.object(validacion, "DIRECTORIO_EVIDENCIA_FINAL", Path(temporal)), \
+                 mock.patch.object(validacion, "exigir_solr"), \
+                 mock.patch.object(validacion, "core_existe", return_value=True), \
+                 mock.patch.object(validacion, "obtener", side_effect=indice.obtener), \
+                 mock.patch("builtins.print"), self.assertRaises(SystemExit):
+                validacion.main(["--core", "ri", "--evidencia-final"],
+                                leer_respuesta=lambda _: validacion.CONFIRMACION_EVIDENCIA_FINAL)
+            self.assertEqual(list(Path(temporal).iterdir()), [])
+
+
+class PruebasCarpetasDeEvidencia(unittest.TestCase):
+    ENCABEZADO = {"etiqueta": validacion.ETIQUETA_EVIDENCIA_FINAL, "core": "ri", "documentos": 62,
+                  "huella_sinonimos": "h", "consulta": "q"}
+
+    def guardar(self, directorio, instante, evidencia_final=True):
+        encabezado = {**self.ENCABEZADO, "fecha_utc": instante.strftime(validacion.FORMATO_FECHA)}
+        with mock.patch.object(validacion, "DIRECTORIO_EVIDENCIA_FINAL", directorio):
+            return validacion.guardar(encabezado, [], evidencia_final, instante)
+
+    def test_segunda_ejecucion_en_otro_instante_no_sobrescribe(self):
+        with tempfile.TemporaryDirectory() as temporal:
+            directorio = Path(temporal)
+            primera, _ = self.guardar(directorio, INSTANTE)
+            contenido_primera = primera.read_text(encoding="utf-8")
+            segunda, _ = self.guardar(directorio, INSTANTE + timedelta(minutes=5))
+            self.assertNotEqual(primera.parent, segunda.parent)
+            self.assertEqual(primera.read_text(encoding="utf-8"), contenido_primera)
+            lineas = (directorio / validacion.NOMBRE_INDICE_EVIDENCIAS).read_text(encoding="utf-8").splitlines()
+            filas = [linea for linea in lineas if linea.startswith("| 2026")]
+            self.assertEqual(len(filas), 2)
+            self.assertIn("2026-11-27T193000Z_ri", filas[0])
+            self.assertIn("2026-11-27T193500Z_ri", filas[1])
+            self.assertIn("| 62 |", filas[1])
+
+    def test_carpeta_existente_se_rechaza_sin_modificar_nada(self):
+        with tempfile.TemporaryDirectory() as temporal:
+            directorio = Path(temporal)
+            primera, _ = self.guardar(directorio, INSTANTE)
+            indice = directorio / validacion.NOMBRE_INDICE_EVIDENCIAS
+            antes = (primera.read_text(encoding="utf-8"), indice.read_text(encoding="utf-8"))
+            with self.assertRaises(SystemExit):
+                self.guardar(directorio, INSTANTE)
+            self.assertEqual((primera.read_text(encoding="utf-8"), indice.read_text(encoding="utf-8")), antes)
+            with mock.patch.object(validacion, "DIRECTORIO_EVIDENCIA_FINAL", directorio), \
+                 self.assertRaises(SystemExit):
+                validacion.exigir_carpeta_nueva(validacion.carpeta_evidencia("ri", INSTANTE))
+
+    def test_prueba_local_se_sobrescribe_y_no_usa_indice(self):
+        with tempfile.TemporaryDirectory() as temporal:
+            directorio = Path(temporal)
+            with mock.patch.object(validacion, "DIRECTORIO_PRUEBA_LOCAL", directorio / "prueba_local"):
+                primera, _ = self.guardar(directorio, INSTANTE, evidencia_final=False)
+                segunda, _ = self.guardar(directorio, INSTANTE, evidencia_final=False)
+            self.assertEqual(primera, segunda)
+            self.assertFalse((directorio / validacion.NOMBRE_INDICE_EVIDENCIAS).exists())
 
 
 class PruebasCasos(unittest.TestCase):
