@@ -96,3 +96,37 @@ a `titulo` y `contenido` e indexar le corresponde a Joseph en su script de esque
 | Solo el `queryAnalyzer` | No | Repetir el script. |
 
 No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11, P08-02).
+
+## P05 · Autocompletado y corrección ortográfica
+
+### Estrategia (P05-01)
+
+| Función | Componente | Fuente | Handler |
+|---|---|---|---|
+| Autocompletado | `SuggestComponent` `sugerencias_es`, diccionario `titulos_es` (`AnalyzingInfixLookupFactory` + `DocumentDictionaryFactory`) | `titulo_sugerencia` (`copyField` de `titulo`; minúsculas y sin acentos, sin stemming) | `/sugerencias` |
+| Corrección | `SpellCheckComponent` `ortografia_es`, diccionario `contenido_es` (`DirectSolrSpellChecker`) | `contenido_ortografia` (`copyField` de `contenido`; minúsculas y palabras vacías, **sin stemming ni plegado**) | `/ortografia` |
+
+- Son nombres nuevos: no se tocan `spellcheck` ni `/spell` del configset. Se crean con la Config API, que los guarda en `configoverlay.json` del core sin editar `solrconfig.xml`.
+- Autocompletado: propone títulos completos que contienen una palabra que empieza por el prefijo (5 por defecto, mínimo 3 letras, contrato P00-04).
+- Corrección: sugiere palabras con acentos (`fucion` → `función`) y una consulta completa (`collate`).
+
+### Uso (desde `proyecto-final-solr/`)
+
+```bash
+py analisis_es/probar_sugerencias_ortografia.py                          # core aislado ri_sugerencias_es + prueba
+py analisis_es/configurar_sugerencias_ortografia.py --core ri            # modo de prueba en ri: solo muestra
+py analisis_es/configurar_sugerencias_ortografia.py --core ri --aplicar  # pide escribir "ri"
+```
+
+En `ri` se ejecuta en la máquina del Solr de destino (Joseph, en su equipo), **después** de `aplicar_en_ri.py`: usa los recursos `es_proyecto`. Además exige que existan `titulo` y `contenido`, porque no los crea.
+
+### Vocabulario y reconstrucción del diccionario (P05-02, P05-03)
+
+- El vocabulario del Suggester son los títulos de los documentos indexados (60 MDN; después, también los PDF). No hay archivo aparte: sale de `titulo_sugerencia`.
+- `buildOnCommit=true`: se reconstruye en cada `commit`. Para reconstruirlo a mano: `GET /solr/<core>/sugerencias?suggest.build=true`.
+- El corrector (`DirectSolrSpellChecker`) lee el índice directamente: no necesita reconstrucción.
+
+### Para Carlos (P05-04, P05-07)
+
+- Sugerencias: `GET /solr/ri/sugerencias?suggest.q=<prefijo>&suggest.count=<n>` → `suggest.titulos_es.<prefijo>.suggestions[].term`.
+- Corrección: `GET /solr/ri/ortografia?q=<consulta>&json.nl=map` → `spellcheck.correctlySpelled`, `spellcheck.suggestions.<término>.suggestion[].word` y `spellcheck.collations` (consulta sugerida).
