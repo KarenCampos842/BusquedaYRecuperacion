@@ -121,7 +121,7 @@ No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11,
 py analisis_es/probar_sugerencias_ortografia.py                          # core aislado ri_sugerencias_es + prueba
 py analisis_es/configurar_sugerencias_ortografia.py --core ri            # modo de prueba en ri: solo muestra
 py analisis_es/configurar_sugerencias_ortografia.py --core ri --aplicar  # pide escribir "ri"
-py analisis_es/configurar_sugerencias_ortografia.py --reemplazar         # solo core de prueba
+py analisis_es/configurar_sugerencias_ortografia.py --reemplazar         # solo ri_sugerencias_es
 ```
 
 En `ri` se ejecuta en la máquina del Solr de destino (Joseph, en su equipo), **después** de `aplicar_en_ri.py`: usa los recursos `es_proyecto`. Además exige que existan `titulo` y `contenido`, porque no los crea.
@@ -140,7 +140,7 @@ Criterios, los mismos que `validar_p05()` en `indexacion/configurar_esquema.py` 
 
 En modo de prueba (`--core ri` sin `--aplicar`) se muestra esta misma revisión.
 
-**`--reemplazar`** sustituye lo incompatible (tipos, campos y `copyField` con `maxChars`) en el core de prueba. Está apagado por defecto y **nunca se permite con `--core ri`**: lo rechaza argparse y también `configurar()` si se llama desde código. Las reglas duplicadas o no autorizadas detienen el script incluso con `--reemplazar`.
+**`--reemplazar`** sustituye lo incompatible (tipos, campos y `copyField` con `maxChars`) y **solo se acepta con el core de prueba `ri_sugerencias_es`**. Está apagado por defecto. Con cualquier otro core (`ri`, `ri_analisis_es` o un nombre desconocido) se rechaza sin leer ni modificar ese core: lo rechaza argparse antes de conectarse a Solr y también `configurar()` si se llama desde código. Las reglas duplicadas o no autorizadas detienen el script incluso con `--reemplazar`.
 
 ### Vocabulario y reconstrucción del diccionario (P05-02, P05-03)
 
