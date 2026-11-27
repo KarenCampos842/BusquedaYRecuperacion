@@ -121,9 +121,26 @@ No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11,
 py analisis_es/probar_sugerencias_ortografia.py                          # core aislado ri_sugerencias_es + prueba
 py analisis_es/configurar_sugerencias_ortografia.py --core ri            # modo de prueba en ri: solo muestra
 py analisis_es/configurar_sugerencias_ortografia.py --core ri --aplicar  # pide escribir "ri"
+py analisis_es/configurar_sugerencias_ortografia.py --reemplazar         # solo core de prueba
 ```
 
 En `ri` se ejecuta en la máquina del Solr de destino (Joseph, en su equipo), **después** de `aplicar_en_ri.py`: usa los recursos `es_proyecto`. Además exige que existan `titulo` y `contenido`, porque no los crea.
+
+**Revisión previa, sin escrituras.** Antes de enviar nada, el script revisa en modo de solo lectura los 3 tipos, los 3 campos auxiliares y las reglas `copyField`, y clasifica cada elemento:
+
+- **Falta:** se crea.
+- **Existe y es compatible:** no se toca.
+- **Existe y es incompatible:** el script se detiene, muestra las diferencias y **no envía ninguna petición**, tampoco a la Config API.
+
+Criterios, los mismos que `validar_p05()` en `indexacion/configurar_esquema.py` de Joseph:
+
+- **Tipos:** misma `class` y los mismos analizadores de índice y de consulta.
+- **Campos:** `type`, `indexed`, `stored`, y `required`, `multiValued` y `docValues` en `false`. Si Solr omite un booleano, cuenta como `false`. Un `default` es incompatible.
+- **`copyField`:** solo las 3 reglas autorizadas (`titulo→titulo_sugerencia`, `contenido→contenido_ortografia`, `contenido→contenido_vocabulario`), sin duplicados ni propiedades extra. `maxChars` debe faltar o ser el entero `0` (sin límite); cualquier otro valor, incluido `"0"` como texto, detiene el script. También lo detiene una regla no autorizada que escriba en un campo auxiliar.
+
+En modo de prueba (`--core ri` sin `--aplicar`) se muestra esta misma revisión.
+
+**`--reemplazar`** sustituye lo incompatible (tipos, campos y `copyField` con `maxChars`) en el core de prueba. Está apagado por defecto y **nunca se permite con `--core ri`**: lo rechaza argparse y también `configurar()` si se llama desde código. Las reglas duplicadas o no autorizadas detienen el script incluso con `--reemplazar`.
 
 ### Vocabulario y reconstrucción del diccionario (P05-02, P05-03)
 
