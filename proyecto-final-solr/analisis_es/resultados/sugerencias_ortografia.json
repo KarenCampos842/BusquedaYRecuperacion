@@ -1,0 +1,140 @@
+{
+  "sugerencias": {
+    "jav": [
+      "Una reintroducción a JavaScript (Tutorial de JS)",
+      "Tipos de datos y estructuras en JavaScript",
+      "JavaScript",
+      "Guía de JavaScript"
+    ],
+    "sel": [
+      "Selectores de tipo",
+      "Selectores de clase",
+      "Selectores de ID",
+      "Selectores universales"
+    ],
+    "her": [
+      "Herencia y la cadena de prototipos",
+      "Herencia"
+    ],
+    "cad": [
+      "Herencia y la cadena de prototipos",
+      "String — Cadena de caracteres"
+    ],
+    "pro": [
+      "Herencia y la cadena de prototipos",
+      "Procesamiento del valor de las propiedades CSS",
+      "Propiedades abreviadas"
+    ],
+    "prom": [],
+    "elem": [
+      "<link> elemento de enlace a recurso externo HTML",
+      "Elemento de metadatos HTML <meta>",
+      "<script>: The Script element",
+      "<title>: El elemento Título del documento",
+      "<body>: El elemento body del documento"
+    ],
+    "ESPEC": [
+      "Especificidad"
+    ],
+    "func": [
+      "Function"
+    ],
+    "xyz": []
+  },
+  "correcciones": {
+    "javasript": {
+      "correcta": false,
+      "alternativas": {
+        "javasript": [
+          "javascript"
+        ]
+      },
+      "consulta_sugerida": "javascript"
+    },
+    "fucion": {
+      "correcta": false,
+      "alternativas": {
+        "fucion": [
+          "función",
+          "function",
+          "funciona",
+          "funcione"
+        ]
+      },
+      "consulta_sugerida": "función"
+    },
+    "selectr": {
+      "correcta": false,
+      "alternativas": {
+        "selectr": [
+          "selector",
+          "select",
+          "selectors"
+        ]
+      },
+      "consulta_sugerida": "selector"
+    },
+    "prototpo": {
+      "correcta": false,
+      "alternativas": {
+        "prototpo": [
+          "prototipo",
+          "prototipos",
+          "prototype"
+        ]
+      },
+      "consulta_sugerida": "prototipo"
+    },
+    "herensia": {
+      "correcta": false,
+      "alternativas": {
+        "herensia": [
+          "herencia"
+        ]
+      },
+      "consulta_sugerida": "herencia"
+    },
+    "promesaz": {
+      "correcta": false,
+      "alternativas": {
+        "promesaz": [
+          "promesas",
+          "promesa",
+          "procesar",
+          "procesan",
+          "procesa"
+        ]
+      },
+      "consulta_sugerida": "promesas"
+    },
+    "propiedadez": {
+      "correcta": false,
+      "alternativas": {
+        "propiedadez": [
+          "propiedades",
+          "propiedad"
+        ]
+      },
+      "consulta_sugerida": "propiedades"
+    },
+    "javascript": {
+      "correcta": true,
+      "alternativas": {},
+      "consulta_sugerida": null
+    },
+    "javasript selectr": {
+      "correcta": false,
+      "alternativas": {
+        "javasript": [
+          "javascript"
+        ],
+        "selectr": [
+          "selector",
+          "select",
+          "selectors"
+        ]
+      },
+      "consulta_sugerida": "javascript selector"
+    }
+  }
+}
