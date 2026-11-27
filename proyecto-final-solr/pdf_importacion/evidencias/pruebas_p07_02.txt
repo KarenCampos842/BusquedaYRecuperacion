@@ -1,0 +1,16 @@
+test_bytes_invalidos_y_no_pdf (test_extractor_pdf.ExtractorPDFTests.test_bytes_invalidos_y_no_pdf) ... EOF marker not found
+ok
+test_cli_guarda_texto_utf8_y_no_sobrescribe (test_extractor_pdf.ExtractorPDFTests.test_cli_guarda_texto_utf8_y_no_sobrescribe) ... Extracción detenida: La salida ya existe; no se sobrescribe: /tmp/tmpov2j65qg/resultado.txt
+ok
+test_entrada_de_tipo_no_soportado (test_extractor_pdf.ExtractorPDFTests.test_entrada_de_tipo_no_soportado) ... ok
+test_los_dos_pdf_de_muestra_son_texto_seleccionable (test_extractor_pdf.ExtractorPDFTests.test_los_dos_pdf_de_muestra_son_texto_seleccionable) ... ok
+test_pdf_con_imagen_pero_sin_capa_textual_no_es_aceptado (test_extractor_pdf.ExtractorPDFTests.test_pdf_con_imagen_pero_sin_capa_textual_no_es_aceptado) ... ok
+test_pdf_protegido_se_rechaza (test_extractor_pdf.ExtractorPDFTests.test_pdf_protegido_se_rechaza) ... ok
+test_pdf_vacio_sin_texto_no_es_aceptado (test_extractor_pdf.ExtractorPDFTests.test_pdf_vacio_sin_texto_no_es_aceptado) ... ok
+test_ruta_inexistente (test_extractor_pdf.ExtractorPDFTests.test_ruta_inexistente) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.105s
+
+OK
+Texto UTF-8 guardado: /tmp/tmpov2j65qg/resultado.txt (2144 caracteres)
