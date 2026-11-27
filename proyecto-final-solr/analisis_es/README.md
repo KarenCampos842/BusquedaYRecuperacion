@@ -123,7 +123,7 @@ No se reindexa `ri` desde aquí: se avisa a Joseph.
 
 `validar_espanol_final.py` ejecuta los casos de `consultas_validacion_final.csv`
 (mayúsculas y acentos, palabras vacías, variantes morfológicas con y sin protección y
-tres grupos de sinónimos) con la consulta de la API (`edismax`, `qf=titulo^4 contenido`).
+tres grupos de sinónimos: relleno, margen y arreglo) con la consulta de la API (`edismax`, `qf=titulo^4 contenido`).
 Guarda tokens de índice y de consulta de `contenido`, IDs recuperados y si dos
 consultas recuperan los mismos documentos. En los sinónimos compara con y sin
 expansión en el mismo índice (sin expansión = `{!term}` con la forma indexada, que no

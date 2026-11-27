@@ -8,7 +8,7 @@ M01,morfologia,promesas,promesa,plural y singular sin protección
 M02,morfologia,selectores,selector,plural y singular sin protección
 M03,morfologia,funciones,función,plural y singular sin protección
 P01,morfologia_protegida,media,medio,media está en protwords_es.txt: no se recorta
-P02,morfologia_protegida,arrays,array,array está en protwords_es.txt; arrays no
+P02,morfologia_protegida,arrays,array,array está en protwords_es.txt; arrays no está
 Y01,sinonimos,relleno,padding,grupo relleno ↔ padding
 Y02,sinonimos,margen,margin,grupo margen ↔ margin
-Y03,sinonimos,booleano,boolean,grupo booleano ↔ boolean
+Y03,sinonimos,arreglo,array,grupo arreglo ↔ array ↔ matriz (array está protegido)
