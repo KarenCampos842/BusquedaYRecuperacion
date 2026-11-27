@@ -105,7 +105,12 @@
             "String — Cadena de caracteres"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 3,
+          "p_at_5": 0.4,
+          "recall_at_10": 0.67
         },
         "stop": {
           "total": 5,
@@ -117,7 +122,12 @@
             "String — Cadena de caracteres"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 3,
+          "p_at_5": 0.4,
+          "recall_at_10": 0.67
         },
         "stem": {
           "total": 9,
@@ -138,7 +148,12 @@
             "Object",
             "RegExp"
           ],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 3,
+          "p_at_5": 0.4,
+          "recall_at_10": 0.67
         },
         "proyecto": {
           "total": 13,
@@ -164,7 +179,12 @@
             "RegExp",
             "Symbol"
           ],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 3,
+          "relevantes_en_10": 3,
+          "total_relevantes": 3,
+          "p_at_5": 0.6,
+          "recall_at_10": 1.0
         }
       }
     },
@@ -302,7 +322,12 @@
             "Procesamiento del valor de las propiedades CSS"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 5,
+          "relevantes_en_10": 7,
+          "total_relevantes": 7,
+          "p_at_5": 1.0,
+          "recall_at_10": 1.0
         },
         "stop": {
           "total": 9,
@@ -318,7 +343,12 @@
             "Procesamiento del valor de las propiedades CSS"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 5,
+          "relevantes_en_10": 7,
+          "total_relevantes": 7,
+          "p_at_5": 1.0,
+          "recall_at_10": 1.0
         },
         "stem": {
           "total": 9,
@@ -334,7 +364,12 @@
             "CSS"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 5,
+          "relevantes_en_10": 7,
+          "total_relevantes": 7,
+          "p_at_5": 1.0,
+          "recall_at_10": 1.0
         },
         "proyecto": {
           "total": 9,
@@ -350,7 +385,12 @@
             "CSS"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 5,
+          "relevantes_en_10": 7,
+          "total_relevantes": 7,
+          "p_at_5": 1.0,
+          "recall_at_10": 1.0
         }
       }
     },
@@ -649,7 +689,12 @@
             "Usar formatos de fecha y hora en HTML"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 3,
+          "relevantes_en_10": 3,
+          "total_relevantes": 4,
+          "p_at_5": 0.6,
+          "recall_at_10": 0.75
         },
         "stop": {
           "total": 24,
@@ -703,7 +748,12 @@
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
-          ]
+          ],
+          "relevantes_en_5": 3,
+          "relevantes_en_10": 4,
+          "total_relevantes": 4,
+          "p_at_5": 0.6,
+          "recall_at_10": 1.0
         },
         "stem": {
           "total": 60,
@@ -720,7 +770,12 @@
             "Categorías de contenido"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 3,
+          "total_relevantes": 4,
+          "p_at_5": 0.4,
+          "recall_at_10": 0.75
         },
         "proyecto": {
           "total": 26,
@@ -772,7 +827,12 @@
             "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
-          ]
+          ],
+          "relevantes_en_5": 3,
+          "relevantes_en_10": 4,
+          "total_relevantes": 4,
+          "p_at_5": 0.6,
+          "recall_at_10": 1.0
         }
       }
     },
@@ -796,7 +856,12 @@
             "Sintaxis de definición de valor"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "stop": {
           "total": 10,
@@ -864,7 +929,12 @@
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
-          ]
+          ],
+          "relevantes_en_5": 1,
+          "relevantes_en_10": 1,
+          "total_relevantes": 2,
+          "p_at_5": 0.2,
+          "recall_at_10": 0.5
         },
         "stem": {
           "total": 60,
@@ -881,7 +951,12 @@
             "Sintaxis de definición de valor"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "proyecto": {
           "total": 10,
@@ -949,7 +1024,12 @@
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null"
-          ]
+          ],
+          "relevantes_en_5": 1,
+          "relevantes_en_10": 1,
+          "total_relevantes": 2,
+          "p_at_5": 0.2,
+          "recall_at_10": 0.5
         }
       }
     },
@@ -1053,7 +1133,12 @@
             "Propiedades abreviadas"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "stop": {
           "total": 2,
@@ -1062,7 +1147,12 @@
             "Propiedades abreviadas"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "stem": {
           "total": 3,
@@ -1074,7 +1164,12 @@
           "ganados_vs_ri": [
             "String — Cadena de caracteres"
           ],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "proyecto": {
           "total": 8,
@@ -1096,7 +1191,12 @@
             "Referencia CSS",
             "String — Cadena de caracteres"
           ],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         }
       }
     },
@@ -1173,7 +1273,12 @@
             "Herencia y la cadena de prototipos"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "stop": {
           "total": 10,
@@ -1190,7 +1295,12 @@
             "Herencia y la cadena de prototipos"
           ],
           "ganados_vs_ri": [],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         },
         "stem": {
           "total": 13,
@@ -1211,7 +1321,12 @@
             "JavaScript",
             "Tipos de datos y estructuras en JavaScript"
           ],
-          "perdidos_vs_ri": []
+          "perdidos_vs_ri": [],
+          "relevantes_en_5": 1,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.2,
+          "recall_at_10": 1.0
         },
         "proyecto": {
           "total": 10,
@@ -1234,7 +1349,12 @@
           "perdidos_vs_ri": [
             "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
             "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function"
-          ]
+          ],
+          "relevantes_en_5": 2,
+          "relevantes_en_10": 2,
+          "total_relevantes": 2,
+          "p_at_5": 0.4,
+          "recall_at_10": 1.0
         }
       }
     },

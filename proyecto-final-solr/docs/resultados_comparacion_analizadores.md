@@ -73,9 +73,40 @@ Capturas tomadas por Karen el 26-nov-2026 sobre el índice de prueba de 60 docum
 | P03-08 | [análisis, parte 1](evidencias/P03-08_sinonimos_analysis_1.png), [parte 2](evidencias/P03-08_sinonimos_analysis_2.png) | Analysis de consulta en `contenido_proyecto` con «promise». El filtro de sinónimos (SGF) produce `promesa` y `promise` (tipo SYNONYM) en la misma posición; PKMF marca `promise` como `keyword=true` y el stemming deja `promes` y `promise`. |
 | P03-08 | [búsqueda](evidencias/P03-08_sinonimos_busqueda.png) | Respuesta JSON de `/select` (la captura no incluye la barra de direcciones). En `params` se ven `q=promise`, `defType=edismax`, `qf=titulo_proyecto^4 contenido_proyecto` y `fl=id,titulo_ri`; devuelve `numFound: 2`: «Guía de JavaScript» y «Expresiones y operadores». La consulta se hizo en `ri_analisis_es`, único core con esos campos. |
 
+## P@5 y Recall@10 (índice de prueba, no evidencia final)
+
+**Índice de prueba `ri_analisis_es`** (60 documentos de `corpus_solr.json`), ejecución del
+27-nov-2026 con `py analisis_es/comparar_analizadores.py`. **No es evidencia final**: el
+índice definitivo es el `ri` de Joseph. Juicios: `analisis_es/juicios_relevancia.csv`
+(confirmados por Karen; criterio en `analisis_es/README.md`). Solo 6 consultas tienen juicios.
+
+Cada celda es **«relevantes entre los 5 primeros» / 5 · «relevantes entre los 10 primeros» / «total de relevantes»**:
+
+- P@5 = relevantes entre los 5 primeros ÷ 5.
+- Recall@10 = relevantes entre los 10 primeros ÷ total de relevantes de la consulta.
+- Con menos de 5 relevantes, P@5 no puede llegar a 5/5 (por ejemplo, C10 tiene 2 relevantes: como máximo 2/5).
+
+| ID | Consulta | Relevantes | ri | stop | stem | proyecto |
+|---|---|---|---|---|---|---|
+| C03 | arreglos | 3 | 2/5 · 2/3 | 2/5 · 2/3 | 2/5 · 2/3 | 3/5 · 3/3 |
+| C05 | selectores | 7 | 5/5 · 7/7 | 5/5 · 7/7 | 5/5 · 7/7 | 5/5 · 7/7 |
+| C09 | la cadena de prototipos | 4 | 3/5 · 3/4 | 3/5 · 4/4 | 2/5 · 3/4 | 3/5 · 4/4 |
+| C10 | el modelo de caja | 2 | 2/5 · 2/2 | 1/5 · 1/2 | 2/5 · 2/2 | 1/5 · 1/2 |
+| C13 | relleno | 2 | 2/5 · 2/2 | 2/5 · 2/2 | 2/5 · 2/2 | 2/5 · 2/2 |
+| C15 | expresión regular | 2 | 2/5 · 2/2 | 2/5 · 2/2 | 1/5 · 2/2 | 2/5 · 2/2 |
+
+**Lo que muestran los conteos** (solo hechos; con 6 consultas no se puede afirmar que un analizador sea mejor que otro):
+
+- **C03 `arreglos`:** `proyecto` sitúa los 3 relevantes entre los 5 primeros; las otras tres variantes sitúan 2. `proyecto` devuelve 13 documentos y las demás, 5–9.
+- **C05 `selectores`:** las cuatro variantes dan el mismo conteo (5/5 · 7/7).
+- **C09 `la cadena de prototipos`:** `stop` y `proyecto` tienen 4 de 4 relevantes entre los 10 primeros; `ri` y `stem`, 3 de 4. Entre los 5 primeros, `stem` tiene 2 y las demás, 3.
+- **C10 `el modelo de caja`:** `ri` y `stem` tienen los 2 relevantes entre los 5 primeros; `stop` y `proyecto`, 1. Con `ri` y `stem` la consulta devuelve los 60 documentos (por «el» y «de»); con `stop` y `proyecto`, 10. El relevante que falta con `stop` y `proyecto` es «Entendiendo el colapso de margen», que no aparece en sus resultados. Su texto no contiene «modelo» ni «caja» (solo la palabra inglesa «models»), así que con `ri` y `stem` solo coincide por «el» y «de».
+- **C13 `relleno`:** las cuatro variantes tienen los 2 relevantes entre los 5 primeros. `proyecto` devuelve 8 documentos por la expansión a `padding`; los otros 6 no están entre los juzgados relevantes.
+- **C15 `expresión regular`:** las cuatro tienen los 2 relevantes entre los 10 primeros; `stem` tiene 1 entre los 5 primeros y las demás, 2.
+
 ## Limitaciones
 
-- **Precisión y exhaustividad aún no se han calculado.** Los juicios de relevancia ya están confirmados por Karen (`analisis_es/juicios_relevancia.csv`, 6 consultas); el script calculará P@5 y Recall@10 en la próxima ejecución. Los juicios los define el equipo, no el script.
+- **P@5 y Recall@10 solo cubren 6 consultas** y un índice de prueba de 60 documentos: sirven para describir lo observado, no para concluir qué analizador es mejor. Los juicios los define el equipo, no el script.
 - Es un índice de prueba con 60 documentos. La validación sobre el índice final corresponde a P08-03 y P08-04.
 
 ## Hallazgos técnicos de Solr 10
