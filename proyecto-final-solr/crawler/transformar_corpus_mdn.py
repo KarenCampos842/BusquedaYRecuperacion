@@ -17,7 +17,7 @@ from mdn_piloto import PilotoError, normalizar_url, validar_url
 
 PROYECTO = Path(__file__).resolve().parents[1]
 ENTRADA = PROYECTO / "data/mdn/limpieza/limpieza_20261125T043642044138Z_c21372d7d7c14eaa9055b2593fd866be/corpus_limpio.json"
-CONTRATO = PROYECTO / "docs/P00-03_contrato_solr_v1.1.md"
+CONTRATO = PROYECTO / "docs/P00-03_contrato_solr_v1.2.md"
 VERSION_REGLAS = "P02-09-v1"
 OBLIGATORIOS = ("id", "titulo", "contenido", "categoria", "tipo_fuente", "fuente", "idioma", "url")
 OPCIONALES = (

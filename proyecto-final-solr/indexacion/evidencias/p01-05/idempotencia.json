@@ -1,0 +1,3645 @@
+{
+  "tarea": "P01-05",
+  "fecha_utc": "2026-11-26T23:38:11.833978+00:00",
+  "core": "ri",
+  "contrato": "docs\\P00-03_contrato_solr_v1.2.md",
+  "sha256_contrato": "16a7222a9f8ad6ff27e0426d5d19962c68abe51960f6d2ff056d811446ba065c",
+  "aplicado": false,
+  "campos_por_agregar": [],
+  "antes": {
+    "schema": {
+      "name": "default-config",
+      "version": 1.7,
+      "uniqueKey": "id",
+      "fieldTypes": [
+        {
+          "name": "_nest_path_",
+          "class": "solr.NestPathField",
+          "maxCharsForDocValues": "-1",
+          "omitNorms": true,
+          "omitTermFreqAndPositions": true,
+          "stored": false,
+          "multiValued": false
+        },
+        {
+          "name": "ancestor_path",
+          "class": "solr.TextField",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "keyword"
+            }
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "delimiter": "/",
+              "name": "pathHierarchy"
+            }
+          }
+        },
+        {
+          "name": "binary",
+          "class": "solr.BinaryField"
+        },
+        {
+          "name": "boolean",
+          "class": "solr.BoolField",
+          "sortMissingLast": true
+        },
+        {
+          "name": "booleans",
+          "class": "solr.BoolField",
+          "sortMissingLast": true,
+          "multiValued": true
+        },
+        {
+          "name": "delimited_payloads_float",
+          "class": "solr.TextField",
+          "indexed": true,
+          "stored": false,
+          "analyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "encoder": "float",
+                "name": "delimitedPayload"
+              }
+            ]
+          }
+        },
+        {
+          "name": "delimited_payloads_int",
+          "class": "solr.TextField",
+          "indexed": true,
+          "stored": false,
+          "analyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "encoder": "integer",
+                "name": "delimitedPayload"
+              }
+            ]
+          }
+        },
+        {
+          "name": "delimited_payloads_string",
+          "class": "solr.TextField",
+          "indexed": true,
+          "stored": false,
+          "analyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "encoder": "identity",
+                "name": "delimitedPayload"
+              }
+            ]
+          }
+        },
+        {
+          "name": "descendent_path",
+          "class": "solr.TextField",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "delimiter": "/",
+              "name": "pathHierarchy"
+            }
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "keyword"
+            }
+          }
+        },
+        {
+          "name": "ignored",
+          "class": "solr.StrField",
+          "indexed": false,
+          "stored": false,
+          "docValues": false,
+          "multiValued": true
+        },
+        {
+          "name": "location",
+          "class": "solr.LatLonPointSpatialField"
+        },
+        {
+          "name": "location_rpt",
+          "class": "solr.SpatialRecursivePrefixTreeFieldType",
+          "geo": "true",
+          "maxDistErr": "0.001",
+          "distErrPct": "0.025",
+          "distanceUnits": "kilometers"
+        },
+        {
+          "name": "lowercase",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "keyword"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pdate",
+          "class": "solr.DatePointField"
+        },
+        {
+          "name": "pdates",
+          "class": "solr.DatePointField",
+          "multiValued": true
+        },
+        {
+          "name": "pdouble",
+          "class": "solr.DoublePointField"
+        },
+        {
+          "name": "pdoubles",
+          "class": "solr.DoublePointField",
+          "multiValued": true
+        },
+        {
+          "name": "pfloat",
+          "class": "solr.FloatPointField"
+        },
+        {
+          "name": "pfloats",
+          "class": "solr.FloatPointField",
+          "multiValued": true
+        },
+        {
+          "name": "phonetic_en",
+          "class": "solr.TextField",
+          "indexed": true,
+          "stored": false,
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "inject": "false",
+                "name": "doubleMetaphone"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pint",
+          "class": "solr.IntPointField"
+        },
+        {
+          "name": "pints",
+          "class": "solr.IntPointField",
+          "multiValued": true
+        },
+        {
+          "name": "plong",
+          "class": "solr.LongPointField"
+        },
+        {
+          "name": "plongs",
+          "class": "solr.LongPointField",
+          "multiValued": true
+        },
+        {
+          "name": "point",
+          "class": "solr.PointType",
+          "dimension": "2",
+          "subFieldSuffix": "_d"
+        },
+        {
+          "name": "random",
+          "class": "solr.RandomSortField",
+          "indexed": true
+        },
+        {
+          "name": "rank",
+          "class": "solr.RankField"
+        },
+        {
+          "name": "string",
+          "class": "solr.StrField",
+          "sortMissingLast": true
+        },
+        {
+          "name": "strings",
+          "class": "solr.StrField",
+          "sortMissingLast": true,
+          "multiValued": true
+        },
+        {
+          "name": "text_ar",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_ar.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "arabicNormalization"
+              },
+              {
+                "name": "arabicStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_bg",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_bg.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "bulgarianStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ca",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "articles": "lang/contractions_ca.txt",
+                "ignoreCase": "true",
+                "name": "elision"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_ca.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Catalan",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_cjk",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "CJKWidth"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "CJKBigram"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_cz",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_cz.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "czechStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_da",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_da.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Danish",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_de",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_de.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "name": "germanNormalization"
+              },
+              {
+                "name": "germanLightStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_el",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "greekLowercase"
+              },
+              {
+                "words": "lang/stopwords_el.txt",
+                "ignoreCase": "false",
+                "name": "stop"
+              },
+              {
+                "name": "greekStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_en",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "englishPossessive"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "porterStem"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "true"
+              },
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "englishPossessive"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "porterStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_en_splitting",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "autoGeneratePhraseQueries": "true",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "splitOnCaseChange": "1",
+                "name": "wordDelimiterGraph",
+                "catenateAll": "0",
+                "generateWordParts": "1",
+                "generateNumberParts": "1",
+                "catenateWords": "1",
+                "catenateNumbers": "1"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "porterStem"
+              },
+              {
+                "name": "flattenGraph"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "true"
+              },
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "splitOnCaseChange": "1",
+                "name": "wordDelimiterGraph",
+                "catenateAll": "0",
+                "generateWordParts": "1",
+                "generateNumberParts": "1",
+                "catenateWords": "0",
+                "catenateNumbers": "0"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "porterStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_en_splitting_tight",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "autoGeneratePhraseQueries": "true",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "false"
+              },
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "catenateAll": "0",
+                "generateNumberParts": "0",
+                "name": "wordDelimiterGraph",
+                "catenateWords": "1",
+                "catenateNumbers": "1",
+                "generateWordParts": "0"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "englishMinimalStem"
+              },
+              {
+                "name": "removeDuplicates"
+              },
+              {
+                "name": "flattenGraph"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            },
+            "filters": [
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "false"
+              },
+              {
+                "words": "lang/stopwords_en.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "catenateAll": "0",
+                "generateNumberParts": "0",
+                "name": "wordDelimiterGraph",
+                "catenateWords": "1",
+                "catenateNumbers": "1",
+                "generateWordParts": "0"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "protected": "protwords.txt",
+                "name": "keywordMarker"
+              },
+              {
+                "name": "englishMinimalStem"
+              },
+              {
+                "name": "removeDuplicates"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_es",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_es.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "name": "spanishLightStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_es_proyecto",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "class": "solr.StandardTokenizerFactory"
+            },
+            "filters": [
+              {
+                "class": "solr.LowerCaseFilterFactory"
+              },
+              {
+                "class": "solr.ASCIIFoldingFilterFactory",
+                "preserveOriginal": "false"
+              },
+              {
+                "class": "solr.ManagedStopFilterFactory",
+                "managed": "es_proyecto"
+              },
+              {
+                "class": "solr.KeywordMarkerFilterFactory",
+                "pattern": "^(?:array|aside|canvas|css|ecmascript|fetch|html|javascript|json|media|promise|source|style|template|title|value)$"
+              },
+              {
+                "class": "solr.SpanishLightStemFilterFactory"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "class": "solr.StandardTokenizerFactory"
+            },
+            "filters": [
+              {
+                "class": "solr.LowerCaseFilterFactory"
+              },
+              {
+                "class": "solr.ASCIIFoldingFilterFactory",
+                "preserveOriginal": "false"
+              },
+              {
+                "class": "solr.ManagedSynonymGraphFilterFactory",
+                "managed": "es_proyecto"
+              },
+              {
+                "class": "solr.ManagedStopFilterFactory",
+                "managed": "es_proyecto"
+              },
+              {
+                "class": "solr.KeywordMarkerFilterFactory",
+                "pattern": "^(?:array|aside|canvas|css|ecmascript|fetch|html|javascript|json|media|promise|source|style|template|title|value)$"
+              },
+              {
+                "class": "solr.SpanishLightStemFilterFactory"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_es_ri",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "class": "solr.StandardTokenizerFactory"
+            },
+            "filters": [
+              {
+                "class": "solr.LowerCaseFilterFactory"
+              },
+              {
+                "class": "solr.ASCIIFoldingFilterFactory",
+                "preserveOriginal": "true"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "class": "solr.StandardTokenizerFactory"
+            },
+            "filters": [
+              {
+                "class": "solr.LowerCaseFilterFactory"
+              },
+              {
+                "class": "solr.ASCIIFoldingFilterFactory",
+                "preserveOriginal": "true"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_et",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_et.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Estonian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_eu",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_eu.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Basque",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_fa",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "charFilters": [
+              {
+                "name": "persian"
+              }
+            ],
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "arabicNormalization"
+              },
+              {
+                "name": "persianNormalization"
+              },
+              {
+                "words": "lang/stopwords_fa.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_fi",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_fi.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Finnish",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_fr",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "articles": "lang/contractions_fr.txt",
+                "ignoreCase": "true",
+                "name": "elision"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_fr.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "name": "frenchLightStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ga",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "articles": "lang/contractions_ga.txt",
+                "ignoreCase": "true",
+                "name": "elision"
+              },
+              {
+                "words": "lang/hyphenations_ga.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "irishLowercase"
+              },
+              {
+                "words": "lang/stopwords_ga.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Irish",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_gen_sort",
+          "class": "solr.SortableTextField",
+          "positionIncrementGap": "100",
+          "multiValued": true,
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "true"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_general",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "multiValued": true,
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "true"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_general_rev",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "indexAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "withOriginal": "true",
+                "maxPosQuestion": "2",
+                "name": "reversedWildcard",
+                "maxFractionAsterisk": "0.33",
+                "maxPosAsterisk": "3"
+              }
+            ]
+          },
+          "queryAnalyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "synonymGraph",
+                "synonyms": "synonyms.txt",
+                "ignoreCase": "true",
+                "expand": "true"
+              },
+              {
+                "words": "stopwords.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_gl",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_gl.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "galicianStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_hi",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "indicNormalization"
+              },
+              {
+                "name": "hindiNormalization"
+              },
+              {
+                "words": "lang/stopwords_hi.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "hindiStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_hu",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_hu.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Hungarian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_hy",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_hy.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Armenian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_id",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_id.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "stemDerivational": "true",
+                "name": "indonesianStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_it",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "articles": "lang/contractions_it.txt",
+                "ignoreCase": "true",
+                "name": "elision"
+              },
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_it.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "name": "italianLightStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ja",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "autoGeneratePhraseQueries": "false",
+          "analyzer": {
+            "tokenizer": {
+              "mode": "search",
+              "name": "japanese"
+            },
+            "filters": [
+              {
+                "name": "japaneseBaseForm"
+              },
+              {
+                "tags": "lang/stoptags_ja.txt",
+                "name": "japanesePartOfSpeechStop"
+              },
+              {
+                "name": "cjkWidth"
+              },
+              {
+                "words": "lang/stopwords_ja.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "minimumLength": "4",
+                "name": "japaneseKatakanaStem"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ko",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "outputUnknownUnigrams": "false",
+              "decompoundMode": "discard",
+              "name": "korean"
+            },
+            "filters": [
+              {
+                "name": "koreanPartOfSpeechStop"
+              },
+              {
+                "name": "koreanReadingForm"
+              },
+              {
+                "name": "lowercase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_lv",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_lv.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "name": "latvianStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_nl",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_nl.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "dictionary": "lang/stemdict_nl.txt",
+                "ignoreCase": "false",
+                "name": "stemmerOverride"
+              },
+              {
+                "language": "Dutch",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_no",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_no.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Norwegian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_pt",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_pt.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "name": "portugueseLightStem"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ro",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_ro.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              },
+              {
+                "language": "Romanian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ru",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_ru.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Russian",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_sv",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "name": "stop",
+                "words": "lang/stopwords_sv.txt",
+                "ignoreCase": "true",
+                "format": "snowball"
+              },
+              {
+                "language": "Swedish",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_th",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "thai"
+            },
+            "filters": [
+              {
+                "name": "lowercase"
+              },
+              {
+                "words": "lang/stopwords_th.txt",
+                "ignoreCase": "true",
+                "name": "stop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_tr",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "standard"
+            },
+            "filters": [
+              {
+                "name": "turkishLowercase"
+              },
+              {
+                "words": "lang/stopwords_tr.txt",
+                "ignoreCase": "false",
+                "name": "stop"
+              },
+              {
+                "language": "Turkish",
+                "name": "snowballPorter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_ws",
+          "class": "solr.TextField",
+          "positionIncrementGap": "100",
+          "analyzer": {
+            "tokenizer": {
+              "name": "whitespace"
+            }
+          }
+        }
+      ],
+      "fields": [
+        {
+          "name": "_nest_path_",
+          "type": "_nest_path_"
+        },
+        {
+          "name": "_root_",
+          "type": "string",
+          "indexed": true,
+          "stored": false
+        },
+        {
+          "name": "_text_",
+          "type": "text_general",
+          "multiValued": true,
+          "indexed": true,
+          "stored": false
+        },
+        {
+          "name": "_version_",
+          "type": "plong",
+          "indexed": false,
+          "stored": false
+        },
+        {
+          "name": "atribucion",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "categoria",
+          "type": "string",
+          "docValues": true,
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "contenido",
+          "type": "text_es_proyecto",
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "descubierta_desde",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "enlaces_salientes",
+          "type": "strings",
+          "multiValued": true,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "fecha_rastreo",
+          "type": "pdate",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "fuente",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "idioma",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "pagerank",
+          "type": "pdouble",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "profundidad",
+          "type": "pint",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "sha256_contenido",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "sha256_contenido_normalizado",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "tipo_documento",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "tipo_fuente",
+          "type": "string",
+          "docValues": true,
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "titulo",
+          "type": "text_es_proyecto",
+          "multiValued": false,
+          "indexed": true,
+          "required": true,
+          "stored": true
+        },
+        {
+          "name": "titulo_descriptivo",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "titulo_documento",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "titulo_original",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "multiValued": false,
+          "indexed": true,
+          "required": false,
+          "stored": true
+        }
+      ],
+      "dynamicFields": [
+        {
+          "name": "*_txt_en_split_tight",
+          "type": "text_en_splitting_tight",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_descendent_path",
+          "type": "descendent_path",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_ancestor_path",
+          "type": "ancestor_path",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_en_split",
+          "type": "text_en_splitting",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_sort",
+          "type": "text_gen_sort",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "ignored_*",
+          "type": "ignored"
+        },
+        {
+          "name": "*_txt_rev",
+          "type": "text_general_rev",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_phon_en",
+          "type": "phonetic_en",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_s_lower",
+          "type": "lowercase",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_cjk",
+          "type": "text_cjk",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "random_*",
+          "type": "random"
+        },
+        {
+          "name": "*_t_sort",
+          "type": "text_gen_sort",
+          "multiValued": false,
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_en",
+          "type": "text_en",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ar",
+          "type": "text_ar",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_bg",
+          "type": "text_bg",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ca",
+          "type": "text_ca",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_cz",
+          "type": "text_cz",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_da",
+          "type": "text_da",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_de",
+          "type": "text_de",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_el",
+          "type": "text_el",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_es",
+          "type": "text_es",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_et",
+          "type": "text_et",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_eu",
+          "type": "text_eu",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_fa",
+          "type": "text_fa",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_fi",
+          "type": "text_fi",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_fr",
+          "type": "text_fr",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ga",
+          "type": "text_ga",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_gl",
+          "type": "text_gl",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_hi",
+          "type": "text_hi",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_hu",
+          "type": "text_hu",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_hy",
+          "type": "text_hy",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_id",
+          "type": "text_id",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_it",
+          "type": "text_it",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ja",
+          "type": "text_ja",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ko",
+          "type": "text_ko",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_lv",
+          "type": "text_lv",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_nl",
+          "type": "text_nl",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_no",
+          "type": "text_no",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_pt",
+          "type": "text_pt",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ro",
+          "type": "text_ro",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_ru",
+          "type": "text_ru",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_sv",
+          "type": "text_sv",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_th",
+          "type": "text_th",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt_tr",
+          "type": "text_tr",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_point",
+          "type": "point",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_srpt",
+          "type": "location_rpt",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "attr_*",
+          "type": "text_general",
+          "multiValued": true,
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_dts",
+          "type": "pdates",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_txt",
+          "type": "text_general",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_str",
+          "type": "strings",
+          "docValues": true,
+          "indexed": false,
+          "stored": false,
+          "useDocValuesAsStored": false
+        },
+        {
+          "name": "*_dpf",
+          "type": "delimited_payloads_float",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_dpi",
+          "type": "delimited_payloads_int",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_dps",
+          "type": "delimited_payloads_string",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_is",
+          "type": "pints",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_ss",
+          "type": "strings",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_ls",
+          "type": "plongs",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_bs",
+          "type": "booleans",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_fs",
+          "type": "pfloats",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_ds",
+          "type": "pdoubles",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_dt",
+          "type": "pdate",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_ws",
+          "type": "text_ws",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_i",
+          "type": "pint",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_s",
+          "type": "string",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_l",
+          "type": "plong",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_b",
+          "type": "boolean",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_f",
+          "type": "pfloat",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_d",
+          "type": "pdouble",
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_t",
+          "type": "text_general",
+          "multiValued": false,
+          "indexed": true,
+          "stored": true
+        },
+        {
+          "name": "*_p",
+          "type": "location",
+          "indexed": true,
+          "stored": true
+        }
+      ],
+      "copyFields": []
+    },
+    "fields": [
+      {
+        "name": "_nest_path_",
+        "type": "_nest_path_",
+        "indexed": true,
+        "stored": false,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": true,
+        "useDocValuesAsStored": false
+      },
+      {
+        "name": "_root_",
+        "type": "string",
+        "indexed": true,
+        "stored": false,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "_text_",
+        "type": "text_general",
+        "indexed": true,
+        "stored": false,
+        "docValues": false,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": false,
+        "omitTermFreqAndPositions": false,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": true,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": true,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "_version_",
+        "type": "plong",
+        "indexed": false,
+        "stored": false,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": false,
+        "omitTermFreqAndPositions": false,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "atribucion",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "categoria",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": true,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "contenido",
+        "type": "text_es_proyecto",
+        "indexed": true,
+        "stored": true,
+        "docValues": false,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": false,
+        "omitTermFreqAndPositions": false,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": true,
+        "tokenized": true,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "descubierta_desde",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "enlaces_salientes",
+        "type": "strings",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": true,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "fecha_rastreo",
+        "type": "pdate",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "fuente",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": true,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": true,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "idioma",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": true,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "pagerank",
+        "type": "pdouble",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "profundidad",
+        "type": "pint",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "sha256_contenido",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "sha256_contenido_normalizado",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "tipo_documento",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "tipo_fuente",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": true,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "titulo",
+        "type": "text_es_proyecto",
+        "indexed": true,
+        "stored": true,
+        "docValues": false,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": false,
+        "omitTermFreqAndPositions": false,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "required": true,
+        "tokenized": true,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "titulo_descriptivo",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "titulo_documento",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "titulo_original",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "indexed": true,
+        "stored": true,
+        "docValues": true,
+        "termVectors": false,
+        "termPositions": false,
+        "termOffsets": false,
+        "termPayloads": false,
+        "omitNorms": true,
+        "omitTermFreqAndPositions": true,
+        "omitPositions": false,
+        "storeOffsetsWithPositions": false,
+        "multiValued": false,
+        "large": false,
+        "uninvertible": false,
+        "sortMissingLast": true,
+        "required": false,
+        "tokenized": false,
+        "useDocValuesAsStored": true
+      }
+    ]
+  },
+  "analisis_espanol": {
+    "responseHeader": {
+      "status": 0,
+      "QTime": 2
+    },
+    "analysis": {
+      "field_types": {
+        "text_es_proyecto": {
+          "index": [
+            "org.apache.lucene.analysis.standard.StandardTokenizer",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1
+                ]
+              },
+              {
+                "text": "Programación",
+                "raw_bytes": "[50 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2
+                ]
+              },
+              {
+                "text": "JavaScript",
+                "raw_bytes": "[4a 61 76 61 53 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3
+                ]
+              },
+              {
+                "text": "HTML",
+                "raw_bytes": "[48 54 4d 4c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4
+                ]
+              },
+              {
+                "text": "CSS",
+                "raw_bytes": "[43 53 53]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.LowerCaseFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programación",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.StopFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.PatternKeywordMarkerFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ],
+            "org.apache.lucene.analysis.es.SpanishLightStemFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ]
+          ],
+          "query": [
+            "org.apache.lucene.analysis.standard.StandardTokenizer",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1
+                ]
+              },
+              {
+                "text": "Programación",
+                "raw_bytes": "[50 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2
+                ]
+              },
+              {
+                "text": "JavaScript",
+                "raw_bytes": "[4a 61 76 61 53 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3
+                ]
+              },
+              {
+                "text": "HTML",
+                "raw_bytes": "[48 54 4d 4c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4
+                ]
+              },
+              {
+                "text": "CSS",
+                "raw_bytes": "[43 53 53]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.LowerCaseFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programación",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.synonym.SynonymGraphFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.StopFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.PatternKeywordMarkerFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ],
+            "org.apache.lucene.analysis.es.SpanishLightStemFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ]
+          ]
+        }
+      },
+      "field_names": {}
+    }
+  }
+}
