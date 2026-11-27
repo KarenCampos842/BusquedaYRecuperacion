@@ -112,10 +112,10 @@ del corpus (no hay un subconjunto afectado). Los sinónimos solo actúan en la c
    `py analisis_es/validar_espanol_final.py --core ri`, que usa la misma consulta que
    la API. Para la evidencia final, con `--evidencia-final` (ver abajo).
 
-Cuando se integre P05 (PR #6): `contenido_ortografia` y `contenido_vocabulario` usan
-las mismas palabras vacías, así que un cambio en `stopwords_es.txt` también obliga a
-reconstruir `/sugerencias` (`suggest.buildAll=true`) y `/ortografia`
-(`spellcheck.build=true`) después de reindexar.
+`contenido_ortografia` y `contenido_vocabulario` también dependen del análisis: después
+de reindexar por un cambio de análisis hay que reconstruir los diccionarios del
+autocompletado (`/sugerencias`, `suggest.buildAll=true`) y del corrector ortográfico
+(`/ortografia`, `spellcheck.build=true`).
 
 No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11, P08-02).
 
