@@ -8,6 +8,8 @@ TIEMPO_ESPERA_SEGUNDOS = 30
 # Core oficial (esquema de Joseph) y core aislado para experimentos de Karen.
 CORE_PRODUCCION = "ri"
 CORE_PRUEBA = "ri_analisis_es"
+# Core aislado con los campos del contrato P00-03 para probar Suggester y SpellCheck.
+CORE_SUGERENCIAS = "ri_sugerencias_es"
 CONJUNTO_CONFIGURACION_PRUEBA = "_default"
 CONTENEDOR_SOLR = "solr-ri"
 

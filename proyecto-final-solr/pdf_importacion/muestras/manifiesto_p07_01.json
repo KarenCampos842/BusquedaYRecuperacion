@@ -1,0 +1,38 @@
+[
+  {
+    "archivo": "guia_formularios_html.pdf",
+    "titulo": "Validación de formularios HTML: guía de prueba",
+    "categoria": "HTML",
+    "tema": "Validación de formularios y entradas",
+    "tipo_fuente": "pdf",
+    "fuente": "PDF local",
+    "idioma": "es",
+    "consulta_exclusiva": "LinceFormulario2026",
+    "consulta_general": "formularios",
+    "tamano_bytes": 25366,
+    "paginas": 2,
+    "caracteres_extraidos": 2144,
+    "palabra_clave_en_segunda_pagina": true,
+    "sha256_pdf": "768847d403914513d6ac0ed74bd697e5dc634eef4e2f0bf11a78ef4c2c7af9e1",
+    "id_solr_previsto": "pdf:768847d403914513d6ac0ed74bd697e5dc634eef4e2f0bf11a78ef4c2c7af9e1",
+    "procedencia": "Documento de prueba original creado para P07-01, uso académico autorizado"
+  },
+  {
+    "archivo": "guia_diseno_css_responsivo.pdf",
+    "titulo": "Diseño responsivo con CSS Grid y Flexbox",
+    "categoria": "CSS",
+    "tema": "Maquetación responsiva con CSS Grid y Flexbox",
+    "tipo_fuente": "pdf",
+    "fuente": "PDF local",
+    "idioma": "es",
+    "consulta_exclusiva": "FaroRejilla2026",
+    "consulta_general": "cuadrícula",
+    "tamano_bytes": 25301,
+    "paginas": 2,
+    "caracteres_extraidos": 1912,
+    "palabra_clave_en_segunda_pagina": true,
+    "sha256_pdf": "b56830143154d57f910411aa694c32bb54e8b77b7e5a8b26020b322a1c091448",
+    "id_solr_previsto": "pdf:b56830143154d57f910411aa694c32bb54e8b77b7e5a8b26020b322a1c091448",
+    "procedencia": "Documento de prueba original creado para P07-01, uso académico autorizado"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "tarea": "P02-11",
+  "carga_real_ejecutada": false,
+  "core_modificado": false,
+  "recuento_actual_confirmado": false,
+  "motivo": "Conexion rechazada en localhost:8983",
+  "modo_prueba": {
+    "codigo_salida": 0,
+    "evidencia": "revision-final/resultado.json"
+  },
+  "suites": {
+    "p02-11": {
+      "ejecutadas": 20,
+      "exitosas": 19,
+      "omitidas": 1,
+      "codigo_salida": 0,
+      "sha256_registro": "bf79f57e810d5b40821aded16c5acb46920ef421e7dc57f3a38a9ec85a5f16e4"
+    },
+    "p01-05": {
+      "ejecutadas": 19,
+      "exitosas": 18,
+      "omitidas": 1,
+      "codigo_salida": 0,
+      "sha256_registro": "85d334d7f79a00a98c4cfa544fee64a43c193d1a703277748d3be6512a7d1832"
+    },
+    "transformacion": {
+      "ejecutadas": 11,
+      "exitosas": 11,
+      "omitidas": 0,
+      "codigo_salida": 0,
+      "sha256_registro": "6da2aa0b3e32e17b39c593ea8b1ae7dfdb7e90ed57289db65756a25a77f75d82"
+    },
+    "analisis": {
+      "ejecutadas": 39,
+      "exitosas": 39,
+      "omitidas": 0,
+      "codigo_salida": 0,
+      "sha256_registro": "61c396930c1e27e018f26abbe8bc1d07f9d3dd458a4fc6eb916f2b139c5e163a"
+    }
+  },
+  "sha256_archivos": {
+    "indexacion\\indexar_corpus_mdn.py": "4646e9d12a9651254e3ac5e36ba0b6c27e082a087ac2d8ef450b860e385c8555",
+    "indexacion\\test_p02_11.py": "5332142cae14683647438dbdff16557626f3e6afb7acd7891dd02bfd70f32d50",
+    "indexacion\\README.md": "7f68184b7d6f252fd1ac7fb31b1911a232185d5d47dc7e73b3d0581337cfbd94"
+  }
+}

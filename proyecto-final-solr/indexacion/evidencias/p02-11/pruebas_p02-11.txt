@@ -1,0 +1,27 @@
+test_corpus_incompleto_duplicado_ajeno_cuotas (test_p02_11.CorpusTests.test_corpus_incompleto_duplicado_ajeno_cuotas) ... ok
+test_corpus_real_60_con_metadatos_preservados (test_p02_11.CorpusTests.test_corpus_real_60_con_metadatos_preservados) ... ok
+test_hash_y_reporte (test_p02_11.CorpusTests.test_hash_y_reporte) ... ok
+test_metadatos_invalidos (test_p02_11.CorpusTests.test_metadatos_invalidos) ... ok
+test_campo_principal_faltante_bloquea (test_p02_11.IndexadorTests.test_campo_principal_faltante_bloquea) ... ok
+test_carga_vacia_piloto_y_repeticion_segura (test_p02_11.IndexadorTests.test_carga_vacia_piloto_y_repeticion_segura) ... ok
+test_errores_de_verificacion (test_p02_11.IndexadorTests.test_errores_de_verificacion) ... ok
+test_esquema_completo (test_p02_11.IndexadorTests.test_esquema_completo) ... ok
+test_esquemas_incompatibles (test_p02_11.IndexadorTests.test_esquemas_incompatibles) ... ok
+test_estado_cambia_antes_de_escribir (test_p02_11.IndexadorTests.test_estado_cambia_antes_de_escribir) ... ok
+test_estados_ajenos_parciales_y_piloto_alterado (test_p02_11.IndexadorTests.test_estados_ajenos_parciales_y_piloto_alterado) ... ok
+test_fallo_verificacion_despues_del_commit_registra_estado (test_p02_11.IndexadorTests.test_fallo_verificacion_despues_del_commit_registra_estado) ... ok
+test_fallos_solr_con_evidencia_sin_limpieza (test_p02_11.IndexadorTests.test_fallos_solr_con_evidencia_sin_limpieza) ... ok
+test_fecha_solr_equivalente_preserva_instante (test_p02_11.IndexadorTests.test_fecha_solr_equivalente_preserva_instante) ... ok
+test_p05_ausente_y_parcial (test_p02_11.IndexadorTests.test_p05_ausente_y_parcial) ... ok
+test_prueba_piloto_sin_escrituras (test_p02_11.IndexadorTests.test_prueba_piloto_sin_escrituras) ... ok
+test_recuento_y_preservacion_completa (test_p02_11.IndexadorTests.test_recuento_y_preservacion_completa) ... ok
+test_sin_confirmacion (test_p02_11.IndexadorTests.test_sin_confirmacion) ... ok
+test_solr_no_disponible_prueba_y_aplicacion (test_p02_11.IndexadorTests.test_solr_no_disponible_prueba_y_aplicacion) ... ok
+test_indice_real_completo (test_p02_11.IntegracionCompletaTests.test_indice_real_completo) ... skipped 'Integración de 60 documentos optativa, solo lectura; requiere carga futura'
+
+----------------------------------------------------------------------
+Ran 20 tests in 7.185s
+
+OK (skipped=1)
+
+Exit code: 0

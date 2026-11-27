@@ -1,0 +1,46 @@
+test_alerta_si_el_control_cambia_al_final (test_aplicar_en_ri.PruebasAplicar.test_alerta_si_el_control_cambia_al_final) ... ok
+test_si_falta_text_es_ri_lo_crea_del_kit_antes_que_text_es_proyecto (test_aplicar_en_ri.PruebasAplicar.test_si_falta_text_es_ri_lo_crea_del_kit_antes_que_text_es_proyecto) ... ok
+test_si_text_es_ri_es_distinto_se_detiene_sin_enviar_nada (test_aplicar_en_ri.PruebasAplicar.test_si_text_es_ri_es_distinto_se_detiene_sin_enviar_nada) ... ok
+test_si_text_es_ri_existe_no_lo_toca (test_aplicar_en_ri.PruebasAplicar.test_si_text_es_ri_existe_no_lo_toca) ... ok
+test_solo_envia_tipos_de_campo_nunca_campos (test_aplicar_en_ri.PruebasAplicar.test_solo_envia_tipos_de_campo_nunca_campos) ... ok
+test_acepta_solo_el_nombre_exacto_del_core (test_aplicar_en_ri.PruebasConfirmacion.test_acepta_solo_el_nombre_exacto_del_core) ... ok
+test_con_bandera_y_confirmacion_aplica (test_aplicar_en_ri.PruebasModoDePrueba.test_con_bandera_y_confirmacion_aplica) ... ok
+test_con_bandera_y_sin_confirmacion_no_aplica (test_aplicar_en_ri.PruebasModoDePrueba.test_con_bandera_y_sin_confirmacion_no_aplica) ... ok
+test_control_distinto_bloquea_aunque_se_confirme (test_aplicar_en_ri.PruebasModoDePrueba.test_control_distinto_bloquea_aunque_se_confirme) ... ok
+test_describe_creacion_del_control_cuando_falta (test_aplicar_en_ri.PruebasModoDePrueba.test_describe_creacion_del_control_cuando_falta) ... ok
+test_no_incluye_definicion_del_control_cuando_existe (test_aplicar_en_ri.PruebasModoDePrueba.test_no_incluye_definicion_del_control_cuando_existe) ... ok
+test_sin_bandera_no_aplica (test_aplicar_en_ri.PruebasModoDePrueba.test_sin_bandera_no_aplica) ... ok
+test_corpus_tiene_60_documentos_validos (test_comparacion.PruebasComparacion.test_corpus_tiene_60_documentos_validos) ... ok
+test_metricas (test_comparacion.PruebasComparacion.test_metricas) ... ok
+test_sin_juicios_no_hay_metricas (test_comparacion.PruebasComparacion.test_sin_juicios_no_hay_metricas) ... ok
+test_tabla_escapa_barras_verticales (test_comparacion.PruebasComparacion.test_tabla_escapa_barras_verticales) ... ok
+test_mapa_equivalencias_incluye_el_original (test_definiciones_tipos.PruebasRecursosGestionados.test_mapa_equivalencias_incluye_el_original) ... ok
+test_lee_text_es_ri_del_kit (test_definiciones_tipos.PruebasTipoControl.test_lee_text_es_ri_del_kit) ... ok
+test_no_se_define_ni_reemplaza_el_control (test_definiciones_tipos.PruebasTipoControl.test_no_se_define_ni_reemplaza_el_control) ... ok
+test_protegidos_antes_del_stemming (test_definiciones_tipos.PruebasTiposAlternativos.test_protegidos_antes_del_stemming) ... ok
+test_proyecto_orden_de_indice (test_definiciones_tipos.PruebasTiposAlternativos.test_proyecto_orden_de_indice) ... ok
+test_proyecto_sinonimos_solo_en_consulta (test_definiciones_tipos.PruebasTiposAlternativos.test_proyecto_sinonimos_solo_en_consulta) ... ok
+test_stem_termina_en_stemming_ligero (test_definiciones_tipos.PruebasTiposAlternativos.test_stem_termina_en_stemming_ligero) ... ok
+test_stop_es_control_mas_palabras_vacias (test_definiciones_tipos.PruebasTiposAlternativos.test_stop_es_control_mas_palabras_vacias) ... ok
+test_compacta_espacios_internos (test_recursos_linguisticos.PruebasNormalizacion.test_compacta_espacios_internos) ... ok
+test_conserva_la_enie (test_recursos_linguisticos.PruebasNormalizacion.test_conserva_la_enie) ... ok
+test_quita_acentos_y_mayusculas (test_recursos_linguisticos.PruebasNormalizacion.test_quita_acentos_y_mayusculas) ... ok
+test_grupos_normalizados (test_recursos_linguisticos.PruebasSinonimos.test_grupos_normalizados) ... ok
+test_incluye_par_promesa_promise (test_recursos_linguisticos.PruebasSinonimos.test_incluye_par_promesa_promise) ... ok
+test_ningun_sinonimo_de_una_palabra_es_vacio (test_recursos_linguisticos.PruebasSinonimos.test_ningun_sinonimo_de_una_palabra_es_vacio) ... ok
+test_rechaza_reglas_de_reemplazo (test_recursos_linguisticos.PruebasSinonimos.test_rechaza_reglas_de_reemplazo) ... ok
+test_un_termino_pertenece_a_un_solo_grupo (test_recursos_linguisticos.PruebasSinonimos.test_un_termino_pertenece_a_un_solo_grupo) ... ok
+test_incluye_forma_original_y_plegada (test_recursos_linguisticos.PruebasStopwords.test_incluye_forma_original_y_plegada) ... ok
+test_lista_no_vacia (test_recursos_linguisticos.PruebasStopwords.test_lista_no_vacia) ... ok
+test_no_elimina_terminos_del_dominio (test_recursos_linguisticos.PruebasStopwords.test_no_elimina_terminos_del_dominio) ... ok
+test_incluye_terminos_del_contrato (test_recursos_linguisticos.PruebasTerminosProtegidos.test_incluye_terminos_del_contrato) ... ok
+test_ninguno_es_palabra_vacia (test_recursos_linguisticos.PruebasTerminosProtegidos.test_ninguno_es_palabra_vacia) ... ok
+test_patron_coincide_solo_con_terminos_completos (test_recursos_linguisticos.PruebasTerminosProtegidos.test_patron_coincide_solo_con_terminos_completos) ... ok
+test_patron_rechaza_lista_vacia (test_recursos_linguisticos.PruebasTerminosProtegidos.test_patron_rechaza_lista_vacia) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.074s
+
+OK
+
+Exit code: 0
