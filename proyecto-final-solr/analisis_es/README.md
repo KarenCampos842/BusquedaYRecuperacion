@@ -103,11 +103,15 @@ No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11,
 
 | Función | Componente | Fuente | Handler |
 |---|---|---|---|
-| Autocompletado | `SuggestComponent` `sugerencias_es`, diccionario `titulos_es` (`AnalyzingInfixLookupFactory` + `DocumentDictionaryFactory`) | `titulo_sugerencia` (`copyField` de `titulo`; minúsculas y sin acentos, sin stemming) | `/sugerencias` |
+| Autocompletado: títulos | `SuggestComponent` `sugerencias_es`, diccionario `titulos_es` (`AnalyzingInfixLookupFactory` + `DocumentDictionaryFactory`) | `titulo_sugerencia` (`copyField` de `titulo`; minúsculas y sin acentos, sin stemming) | `/sugerencias` |
+| Autocompletado: términos | mismo componente, diccionario `terminos_es` (`AnalyzingLookupFactory` + `HighFrequencyDictionaryFactory`) | `contenido_vocabulario` (`copyField` de `contenido`; minúsculas y palabras vacías, **sin stemming ni plegado**; descarta tokens de menos de 3 letras y los que tienen números o símbolos) | `/sugerencias` |
 | Corrección | `SpellCheckComponent` `ortografia_es`, diccionario `contenido_es` (`DirectSolrSpellChecker`) | `contenido_ortografia` (`copyField` de `contenido`; minúsculas y palabras vacías, **sin stemming ni plegado**) | `/ortografia` |
 
 - Son nombres nuevos: no se tocan `spellcheck` ni `/spell` del configset. Se crean con la Config API, que los guarda en `configoverlay.json` del core sin editar `solrconfig.xml`.
-- Autocompletado: propone títulos completos que contienen una palabra que empieza por el prefijo (5 por defecto, mínimo 3 letras, contrato P00-04).
+- Autocompletado: `/sugerencias` consulta los dos diccionarios a la vez (5 sugerencias por diccionario, mínimo 3 letras, contrato P00-04).
+  - `terminos_es`: palabras del contenido que empiezan por el prefijo, ordenadas por número de documentos que las contienen (`prom` → promedio, promesa, promesas, prompt). Conserva nombres de API con punto (`function.length`).
+  - `titulos_es`: títulos completos que contienen una palabra que empieza por el prefijo.
+  - En ambos, el prefijo se compara sin distinguir acentos ni mayúsculas.
 - Corrección: sugiere palabras con acentos (`fucion` → `función`) y una consulta completa (`collate`).
 
 ### Uso (desde `proyecto-final-solr/`)
@@ -122,11 +126,22 @@ En `ri` se ejecuta en la máquina del Solr de destino (Joseph, en su equipo), **
 
 ### Vocabulario y reconstrucción del diccionario (P05-02, P05-03)
 
-- El vocabulario del Suggester son los títulos de los documentos indexados (60 MDN; después, también los PDF). No hay archivo aparte: sale de `titulo_sugerencia`.
-- `buildOnCommit=true`: se reconstruye en cada `commit`. Para reconstruirlo a mano: `GET /solr/<core>/sugerencias?suggest.build=true`.
+- El vocabulario sale de los documentos indexados (60 MDN; después, también los PDF): títulos (`titulo_sugerencia`) y palabras del contenido (`contenido_vocabulario`). No hay archivo aparte.
+- `buildOnCommit=true`: los dos diccionarios se reconstruyen en cada `commit`. Para reconstruirlos a mano: `GET /solr/<core>/sugerencias?suggest.buildAll=true`.
+- `HighFrequencyDictionaryFactory` no lleva `threshold`: la Config API lo guarda como texto y Solr 10 falla al construir (`ClassCastException`). Sin él incluye todos los términos (umbral 0).
 - El corrector (`DirectSolrSpellChecker`) lee el índice directamente: no necesita reconstrucción.
 
 ### Para Carlos (P05-04, P05-07)
 
-- Sugerencias: `GET /solr/ri/sugerencias?suggest.q=<prefijo>&suggest.count=<n>` → `suggest.titulos_es.<prefijo>.suggestions[].term`.
+- Sugerencias: `GET /solr/ri/sugerencias?suggest.q=<prefijo>&suggest.count=<n>`. La respuesta trae un bloque por diccionario:
+
+  ```json
+  {"suggest": {
+     "terminos_es": {"prom": {"numFound": 4, "suggestions": [
+         {"term": "promedio", "weight": 1, "payload": ""},
+         {"term": "promesa",  "weight": 1, "payload": ""}, "..."]}},
+     "titulos_es":  {"prom": {"numFound": 0, "suggestions": []}}}}
+  ```
+
+  `term` es el texto que se muestra y `weight` es el número de documentos en `terminos_es`. `suggest.count` se aplica a cada diccionario por separado. Para convertirlo al formato del contrato, una propuesta: tomar primero los `term` de `terminos_es` y después los de `titulos_es`, quitar duplicados sin distinguir mayúsculas ni acentos y recortar al `limit` (5 por defecto, máx. 8).
 - Corrección: `GET /solr/ri/ortografia?q=<consulta>&json.nl=map` → `spellcheck.correctlySpelled`, `spellcheck.suggestions.<término>.suggestion[].word` y `spellcheck.collations` (consulta sugerida).

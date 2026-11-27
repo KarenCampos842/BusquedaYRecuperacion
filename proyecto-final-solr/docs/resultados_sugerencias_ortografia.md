@@ -7,25 +7,28 @@
 Reproducir desde `proyecto-final-solr/`: `py analisis_es/probar_sugerencias_ortografia.py`.
 Los datos completos están en `analisis_es/resultados/sugerencias_ortografia.json`. La configuración se describe en `analisis_es/README.md` (sección P05).
 
-## Autocompletado: handler `/sugerencias` (diccionario `titulos_es`, 5 sugerencias)
+## Autocompletado: handler `/sugerencias` (diccionarios `terminos_es` y `titulos_es`, 5 sugerencias cada uno)
 
-| Prefijo | Títulos sugeridos |
-|---|---|
-| jav | Una reintroducción a JavaScript (Tutorial de JS); Tipos de datos y estructuras en JavaScript; JavaScript; Guía de JavaScript |
-| sel | Selectores de tipo; Selectores de clase; Selectores de ID; Selectores universales |
-| her | Herencia y la cadena de prototipos; Herencia |
-| cad | Herencia y la cadena de prototipos; String — Cadena de caracteres |
-| pro | Herencia y la cadena de prototipos; Procesamiento del valor de las propiedades CSS; Propiedades abreviadas |
-| prom | — |
-| elem | `<link>` elemento de enlace a recurso externo HTML; Elemento de metadatos HTML `<meta>`; `<script>`: The Script element; `<title>`: El elemento Título del documento; `<body>`: El elemento body del documento |
-| ESPEC | Especificidad |
-| func | Function |
-| xyz | — |
+| Prefijo | `terminos_es` (palabras del contenido) | `titulos_es` (títulos completos) |
+|---|---|---|
+| jav | javascript; java; javascript.js | Una reintroducción a JavaScript (Tutorial de JS); Tipos de datos y estructuras en JavaScript; JavaScript; Guía de JavaScript |
+| sel | selector; selectores; selectors; selecciona; seleccionando | Selectores de tipo; Selectores de clase; Selectores de ID; Selectores universales |
+| her | herencia; hereda; heredada; heredan; herramientas | Herencia y la cadena de prototipos; Herencia |
+| cad | cadena; cadenas | Herencia y la cadena de prototipos; String — Cadena de caracteres |
+| pro | pro; propiedad; propiedades; properties; proporciona | Herencia y la cadena de prototipos; Procesamiento del valor de las propiedades CSS; Propiedades abreviadas |
+| prom | promedio; promesa; promesas; prompt | — |
+| elem | elem; elemento; elementos; element; elements | `<link>` elemento de enlace a recurso externo HTML; Elemento de metadatos HTML `<meta>`; `<script>`: The Script element; `<title>`: El elemento Título del documento; `<body>`: El elemento body del documento |
+| ESPEC | especificación; especificaciones; especifica; especificado; especificar | Especificidad |
+| func | función; function; funciona; funciones; funcionalidad | Function |
+| xyz | — | — |
 
-- Cada sugerencia es un título completo que contiene una palabra que empieza por el prefijo, en cualquier posición («cad» → «… la cadena de prototipos»).
-- «ESPEC» en mayúsculas devuelve «Especificidad».
-- «prom» no devuelve nada: ningún título contiene una palabra que empiece por «prom». «promesa» solo aparece en el contenido.
-- «elem» devolvió 5 sugerencias, el máximo configurado.
+- 9 de los 10 prefijos devuelven términos; 8 devuelven títulos. «xyz» no devuelve nada en ninguno de los dos.
+- «prom» devuelve 4 términos del contenido (promedio, promesa, promesas, prompt) y ningún título: ningún título contiene una palabra que empiece por «prom».
+- Los términos se ordenan por número de documentos que los contienen. Los 4 de «prom» aparecen en 1 documento cada uno, así que quedan en orden alfabético.
+- Cuando el prefijo coincide con una palabra completa del contenido, esa palabra va primero (`exactMatchFirst`): «pro» y «elem» existen como palabras en el corpus.
+- Las sugerencias de términos conservan los acentos («función», «especificación») aunque el prefijo se escriba sin ellos o en mayúsculas («ESPEC»).
+- El vocabulario descarta tokens con números o símbolos: en `contenido_ortografia` existe «javascript:void» y en `contenido_vocabulario` no. Conserva nombres de API con punto entre letras («javascript.js», «function.length»).
+- Los ejemplos del contrato P00-04 «promesa en javascript» y «promise.all» no aparecen: el corpus no contiene «promise.all», y el vocabulario es de palabras sueltas, no de frases.
 
 ## Corrección: handler `/ortografia` (diccionario `contenido_es`)
 
@@ -47,7 +50,7 @@ Los datos completos están en `analisis_es/resultados/sugerencias_ortografia.jso
 
 ## Verificaciones
 
-- Dos ejecuciones seguidas sin errores. En la segunda, los tipos y campos se reemplazan, los componentes se actualizan y no se duplican los `copyField`.
+- Ejecuciones repetidas sin errores. En la segunda, los tipos y campos se reemplazan, los componentes se actualizan y no se duplican los `copyField`.
 - El overlay del core de prueba solo contiene `sugerencias_es`, `ortografia_es`, `/sugerencias` y `/ortografia`. El componente `spellcheck` del configset sigue apuntando a `_text_`.
 - `ri` local sin cambios: mismos campos y overlay vacío.
 
