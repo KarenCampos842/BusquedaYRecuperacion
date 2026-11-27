@@ -1,45 +1,123 @@
 {
   "sugerencias": {
-    "jav": [
-      "Una reintroducción a JavaScript (Tutorial de JS)",
-      "Tipos de datos y estructuras en JavaScript",
-      "JavaScript",
-      "Guía de JavaScript"
-    ],
-    "sel": [
-      "Selectores de tipo",
-      "Selectores de clase",
-      "Selectores de ID",
-      "Selectores universales"
-    ],
-    "her": [
-      "Herencia y la cadena de prototipos",
-      "Herencia"
-    ],
-    "cad": [
-      "Herencia y la cadena de prototipos",
-      "String — Cadena de caracteres"
-    ],
-    "pro": [
-      "Herencia y la cadena de prototipos",
-      "Procesamiento del valor de las propiedades CSS",
-      "Propiedades abreviadas"
-    ],
-    "prom": [],
-    "elem": [
-      "<link> elemento de enlace a recurso externo HTML",
-      "Elemento de metadatos HTML <meta>",
-      "<script>: The Script element",
-      "<title>: El elemento Título del documento",
-      "<body>: El elemento body del documento"
-    ],
-    "ESPEC": [
-      "Especificidad"
-    ],
-    "func": [
-      "Function"
-    ],
-    "xyz": []
+    "jav": {
+      "terminos_es": [
+        "javascript",
+        "java",
+        "javascript.js"
+      ],
+      "titulos_es": [
+        "Una reintroducción a JavaScript (Tutorial de JS)",
+        "Tipos de datos y estructuras en JavaScript",
+        "JavaScript",
+        "Guía de JavaScript"
+      ]
+    },
+    "sel": {
+      "terminos_es": [
+        "selector",
+        "selectores",
+        "selectors",
+        "selecciona",
+        "seleccionando"
+      ],
+      "titulos_es": [
+        "Selectores de tipo",
+        "Selectores de clase",
+        "Selectores de ID",
+        "Selectores universales"
+      ]
+    },
+    "her": {
+      "terminos_es": [
+        "herencia",
+        "hereda",
+        "heredada",
+        "heredan",
+        "herramientas"
+      ],
+      "titulos_es": [
+        "Herencia y la cadena de prototipos",
+        "Herencia"
+      ]
+    },
+    "cad": {
+      "terminos_es": [
+        "cadena",
+        "cadenas"
+      ],
+      "titulos_es": [
+        "Herencia y la cadena de prototipos",
+        "String — Cadena de caracteres"
+      ]
+    },
+    "pro": {
+      "terminos_es": [
+        "pro",
+        "propiedad",
+        "propiedades",
+        "properties",
+        "proporciona"
+      ],
+      "titulos_es": [
+        "Herencia y la cadena de prototipos",
+        "Procesamiento del valor de las propiedades CSS",
+        "Propiedades abreviadas"
+      ]
+    },
+    "prom": {
+      "terminos_es": [
+        "promedio",
+        "promesa",
+        "promesas",
+        "prompt"
+      ],
+      "titulos_es": []
+    },
+    "elem": {
+      "terminos_es": [
+        "elem",
+        "elemento",
+        "elementos",
+        "element",
+        "elements"
+      ],
+      "titulos_es": [
+        "<link> elemento de enlace a recurso externo HTML",
+        "Elemento de metadatos HTML <meta>",
+        "<script>: The Script element",
+        "<title>: El elemento Título del documento",
+        "<body>: El elemento body del documento"
+      ]
+    },
+    "ESPEC": {
+      "terminos_es": [
+        "especificación",
+        "especificaciones",
+        "especifica",
+        "especificado",
+        "especificar"
+      ],
+      "titulos_es": [
+        "Especificidad"
+      ]
+    },
+    "func": {
+      "terminos_es": [
+        "función",
+        "function",
+        "funciona",
+        "funciones",
+        "funcionalidad"
+      ],
+      "titulos_es": [
+        "Function"
+      ]
+    },
+    "xyz": {
+      "terminos_es": [],
+      "titulos_es": []
+    }
   },
   "correcciones": {
     "javasript": {

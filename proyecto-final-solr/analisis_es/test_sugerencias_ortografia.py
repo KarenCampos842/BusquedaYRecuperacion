@@ -3,6 +3,7 @@
 Ejecutar desde proyecto-final-solr/:  py -m unittest discover -s analisis_es -v
 """
 
+import re
 import unittest
 from unittest import mock
 
@@ -14,13 +15,22 @@ from definiciones_sugerencias import (
     CAMPO_ORTOGRAFIA,
     CAMPO_SUGERENCIA,
     CAMPO_TITULO,
+    CAMPO_VOCABULARIO,
     CAMPOS_AUXILIARES,
+    COMPONENTE_SUGGESTER,
     CONFIGURACION_SOLRCONFIG,
     COPIAS,
+    DICCIONARIOS_AUTOCOMPLETADO,
+    HANDLER_SUGGESTER,
     NOMBRES_DEL_CONFIGSET_QUE_NO_SE_TOCAN,
+    PATRON_TOKEN_VALIDO,
     definir_text_ortografia_es,
     definir_text_sugerencia_es,
+    definir_text_vocabulario_es,
 )
+
+# \p{L} (Java) equivale a [^\W\d_] en el módulo re de Python.
+TOKEN_VALIDO = re.compile(PATRON_TOKEN_VALIDO.replace(r"\p{L}", r"[^\W\d_]"))
 
 
 def clases(tipo: dict) -> list[str]:
@@ -42,8 +52,28 @@ class PruebasDefiniciones(unittest.TestCase):
         self.assertEqual(filtros, ["LowerCaseFilterFactory", "ASCIIFoldingFilterFactory"])
 
     def test_copias_desde_titulo_y_contenido(self):
-        self.assertEqual({(c["source"], c["dest"]) for c in COPIAS},
-                         {(CAMPO_TITULO, CAMPO_SUGERENCIA), (CAMPO_CONTENIDO, CAMPO_ORTOGRAFIA)})
+        self.assertEqual({(c["source"], c["dest"]) for c in COPIAS}, {
+            (CAMPO_TITULO, CAMPO_SUGERENCIA),
+            (CAMPO_CONTENIDO, CAMPO_ORTOGRAFIA),
+            (CAMPO_CONTENIDO, CAMPO_VOCABULARIO),
+        })
+
+    def test_vocabulario_sin_stemming_ni_plegado(self):
+        filtros = clases(definir_text_vocabulario_es())
+        self.assertNotIn("SpanishLightStemFilterFactory", filtros)
+        self.assertNotIn("ASCIIFoldingFilterFactory", filtros)
+        self.assertIn("ManagedStopFilterFactory", filtros)
+
+    def test_vocabulario_descarta_restos_de_codigo(self):
+        for valido in ("promesa", "función", "promise.all"):
+            self.assertTrue(TOKEN_VALIDO.fullmatch(valido), valido)
+        for invalido in ("javascript:void", "h1", "123", ".prototype", "a_b"):
+            self.assertFalse(TOKEN_VALIDO.fullmatch(invalido), invalido)
+
+    def test_suggester_con_diccionarios_de_terminos_y_titulos(self):
+        nombres = [s["name"] for s in COMPONENTE_SUGGESTER["suggester"]]
+        self.assertEqual(sorted(nombres), sorted(DICCIONARIOS_AUTOCOMPLETADO))
+        self.assertEqual(HANDLER_SUGGESTER["defaults"]["suggest.dictionary"], DICCIONARIOS_AUTOCOMPLETADO)
 
     def test_titulo_sugerencia_almacenado_para_el_diccionario(self):
         campo = next(c for c in CAMPOS_AUXILIARES if c["name"] == CAMPO_SUGERENCIA)

@@ -7,8 +7,8 @@ Uso (desde proyecto-final-solr/, con Solr encendido):
    titulo/contenido con text_es_proyecto. `ri` no se toca.
 2. Aplica configurar_sugerencias_ortografia.py en ese core.
 3. Indexa los 60 documentos de corpus_solr.json tal como vienen (solo lectura).
-4. Reconstruye el diccionario del Suggester (P05-02: el vocabulario son los
-   60 títulos) y consulta prefijos y errores de escritura.
+4. Reconstruye los diccionarios del Suggester (P05-02: títulos y palabras del
+   contenido de los 60 documentos) y consulta prefijos y errores de escritura.
 5. Guarda resultados/sugerencias_ortografia.json y una tabla Markdown.
 """
 
@@ -18,11 +18,7 @@ from configuracion import CORE_SUGERENCIAS, DIRECTORIO_RESULTADOS
 from configurar_analizadores import agregar_o_reemplazar, configurar_tipos
 from configurar_sugerencias_ortografia import configurar
 from corpus_prueba import cargar_corpus, reindexar_core_de_prueba
-from definiciones_sugerencias import (
-    DICCIONARIO_SUGERENCIAS,
-    HANDLER_ORTOGRAFIA,
-    HANDLER_SUGERENCIAS,
-)
+from definiciones_sugerencias import DICCIONARIOS_AUTOCOMPLETADO, HANDLER_ORTOGRAFIA, HANDLER_SUGERENCIAS
 from definiciones_tipos import TIPO_PROYECTO
 from solr_cliente import asegurar_core_de_prueba, exigir_solr, obtener
 
@@ -50,14 +46,17 @@ def preparar_core() -> None:
     configurar(CORE_SUGERENCIAS)
 
 
-def reconstruir_diccionario() -> None:
-    obtener(CORE_SUGERENCIAS, HANDLER_SUGERENCIAS, {"suggest.build": "true", "suggest.q": "x"})
+def reconstruir_diccionarios() -> None:
+    obtener(CORE_SUGERENCIAS, HANDLER_SUGERENCIAS, {"suggest.buildAll": "true"})
 
 
-def sugerir(prefijo: str) -> list[str]:
+def sugerir(prefijo: str) -> dict[str, list[str]]:
+    """Sugerencias de cada diccionario, tal como las devuelve /sugerencias."""
     respuesta = obtener(CORE_SUGERENCIAS, HANDLER_SUGERENCIAS, {"suggest.q": prefijo})
-    sugerencias = respuesta["suggest"][DICCIONARIO_SUGERENCIAS][prefijo]["suggestions"]
-    return [s["term"] for s in sugerencias]
+    return {
+        diccionario: [s["term"] for s in respuesta["suggest"][diccionario][prefijo]["suggestions"]]
+        for diccionario in DICCIONARIOS_AUTOCOMPLETADO
+    }
 
 
 def corregir(consulta: str) -> dict:
@@ -77,8 +76,11 @@ def corregir(consulta: str) -> dict:
 
 
 def tabla_markdown(sugerencias: dict, correcciones: dict) -> str:
-    filas = ["| Prefijo | Sugerencias (títulos) |", "|---|---|"]
-    filas += [f"| {p} | {'; '.join(s) or '—'} |" for p, s in sugerencias.items()]
+    filas = ["| Prefijo | " + " | ".join(DICCIONARIOS_AUTOCOMPLETADO) + " |",
+             "|---|" + "---|" * len(DICCIONARIOS_AUTOCOMPLETADO)]
+    for prefijo, por_diccionario in sugerencias.items():
+        celdas = " | ".join("; ".join(por_diccionario[d]) or "—" for d in DICCIONARIOS_AUTOCOMPLETADO)
+        filas.append(f"| {prefijo} | {celdas} |")
     filas += ["", "| Consulta | ¿Correcta? | Alternativas | Consulta sugerida |", "|---|---|---|---|"]
     for consulta, c in correcciones.items():
         alternativas = "; ".join(f"{t} → {', '.join(a)}" for t, a in c["alternativas"].items()) or "—"
@@ -92,7 +94,7 @@ def main() -> None:
     documentos = cargar_corpus()
     reindexar_core_de_prueba(CORE_SUGERENCIAS, documentos)
     print(f"Indexados {len(documentos)} documentos en '{CORE_SUGERENCIAS}'.")
-    reconstruir_diccionario()
+    reconstruir_diccionarios()
     sugerencias = {prefijo: sugerir(prefijo) for prefijo in PREFIJOS}
     correcciones = {consulta: corregir(consulta) for consulta in ERRORES}
     DIRECTORIO_RESULTADOS.mkdir(exist_ok=True)

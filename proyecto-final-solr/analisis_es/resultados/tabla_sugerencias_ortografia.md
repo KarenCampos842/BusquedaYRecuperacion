@@ -1,15 +1,15 @@
-| Prefijo | Sugerencias (títulos) |
-|---|---|
-| jav | Una reintroducción a JavaScript (Tutorial de JS); Tipos de datos y estructuras en JavaScript; JavaScript; Guía de JavaScript |
-| sel | Selectores de tipo; Selectores de clase; Selectores de ID; Selectores universales |
-| her | Herencia y la cadena de prototipos; Herencia |
-| cad | Herencia y la cadena de prototipos; String — Cadena de caracteres |
-| pro | Herencia y la cadena de prototipos; Procesamiento del valor de las propiedades CSS; Propiedades abreviadas |
-| prom | — |
-| elem | <link> elemento de enlace a recurso externo HTML; Elemento de metadatos HTML <meta>; <script>: The Script element; <title>: El elemento Título del documento; <body>: El elemento body del documento |
-| ESPEC | Especificidad |
-| func | Function |
-| xyz | — |
+| Prefijo | terminos_es | titulos_es |
+|---|---|---|
+| jav | javascript; java; javascript.js | Una reintroducción a JavaScript (Tutorial de JS); Tipos de datos y estructuras en JavaScript; JavaScript; Guía de JavaScript |
+| sel | selector; selectores; selectors; selecciona; seleccionando | Selectores de tipo; Selectores de clase; Selectores de ID; Selectores universales |
+| her | herencia; hereda; heredada; heredan; herramientas | Herencia y la cadena de prototipos; Herencia |
+| cad | cadena; cadenas | Herencia y la cadena de prototipos; String — Cadena de caracteres |
+| pro | pro; propiedad; propiedades; properties; proporciona | Herencia y la cadena de prototipos; Procesamiento del valor de las propiedades CSS; Propiedades abreviadas |
+| prom | promedio; promesa; promesas; prompt | — |
+| elem | elem; elemento; elementos; element; elements | <link> elemento de enlace a recurso externo HTML; Elemento de metadatos HTML <meta>; <script>: The Script element; <title>: El elemento Título del documento; <body>: El elemento body del documento |
+| ESPEC | especificación; especificaciones; especifica; especificado; especificar | Especificidad |
+| func | función; function; funciona; funciones; funcionalidad | Function |
+| xyz | — | — |
 
 | Consulta | ¿Correcta? | Alternativas | Consulta sugerida |
 |---|---|---|---|
