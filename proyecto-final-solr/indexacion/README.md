@@ -84,10 +84,14 @@ los analizadores auxiliares ni el funcionamiento de Suggester/SpellCheck.
 
 Observaciones para revisar antes de integrar la PR #6:
 
-- Su configurador usa `agregar_o_reemplazar`: reemplaza tipos y campos auxiliares
-  existentes sin comparar compatibilidad ni guardar una instantánea previa.
-- Su detección de copias existentes compara solo origen/destino: una copia con
-  `maxChars` incompatible se conserva. P01-05 la detecta y detiene la operación.
+- En la revisión histórica de P01-05, su configurador usaba `agregar_o_reemplazar`
+  y reemplazaba tipos y campos auxiliares existentes sin comparar compatibilidad
+  ni guardar una instantánea previa. Karen corrigió este problema en su
+  actualización posterior de la PR #6.
+- En esa revisión, la detección de copias existentes comparaba solo origen/destino
+  y conservaba una copia con `maxChars` incompatible. Karen también corrigió
+  este problema en su actualización posterior de la PR #6. P01-05 mantiene la
+  comprobación de compatibilidad y detiene la operación ante una copia incompatible.
 - Agregar `copyField` no rellena retroactivamente los auxiliares de los tres
   documentos existentes. La validación funcional con esos documentos requiere
   acordar después una actualización por ID y construcción de diccionarios.
@@ -217,7 +221,167 @@ Incidencias resueltas:
    `subprocess.run`, combinando stdout/stderr y comprobando el código real de
    cada proceso: 0 en las tres suites.
 
-## Antes de P02-11
+## P02-11: indexación completa preparada, carga real pendiente
+
+`indexar_corpus_mdn.py` valida los 60 documentos de la transformación aprobada
+P02-09 y sus metadatos separados. Reutiliza `cargar_corpus`, `transformar_corpus`
+y `planificar`; no mantiene otro contrato de validación. Comprueba el reporte
+exitoso, el SHA-256 del corpus, 60 IDs únicos y cuotas 20/20/20. Asocia metadatos
+por ID con correspondencia exacta, sin campos ajenos ni conflictos. Rechaza fechas
+que requieran una nueva conversión: la transformación aprobada ya usa UTC Z con
+milisegundos. No cambia ningún artefacto del corpus.
+
+El reporte histórico de transformación referencia P00-03 v1.1. Se conserva como
+evidencia original; los documentos se vuelven a validar con las reglas vigentes
+y se registra el hash del contrato v1.2, del corpus, de los metadatos y del reporte.
+El reporte P02-09 no incluía un hash de metadatos: se valida su contenido y se
+registra el hash leído, sin atribuirle una firma de aprobación inexistente.
+
+Desde `proyecto-final-solr/`, en PowerShell:
+
+```powershell
+# Predeterminado: solo validar e inspeccionar, sin POST ni commit.
+.\.venv\Scripts\python.exe indexacion/indexar_corpus_mdn.py
+
+# Evidencias en una carpeta nueva elegida explícitamente.
+.\.venv\Scripts\python.exe indexacion/indexar_corpus_mdn.py --salida indexacion/evidencias/p02-11/revision-01
+
+# Pruebas locales; la integración completa se omite por defecto.
+.\.venv\Scripts\python.exe -m unittest discover -s indexacion -p test_p02_11.py -v
+```
+
+La salida predeterminada es una carpeta nueva bajo `indexacion/evidencias/p02-11/`.
+`resultado.json` registra el plan de 60 IDs, sus títulos y categorías, qué IDs se
+crearían o sustituirían cuando Solr responde, bloqueos y respuestas de lectura.
+Sin Solr disponible, las acciones quedan pendientes de inspección y el estado
+es `prueba_local_solr_no_disponible`. El código de salida 0 indica que la prueba
+local fue válida; **no autoriza la carga**: revisar `estado` y `bloqueos`.
+Un esquema incompatible o estado ajeno produce error y código de salida 1.
+
+### Dependencia de P05 / PR #6
+
+La inspección de la referencia local `origin/feat/autocompletado-ortografia`, sin
+fusionarla, confirma estos requisitos, ya definidos en `configurar_esquema.py`:
+
+| Campo auxiliar | Tipo | stored | Copia |
+|---|---|---|---|
+| `titulo_sugerencia` | `text_sugerencia_es` | true | `titulo` |
+| `contenido_ortografia` | `text_ortografia_es` | false | `contenido` |
+| `contenido_vocabulario` | `text_vocabulario_es` | false | `contenido` |
+
+Los tres deben estar indexados, ser monovaluados, sin `docValues`, sin valores
+predeterminados y con sus copias sin truncamiento. P02-11 **exige** su presencia,
+aunque sean opcionales para el contrato principal. No crea tipos, campos,
+`copyField`, componentes, handlers ni diccionarios. La instalación de Suggester
+y SpellCheck y su validación funcional siguen perteneciendo a P05; este cargador
+comprueba las dependencias de esquema de la indexación, no certifica sus endpoints.
+
+### Aplicación futura: no ejecutada durante este desarrollo
+
+Solo después de integrar y aplicar P05 y revisar las evidencias:
+
+```powershell
+.\.venv\Scripts\python.exe indexacion/indexar_corpus_mdn.py --aplicar --confirmar "INDEXAR 60 DOCUMENTOS EN ri" --salida indexacion/evidencias/p02-11/carga-01
+```
+
+La frase debe coincidir literalmente y también se exige al invocar `ejecutar`
+desde Python. Antes de escribir se comprueban esquema completo, analizador y
+documentos actuales. Se acepta un core vacío, los tres IDs piloto esperados con
+sus campos obligatorios originales, o exactamente los mismos 60 IDs del corpus.
+Un índice parcial o con documentos ajenos bloquea la carga. Los 60 IDs existentes
+pueden actualizar sus valores desde el corpus aprobado; los auxiliares se rellenan
+por `copyField`. No se envían valores auxiliares manualmente.
+
+La carga sustituye documentos completos con `overwrite=true`, reutiliza los IDs
+piloto y realiza un commit explícito con `waitSearcher=true`. Las repeticiones
+mantienen 60 IDs únicos. Se guardan `preparacion.json` y `documentos.json` antes
+del primer POST, y `resultado.json` al finalizar o ante errores. Se verifica el
+status de update y commit. Una desconexión puede dejar una escritura parcial:
+se registra el estado observable sin limpiar ni reparar automáticamente. No se
+reintenta automáticamente un update ni un commit de resultado incierto.
+
+La verificación posterior exige 60 documentos, cuotas, `tipo_fuente=web`, todos
+los campos y metadatos enviados, título sugerido preservado, facetas exactas,
+búsquedas por título y contenido de las tres categorías, términos técnicos y un
+término acentuado del corpus. Cada consulta se repite y compara IDs, orden y
+puntuaciones, ordenando por score e ID para resolver empates. Las fechas se
+comparan como instantes UTC con milisegundos mediante el validador existente,
+admitiendo diferencias de serialización de ceros finales en `pdate`. Para los campos
+P05 no almacenados se consulta su presencia en el índice invertido; no se intenta
+leerlos como stored. También se confirma que esquema y archivos no cambiaron.
+
+Para `enlaces_salientes`, una lista vacía esperada equivale a la ausencia del
+campo en la respuesta de Solr: los multivaluados sin valores pueden omitirse.
+Esta excepción solo acepta el campo ausente o `[]`; un `null` explícito no se
+equipara a una lista vacía. Las listas no vacías se comparan exactamente,
+incluyendo valores, cantidad y orden. Las validaciones de los demás campos
+conservan su comportamiento.
+
+Ejecutar sin otros escritores en `ri`: las comprobaciones previas y el update
+no son una transacción ni un bloqueo distribuido. Un error posterior al commit
+se informa como error, aunque ya haya 60 documentos, y requiere inspección humana.
+
+### Integración completa de solo lectura
+
+Después de la carga real, esta prueba verifica el índice sin escribir:
+
+```powershell
+$env:P02_11_SOLR_INTEGRACION = '1'
+.\.venv\Scripts\python.exe -m unittest discover -s indexacion -p test_p02_11.py -v
+Remove-Item Env:P02_11_SOLR_INTEGRACION
+```
+
+Las pruebas P01-05 conservan su alcance de **tres** documentos. Su integración
+real deja de ser aplicable tras cargar los 60; no activar `P01_05_SOLR_INTEGRACION`
+para verificar el índice completo. Las pruebas P02-11 ordinarias usan un Solr
+simulado, incluyendo fallos de update, commit y verificación, sin tocar el core.
+
+Durante la ejecución inicial de desarrollo, la prueba local validó los 60 documentos y sus metadatos;
+Solr rechazó la conexión en `localhost:8983`. La evidencia está en
+`evidencias/p02-11/revision-final/resultado.json`. No se ejecutó la carga real
+ni se modificó `ri`; en esa ejecución no se pudo reconfirmar su recuento de tres.
+P02-11 permanece pendiente hasta la carga y verificación reales tras P05.
+
+Resultados iniciales de las pruebas locales de este desarrollo (registros en
+`evidencias/p02-11/pruebas_*.txt`, resumen en `resumen_desarrollo.json`):
+
+| Suite | Exitosas | Integraciones omitidas |
+|---|---:|---:|
+| P02-11 | 19 | 1 |
+| P01-05 | 18 | 1 |
+| Transformación P02-09 | 11 | 0 |
+| Análisis de español | 39 | 0 |
+| Total | 87 | 2 |
+
+Las dos omisiones corresponden a pruebas de lectura del core real. Todos los
+procesos de pruebas finalizaron con código 0; no se hicieron commits ni push.
+
+### Revisión de enlaces vacíos con Solr disponible
+
+Se ejecutó de nuevo el indexador exclusivamente en modo de prueba:
+
+```powershell
+.\.venv\Scripts\python.exe indexacion/indexar_corpus_mdn.py --salida indexacion/evidencias/p02-11/revision-enlaces-vacios
+```
+
+La nueva evidencia `revision-enlaces-vacios/resultado.json` registra
+`estado=prueba_bloqueada`, **3 documentos piloto existentes, 3 sustituciones y
+57 documentos por crear**. Se detectaron los seis bloqueos esperados: faltan
+`titulo_sugerencia`, `contenido_ortografia`, `contenido_vocabulario` y sus tres
+reglas `copyField`. No se intentó ninguna escritura ni se ejecutó un commit.
+Una segunda lectura, guardada en `estado_posterior.json`, confirmó los mismos
+tres documentos y valores. Las evidencias anteriores se conservaron intactas.
+
+Las pruebas ahora simulan la omisión de los cinco `enlaces_salientes=[]` del
+corpus real y rechazan listas incompletas, alteradas, distintas, reordenadas,
+con enlaces adicionales o ausentes cuando se esperan valores. También rechazan
+valores incorrectos para listas vacías y campos distintos omitidos o alterados.
+Registros nuevos: `revision-enlaces-vacios/pruebas_*.txt` y
+`revision-enlaces-vacios/resumen_pruebas.json`: **90 pruebas exitosas y
+2 integraciones reales omitidas**, con códigos de salida 0 (P02-11: 22 exitosas,
+P01-05: 18, transformación: 11, análisis: 39).
+
+## Estado histórico previo a P02-11
 
 No se observó un bloqueo técnico de campos o del piloto. La compatibilidad de
 los 60 documentos y sus metadatos se validó localmente; su indexación completa

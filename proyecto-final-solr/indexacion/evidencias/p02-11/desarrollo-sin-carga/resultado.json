@@ -1,0 +1,346 @@
+{
+  "tarea": "P02-11",
+  "core": "ri",
+  "modo": "prueba",
+  "fecha_utc": "2026-11-27T06:35:10.133117+00:00",
+  "estado": "prueba_local_solr_no_disponible",
+  "escritura_intentada": false,
+  "commit_confirmado": false,
+  "bloqueos": [
+    "Solr no disponible: <urlopen error [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión>"
+  ],
+  "salida": "C:\\Users\\josep\\Documents\\UNIVERSIDAD\\Semestre_7\\Busqueda y Recuperacion\\Tareas\\BusquedaYRecuperacion\\proyecto-final-solr\\indexacion\\evidencias\\p02-11\\desarrollo-sin-carga",
+  "validacion": {
+    "sha256_corpus": "8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11",
+    "resumen": {
+      "total_entrada": 60,
+      "documentos_validos": 60,
+      "documentos_transformados": 60,
+      "ids_unicos_validos": 60,
+      "categorias_validas": {
+        "JavaScript": 20,
+        "HTML": 20,
+        "CSS": 20
+      }
+    },
+    "contrato_original": "docs/P00-03_contrato_solr_v1.1.md",
+    "contrato_verificado": "docs\\P00-03_contrato_solr_v1.2.md",
+    "sha256_contrato": "16a7222a9f8ad6ff27e0426d5d19962c68abe51960f6d2ff056d811446ba065c",
+    "sha256_metadatos": "b310e74afe90527051a9b8b1e42c9886730ae0359163f45815ceb87ba08d9908",
+    "sha256_reporte": "8953d0af5e985af10fdf333fc317242aa410cf2844317a264703fbbd7b6d6d56",
+    "resumen_completo": {
+      "total_entrada": 60,
+      "documentos_validos": 60,
+      "documentos_transformados": 60,
+      "ids_unicos_validos": 60,
+      "categorias_validas": {
+        "JavaScript": 20,
+        "HTML": 20,
+        "CSS": 20
+      }
+    }
+  },
+  "corpus": "C:\\Users\\josep\\Documents\\UNIVERSIDAD\\Semestre_7\\Busqueda y Recuperacion\\Tareas\\BusquedaYRecuperacion\\proyecto-final-solr\\data\\mdn\\transformacion\\transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0\\corpus_solr.json",
+  "plan": [
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "titulo": "CSS",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+      "titulo": "Introducción al modelo de caja básico de CSS",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+      "titulo": "Entendiendo el colapso de margen",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance",
+      "titulo": "Herencia",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+      "titulo": "Procesamiento del valor de las propiedades CSS",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+      "titulo": "Propiedades abreviadas",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Specificity",
+      "titulo": "Especificidad",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+      "titulo": "Regla-At",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+      "titulo": "Comentarios",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Introduction",
+      "titulo": "Sintaxis",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax",
+      "titulo": "Sintaxis de definición de valor",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+      "titulo": "Referencia CSS",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@charset",
+      "titulo": "@charset",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face",
+      "titulo": "@font-face",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@import",
+      "titulo": "@import",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@media",
+      "titulo": "@media",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Class_selectors",
+      "titulo": "Selectores de clase",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/ID_selectors",
+      "titulo": "Selectores de ID",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Type_selectors",
+      "titulo": "Selectores de tipo",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/Universal_selectors",
+      "titulo": "Selectores universales",
+      "categoria": "CSS"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "titulo": "HTML: Lenguaje de Marcado de Hipertexto",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Content_categories",
+      "titulo": "Categorías de contenido",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+      "titulo": "Usar formatos de fecha y hora en HTML",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Microdata",
+      "titulo": "Microdatos",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+      "titulo": "<a> : elemento de ancla HTML",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/abbr",
+      "titulo": "<abbr>",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/address",
+      "titulo": "<address>",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+      "titulo": "<article>: El elemento con contendio del artículo",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/aside",
+      "titulo": "aside",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+      "titulo": "<audio> : elemento HTML para incrustar audio",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/base",
+      "titulo": "<base>",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+      "titulo": "<body>: El elemento body del documento",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/head",
+      "titulo": "head",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/link",
+      "titulo": "<link> elemento de enlace a recurso externo HTML",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta",
+      "titulo": "Elemento de metadatos HTML <meta>",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/noscript",
+      "titulo": "noscript",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/script",
+      "titulo": "<script>: The Script element",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/style",
+      "titulo": "style",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/template",
+      "titulo": "<template>",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/title",
+      "titulo": "<title>: El elemento Título del documento",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "titulo": "JavaScript",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+      "titulo": "Guía de JavaScript",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures",
+      "titulo": "Tipos de datos y estructuras en JavaScript",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+      "titulo": "Herencia y la cadena de prototipos",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+      "titulo": "Una reintroducción a JavaScript (Tutorial de JS)",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+      "titulo": "Clases",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "titulo": "Array",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+      "titulo": "BigInt",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+      "titulo": "Booleano",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date",
+      "titulo": "Date",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+      "titulo": "Error",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+      "titulo": "Function",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "titulo": "Number",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "titulo": "Object",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "titulo": "RegExp",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "titulo": "String — Cadena de caracteres",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+      "titulo": "Symbol",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+      "titulo": "undefined",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+      "titulo": "Expresiones y operadores",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/null",
+      "titulo": "null",
+      "categoria": "JavaScript"
+    }
+  ]
+}
