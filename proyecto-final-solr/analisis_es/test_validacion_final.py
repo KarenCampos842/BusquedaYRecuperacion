@@ -1,0 +1,147 @@
+"""Pruebas sin Solr de validar_espanol_final.py (P03-10, P08-03, P08-04).
+
+Ejecutar desde proyecto-final-solr/:  py -m unittest discover -s analisis_es -v
+"""
+
+import unittest
+from unittest import mock
+
+import validar_espanol_final as validacion
+from configuracion import CORE_PRODUCCION, CORE_PRUEBA
+
+CORES_NO_PREPARABLES = (CORE_PRODUCCION, CORE_PRUEBA, "core_inventado")
+CORES_SIN_EVIDENCIA_FINAL = (validacion.CORE_VALIDACION, CORE_PRUEBA, "core_inventado")
+
+
+def documentos(*ids):
+    return [{"id": i, "titulo": f"Título {i}"} for i in ids]
+
+
+class PruebasArgumentos(unittest.TestCase):
+    def rechaza(self, argumentos):
+        with mock.patch("sys.stderr"), self.assertRaises(SystemExit):
+            validacion.leer_argumentos(argumentos)
+
+    def test_preparar_solo_con_core_de_validacion(self):
+        for core in CORES_NO_PREPARABLES:
+            with self.subTest(core=core):
+                self.rechaza(["--core", core, "--preparar-core-de-prueba"])
+        self.assertTrue(validacion.leer_argumentos(["--preparar-core-de-prueba"]).preparar_core_de_prueba)
+
+    def test_evidencia_final_solo_con_ri(self):
+        for core in CORES_SIN_EVIDENCIA_FINAL:
+            with self.subTest(core=core):
+                self.rechaza(["--core", core, "--evidencia-final"])
+        self.assertTrue(validacion.leer_argumentos(["--core", "ri", "--evidencia-final"]).evidencia_final)
+
+    def test_preparar_core_rechaza_otros_cores_sin_escribir(self):
+        for core in CORES_NO_PREPARABLES:
+            with self.subTest(core=core), \
+                 mock.patch.object(validacion, "configurar_tipos") as configurar, \
+                 mock.patch.object(validacion, "reindexar_core_de_prueba") as reindexar, \
+                 self.assertRaises(ValueError):
+                validacion.preparar_core_de_prueba(core)
+            configurar.assert_not_called()
+            reindexar.assert_not_called()
+
+
+class PruebasEvidenciaFinal(unittest.TestCase):
+    def ejecutar_main(self, argumentos, respuesta):
+        with mock.patch.object(validacion, "exigir_solr") as exigir_solr, \
+             mock.patch.object(validacion, "exigir_core_listo", return_value=60), \
+             mock.patch.object(validacion, "construir_encabezado", return_value={}) as encabezado, \
+             mock.patch.object(validacion, "leer_casos", return_value=[]), \
+             mock.patch.object(validacion, "guardar", return_value=("j", "t")), \
+             mock.patch.object(validacion, "tabla_markdown", return_value=""), \
+             mock.patch("builtins.print"):
+            validacion.main(argumentos, leer_respuesta=lambda _: respuesta)
+        return exigir_solr, encabezado
+
+    def test_sin_confirmacion_no_conecta_ni_genera(self):
+        with self.assertRaises(SystemExit):
+            self.ejecutar_main(["--core", "ri", "--evidencia-final"], respuesta="ri")
+
+    def test_con_confirmacion_marca_evidencia_final(self):
+        _, encabezado = self.ejecutar_main(["--core", "ri", "--evidencia-final"],
+                                           respuesta=validacion.CONFIRMACION_EVIDENCIA_FINAL)
+        encabezado.assert_called_once_with("ri", 60, True)
+
+    def test_por_defecto_es_prueba_local(self):
+        _, encabezado = self.ejecutar_main(["--core", "ri"], respuesta="")
+        encabezado.assert_called_once_with("ri", 60, False)
+        with mock.patch.object(validacion, "huella_sinonimos", return_value="x"):
+            self.assertEqual(validacion.construir_encabezado("ri", 60, False)["etiqueta"],
+                             validacion.ETIQUETA_PRUEBA_LOCAL)
+
+    def test_carpetas_separadas(self):
+        self.assertNotEqual(validacion.directorio_salida(False), validacion.directorio_salida(True))
+
+
+class PruebasCasos(unittest.TestCase):
+    def test_casos_cubren_los_criterios_de_p03_10_y_p08(self):
+        casos = validacion.leer_casos()
+        criterios = {c["criterio"] for c in casos}
+        self.assertTrue({"mayusculas_acentos", "stopwords", "morfologia", "morfologia_protegida",
+                         validacion.CRITERIO_SINONIMOS} <= criterios)
+        self.assertGreaterEqual(sum(c["criterio"] == validacion.CRITERIO_SINONIMOS for c in casos), 2)
+        self.assertEqual(len({c["id"] for c in casos}), len(casos))
+
+    def test_sin_expansion_usa_term_en_titulo_y_contenido(self):
+        parametros = validacion.parametros_sin_expansion(["rellen"])
+        self.assertEqual(parametros["q"], "{!bool should=$t0 should=$t1}")
+        self.assertEqual(parametros["t0"], "{!term f=titulo}rellen")
+        self.assertEqual(parametros["t1"], "{!term f=contenido}rellen")
+
+    def test_consulta_real_es_la_de_la_api_con_orden_estable(self):
+        parametros = validacion.parametros_consulta_real("x")
+        self.assertEqual(parametros["qf"], f"titulo^{validacion.PESO_TITULO} contenido")
+        self.assertEqual(parametros["sort"], "score desc,id asc")
+
+    def test_sinonimos_calcula_ids_nuevos_por_expansion(self):
+        respuestas = {"relleno": documentos("d1", "d2", "d3"), "padding": documentos("d1", "d2", "d3")}
+
+        def buscar(_core, parametros):
+            if parametros.get("defType") == "edismax":
+                return respuestas[parametros["q"]]
+            return documentos("d1") if "rellen" in parametros["t0"] else documentos("d2", "d3")
+
+        caso = {"id": "Y01", "criterio": validacion.CRITERIO_SINONIMOS,
+                "consulta_a": "relleno", "consulta_b": "padding", "descripcion": ""}
+        with mock.patch.object(validacion, "buscar", side_effect=buscar), \
+             mock.patch.object(validacion, "tokens", side_effect=lambda _c, t, _f: [t[:6]]):
+            resultado = validacion.ejecutar_caso("core", caso)
+        self.assertEqual(resultado["a"]["ids_nuevos_por_expansion"], ["d2", "d3"])
+        self.assertEqual(resultado["b"]["ids_nuevos_por_expansion"], ["d1"])
+        self.assertTrue(resultado["mismos_documentos"])
+
+    def test_caso_no_sinonimo_no_consulta_sin_expansion(self):
+        caso = {"id": "A01", "criterio": "mayusculas_acentos",
+                "consulta_a": "función", "consulta_b": "FUNCION", "descripcion": ""}
+        with mock.patch.object(validacion, "buscar", side_effect=[documentos("d1"), documentos("d2")]) as buscar, \
+             mock.patch.object(validacion, "tokens", return_value=["funcion"]):
+            resultado = validacion.ejecutar_caso("core", caso)
+        self.assertEqual(buscar.call_count, 2)
+        self.assertFalse(resultado["mismos_documentos"])
+        self.assertEqual((resultado["solo_en_a"], resultado["solo_en_b"]), (["d1"], ["d2"]))
+
+    def test_tabla_estable_y_sin_metricas(self):
+        observacion = {"consulta": "a|b", "tokens_consulta": ["a"], "total": 1, "ids": ["x"]}
+        resultado = {"id": "A01", "criterio": "stopwords", "a": observacion, "b": observacion,
+                     "mismos_documentos": True}
+        encabezado = {"etiqueta": validacion.ETIQUETA_PRUEBA_LOCAL, "core": "c", "documentos": 1,
+                      "huella_sinonimos": "h", "consulta": "q"}
+        tabla = validacion.tabla_markdown(encabezado, [resultado])
+        self.assertEqual(tabla, validacion.tabla_markdown(encabezado, [resultado]))
+        self.assertIn("PRUEBA LOCAL", tabla)
+        self.assertIn(r"a\|b", tabla)
+        self.assertNotIn("P@5", tabla)
+
+    def test_id_corto_quita_prefijo_mdn(self):
+        self.assertEqual(validacion.id_corto(validacion.PREFIJO_URL_MDN + "CSS"), "CSS")
+
+    def test_el_script_no_importa_enviar(self):
+        self.assertFalse(hasattr(validacion, "enviar"))
+
+
+if __name__ == "__main__":
+    unittest.main()
