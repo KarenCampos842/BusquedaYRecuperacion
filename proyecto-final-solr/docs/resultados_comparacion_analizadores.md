@@ -61,6 +61,18 @@ Reproducir desde `proyecto-final-solr/`: `py analisis_es/comparar_analizadores.p
   - **C14:** en todas estas cifras ya se quitó «enlace» del grupo (`fix:` `438c932`). Con él, «hipervínculo» coincidía con 11 documentos, entre ellos Herencia («enlace a un objeto prototipo»), Array («ámbito de enlace `with`») y String («enlace a URL», en `String.prototype.link()`). Sin él coincide con 4, el mismo total que `stem` (por el plural `hipervínculos`).
 - **Control (C17).** «CSS selector» da 26 en las cuatro variantes.
 
+## Evidencias (capturas de Solr Admin, core `ri_analisis_es`)
+
+Capturas tomadas por Karen el 26-nov-2026 sobre el índice de prueba de 60 documentos, no sobre la colección final. Cuando la tabla de tokens no cabía en una pantalla, la captura se dividió en dos partes.
+
+| Tarea | Captura | Qué muestra |
+|---|---|---|
+| P03-01 | [parte 1](evidencias/P03-01_linea_base_1.png), [parte 2](evidencias/P03-01_linea_base_2.png) | Analysis de `titulo_ri` (`text_es_ri`). En índice, «BÚSQUEDA de Información» pasa a `búsqueda`, `información` (minúsculas) y después a `busqueda`/`búsqueda` e `informacion`/`información` (plegado con original); `de` se conserva. En consulta, «busqueda de informacion» queda `busqueda`, `de`, `informacion`. |
+| P03-03 | [captura](evidencias/P03-03_stopwords.png) | Analysis de `contenido_stop` con «la búsqueda de los documentos». Tras el filtro de palabras vacías (SF) quedan `busqueda`, `búsqueda` y `documentos`; `la`, `de` y `los` se eliminan y las posiciones 2 y 5 se mantienen. |
+| P03-05 | [captura](evidencias/P03-05_stemming.png) | Analysis de `contenido_stem` (el desplegable aparece recortado como «contenido_st…»; la etapa SLSF identifica el tipo). «buscar buscando documento documentos» termina en `buscar`, `buscand`, `document`, `document`: `documento` y `documentos` comparten raíz; `buscar` y `buscando` no. |
+| P03-08 | [análisis, parte 1](evidencias/P03-08_sinonimos_analysis_1.png), [parte 2](evidencias/P03-08_sinonimos_analysis_2.png) | Analysis de consulta en `contenido_proyecto` con «promise». El filtro de sinónimos (SGF) produce `promesa` y `promise` (tipo SYNONYM) en la misma posición; PKMF marca `promise` como `keyword=true` y el stemming deja `promes` y `promise`. |
+| P03-08 | [búsqueda](evidencias/P03-08_sinonimos_busqueda.png) | Respuesta JSON de `/select` (la captura no incluye la barra de direcciones). En `params` se ven `q=promise`, `defType=edismax`, `qf=titulo_proyecto^4 contenido_proyecto` y `fl=id,titulo_ri`; devuelve `numFound: 2`: «Guía de JavaScript» y «Expresiones y operadores». La consulta se hizo en `ri_analisis_es`, único core con esos campos. |
+
 ## Limitaciones
 
 - **Precisión y exhaustividad no se calcularon** porque no hay juicios de relevancia aprobados. El script calcula P@5 y Recall@10 si se agrega `analisis_es/juicios_relevancia.csv` (`consulta_id,doc_id`). Los juicios los define el equipo, no el script.
