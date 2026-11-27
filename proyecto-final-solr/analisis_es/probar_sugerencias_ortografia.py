@@ -30,7 +30,8 @@ CAMPOS_CONTRATO = [
       for nombre in ("categoria", "tipo_fuente", "fuente", "idioma", "url")),
 ]
 
-PREFIJOS = ["jav", "sel", "her", "cad", "pro", "prom", "elem", "ESPEC", "func", "xyz"]
+# "fún" y "bús": prefijos con acento (P05-03); "ESPEC": mayúsculas.
+PREFIJOS = ["jav", "sel", "her", "cad", "pro", "prom", "elem", "ESPEC", "func", "fún", "bús", "xyz"]
 ERRORES = ["javasript", "fucion", "selectr", "prototpo", "herensia", "promesaz",
            "propiedadez", "javascript", "javasript selectr"]
 

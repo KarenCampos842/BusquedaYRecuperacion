@@ -9,6 +9,8 @@
 | elem | elem; elemento; elementos; element; elements | <link> elemento de enlace a recurso externo HTML; Elemento de metadatos HTML <meta>; <script>: The Script element; <title>: El elemento Título del documento; <body>: El elemento body del documento |
 | ESPEC | especificación; especificaciones; especifica; especificado; especificar | Especificidad |
 | func | función; function; funciona; funciones; funcionalidad | Function |
+| fún | función; function; funciona; funciones; funcionalidad | Function |
+| bús | búsqueda; busca; buscar; búsquedas; buscando | — |
 | xyz | — | — |
 
 | Consulta | ¿Correcta? | Alternativas | Consulta sugerida |

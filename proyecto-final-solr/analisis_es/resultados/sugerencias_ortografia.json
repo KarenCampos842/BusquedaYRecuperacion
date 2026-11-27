@@ -114,6 +114,28 @@
         "Function"
       ]
     },
+    "fún": {
+      "terminos_es": [
+        "función",
+        "function",
+        "funciona",
+        "funciones",
+        "funcionalidad"
+      ],
+      "titulos_es": [
+        "Function"
+      ]
+    },
+    "bús": {
+      "terminos_es": [
+        "búsqueda",
+        "busca",
+        "buscar",
+        "búsquedas",
+        "buscando"
+      ],
+      "titulos_es": []
+    },
     "xyz": {
       "terminos_es": [],
       "titulos_es": []
