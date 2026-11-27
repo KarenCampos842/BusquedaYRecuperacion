@@ -20,12 +20,15 @@ Los datos completos están en `analisis_es/resultados/sugerencias_ortografia.jso
 | elem | elem; elemento; elementos; element; elements | `<link>` elemento de enlace a recurso externo HTML; Elemento de metadatos HTML `<meta>`; `<script>`: The Script element; `<title>`: El elemento Título del documento; `<body>`: El elemento body del documento |
 | ESPEC | especificación; especificaciones; especifica; especificado; especificar | Especificidad |
 | func | función; function; funciona; funciones; funcionalidad | Function |
+| fún | función; function; funciona; funciones; funcionalidad | Function |
+| bús | búsqueda; busca; buscar; búsquedas; buscando | — |
 | xyz | — | — |
 
-- 9 de los 10 prefijos devuelven términos; 8 devuelven títulos. «xyz» no devuelve nada en ninguno de los dos.
+- 11 de los 12 prefijos devuelven términos; 9 devuelven títulos. «xyz» no devuelve nada en ninguno de los dos.
 - «prom» devuelve 4 términos del contenido (promedio, promesa, promesas, prompt) y ningún título: ningún título contiene una palabra que empiece por «prom».
 - Los términos se ordenan por número de documentos que los contienen. Los 4 de «prom» aparecen en 1 documento cada uno, así que quedan en orden alfabético.
 - Cuando el prefijo coincide con una palabra completa del contenido, esa palabra va primero (`exactMatchFirst`): «pro» y «elem» existen como palabras en el corpus.
+- Prefijos con acento (P05-03): «fún» devuelve lo mismo que «func» sin acento. «bús» devuelve palabras con y sin acento («búsqueda», «busca», «buscar»).
 - Las sugerencias de términos conservan los acentos («función», «especificación») aunque el prefijo se escriba sin ellos o en mayúsculas («ESPEC»).
 - El vocabulario descarta tokens con números o símbolos: en `contenido_ortografia` existe «javascript:void» y en `contenido_vocabulario` no. Conserva nombres de API con punto entre letras («javascript.js», «function.length»).
 - Los ejemplos del contrato P00-04 «promesa en javascript» y «promise.all» no aparecen: el corpus no contiene «promise.all», y el vocabulario es de palabras sueltas, no de frases.

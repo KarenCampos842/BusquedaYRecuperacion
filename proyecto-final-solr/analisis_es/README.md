@@ -112,6 +112,7 @@ No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11,
   - `terminos_es`: palabras del contenido que empiezan por el prefijo, ordenadas por número de documentos que las contienen (`prom` → promedio, promesa, promesas, prompt). Conserva nombres de API con punto (`function.length`).
   - `titulos_es`: títulos completos que contienen una palabra que empieza por el prefijo.
   - En ambos, el prefijo se compara sin distinguir acentos ni mayúsculas.
+  - El vocabulario es de palabras sueltas: ejemplos del contrato P00-04 como «promise.all» o «promesa en javascript» no son reproducibles con este corpus («promise.all» no aparece y no hay diccionario de frases).
 - Corrección: sugiere palabras con acentos (`fucion` → `función`) y una consulta completa (`collate`).
 
 ### Uso (desde `proyecto-final-solr/`)
