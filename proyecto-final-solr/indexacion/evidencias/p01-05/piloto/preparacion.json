@@ -1,0 +1,1053 @@
+{
+  "tarea": "P01-05",
+  "fecha_utc": "2026-11-26T23:37:23.498846+00:00",
+  "core": "ri",
+  "corpus": "data\\mdn\\transformacion\\transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0\\corpus_solr.json",
+  "validacion_60": {
+    "sha256_corpus": "8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11",
+    "resumen": {
+      "total_entrada": 60,
+      "documentos_validos": 60,
+      "documentos_transformados": 60,
+      "ids_unicos_validos": 60,
+      "categorias_validas": {
+        "JavaScript": 20,
+        "HTML": 20,
+        "CSS": 20
+      }
+    },
+    "contrato_original": "docs/P00-03_contrato_solr_v1.1.md",
+    "contrato_verificado": "docs\\P00-03_contrato_solr_v1.2.md",
+    "sha256_contrato": "16a7222a9f8ad6ff27e0426d5d19962c68abe51960f6d2ff056d811446ba065c"
+  },
+  "seleccion": [
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "titulo": "JavaScript",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+      "categoria": "JavaScript"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "titulo": "HTML: Lenguaje de Marcado de Hipertexto",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "categoria": "HTML"
+    },
+    {
+      "id": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "titulo": "CSS",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "categoria": "CSS"
+    }
+  ],
+  "antes": {
+    "responseHeader": {
+      "status": 0,
+      "QTime": 0,
+      "params": {
+        "q": "*:*",
+        "rows": "10",
+        "wt": "json"
+      }
+    },
+    "response": {
+      "numFound": 0,
+      "start": 0,
+      "numFoundExact": true,
+      "docs": []
+    }
+  },
+  "aplicado": true,
+  "analisis_espanol": {
+    "responseHeader": {
+      "status": 0,
+      "QTime": 3
+    },
+    "analysis": {
+      "field_types": {
+        "text_es_proyecto": {
+          "index": [
+            "org.apache.lucene.analysis.standard.StandardTokenizer",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1
+                ]
+              },
+              {
+                "text": "Programación",
+                "raw_bytes": "[50 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2
+                ]
+              },
+              {
+                "text": "JavaScript",
+                "raw_bytes": "[4a 61 76 61 53 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3
+                ]
+              },
+              {
+                "text": "HTML",
+                "raw_bytes": "[48 54 4d 4c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4
+                ]
+              },
+              {
+                "text": "CSS",
+                "raw_bytes": "[43 53 53]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.LowerCaseFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programación",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.StopFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.PatternKeywordMarkerFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ],
+            "org.apache.lucene.analysis.es.SpanishLightStemFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ]
+          ],
+          "query": [
+            "org.apache.lucene.analysis.standard.StandardTokenizer",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1
+                ]
+              },
+              {
+                "text": "Programación",
+                "raw_bytes": "[50 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2
+                ]
+              },
+              {
+                "text": "JavaScript",
+                "raw_bytes": "[4a 61 76 61 53 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3
+                ]
+              },
+              {
+                "text": "HTML",
+                "raw_bytes": "[48 54 4d 4c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4
+                ]
+              },
+              {
+                "text": "CSS",
+                "raw_bytes": "[43 53 53]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.LowerCaseFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programación",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 c3 b3 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.synonym.SynonymGraphFilter",
+            [
+              {
+                "text": "la",
+                "raw_bytes": "[6c 61]",
+                "start": 0,
+                "end": 2,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 1,
+                "positionHistory": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.core.StopFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            ],
+            "org.apache.lucene.analysis.miscellaneous.PatternKeywordMarkerFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ],
+            "org.apache.lucene.analysis.es.SpanishLightStemFilter",
+            [
+              {
+                "text": "programacion",
+                "raw_bytes": "[70 72 6f 67 72 61 6d 61 63 69 6f 6e]",
+                "start": 3,
+                "end": 15,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 2,
+                "positionHistory": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": false
+              },
+              {
+                "text": "javascript",
+                "raw_bytes": "[6a 61 76 61 73 63 72 69 70 74]",
+                "start": 16,
+                "end": 26,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 3,
+                "positionHistory": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "html",
+                "raw_bytes": "[68 74 6d 6c]",
+                "start": 27,
+                "end": 31,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 4,
+                "positionHistory": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              },
+              {
+                "text": "css",
+                "raw_bytes": "[63 73 73]",
+                "start": 32,
+                "end": 35,
+                "org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute#positionLength": 1,
+                "type": "<ALPHANUM>",
+                "org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute#termFrequency": 1,
+                "position": 5,
+                "positionHistory": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "org.apache.lucene.analysis.tokenattributes.KeywordAttribute#keyword": true
+              }
+            ]
+          ]
+        }
+      },
+      "field_names": {}
+    }
+  }
+}

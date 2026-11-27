@@ -1,0 +1,20 @@
+test_aplicar_solo_add_field_y_conserva_tipos (test_p01_05.EsquemaTests.test_aplicar_solo_add_field_y_conserva_tipos) ... ok
+test_contrato_tipos_facetas_y_opcionales (test_p01_05.EsquemaTests.test_contrato_tipos_facetas_y_opcionales) ... ok
+test_evidencia_no_se_sobrescribe (test_p01_05.EsquemaTests.test_evidencia_no_se_sobrescribe) ... ok
+test_incompatibilidades_bloquean_antes_de_escribir (test_p01_05.EsquemaTests.test_incompatibilidades_bloquean_antes_de_escribir) ... ok
+test_plan_idempotente_y_sin_mutacion (test_p01_05.EsquemaTests.test_plan_idempotente_y_sin_mutacion) ... ok
+test_unique_key_tipos_copyfield_y_required_ajeno (test_p01_05.EsquemaTests.test_unique_key_tipos_copyfield_y_required_ajeno) ... ok
+test_piloto_real_esquema_preservacion_busquedas_facetas (test_p01_05.IntegracionTests.test_piloto_real_esquema_preservacion_busquedas_facetas) ... ok
+test_60_validos_y_seleccion_exacta_estable (test_p01_05.PilotoTests.test_60_validos_y_seleccion_exacta_estable) ... ok
+test_core_ajeno_y_contenido_distinto_rechazados (test_p01_05.PilotoTests.test_core_ajeno_y_contenido_distinto_rechazados) ... ok
+test_core_ocupado_no_recibe_update (test_p01_05.PilotoTests.test_core_ocupado_no_recibe_update) ... ok
+test_duplicados_campos_ajenos_y_cuotas_rechazados (test_p01_05.PilotoTests.test_duplicados_campos_ajenos_y_cuotas_rechazados) ... ok
+test_hash_o_reporte_invalido_rechazado (test_p01_05.PilotoTests.test_hash_o_reporte_invalido_rechazado) ... ok
+test_metadatos_reales_60_compatibles_sin_indexarlos (test_p01_05.PilotoTests.test_metadatos_reales_60_compatibles_sin_indexarlos) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.484s
+
+OK
+
+exit_code=0
