@@ -82,12 +82,21 @@ DEFINIDORES_TIPOS_SUGERENCIAS = {
     TIPO_VOCABULARIO: definir_text_vocabulario_es,
 }
 
+def campo_auxiliar(nombre: str, tipo: str, almacenado: bool) -> dict:
+    """Mismas propiedades que valida validar_p05() en indexacion/configurar_esquema.py (Joseph)."""
+    return {"name": nombre, "type": tipo, "stored": almacenado, "indexed": True,
+            "required": False, "multiValued": False, "docValues": False}
+
+
 CAMPOS_AUXILIARES = [
     # stored=true: DocumentDictionaryFactory lee el valor almacenado para armar el diccionario.
-    {"name": CAMPO_SUGERENCIA, "type": TIPO_SUGERENCIA, "stored": True, "indexed": True},
-    {"name": CAMPO_ORTOGRAFIA, "type": TIPO_ORTOGRAFIA, "stored": False, "indexed": True},
-    {"name": CAMPO_VOCABULARIO, "type": TIPO_VOCABULARIO, "stored": False, "indexed": True},
+    campo_auxiliar(CAMPO_SUGERENCIA, TIPO_SUGERENCIA, almacenado=True),
+    campo_auxiliar(CAMPO_ORTOGRAFIA, TIPO_ORTOGRAFIA, almacenado=False),
+    campo_auxiliar(CAMPO_VOCABULARIO, TIPO_VOCABULARIO, almacenado=False),
 ]
+
+# copyField sin límite: maxChars ausente o el entero 0 (mismo criterio que validar_p05()).
+MAX_CHARS_ILIMITADO = 0
 
 COPIAS = [
     {"source": CAMPO_TITULO, "dest": CAMPO_SUGERENCIA},
