@@ -75,7 +75,7 @@ Capturas tomadas por Karen el 26-nov-2026 sobre el índice de prueba de 60 docum
 
 ## Limitaciones
 
-- **Precisión y exhaustividad no se calcularon** porque no hay juicios de relevancia aprobados. El script calcula P@5 y Recall@10 si se agrega `analisis_es/juicios_relevancia.csv` (`consulta_id,doc_id`). Los juicios los define el equipo, no el script.
+- **Precisión y exhaustividad aún no se han calculado.** Los juicios de relevancia ya están confirmados por Karen (`analisis_es/juicios_relevancia.csv`, 6 consultas); el script calculará P@5 y Recall@10 en la próxima ejecución. Los juicios los define el equipo, no el script.
 - Es un índice de prueba con 60 documentos. La validación sobre el índice final corresponde a P08-03 y P08-04.
 
 ## Hallazgos técnicos de Solr 10

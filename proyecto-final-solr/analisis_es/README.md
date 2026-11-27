@@ -147,19 +147,33 @@ py analisis_es/validar_espanol_final.py --core ri --evidencia-final
 - Guion de la demostración: `../docs/guion_demostracion_espanol.md`. Capturas de
   P09-03: `../docs/evidencias/P09-03/`.
 
-## Juicios de relevancia (BORRADOR)
+## Juicios de relevancia
 
-`juicios_relevancia_BORRADOR.csv` (`consulta_id,doc_id`) es una **propuesta sin
-revisar** para 6 consultas de `consultas_comparacion.csv` (C03, C05, C09, C10, C13,
-C15). Criterio: un documento es relevante si **trata el tema** (lo nombra el título o
-le dedica una sección), no si solo lo menciona de pasada. Casos dudosos que se dejaron
-fuera y Karen debe decidir:
+`juicios_relevancia.csv` (`consulta_id,doc_id`, 20 juicios) fue **revisado y confirmado
+por Karen**. `comparar_analizadores.py` lo lee automáticamente y calcula P@5 y
+Recall@10 para estas consultas.
 
-- C05 `selectores`: `CSS/Reference` (lista de referencia con muchos selectores).
-- C09 `la cadena de prototipos`: `JavaScript/Reference/Classes` (las clases se apoyan en prototipos).
-- C13 `relleno`: `CSS/Reference` y `CSS/Guides/Cascade/Property_value_processing` (solo ejemplos de `padding`).
-- C15 `expresión regular`: `JavaScript/Reference/Global_Objects/Symbol` (`Symbol.match`).
+**Criterio:** un documento es relevante si contiene información directa sobre el tema
+consultado, aunque no sea su tema único.
 
-Mientras se llame `_BORRADOR`, **ningún script lo usa** y no se calcula ninguna
-métrica. Cuando Karen lo confirme, se renombra a `juicios_relevancia.csv` y
-`comparar_analizadores.py` calculará P@5 y Recall@10.
+| Consulta | Texto | Documentos relevantes |
+|---|---|---|
+| C03 | `arreglos` | 3 |
+| C05 | `selectores` | 7 |
+| C09 | `la cadena de prototipos` | 4 |
+| C10 | `el modelo de caja` | 2 |
+| C13 | `relleno` | 2 |
+| C15 | `expresión regular` | 2 |
+
+**Casos dudosos y decisión** (`CSS/Reference` se decidió por separado en C05 y en C13):
+
+| Consulta | Documento | Decisión |
+|---|---|---|
+| C05 `selectores` | `CSS/Reference` | Incluido |
+| C09 `la cadena de prototipos` | `JavaScript/Reference/Classes` | Incluido |
+| C13 `relleno` | `CSS/Reference` | Excluido |
+| C13 `relleno` | `CSS/Guides/Cascade/Property_value_processing` | Excluido |
+| C15 `expresión regular` | `JavaScript/Reference/Global_Objects/Symbol` | Excluido |
+
+Las demás consultas de `consultas_comparacion.csv` no tienen juicios: para ellas no se
+calcula ninguna métrica.
