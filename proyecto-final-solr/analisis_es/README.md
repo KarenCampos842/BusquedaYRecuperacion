@@ -114,8 +114,9 @@ del corpus (no hay un subconjunto afectado). Los sinónimos solo actúan en la c
 
 `contenido_ortografia` y `contenido_vocabulario` también dependen del análisis: después
 de reindexar por un cambio de análisis hay que reconstruir los diccionarios del
-autocompletado (`/sugerencias`, `suggest.buildAll=true`) y del corrector ortográfico
-(`/ortografia`, `spellcheck.build=true`).
+autocompletado con `/sugerencias?suggest.buildAll=true`, que confirma la reconstrucción
+automática del `commit` (`buildOnCommit=true`). El corrector ortográfico lee el índice
+directamente y no necesita reconstrucción.
 
 No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11, P08-02).
 
