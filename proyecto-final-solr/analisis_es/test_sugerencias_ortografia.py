@@ -9,7 +9,7 @@ from unittest import mock
 
 import configurar_analizadores
 import configurar_sugerencias_ortografia as configuracion_p05
-from configuracion import CORE_PRODUCCION
+from configuracion import CORE_PRODUCCION, CORE_PRUEBA, CORE_SUGERENCIAS
 from solr_cliente import ErrorSolr
 from definiciones_sugerencias import (
     CAMPO_CONTENIDO,
@@ -126,7 +126,10 @@ class EsquemaSimulado:
         return [comando for ruta, cuerpo in self.escrituras if ruta == "schema" for comando in cuerpo]
 
 
-def ejecutar_configurar(esquema, core="core_de_prueba", reemplazar=False):
+CORES_QUE_NO_ADMITEN_REEMPLAZAR = (CORE_PRODUCCION, CORE_PRUEBA, "core_inventado")
+
+
+def ejecutar_configurar(esquema, core=CORE_SUGERENCIAS, reemplazar=False):
     with mock.patch.object(configuracion_p05, "obtener", side_effect=esquema.obtener), \
          mock.patch.object(configuracion_p05, "enviar", side_effect=esquema.enviar), \
          mock.patch("builtins.print"):
@@ -209,7 +212,7 @@ class PruebasConfigurar(unittest.TestCase):
         self.assertEqual(sorted((c["source"], c["dest"]) for c in esquema.copias),
                          sorted((c["source"], c["dest"]) for c in COPIAS))
 
-    def test_reemplazar_corrige_max_chars_en_core_de_prueba(self):
+    def test_reemplazar_corrige_max_chars_en_ri_sugerencias_es(self):
         esquema = EsquemaSimulado.completo()
         esquema.copias[2] = {**esquema.copias[2], "maxChars": 100}
         ejecutar_configurar(esquema, reemplazar=True)
@@ -217,11 +220,20 @@ class PruebasConfigurar(unittest.TestCase):
         self.assertTrue(all("maxChars" not in c for c in esquema.copias))
         self.assertEqual(len(esquema.copias), len(COPIAS))
 
-    def test_reemplazar_en_ri_se_rechaza_antes_de_leer_o_escribir(self):
+    def test_reemplazar_fuera_de_ri_sugerencias_es_se_rechaza_sin_leer_ni_escribir(self):
+        for core in CORES_QUE_NO_ADMITEN_REEMPLAZAR:
+            with self.subTest(core=core):
+                esquema = EsquemaSimulado.completo()
+                with mock.patch.object(configuracion_p05, "obtener") as obtener,                      mock.patch.object(configuracion_p05, "enviar") as enviar,                      self.assertRaises(ValueError):
+                    configuracion_p05.configurar(core, reemplazar=True)
+                obtener.assert_not_called()
+                enviar.assert_not_called()
+                self.assertEqual(esquema.escrituras, [])
+
+    def test_reemplazar_se_acepta_en_ri_sugerencias_es(self):
         esquema = EsquemaSimulado.completo()
-        with self.assertRaises(ValueError):
-            ejecutar_configurar(esquema, core=CORE_PRODUCCION, reemplazar=True)
-        self.assertEqual(esquema.escrituras, [])
+        ejecutar_configurar(esquema, core=CORE_SUGERENCIAS, reemplazar=True)
+        self.assertEqual(esquema.comandos_de_esquema(), [])
 
     def test_nunca_crea_ni_modifica_titulo_ni_contenido(self):
         esquema = EsquemaSimulado()
@@ -247,15 +259,22 @@ class PruebasConfirmacionEnRi(unittest.TestCase):
             configuracion_p05.main(argumentos, leer_respuesta=lambda _: respuesta)
         return configurar
 
-    def test_reemplazar_con_core_ri_lo_rechaza_argparse(self):
-        with mock.patch("sys.stderr"), self.assertRaises(SystemExit):
-            configuracion_p05.leer_argumentos(["--core", "ri", "--reemplazar"])
-        with mock.patch("sys.stderr"), self.assertRaises(SystemExit):
-            self._main(["--core", "ri", "--aplicar", "--reemplazar"])
+    def test_reemplazar_fuera_de_ri_sugerencias_es_lo_rechaza_argparse_sin_conectar(self):
+        for core in CORES_QUE_NO_ADMITEN_REEMPLAZAR:
+            with self.subTest(core=core):
+                with mock.patch("sys.stderr"), self.assertRaises(SystemExit):
+                    configuracion_p05.leer_argumentos(["--core", core, "--reemplazar"])
+                with mock.patch("sys.stderr"),                      mock.patch.object(configuracion_p05, "exigir_solr") as exigir_solr,                      mock.patch.object(configuracion_p05, "configurar") as configurar,                      self.assertRaises(SystemExit):
+                    configuracion_p05.main(["--core", core, "--aplicar", "--reemplazar"],
+                                           leer_respuesta=lambda _: core)
+                exigir_solr.assert_not_called()
+                configurar.assert_not_called()
 
-    def test_reemplazar_en_core_de_prueba_se_pasa_a_configurar(self):
-        configurar = self._main(["--reemplazar"])
-        configurar.assert_called_once_with(configuracion_p05.CORE_SUGERENCIAS, reemplazar=True)
+    def test_reemplazar_en_ri_sugerencias_es_se_pasa_a_configurar(self):
+        for argumentos in (["--reemplazar"], ["--core", CORE_SUGERENCIAS, "--reemplazar"]):
+            with self.subTest(argumentos=argumentos):
+                configurar = self._main(argumentos)
+                configurar.assert_called_once_with(CORE_SUGERENCIAS, reemplazar=True)
 
     def test_ri_sin_bandera_no_aplica(self):
         self.assertFalse(self._main(["--core", "ri"]).called)
