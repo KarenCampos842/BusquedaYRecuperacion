@@ -24,5 +24,5 @@ Cada captura debe mostrar la URL o la consulta y los títulos de los resultados.
 
 - Qué se probó: mayúsculas y acentos, palabras vacías, variantes morfológicas y términos protegidos en `contenido` (`text_es_proyecto`).
 - Por qué cubre el criterio: muestra los tokens del analizador real y los resultados de la consulta de la API sobre el índice definitivo.
-- Resultados: ver `analisis_es/resultados/evidencia_final/validacion_final_ri.md`.
+- Resultados: `validacion_final_ri.md` de la carpeta de la ejecución elegida en `analisis_es/resultados/evidencia_final/` (listada en `analisis_es/resultados/evidencia_final/INDICE.md`; la última línea es la más reciente). Anotar aquí qué carpeta se usó.
   No escribir aquí cifras que no salgan de esa tabla.

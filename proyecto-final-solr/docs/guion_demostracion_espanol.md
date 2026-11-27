@@ -3,7 +3,7 @@
 **Duración:** unos 5 minutos. **Dónde:** Solr Admin del índice definitivo (el `ri` de
 Joseph) y el buscador de la aplicación. **Antes:** ejecutar
 `py analisis_es/validar_espanol_final.py --core ri --evidencia-final` en el equipo de
-Joseph y tener abierta la tabla `analisis_es/resultados/evidencia_final/validacion_final_ri.md`.
+Joseph y tener abierta la tabla `validacion_final_ri.md` de la carpeta de la ejecución elegida en `analisis_es/resultados/evidencia_final/` (listada en `analisis_es/resultados/evidencia_final/INDICE.md`; la última línea es la más reciente).
 Las cifras se leen de esa tabla en el momento; este guion no las anticipa.
 
 **Idea central:** `titulo` y `contenido` usan `text_es_proyecto` en lugar de

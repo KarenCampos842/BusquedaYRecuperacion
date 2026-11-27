@@ -139,8 +139,21 @@ py analisis_es/validar_espanol_final.py --core ri --evidencia-final
 - Sobre el core indicado **solo hace lecturas**. La única escritura es
   `--preparar-core-de-prueba`, que solo se acepta con `ri_validacion_es`.
 - La salida va a `resultados/prueba_local/` con la etiqueta **PRUEBA LOCAL** salvo con
-  `--evidencia-final`, que solo se acepta con `--core ri`, pide escribir
-  `indice definitivo` y guarda en `resultados/evidencia_final/`.
+  `--evidencia-final`, que solo se acepta con `--core ri` y pide escribir `indice definitivo`.
+  La prueba local **se sobrescribe** en cada ejecución.
+- Con `--evidencia-final`, antes de ejecutar los casos, se comprueba que el índice tiene los
+  **60 documentos MDN aprobados**:
+  - los IDs de `corpus_solr.json`, consultados por ID;
+  - cada uno con su categoría y `tipo_fuente=web`;
+  - 20/20/20 por categoría.
+  Si falta algo, el script se detiene sin escribir nada y lista IDs faltantes, categorías
+  o `tipo_fuente` incorrectos y conteos. **No exige 60 documentos en total**: los
+  documentos adicionales (por ejemplo, los PDF) no provocan rechazo.
+- Cada ejecución de evidencia final se guarda en una **carpeta nueva** con fecha y hora
+  UTC, `resultados/evidencia_final/<AAAA-MM-DDTHHMMSSZ>_ri/`, y nunca sobrescribe: si la
+  carpeta existe, se detiene. Además añade una línea (fecha, core, documentos, carpeta) a
+  `resultados/evidencia_final/INDICE.md`, que solo crece. Para la entrega se usa la
+  carpeta de la ejecución elegida (normalmente la última del índice).
 - **La evidencia final solo vale sobre el índice definitivo: el `ri` de Joseph.** Por
   eso se ejecuta en su equipo (o juntos, con pantalla compartida). Ejecutarlo sobre otro
   `ri` local no es evidencia final.
