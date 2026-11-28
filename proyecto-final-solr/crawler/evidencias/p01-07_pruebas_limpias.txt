@@ -1,0 +1,84 @@
+test_configuracion_invalida (test_ampliacion_mdn.AmpliacionTests.test_configuracion_invalida) ... ok
+test_corpus_alterado_detiene_antes_de_red (test_ampliacion_mdn.AmpliacionTests.test_corpus_alterado_detiene_antes_de_red) ... ok
+test_corpus_v2_real_se_reutiliza_identico_sin_red (test_ampliacion_mdn.AmpliacionTests.test_corpus_v2_real_se_reutiliza_identico_sin_red) ... ok
+test_cuotas_desiguales_con_reutilizacion_y_sin_redescargas (test_ampliacion_mdn.AmpliacionTests.test_cuotas_desiguales_con_reutilizacion_y_sin_redescargas) ... ok
+test_duplicado_contenido_validado_se_rechaza (test_ampliacion_mdn.AmpliacionTests.test_duplicado_contenido_validado_se_rechaza) ... ok
+test_indice_descubre_pero_no_ocupa_plaza_de_articulo (test_ampliacion_mdn.AmpliacionTests.test_indice_descubre_pero_no_ocupa_plaza_de_articulo) ... ok
+test_limite_exacto_incluye_robots (test_ampliacion_mdn.AmpliacionTests.test_limite_exacto_incluye_robots) ... ok
+test_limite_global_tambien_corta_redirecciones (test_ampliacion_mdn.AmpliacionTests.test_limite_global_tambien_corta_redirecciones) ... ok
+test_objetivo_60_con_12_reutilizados_y_48_respuestas_locales (test_ampliacion_mdn.AmpliacionTests.test_objetivo_60_con_12_reutilizados_y_48_respuestas_locales) ... ok
+test_prioridad_articulos_y_limite_indices_cero (test_ampliacion_mdn.AmpliacionTests.test_prioridad_articulos_y_limite_indices_cero) ... ok
+test_profundidad_cero_no_descubre_descendientes (test_ampliacion_mdn.AmpliacionTests.test_profundidad_cero_no_descubre_descendientes) ... ok
+test_relleno_indices_respeta_cupo_y_resultado_parcial (test_ampliacion_mdn.AmpliacionTests.test_relleno_indices_respeta_cupo_y_resultado_parcial) ... ok
+test_robots_denegado_no_borra_reutilizados (test_ampliacion_mdn.AmpliacionTests.test_robots_denegado_no_borra_reutilizados) ... ok
+test_corpus_real_preserva_esquema_orden_y_metadatos (test_limpieza_mdn.LimpiezaTests.test_corpus_real_preserva_esquema_orden_y_metadatos) ... ok
+test_css_legitimo_html_y_js_se_conservan_byte_a_byte (test_limpieza_mdn.LimpiezaTests.test_css_legitimo_html_y_js_se_conservan_byte_a_byte) ... ok
+test_duplicados_despues_no_se_borran_silenciosamente (test_limpieza_mdn.LimpiezaTests.test_duplicados_despues_no_se_borran_silenciosamente) ... ok
+test_elimina_solo_secuencia_exacta_y_registra_offsets (test_limpieza_mdn.LimpiezaTests.test_elimina_solo_secuencia_exacta_y_registra_offsets) ... ok
+test_firma_sin_contexto_y_variantes_se_conservan_y_advierten (test_limpieza_mdn.LimpiezaTests.test_firma_sin_contexto_y_variantes_se_conservan_y_advierten) ... ok
+test_idempotencia_del_corpus_real (test_limpieza_mdn.LimpiezaTests.test_idempotencia_del_corpus_real) ... ok
+test_limites_inicio_final_y_bloques_consecutivos (test_limpieza_mdn.LimpiezaTests.test_limites_inicio_final_y_bloques_consecutivos) ... ok
+test_no_normaliza_espacios_prosa_ni_codigo (test_limpieza_mdn.LimpiezaTests.test_no_normaliza_espacios_prosa_ni_codigo) ... ok
+test_rechaza_cantidad_hash_esquema_y_documentos_vacios (test_limpieza_mdn.LimpiezaTests.test_rechaza_cantidad_hash_esquema_y_documentos_vacios) ... ok
+test_salida_nueva_sin_sobrescribir_entrada_ni_reportes (test_limpieza_mdn.LimpiezaTests.test_salida_nueva_sin_sobrescribir_entrada_ni_reportes) ... ok
+test_validacion_fallida_no_crea_salida (test_limpieza_mdn.LimpiezaTests.test_validacion_fallida_no_crea_salida) ... ok
+test_actualizacion_local_no_muta_el_original (test_mdn_corpus.CorpusTests.test_actualizacion_local_no_muta_el_original) ... ok
+test_clasificacion_independiente_de_categoria (test_mdn_corpus.CorpusTests.test_clasificacion_independiente_de_categoria) ... ok
+test_deduplicacion_url_y_contenido (test_mdn_corpus.CorpusTests.test_deduplicacion_url_y_contenido) ... ok
+test_descubre_por_enlaces_cuotas_y_sin_descargas_duplicadas (test_mdn_corpus.CorpusTests.test_descubre_por_enlaces_cuotas_y_sin_descargas_duplicadas) ... ACEPTADO 1/12 [JavaScript 1/4] Introducción — https://developer.mozilla.org/es/docs/Web/JavaScript/articulo0
+ACEPTADO 2/12 [JavaScript 2/4] Introducción — https://developer.mozilla.org/es/docs/Web/JavaScript/articulo1
+ACEPTADO 3/12 [JavaScript 3/4] Introducción — https://developer.mozilla.org/es/docs/Web/JavaScript/articulo2
+ACEPTADO 4/12 [JavaScript 4/4] Introducción — https://developer.mozilla.org/es/docs/Web/JavaScript/articulo0/articulo0
+ACEPTADO 5/12 [HTML 1/4] Introducción — https://developer.mozilla.org/es/docs/Web/HTML/articulo0
+ACEPTADO 6/12 [HTML 2/4] Introducción — https://developer.mozilla.org/es/docs/Web/HTML/articulo1
+ACEPTADO 7/12 [HTML 3/4] Introducción — https://developer.mozilla.org/es/docs/Web/HTML/articulo2
+ACEPTADO 8/12 [HTML 4/4] Introducción — https://developer.mozilla.org/es/docs/Web/HTML/articulo0/articulo0
+ACEPTADO 9/12 [CSS 1/4] Introducción — https://developer.mozilla.org/es/docs/Web/CSS/articulo0
+ACEPTADO 10/12 [CSS 2/4] Introducción — https://developer.mozilla.org/es/docs/Web/CSS/articulo1
+ACEPTADO 11/12 [CSS 3/4] Introducción — https://developer.mozilla.org/es/docs/Web/CSS/articulo2
+ACEPTADO 12/12 [CSS 4/4] Introducción — https://developer.mozilla.org/es/docs/Web/CSS/articulo0/articulo0
+ok
+test_extractor_excluye_enlaces_descargables_y_propios (test_mdn_corpus.CorpusTests.test_extractor_excluye_enlaces_descargables_y_propios) ... ok
+test_fallo_robots_no_solicita_articulos (test_mdn_corpus.CorpusTests.test_fallo_robots_no_solicita_articulos) ... DETENIDO: robots inaccesible
+ok
+test_filtra_recursos_y_autorreferencias (test_mdn_corpus.CorpusTests.test_filtra_recursos_y_autorreferencias) ... ok
+test_hash_del_contenido_almacenado_y_deduplicacion_separados (test_mdn_corpus.CorpusTests.test_hash_del_contenido_almacenado_y_deduplicacion_separados) ... ok
+test_inline_parrafos_codigo_y_titulos (test_mdn_corpus.CorpusTests.test_inline_parrafos_codigo_y_titulos) ... ok
+test_no_html_no_se_extrae (test_mdn_corpus.CorpusTests.test_no_html_no_se_extrae) ... ok
+test_normalizacion_y_filtros (test_mdn_corpus.CorpusTests.test_normalizacion_y_filtros) ... ok
+test_rechaza_ingles_con_html_es (test_mdn_corpus.CorpusTests.test_rechaza_ingles_con_html_es) ... ok
+test_robots_ambiguo_y_frecuencia_ininterpretable (test_mdn_corpus.CorpusTests.test_robots_ambiguo_y_frecuencia_ininterpretable) ... ok
+test_diseno_actual_excluye_aviso_y_tabla_lateral (test_mdn_piloto.PilotoTests.test_diseno_actual_excluye_aviso_y_tabla_lateral) ... ok
+test_extrae_articulo_sin_navegacion (test_mdn_piloto.PilotoTests.test_extrae_articulo_sin_navegacion) ... ok
+test_rechaza_rutas_fuera_del_alcance (test_mdn_piloto.PilotoTests.test_rechaza_rutas_fuera_del_alcance) ... ok
+test_redireccion_externa_no_se_solicita (test_mdn_piloto.PilotoTests.test_redireccion_externa_no_se_solicita) ... ok
+test_redireccion_interna_revalida_robots (test_mdn_piloto.PilotoTests.test_redireccion_interna_revalida_robots) ... ok
+test_robots_denegado_no_descarga (test_mdn_piloto.PilotoTests.test_robots_denegado_no_descarga) ... ok
+test_robots_invalido_detiene (test_mdn_piloto.PilotoTests.test_robots_invalido_detiene) ... ok
+test_bom_utf8_no_altera_el_contenido (test_regresiones_mdn.CodificacionTests.test_bom_utf8_no_altera_el_contenido) ... ok
+test_charset_http_explicito_y_utf8_producen_el_mismo_texto (test_regresiones_mdn.CodificacionTests.test_charset_http_explicito_y_utf8_producen_el_mismo_texto) ... ok
+test_error_de_bytes_o_charset_desconocido_rechaza (test_regresiones_mdn.CodificacionTests.test_error_de_bytes_o_charset_desconocido_rechaza) ... ok
+test_utf8_sin_charset_no_depende_de_autodeteccion (test_regresiones_mdn.CodificacionTests.test_utf8_sin_charset_no_depende_de_autodeteccion) ... ok
+test_escritura_exclusiva_y_colision_no_sobrescriben (test_regresiones_mdn.PersistenciaTests.test_escritura_exclusiva_y_colision_no_sobrescriben) ... ok
+test_main_fallido_y_exitoso_crean_resultados_separados (test_regresiones_mdn.PersistenciaTests.test_main_fallido_y_exitoso_crean_resultados_separados) ... ok
+test_ancla_final_y_allow_mas_especifico (test_regresiones_mdn.RobotsPatronesTests.test_ancla_final_y_allow_mas_especifico) ... ok
+test_escapes_y_frecuencia (test_regresiones_mdn.RobotsPatronesTests.test_escapes_y_frecuencia) ... ok
+test_grupos_especificos_repetidos_y_desempate_allow (test_regresiones_mdn.RobotsPatronesTests.test_grupos_especificos_repetidos_y_desempate_allow) ... ok
+test_redireccion_a_files_no_se_solicita (test_regresiones_mdn.RobotsPatronesTests.test_redireccion_a_files_no_se_solicita) ... ok
+test_regla_mdn_files_impide_la_solicitud (test_regresiones_mdn.RobotsPatronesTests.test_regla_mdn_files_impide_la_solicitud) ... ok
+test_cli_exito_y_error (test_transformacion_mdn.TransformacionTests.test_cli_exito_y_error) ... ok
+test_corpus_real_cuotas_campos_preservacion_y_no_mutacion (test_transformacion_mdn.TransformacionTests.test_corpus_real_cuotas_campos_preservacion_y_no_mutacion) ... ok
+test_fechas_utc_offsets_y_precision (test_transformacion_mdn.TransformacionTests.test_fechas_utc_offsets_y_precision) ... ok
+test_generacion_reproducible_entrada_intacta_y_no_sobrescritura (test_transformacion_mdn.TransformacionTests.test_generacion_reproducible_entrada_intacta_y_no_sobrescritura) ... ok
+test_metadatos_incluidos_solo_autorizados (test_transformacion_mdn.TransformacionTests.test_metadatos_incluidos_solo_autorizados) ... ok
+test_opcionales_ausentes_null_y_listas_vacias (test_transformacion_mdn.TransformacionTests.test_opcionales_ausentes_null_y_listas_vacias) ... ok
+test_rechaza_campos_obligatorios_faltantes_y_vacios (test_transformacion_mdn.TransformacionTests.test_rechaza_campos_obligatorios_faltantes_y_vacios) ... ok
+test_rechaza_cantidad_cuotas_raiz_y_duplicados (test_transformacion_mdn.TransformacionTests.test_rechaza_cantidad_cuotas_raiz_y_duplicados) ... ok
+test_rechaza_valores_invalidos_y_campos_ajenos (test_transformacion_mdn.TransformacionTests.test_rechaza_valores_invalidos_y_campos_ajenos) ... ok
+test_rechazo_persistido_sin_corpus_parcial (test_transformacion_mdn.TransformacionTests.test_rechazo_persistido_sin_corpus_parcial) ... ok
+test_urls_invalidas_y_sin_normalizar_no_se_reparan (test_transformacion_mdn.TransformacionTests.test_urls_invalidas_y_sin_normalizar_no_se_reparan) ... ok
+
+----------------------------------------------------------------------
+Ran 66 tests in 3.299s
+
+OK
