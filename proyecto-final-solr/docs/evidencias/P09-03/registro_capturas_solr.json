@@ -1,0 +1,902 @@
+{
+  "inicio_utc": "2026-11-28T01:46:42+00:00",
+  "core": "ri",
+  "documentos": 62,
+  "tipo_fuente": {
+    "web": 60,
+    "pdf": 2
+  },
+  "validacion": "analisis_es/resultados/evidencia_final/2026-11-28T014018Z_ri/validacion_final_ri.json",
+  "sha256_validacion": "d408e761b9677610703b1b891f267961c863d6a38c7e9f99547be520d61be15a",
+  "token_indice_y01": "rellen",
+  "capturas": [
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_01_acentos_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=Funci%C3%B3n%20de%20B%C3%9ASQUEDA&analysis.query=funcion%20de%20busqueda&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "Etapas del índice y de la consulta. Los tokens coinciden al salir de LowerCase y ASCIIFolding. Las etapas posteriores se describen en la nota de entrega.",
+      "fecha_utc": "2026-11-28T01:58:52+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "index",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "Función",
+            "de",
+            "BÚSQUEDA"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "función",
+            "de",
+            "búsqueda"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "funcion",
+            "de",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "StopFilter",
+          "tokens": [
+            "funcion",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "funcion",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "funcion",
+            "busqued"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "funcion",
+            "de",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "funcion",
+            "de",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "funcion",
+            "de",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "funcion",
+            "function",
+            "de",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "StopFilter",
+          "tokens": [
+            "funcion",
+            "function",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "funcion",
+            "function",
+            "busqueda"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "funcion",
+            "function",
+            "busqued"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=Funci%C3%B3n%20de%20B%C3%9ASQUEDA&analysis.query=funcion%20de%20busqueda&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.5
+      },
+      "dimensiones_px": [
+        1920,
+        1021
+      ],
+      "fecha_captura_utc": "2026-11-28T01:58:58+00:00",
+      "sha256_png": "6487d771541d1015788cdbcd4081b8fe1dec57e124ec528bdc0ff18cd01b7a6a",
+      "resultado": "verificado",
+      "sha256_png_anterior": "3d17b590fb2ed70c9b95ee84d24d88dd92bb4da04d9f9599790cf4304666e755",
+      "metodo_revision": "Ventana de Edge con escala unitaria y zoom nativo al 50 %"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_02_acentos_busqueda.png",
+      "url": "http://localhost:8983/solr/ri/select?q=FUNCION&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "criterio": "Resultados de `FUNCION`; comparar con la captura 03.",
+      "fecha_utc": "2026-11-28T01:46:48+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "A01",
+        "numFound": 35,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+            "titulo": "Function"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+            "titulo": "Una reintroducción a JavaScript (Tutorial de JS)"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "titulo": "<body>: El elemento body del documento"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "titulo": "Referencia CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+            "titulo": "Herencia y la cadena de prototipos"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+            "titulo": "Clases"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "titulo": "Expresiones y operadores"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+            "titulo": "Object"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+            "titulo": "Guía de JavaScript"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+            "titulo": "JavaScript"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=FUNCION&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.9375
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:46:52+00:00",
+      "sha256_png": "09d025fda7ade7ff275b89c930be5ec29886762d369d39dc7a806e264ab1947c",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_03_acentos_busqueda.png",
+      "url": "http://localhost:8983/solr/ri/select?q=funci%C3%B3n&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "criterio": "Resultados de `función` (casos A01 de la tabla).",
+      "fecha_utc": "2026-11-28T01:46:52+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "A01",
+        "numFound": 35,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function",
+            "titulo": "Function"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+            "titulo": "Una reintroducción a JavaScript (Tutorial de JS)"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "titulo": "<body>: El elemento body del documento"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "titulo": "Referencia CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+            "titulo": "Herencia y la cadena de prototipos"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+            "titulo": "Clases"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators",
+            "titulo": "Expresiones y operadores"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+            "titulo": "Object"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+            "titulo": "Guía de JavaScript"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+            "titulo": "JavaScript"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=funci%C3%B3n&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.9375
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:46:55+00:00",
+      "sha256_png": "5dcdcc9ad4b602173ab6180f01190f144d39288c4b6916b652fe34cf8fb396ed",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_04_stopwords_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=la%20cadena%20de%20prototipos&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "Tras el filtro de palabras vacías desaparecen `la` y `de`; quedan `cadena` y `prototipos` (raíces).",
+      "fecha_utc": "2026-11-28T01:46:55+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "index",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "la",
+            "cadena",
+            "de",
+            "prototipos"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "StopFilter",
+          "tokens": [
+            "cadena",
+            "prototipos"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "cadena",
+            "prototipos"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "caden",
+            "prototip"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=la%20cadena%20de%20prototipos&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.625
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:00+00:00",
+      "sha256_png": "6b21f81cb3212db2252ac75038b33fb67e04cdfbf8ef42afaa9b55544d74cad0",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_05_stopwords_busqueda.png",
+      "url": "http://localhost:8983/solr/ri/select?q=la%20cadena%20de%20prototipos&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "criterio": "Resultados de la frase con palabras vacías (caso S01).",
+      "fecha_utc": "2026-11-28T01:47:00+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "S01",
+        "numFound": 26,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain",
+            "titulo": "Herencia y la cadena de prototipos"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+            "titulo": "String — Cadena de caracteres"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object",
+            "titulo": "Object"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Language_overview",
+            "titulo": "Una reintroducción a JavaScript (Tutorial de JS)"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+            "titulo": "JavaScript"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Guide",
+            "titulo": "Guía de JavaScript"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number",
+            "titulo": "Number"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes",
+            "titulo": "Clases"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error",
+            "titulo": "Error"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Guides/Date_and_time_formats",
+            "titulo": "Usar formatos de fecha y hora en HTML"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=la%20cadena%20de%20prototipos&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.9375
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:03+00:00",
+      "sha256_png": "1fc588ed63285e00fc7d6c141ea00bebfb19ea05fe3e07843d476cc2e9a41844",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_06_stemming_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=promesas%20promesa%20selectores%20selector&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "SpanishLightStem: plural y singular comparten raíz.",
+      "fecha_utc": "2026-11-28T01:47:03+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "index",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "promesas",
+            "promesa",
+            "selectores",
+            "selector"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "promesas",
+            "promesa",
+            "selectores",
+            "selector"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "promesas",
+            "promesa",
+            "selectores",
+            "selector"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "StopFilter",
+          "tokens": [
+            "promesas",
+            "promesa",
+            "selectores",
+            "selector"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "promesas",
+            "promesa",
+            "selectores",
+            "selector"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "promes",
+            "promes",
+            "selector",
+            "selector"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=promesas%20promesa%20selectores%20selector&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.625
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:07+00:00",
+      "sha256_png": "601b2e759415db09c3edc6e7577fab50874c9a4c7a410e96bb6d71caa55f0a7d",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/preprocesamiento/preprocesamiento_07_protegidas_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=media%20medio%20arrays%20array&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "KeywordMarker: `media` y `array` se conservan (protwords_es.txt); `medio` se recorta a `medi`. `arrays` tampoco se recorta (el stemmer no lo cambia), así que en el índice no se une a `array`.",
+      "fecha_utc": "2026-11-28T01:47:07+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "index",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "media",
+            "medio",
+            "arrays",
+            "array"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "media",
+            "medio",
+            "arrays",
+            "array"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "media",
+            "medio",
+            "arrays",
+            "array"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "StopFilter",
+          "tokens": [
+            "media",
+            "medio",
+            "arrays",
+            "array"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "media",
+            "medio",
+            "arrays",
+            "array"
+          ]
+        },
+        {
+          "fase": "index",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "media",
+            "medi",
+            "arrays",
+            "array"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.fieldvalue=media%20medio%20arrays%20array&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.625
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:11+00:00",
+      "sha256_png": "bae094d31fc22ca5bd5ff816f7509da06c3e854a1f8d5b9ce4122c0c2dcd8599",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/sinonimos/sinonimos_01_relleno_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.query=relleno&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "Analizador de consulta: SynonymGraph añade `padding` a `relleno`.",
+      "fecha_utc": "2026-11-28T01:58:58+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "query",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "StopFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "padding",
+            "relleno"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "padding",
+            "rellen"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.query=relleno&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.5
+      },
+      "dimensiones_px": [
+        1920,
+        1021
+      ],
+      "fecha_captura_utc": "2026-11-28T01:59:04+00:00",
+      "sha256_png": "567cc3e02b176b51a6b1b0af06c6fb05a8d8384064909e606b7395ecc2fe12b6",
+      "resultado": "verificado",
+      "sha256_png_anterior": "3d7297bef964d5d854a39c2a4279e7eec4c2bdb0cd9e00bf8bf053184ae3f4d9",
+      "metodo_revision": "Ventana de Edge con escala unitaria y zoom nativo al 50 %"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/sinonimos/sinonimos_02_relleno_sin_expansion.png",
+      "url": "http://localhost:8983/solr/ri/select?q=%7B%21bool%20should%3D%24t0%20should%3D%24t1%7D&t0=%7B%21term%20f%3Dtitulo%7Drellen&t1=%7B%21term%20f%3Dcontenido%7Drellen&fl=id%2Ctitulo&rows=10",
+      "criterio": "Sin expansión: documentos que contienen la forma indexada de `relleno`. Antes de capturar, comprobar el token exacto en `tokens_indice` de Y01 (`validacion_final_ri.json` de la carpeta de la ejecución elegida); si difiere de `rellen`, cambiarlo en la URL.",
+      "fecha_utc": "2026-11-28T01:47:16+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "Y01",
+        "numFound": 3,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+            "titulo": "Introducción al modelo de caja básico de CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+            "titulo": "Propiedades abreviadas"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+            "titulo": "String — Cadena de caracteres"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=%7B%21bool%20should%3D%24t0%20should%3D%24t1%7D&t0=%7B%21term%20f%3Dtitulo%7Drellen&t1=%7B%21term%20f%3Dcontenido%7Drellen&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 1.25
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:18+00:00",
+      "sha256_png": "2b3df145b9c84de351670839282d7898b3e9f9404acd1ee178537caa5d0f37c2",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/sinonimos/sinonimos_03_relleno_con_expansion.png",
+      "url": "http://localhost:8983/solr/ri/select?q=relleno&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "criterio": "Con expansión: consulta real; deben aparecer los documentos nuevos de la tabla (Y01).",
+      "fecha_utc": "2026-11-28T01:47:18+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "Y01",
+        "numFound": 8,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+            "titulo": "Introducción al modelo de caja básico de CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+            "titulo": "Propiedades abreviadas"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "titulo": "Referencia CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "titulo": "Procesamiento del valor de las propiedades CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "titulo": "<article>: El elemento con contendio del artículo"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String",
+            "titulo": "String — Cadena de caracteres"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/a",
+            "titulo": "<a> : elemento de ancla HTML"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/audio",
+            "titulo": "<audio> : elemento HTML para incrustar audio"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=relleno&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 1
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:22+00:00",
+      "sha256_png": "39d2435039d917ce3f52dd4b5911e8cf4bdf9117e1a3506468729f46ff2a239d",
+      "resultado": "verificado"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/sinonimos/sinonimos_04_margen_analysis.png",
+      "url": "http://localhost:8983/solr/#/ri/analysis?analysis.query=margen&analysis.fieldname=contenido&verbose_output=1",
+      "criterio": "Analizador de consulta: `margen` se expande a `margin`.",
+      "fecha_utc": "2026-11-28T01:59:04+00:00",
+      "incidencias": [],
+      "observado": [
+        {
+          "fase": "query",
+          "etapa": "StandardTokenizer",
+          "tokens": [
+            "margen"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "LowerCaseFilter",
+          "tokens": [
+            "margen"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "ASCIIFoldingFilter",
+          "tokens": [
+            "margen"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SynonymGraphFilter",
+          "tokens": [
+            "margen",
+            "margin"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "StopFilter",
+          "tokens": [
+            "margen",
+            "margin"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "PatternKeywordMarkerFilter",
+          "tokens": [
+            "margen",
+            "margin"
+          ]
+        },
+        {
+          "fase": "query",
+          "etapa": "SpanishLightStemFilter",
+          "tokens": [
+            "margen",
+            "margin"
+          ]
+        }
+      ],
+      "url_visible": "http://localhost:8983/solr/#/ri/analysis?analysis.query=margen&analysis.fieldname=contenido&verbose_output=1",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.5
+      },
+      "dimensiones_px": [
+        1920,
+        1021
+      ],
+      "fecha_captura_utc": "2026-11-28T01:59:09+00:00",
+      "sha256_png": "ee24449ee2e2eeaad827342ae7fd73c0dd07f2bcc66e74a0c2025e008bd429f7",
+      "resultado": "verificado",
+      "sha256_png_anterior": "e7120c7ce5e6ca141da1eacc7fc5ab0a74c0ffb9ff900e5dd70ae4146e77fd88",
+      "metodo_revision": "Ventana de Edge con escala unitaria y zoom nativo al 50 %"
+    },
+    {
+      "archivo": "docs/evidencias/P09-03/sinonimos/sinonimos_05_margen_con_expansion.png",
+      "url": "http://localhost:8983/solr/ri/select?q=margen&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "criterio": "Consulta real de `margen` (caso Y02).",
+      "fecha_utc": "2026-11-28T01:47:26+00:00",
+      "incidencias": [],
+      "observado": {
+        "caso": "Y02",
+        "numFound": 15,
+        "documentos_visibles": [
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing",
+            "titulo": "Entendiendo el colapso de margen"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Box_model/Introduction",
+            "titulo": "Introducción al modelo de caja básico de CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties",
+            "titulo": "Propiedades abreviadas"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/body",
+            "titulo": "<body>: El elemento body del documento"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Reference",
+            "titulo": "Referencia CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/article",
+            "titulo": "<article>: El elemento con contendio del artículo"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Property_value_processing",
+            "titulo": "Procesamiento del valor de las propiedades CSS"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/Comments",
+            "titulo": "Comentarios"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS/Guides/Syntax/At-rules",
+            "titulo": "Regla-At"
+          },
+          {
+            "id": "https://developer.mozilla.org/es/docs/Web/CSS",
+            "titulo": "CSS"
+          }
+        ]
+      },
+      "url_visible": "http://localhost:8983/solr/ri/select?q=margen&defType=edismax&q.op=OR&qf=titulo%5E4%20contenido&fl=id%2Ctitulo&rows=10",
+      "encuadre": {
+        "cabe": true,
+        "escala": 0.9375
+      },
+      "dimensiones_px": [
+        1920,
+        1020
+      ],
+      "fecha_captura_utc": "2026-11-28T01:47:30+00:00",
+      "sha256_png": "f0a2b8908a64c2b2aaa2daf676ccdd5f0f88f1eefcdc35499bdfd73f4848610b",
+      "resultado": "verificado"
+    }
+  ],
+  "fin_utc": "2026-11-28T01:47:30+00:00",
+  "revision_analysis": {
+    "inicio_utc": "2026-11-28T01:58:52+00:00",
+    "fin_utc": "2026-11-28T01:59:09+00:00",
+    "capturas_actualizadas": 3,
+    "observacion": "URL y etapas idénticas a la captura inicial. Las tres imágenes se revisaron visualmente antes de actualizar."
+  }
+}
