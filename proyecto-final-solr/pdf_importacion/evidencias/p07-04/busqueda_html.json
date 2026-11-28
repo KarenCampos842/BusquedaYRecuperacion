@@ -1,0 +1,13 @@
+﻿{
+    "numFound":  1,
+    "start":  0,
+    "numFoundExact":  true,
+    "docs":  [
+                 {
+                     "id":  "pdf:768847d403914513d6ac0ed74bd697e5dc634eef4e2f0bf11a78ef4c2c7af9e1",
+                     "titulo":  "Validación de formularios HTML: guía de prueba",
+                     "categoria":  "HTML",
+                     "tipo_fuente":  "pdf"
+                 }
+             ]
+}

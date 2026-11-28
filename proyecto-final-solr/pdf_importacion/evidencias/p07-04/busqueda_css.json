@@ -1,0 +1,13 @@
+﻿{
+    "numFound":  1,
+    "start":  0,
+    "numFoundExact":  true,
+    "docs":  [
+                 {
+                     "id":  "pdf:b56830143154d57f910411aa694c32bb54e8b77b7e5a8b26020b322a1c091448",
+                     "titulo":  "Diseño responsivo con CSS Grid y Flexbox",
+                     "categoria":  "CSS",
+                     "tipo_fuente":  "pdf"
+                 }
+             ]
+}

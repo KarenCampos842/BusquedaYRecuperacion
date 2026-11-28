@@ -1,0 +1,17 @@
+{
+  "corpus": "data/mdn/transformacion/transformacion_20261126T061527349966Z_68284317199543fbb7b8f960224db1d0/corpus_solr.json",
+  "sha256_corpus": "8d9aa15d1239c92b84c9e9009444781bc201f04489a75ddc28f13ca3fdf4ab11",
+  "documentos_comparados": 60,
+  "campos_comparados": [
+    "categoria",
+    "contenido",
+    "fuente",
+    "id",
+    "idioma",
+    "tipo_fuente",
+    "titulo",
+    "url"
+  ],
+  "diferencias": [],
+  "alcance": "Campos almacenados presentes en el corpus aprobado; no acredita estado histórico, analizadores ni campos derivados por copyField."
+}

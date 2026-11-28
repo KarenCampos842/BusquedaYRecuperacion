@@ -1,0 +1,49 @@
+Fecha UTC: 2026-11-28T00:47:11.378055+00:00
+Python: 3.14.0
+pypdf: 6.21.4
+Equivalente: python -X utf8 -m unittest discover -s pdf_importacion -p "test*.py" -v
+Ejecucion con socket.connect bloqueado; rutas temporales anonimizadas.
+
+test_bytes_invalidos_y_no_pdf (test_extractor_pdf.ExtractorPDFTests.test_bytes_invalidos_y_no_pdf) ... EOF marker not found
+ok
+test_cli_guarda_texto_utf8_y_no_sobrescribe (test_extractor_pdf.ExtractorPDFTests.test_cli_guarda_texto_utf8_y_no_sobrescribe) ... Texto UTF-8 guardado: <TEMP>/resultado.txt (2144 caracteres)
+Extracción detenida: La salida ya existe; no se sobrescribe: <TEMP>/resultado.txt
+ok
+test_entrada_de_tipo_no_soportado (test_extractor_pdf.ExtractorPDFTests.test_entrada_de_tipo_no_soportado) ... ok
+test_los_dos_pdf_de_muestra_son_texto_seleccionable (test_extractor_pdf.ExtractorPDFTests.test_los_dos_pdf_de_muestra_son_texto_seleccionable) ... ok
+test_pdf_con_imagen_pero_sin_capa_textual_no_es_aceptado (test_extractor_pdf.ExtractorPDFTests.test_pdf_con_imagen_pero_sin_capa_textual_no_es_aceptado) ... ok
+test_pdf_protegido_se_rechaza (test_extractor_pdf.ExtractorPDFTests.test_pdf_protegido_se_rechaza) ... ok
+test_pdf_vacio_sin_texto_no_es_aceptado (test_extractor_pdf.ExtractorPDFTests.test_pdf_vacio_sin_texto_no_es_aceptado) ... ok
+test_ruta_inexistente (test_extractor_pdf.ExtractorPDFTests.test_ruta_inexistente) ... ok
+test_confirmacion_faltante_detiene_antes_de_solr (test_p07_03_04.IndexacionPDF.test_confirmacion_faltante_detiene_antes_de_solr) ... ok
+test_documento_existente_no_se_duplica (test_p07_03_04.IndexacionPDF.test_documento_existente_no_se_duplica) ... ok
+test_escribe_solo_confirmado_y_comprueba_commit (test_p07_03_04.IndexacionPDF.test_escribe_solo_confirmado_y_comprueba_commit) ... ok
+test_normalizacion_solr_monovalor (test_p07_03_04.IndexacionPDF.test_normalizacion_solr_monovalor) ... ok
+test_post_sin_documento_verificado_da_error (test_p07_03_04.IndexacionPDF.test_post_sin_documento_verificado_da_error) ... ok
+test_preflight_fallido_bloquea_escritura (test_p07_03_04.IndexacionPDF.test_preflight_fallido_bloquea_escritura) ... ok
+test_simulacion_no_escribe (test_p07_03_04.IndexacionPDF.test_simulacion_no_escribe) ... ok
+test_cli_solo_documento_no_intenta_solr (test_p07_03_04.SeguridadPreflight.test_cli_solo_documento_no_intenta_solr) ... {
+  "estado": "documento_local_generado",
+  "id": "pdf:768847d403914513d6ac0ed74bd697e5dc634eef4e2f0bf11a78ef4c2c7af9e1",
+  "categoria": "General",
+  "caracteres": 2144
+}
+ok
+test_esquema_exige_texto_es_y_facetas (test_p07_03_04.SeguridadPreflight.test_esquema_exige_texto_es_y_facetas) ... ok
+test_los_60_mdn_son_condicion_para_escribir (test_p07_03_04.SeguridadPreflight.test_los_60_mdn_son_condicion_para_escribir) ... ok
+test_mismo_id_con_distinto_titulo_se_rechaza (test_p07_03_04.SeguridadPreflight.test_mismo_id_con_distinto_titulo_se_rechaza) ... ok
+test_bytes_requieren_titulo_o_nombre (test_p07_03_04.TransformacionPDF.test_bytes_requieren_titulo_o_nombre) ... ok
+test_categoria_por_defecto_y_titulo_derivado (test_p07_03_04.TransformacionPDF.test_categoria_por_defecto_y_titulo_derivado) ... ok
+test_categorias_no_autorizadas (test_p07_03_04.TransformacionPDF.test_categorias_no_autorizadas) ... ok
+test_documento_que_incluye_url_o_tema_se_rechaza (test_p07_03_04.TransformacionPDF.test_documento_que_incluye_url_o_tema_se_rechaza) ... ok
+test_dos_pdf_reales_y_esquema_exactamente_siete_campos (test_p07_03_04.TransformacionPDF.test_dos_pdf_reales_y_esquema_exactamente_siete_campos) ... ok
+test_pdf_invalido_o_sin_capa_texto (test_p07_03_04.TransformacionPDF.test_pdf_invalido_o_sin_capa_texto) ... ok
+test_sha_no_depende_del_titulo (test_p07_03_04.TransformacionPDF.test_sha_no_depende_del_titulo) ... ok
+test_titulos_vacios_ilegibles_y_control (test_p07_03_04.TransformacionPDF.test_titulos_vacios_ilegibles_y_control) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.198s
+
+OK
+
+PDF y evidencias P07-03: hashes sin cambios.

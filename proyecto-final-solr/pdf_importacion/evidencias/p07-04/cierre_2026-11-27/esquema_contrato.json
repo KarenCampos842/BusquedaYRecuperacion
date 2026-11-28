@@ -1,0 +1,240 @@
+{
+  "fecha_utc": "2026-11-28T00:47:12.753031+00:00",
+  "metodo": "GET",
+  "consultas": [
+    {
+      "url": "http://localhost:8983/solr/ri/schema/fields?wt=json",
+      "respuesta": {
+        "responseHeader": {
+          "status": 0,
+          "QTime": 0
+        },
+        "fields": [
+          {
+            "name": "_nest_path_",
+            "type": "_nest_path_"
+          },
+          {
+            "name": "_root_",
+            "type": "string",
+            "indexed": true,
+            "stored": false
+          },
+          {
+            "name": "_text_",
+            "type": "text_general",
+            "multiValued": true,
+            "indexed": true,
+            "stored": false
+          },
+          {
+            "name": "_version_",
+            "type": "plong",
+            "indexed": false,
+            "stored": false
+          },
+          {
+            "name": "atribucion",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "categoria",
+            "type": "string",
+            "docValues": true,
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "contenido",
+            "type": "text_es_proyecto",
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "contenido_ortografia",
+            "type": "text_ortografia_es",
+            "docValues": false,
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": false
+          },
+          {
+            "name": "contenido_vocabulario",
+            "type": "text_vocabulario_es",
+            "docValues": false,
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": false
+          },
+          {
+            "name": "descubierta_desde",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "enlaces_salientes",
+            "type": "strings",
+            "multiValued": true,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "fecha_rastreo",
+            "type": "pdate",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "fuente",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "idioma",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "pagerank",
+            "type": "pdouble",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "profundidad",
+            "type": "pint",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "sha256_contenido",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "sha256_contenido_normalizado",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "tipo_documento",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "tipo_fuente",
+            "type": "string",
+            "docValues": true,
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "titulo",
+            "type": "text_es_proyecto",
+            "multiValued": false,
+            "indexed": true,
+            "required": true,
+            "stored": true
+          },
+          {
+            "name": "titulo_descriptivo",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "titulo_documento",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "titulo_original",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "titulo_sugerencia",
+            "type": "text_sugerencia_es",
+            "docValues": false,
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "multiValued": false,
+            "indexed": true,
+            "required": false,
+            "stored": true
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://localhost:8983/solr/ri/schema/uniquekey?wt=json",
+      "respuesta": {
+        "responseHeader": {
+          "status": 0,
+          "QTime": 11
+        },
+        "uniqueKey": "id"
+      }
+    }
+  ],
+  "resultado": "OK"
+}
