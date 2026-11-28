@@ -86,16 +86,111 @@ a `titulo` y `contenido` e indexar le corresponde a Joseph en su script de esque
   término → grupo completo (`recursos_gestionados.mapa_equivalencias`).
 - Desde Git Bash, `docker exec` necesita `MSYS_NO_PATHCONV=1`; en PowerShell no.
 
-## P03-09 · Cuándo reindexar
+## P03-09 · Cuándo y cómo reindexar
 
-| Cambio | ¿Reindexar `titulo`/`contenido`? | Qué hacer |
+**Qué se reindexa.** `titulo` y `contenido` usan `text_es_proyecto` y están en **todos**
+los documentos. Un cambio en el análisis de índice obliga a reindexar los 60 documentos
+del corpus (no hay un subconjunto afectado). Los sinónimos solo actúan en la consulta.
+
+| Cambio | ¿Reindexar? | Qué hacer |
 |---|---|---|
-| `synonyms_es.txt` | **No** (solo consulta) | Repetir `configurar_analizadores.py --core ri --tipos text_es_proyecto` (sincroniza y recarga). |
-| `stopwords_es.txt` o `protwords_es.txt` | **Sí** (afectan el índice) | Repetir el script anterior y pedir a Joseph que vuelva a indexar los documentos. |
-| Filtros del `indexAnalyzer` de `text_es_proyecto` | **Sí** | Igual que el caso anterior. |
-| Solo el `queryAnalyzer` | No | Repetir el script. |
+| `synonyms_es.txt` | **No** (solo consulta) | Pasos 1 y 2. |
+| `stopwords_es.txt` o `protwords_es.txt` | **Sí**: los 60 documentos | Pasos 1 a 4. |
+| Filtros del `indexAnalyzer` de `text_es_proyecto` | **Sí**: los 60 documentos | Pasos 1 a 4. |
+| Solo el `queryAnalyzer` | No | Pasos 1 y 2. |
+
+**Procedimiento en `ri`** (en el equipo de Joseph, que es quien indexa: P02-11, P08-02):
+
+1. `py analisis_es/aplicar_en_ri.py` (modo de prueba) y revisar la salida.
+2. `py analisis_es/aplicar_en_ri.py --aplicar` (pide escribir `ri`): reemplaza
+   `text_es_proyecto`, sincroniza los recursos `es_proyecto` y recarga `ri`.
+   `text_es_ri` no se toca.
+3. Si el cambio afecta al índice: Joseph vuelve a indexar los 60 documentos con su
+   script de indexación completa (`indexacion/indexar_corpus_mdn.py`, PR #9), que
+   sustituye cada documento por su ID.
+4. Comprobar en la consulta real (no en un campo experimental):
+   `py analisis_es/validar_espanol_final.py --core ri`, que usa la misma consulta que
+   la API. Para la evidencia final, con `--evidencia-final` (ver abajo).
+
+`contenido_ortografia` y `contenido_vocabulario` también dependen del análisis: después
+de reindexar por un cambio de análisis hay que reconstruir los diccionarios del
+autocompletado con `/sugerencias?suggest.buildAll=true`, que confirma la reconstrucción
+automática del `commit` (`buildOnCommit=true`). El corrector ortográfico lee el índice
+directamente y no necesita reconstrucción.
 
 No se reindexa `ri` desde aquí: se avisa a Joseph, que es quien indexa (P02-11, P08-02).
+
+## P03-10 / P08-03 / P08-04 · Validación sobre el índice
+
+`validar_espanol_final.py` ejecuta los casos de `consultas_validacion_final.csv`
+(mayúsculas y acentos, palabras vacías, variantes morfológicas con y sin protección y
+tres grupos de sinónimos: relleno, margen y arreglo) con la consulta de la API (`edismax`, `qf=titulo^4 contenido`).
+Guarda tokens de índice y de consulta de `contenido`, IDs recuperados y si dos
+consultas recuperan los mismos documentos. En los sinónimos compara con y sin
+expansión en el mismo índice (sin expansión = `{!term}` con la forma indexada, que no
+pasa por el analizador de consulta). No calcula métricas de calidad.
+
+```bash
+py analisis_es/validar_espanol_final.py --preparar-core-de-prueba  # crea e indexa ri_validacion_es
+py analisis_es/validar_espanol_final.py                            # repite sobre ri_validacion_es
+py analisis_es/validar_espanol_final.py --core ri                  # solo lectura; sigue siendo PRUEBA LOCAL
+py analisis_es/validar_espanol_final.py --core ri --evidencia-final
+```
+
+- Sobre el core indicado **solo hace lecturas**. La única escritura es
+  `--preparar-core-de-prueba`, que solo se acepta con `ri_validacion_es`.
+- La salida va a `resultados/prueba_local/` con la etiqueta **PRUEBA LOCAL** salvo con
+  `--evidencia-final`, que solo se acepta con `--core ri` y pide escribir `indice definitivo`.
+  La prueba local **se sobrescribe** en cada ejecución.
+- Con `--evidencia-final`, antes de ejecutar los casos, se comprueba que el índice tiene los
+  **60 documentos MDN aprobados**:
+  - los IDs de `corpus_solr.json`, consultados por ID;
+  - cada uno con su categoría y `tipo_fuente=web`;
+  - 20/20/20 por categoría.
+  Si falta algo, el script se detiene sin escribir nada y lista IDs faltantes, categorías
+  o `tipo_fuente` incorrectos y conteos. **No exige 60 documentos en total**: los
+  documentos adicionales (por ejemplo, los PDF) no provocan rechazo.
+- Cada ejecución de evidencia final se guarda en una **carpeta nueva** con fecha y hora
+  UTC, `resultados/evidencia_final/<AAAA-MM-DDTHHMMSSZ>_ri/`, y nunca sobrescribe: si la
+  carpeta existe, se detiene. Además añade una línea (fecha, core, documentos, carpeta) a
+  `resultados/evidencia_final/INDICE.md`, que solo crece. Para la entrega se usa la
+  carpeta de la ejecución elegida (normalmente la última del índice).
+- **La evidencia final solo vale sobre el índice definitivo: el `ri` de Joseph.** Por
+  eso se ejecuta en su equipo (o juntos, con pantalla compartida). Ejecutarlo sobre otro
+  `ri` local no es evidencia final.
+- Guion de la demostración: `../docs/guion_demostracion_espanol.md`. Capturas de
+  P09-03: `../docs/evidencias/P09-03/`.
+
+## Juicios de relevancia
+
+`juicios_relevancia.csv` (`consulta_id,doc_id`, 20 juicios) fue **revisado y confirmado
+por Karen**. `comparar_analizadores.py` lo lee automáticamente y calcula P@5 y
+Recall@10 para estas consultas.
+
+**Criterio:** un documento es relevante si contiene información directa sobre el tema
+consultado, aunque no sea su tema único.
+
+| Consulta | Texto | Documentos relevantes |
+|---|---|---|
+| C03 | `arreglos` | 3 |
+| C05 | `selectores` | 7 |
+| C09 | `la cadena de prototipos` | 4 |
+| C10 | `el modelo de caja` | 2 |
+| C13 | `relleno` | 2 |
+| C15 | `expresión regular` | 2 |
+
+**Casos dudosos y decisión** (`CSS/Reference` se decidió por separado en C05 y en C13):
+
+| Consulta | Documento | Decisión |
+|---|---|---|
+| C05 `selectores` | `CSS/Reference` | Incluido |
+| C09 `la cadena de prototipos` | `JavaScript/Reference/Classes` | Incluido |
+| C13 `relleno` | `CSS/Reference` | Excluido |
+| C13 `relleno` | `CSS/Guides/Cascade/Property_value_processing` | Excluido |
+| C15 `expresión regular` | `JavaScript/Reference/Global_Objects/Symbol` | Excluido |
+
+Las demás consultas de `consultas_comparacion.csv` no tienen juicios: para ellas no se
+calcula ninguna métrica.
 
 ## P05 · Autocompletado y corrección ortográfica
 

@@ -15,7 +15,9 @@ class PruebasComparacion(unittest.TestCase):
 
     def test_metricas(self):
         ids = ["a", "x", "b", "y", "z", "c"]
-        self.assertEqual(metricas(ids, {"a", "b", "c", "d"}), {"p_at_5": 0.4, "recall_at_10": 0.75})
+        self.assertEqual(metricas(ids, {"a", "b", "c", "d"}),
+                         {"relevantes_en_5": 2, "relevantes_en_10": 3, "total_relevantes": 4,
+                          "p_at_5": 0.4, "recall_at_10": 0.75})
 
     def test_sin_juicios_no_hay_metricas(self):
         self.assertEqual(metricas(["a"], set()), {})

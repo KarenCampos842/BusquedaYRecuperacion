@@ -108,12 +108,17 @@ def leer_juicios() -> dict[str, set[str]]:
 
 
 def metricas(ids: list[str], relevantes: set[str]) -> dict:
+    """P@5 y Recall@10 junto con los conteos de los que salen."""
     if not relevantes:
         return {}
-    primeros = ids[:RESULTADOS_VISIBLES]
+    en_5 = sum(i in relevantes for i in ids[:CORTE_PRECISION])
+    en_10 = sum(i in relevantes for i in ids[:RESULTADOS_VISIBLES])
     return {
-        "p_at_5": round(sum(i in relevantes for i in ids[:CORTE_PRECISION]) / CORTE_PRECISION, 2),
-        "recall_at_10": round(sum(i in relevantes for i in primeros) / len(relevantes), 2),
+        "relevantes_en_5": en_5,
+        "relevantes_en_10": en_10,
+        "total_relevantes": len(relevantes),
+        "p_at_5": round(en_5 / CORTE_PRECISION, 2),
+        "recall_at_10": round(en_10 / len(relevantes), 2),
     }
 
 
